@@ -1,0 +1,476 @@
+{
+  "protocol_id": "CT-UPDATE-010",
+  "cohort": "PanTrack",
+  "source_config_file": "config/preanalysis/ct_update_001_2026-09-15.json",
+  "source_config_sha256": "60e7165e3761b0d57e17a48e52edc568c3a788ca9a0b0bdaed5c46dac17bb508",
+  "runs": [
+    {
+      "execution_id": "CT-PILOT-002",
+      "seed": 20260915,
+      "config_sha256": "9b64654628eb2098dfea9edce886c06d0a9f7c415fc32cbdc395b36886d9df43",
+      "source_results": {
+        "CT_PILOT_002_RESULTS_2026-09-15.json": "25d7f3c1ed6a1ec2753f9479152fa6868955eb3d52562aa59f1ec8264c8817a9",
+        "CT_PILOT_002_CONTROL_RESULTS_2026-09-16.json": "b8a7e98184624e2c890f3ae2957ca67bcd1ef67cd568f7681f68672cb915dc0a",
+        "CT_PILOT_002_DISTILLATION_RESULTS_2026-09-16.json": "491abba12e61c99fd947251e840ccfd575a9640a14ad352bffe8a3fe6a55d3bd"
+      },
+      "execution_policy_file": "config/preanalysis/ct_update_execution_002_2026-09-15.json",
+      "checkpoints": {
+        "old": {
+          "path": "runs/pilot_002/old.pt",
+          "receipt": {
+            "phase": "old",
+            "steps": 20000,
+            "seed": 20260915,
+            "parent_sha256": null,
+            "config_sha256": "9b64654628eb2098dfea9edce886c06d0a9f7c415fc32cbdc395b36886d9df43",
+            "execution_id": "CT-PILOT-002",
+            "checkpoint_sha256": "4e798b2eb5aee3d0f8a14589256e78eeb9575d205811c8d369534f81b407ba0a",
+            "checkpoint_bytes": 19242585,
+            "eligible_training_patients": 113,
+            "elapsed_seconds": 1315.1534082759172,
+            "peak_allocated_bytes": 560962048,
+            "status": "TRAINING_COMPLETE"
+          }
+        },
+        "new": {
+          "path": "runs/pilot_002/new.pt",
+          "receipt": {
+            "phase": "new",
+            "steps": 10000,
+            "seed": 20260915,
+            "parent_sha256": "4e798b2eb5aee3d0f8a14589256e78eeb9575d205811c8d369534f81b407ba0a",
+            "config_sha256": "9b64654628eb2098dfea9edce886c06d0a9f7c415fc32cbdc395b36886d9df43",
+            "execution_id": "CT-PILOT-002",
+            "checkpoint_sha256": "8837a8f683eea821d65fd547c49a82223b82996bde06cc3a3cb8d5fae2b4a28c",
+            "checkpoint_bytes": 19242649,
+            "eligible_training_patients": 225,
+            "elapsed_seconds": 540.6383497603238,
+            "peak_allocated_bytes": 560962048,
+            "status": "TRAINING_COMPLETE"
+          }
+        },
+        "continued": {
+          "path": "runs/pilot_002/continued.pt",
+          "receipt": {
+            "phase": "continued",
+            "steps": 10000,
+            "seed": 20260915,
+            "parent_sha256": "4e798b2eb5aee3d0f8a14589256e78eeb9575d205811c8d369534f81b407ba0a",
+            "config_sha256": "9b64654628eb2098dfea9edce886c06d0a9f7c415fc32cbdc395b36886d9df43",
+            "execution_id": "CT-PILOT-002",
+            "checkpoint_sha256": "12aab819c25d4f762b770e823c47cc08fbd254316840608d1d49a9cbc6b6a94f",
+            "checkpoint_bytes": 19242649,
+            "eligible_training_patients": 113,
+            "elapsed_seconds": 588.7953694947064,
+            "peak_allocated_bytes": 560962048,
+            "status": "TRAINING_COMPLETE"
+          }
+        },
+        "scratch_base": {
+          "path": "runs/controls_002/scratch_base.pt",
+          "receipt": {
+            "phase": "scratch_base",
+            "steps": 20000,
+            "seed": 20260915,
+            "parent_sha256": null,
+            "config_sha256": "9b64654628eb2098dfea9edce886c06d0a9f7c415fc32cbdc395b36886d9df43",
+            "execution_id": "CT-PILOT-002",
+            "checkpoint_sha256": "0d30fdbad5223049d90fe7d8fd75f4835ab86f4f94bba47903d189312ffd5fe2",
+            "checkpoint_bytes": 19242585,
+            "eligible_training_patients": 225,
+            "elapsed_seconds": 1060.6883939988911,
+            "peak_allocated_bytes": 520551936,
+            "status": "TRAINING_COMPLETE"
+          }
+        },
+        "scratch": {
+          "path": "runs/controls_002/scratch.pt",
+          "receipt": {
+            "phase": "scratch",
+            "steps": 10000,
+            "seed": 20260915,
+            "parent_sha256": "0d30fdbad5223049d90fe7d8fd75f4835ab86f4f94bba47903d189312ffd5fe2",
+            "config_sha256": "9b64654628eb2098dfea9edce886c06d0a9f7c415fc32cbdc395b36886d9df43",
+            "execution_id": "CT-PILOT-002",
+            "checkpoint_sha256": "43f1fd03ab6f96a08252689f347e037e49c3e554c6b6ac13477ad787a4195c52",
+            "checkpoint_bytes": 19242649,
+            "eligible_training_patients": 225,
+            "elapsed_seconds": 572.1726910267025,
+            "peak_allocated_bytes": 563059200,
+            "status": "TRAINING_COMPLETE"
+          }
+        },
+        "kd_001": {
+          "path": "runs/distillation_002/kd_001.pt",
+          "receipt": {
+            "phase": "kd_001",
+            "steps": 10000,
+            "seed": 20260915,
+            "parent_sha256": "4e798b2eb5aee3d0f8a14589256e78eeb9575d205811c8d369534f81b407ba0a",
+            "config_sha256": "9b64654628eb2098dfea9edce886c06d0a9f7c415fc32cbdc395b36886d9df43",
+            "teacher_sha256": "4e798b2eb5aee3d0f8a14589256e78eeb9575d205811c8d369534f81b407ba0a",
+            "distillation_policy_sha256": "ff6d1cc1c0d84051298e146a7fab8f1d2e7fc06ce9fd15cdc6704b1c9ec2b7c3",
+            "coefficient": 1.0,
+            "temperature": 2.0,
+            "status": "TRAINING_COMPLETE",
+            "execution_id": "CT-PILOT-002",
+            "checkpoint_sha256": "3965c61a62f6d86f0e599760ac63b97168a638386041f39db142e29acaae45e2",
+            "checkpoint_bytes": 19242841,
+            "teacher_unchanged": true,
+            "teacher_state_sha256": "370a53495aa05f5441ef2091d1df1223ea14725d6c77d61fcb4820edd24f8799",
+            "eligible_training_patients": 225,
+            "elapsed_seconds": 559.4959948137403,
+            "peak_allocated_bytes": 585697792
+          }
+        },
+        "kd_010": {
+          "path": "runs/distillation_002/kd_010.pt",
+          "receipt": {
+            "phase": "kd_010",
+            "steps": 10000,
+            "seed": 20260915,
+            "parent_sha256": "4e798b2eb5aee3d0f8a14589256e78eeb9575d205811c8d369534f81b407ba0a",
+            "config_sha256": "9b64654628eb2098dfea9edce886c06d0a9f7c415fc32cbdc395b36886d9df43",
+            "teacher_sha256": "4e798b2eb5aee3d0f8a14589256e78eeb9575d205811c8d369534f81b407ba0a",
+            "distillation_policy_sha256": "ff6d1cc1c0d84051298e146a7fab8f1d2e7fc06ce9fd15cdc6704b1c9ec2b7c3",
+            "coefficient": 10.0,
+            "temperature": 2.0,
+            "status": "TRAINING_COMPLETE",
+            "execution_id": "CT-PILOT-002",
+            "checkpoint_sha256": "a4697cdf72232b3a8bb2c96f0d34b5dfc2170b1c6faaa2f221792c521276656d",
+            "checkpoint_bytes": 19242841,
+            "teacher_unchanged": true,
+            "teacher_state_sha256": "370a53495aa05f5441ef2091d1df1223ea14725d6c77d61fcb4820edd24f8799",
+            "eligible_training_patients": 225,
+            "elapsed_seconds": 553.67505774647,
+            "peak_allocated_bytes": 585697792
+          }
+        }
+      },
+      "state_sha256": {
+        "scratch": "ae1a8027eca98853cf8658be70f72f340e6494fb1ec947e5c9dd275e196aac92",
+        "bcwi_025": "f82fdfbe42981f4462629f920b028a2f339f0e3136e533584f0cd49284715902",
+        "bcwi_050": "f2cd8c31b5fc888857899646be76583bffb74cd11675c45eaa5748d1e6827008",
+        "bcwi_075": "df2fd43a2f9577647338a69d3a607351a83314da5341483c7c471882bc3c850c",
+        "kd_001": "64c0825c498cb7f6a070dd8730865ef1e3e124129e9f96c2e5eb6046fafde1ed",
+        "kd_010": "e25ae9c5755a859a8381337e2660ed61bbcc017ddcf6de357fc728507a318b92",
+        "old": "370a53495aa05f5441ef2091d1df1223ea14725d6c77d61fcb4820edd24f8799"
+      },
+      "development_evaluation_relative": "runs/evaluation_002",
+      "development_results_sha256": "25d7f3c1ed6a1ec2753f9479152fa6868955eb3d52562aa59f1ec8264c8817a9",
+      "development_predictions_sha256": "6e6ab5cebe5a5ae5e585a9fd792fe296d468cb92fa32db9f095337ea7b1b9bff"
+    },
+    {
+      "execution_id": "CT-PILOT-003",
+      "seed": 20260917,
+      "config_sha256": "55c2f30f9bde656cde067541015ab479fd20dab22ba08f45729d382e1ca95031",
+      "source_results": {
+        "CT_PILOT_003_RESULTS_2026-09-16.json": "b4c0370288b2a490289ef8bdb5e99704c825279d1bb21b60359f5bdbc46d05ed",
+        "CT_PILOT_003_CONTROL_RESULTS_2026-09-16.json": "c5f23909f618f052a40479f6c90c948df9e7b0ac43a7e6b950180d5a2a5849a1",
+        "CT_PILOT_003_DISTILLATION_RESULTS_2026-09-16.json": "789a25a952d93b884e1790c4fc2302742108692c20420dd8207a40b06ba604b9"
+      },
+      "execution_policy_file": "config/preanalysis/ct_update_execution_003_2026-09-15.json",
+      "checkpoints": {
+        "old": {
+          "path": "runs/pilot_003/old.pt",
+          "receipt": {
+            "phase": "old",
+            "steps": 20000,
+            "seed": 20260917,
+            "parent_sha256": null,
+            "config_sha256": "55c2f30f9bde656cde067541015ab479fd20dab22ba08f45729d382e1ca95031",
+            "execution_id": "CT-PILOT-003",
+            "checkpoint_sha256": "d65b3c3c829982f8e40bf169fa1bf204b5627dffeb20ca88d6a4e8ddd7e94a27",
+            "checkpoint_bytes": 19242585,
+            "eligible_training_patients": 113,
+            "elapsed_seconds": 1202.2075624186546,
+            "peak_allocated_bytes": 560962048,
+            "status": "TRAINING_COMPLETE"
+          }
+        },
+        "new": {
+          "path": "runs/pilot_003/new.pt",
+          "receipt": {
+            "phase": "new",
+            "steps": 10000,
+            "seed": 20260917,
+            "parent_sha256": "d65b3c3c829982f8e40bf169fa1bf204b5627dffeb20ca88d6a4e8ddd7e94a27",
+            "config_sha256": "55c2f30f9bde656cde067541015ab479fd20dab22ba08f45729d382e1ca95031",
+            "execution_id": "CT-PILOT-003",
+            "checkpoint_sha256": "49f66774327c871e670b756d75eb492351cef12794774b33b54c838c416b61d2",
+            "checkpoint_bytes": 19242649,
+            "eligible_training_patients": 225,
+            "elapsed_seconds": 640.4004041124135,
+            "peak_allocated_bytes": 560962048,
+            "status": "TRAINING_COMPLETE"
+          }
+        },
+        "continued": {
+          "path": "runs/pilot_003/continued.pt",
+          "receipt": {
+            "phase": "continued",
+            "steps": 10000,
+            "seed": 20260917,
+            "parent_sha256": "d65b3c3c829982f8e40bf169fa1bf204b5627dffeb20ca88d6a4e8ddd7e94a27",
+            "config_sha256": "55c2f30f9bde656cde067541015ab479fd20dab22ba08f45729d382e1ca95031",
+            "execution_id": "CT-PILOT-003",
+            "checkpoint_sha256": "61a2028e9a1e2fdf709dd7b8b5a0cbd411b7e3c05095aac7be7f4d11987bf7e2",
+            "checkpoint_bytes": 19242649,
+            "eligible_training_patients": 113,
+            "elapsed_seconds": 631.42534715496,
+            "peak_allocated_bytes": 560962048,
+            "status": "TRAINING_COMPLETE"
+          }
+        },
+        "scratch_base": {
+          "path": "runs/controls_003/scratch_base.pt",
+          "receipt": {
+            "phase": "scratch_base",
+            "steps": 20000,
+            "seed": 20260917,
+            "parent_sha256": null,
+            "config_sha256": "55c2f30f9bde656cde067541015ab479fd20dab22ba08f45729d382e1ca95031",
+            "execution_id": "CT-PILOT-003",
+            "checkpoint_sha256": "fc16483645f3a36a76c723d44e7b52b46a7ed33f54878b1ce1ef1f0ee287c974",
+            "checkpoint_bytes": 19242585,
+            "eligible_training_patients": 225,
+            "elapsed_seconds": 1310.4279206376523,
+            "peak_allocated_bytes": 520551936,
+            "status": "TRAINING_COMPLETE"
+          }
+        },
+        "scratch": {
+          "path": "runs/controls_003/scratch.pt",
+          "receipt": {
+            "phase": "scratch",
+            "steps": 10000,
+            "seed": 20260917,
+            "parent_sha256": "fc16483645f3a36a76c723d44e7b52b46a7ed33f54878b1ce1ef1f0ee287c974",
+            "config_sha256": "55c2f30f9bde656cde067541015ab479fd20dab22ba08f45729d382e1ca95031",
+            "execution_id": "CT-PILOT-003",
+            "checkpoint_sha256": "4c3440cf3df2ce947aabe90db345b4043fe552ddc630a8f36af2701d35ad23b6",
+            "checkpoint_bytes": 19242649,
+            "eligible_training_patients": 225,
+            "elapsed_seconds": 483.4165190458298,
+            "peak_allocated_bytes": 563059200,
+            "status": "TRAINING_COMPLETE"
+          }
+        },
+        "kd_001": {
+          "path": "runs/distillation_003/kd_001.pt",
+          "receipt": {
+            "phase": "kd_001",
+            "steps": 10000,
+            "seed": 20260917,
+            "parent_sha256": "d65b3c3c829982f8e40bf169fa1bf204b5627dffeb20ca88d6a4e8ddd7e94a27",
+            "config_sha256": "55c2f30f9bde656cde067541015ab479fd20dab22ba08f45729d382e1ca95031",
+            "teacher_sha256": "d65b3c3c829982f8e40bf169fa1bf204b5627dffeb20ca88d6a4e8ddd7e94a27",
+            "distillation_policy_sha256": "ff6d1cc1c0d84051298e146a7fab8f1d2e7fc06ce9fd15cdc6704b1c9ec2b7c3",
+            "coefficient": 1.0,
+            "temperature": 2.0,
+            "status": "TRAINING_COMPLETE",
+            "execution_id": "CT-PILOT-003",
+            "checkpoint_sha256": "9b65e3a5ae4112ecdb558e6054f9556299b8849284043a79d3f6812bc433c5d1",
+            "checkpoint_bytes": 19242841,
+            "teacher_unchanged": true,
+            "teacher_state_sha256": "57a8ff327d754ff60cde09330683a21324f24e3b216ed1a6e687546381bf754e",
+            "eligible_training_patients": 225,
+            "elapsed_seconds": 561.256397113204,
+            "peak_allocated_bytes": 585697792
+          }
+        },
+        "kd_010": {
+          "path": "runs/distillation_003/kd_010.pt",
+          "receipt": {
+            "phase": "kd_010",
+            "steps": 10000,
+            "seed": 20260917,
+            "parent_sha256": "d65b3c3c829982f8e40bf169fa1bf204b5627dffeb20ca88d6a4e8ddd7e94a27",
+            "config_sha256": "55c2f30f9bde656cde067541015ab479fd20dab22ba08f45729d382e1ca95031",
+            "teacher_sha256": "d65b3c3c829982f8e40bf169fa1bf204b5627dffeb20ca88d6a4e8ddd7e94a27",
+            "distillation_policy_sha256": "ff6d1cc1c0d84051298e146a7fab8f1d2e7fc06ce9fd15cdc6704b1c9ec2b7c3",
+            "coefficient": 10.0,
+            "temperature": 2.0,
+            "status": "TRAINING_COMPLETE",
+            "execution_id": "CT-PILOT-003",
+            "checkpoint_sha256": "18e2ef3a7d4ba30db0a1aa10122191147e270a863e26b73d630ef86ab136e7a7",
+            "checkpoint_bytes": 19242841,
+            "teacher_unchanged": true,
+            "teacher_state_sha256": "57a8ff327d754ff60cde09330683a21324f24e3b216ed1a6e687546381bf754e",
+            "eligible_training_patients": 225,
+            "elapsed_seconds": 535.7860459275544,
+            "peak_allocated_bytes": 585697792
+          }
+        }
+      },
+      "state_sha256": {
+        "scratch": "55857c28a8f55e2ac8c874f292d82b3116141b4822209155ab9ed86dacfcc9b3",
+        "bcwi_025": "ee0e348fbc5a274d81103bacda60a791ebf4337fd6263bcd1c1fc3947a123e01",
+        "bcwi_050": "0359b83f4da1f14664320e2e7ace144a1cca20bf4e41374ef35cd257b11770df",
+        "bcwi_075": "dff7dbb62457cfd660c9ff3028e3c97052baa786618dfb62bfec537fec79fb41",
+        "kd_001": "a47d3aa31e8737cff739a86d4438a7a7593dce41b2cd9f81073d969170b9c106",
+        "kd_010": "f0564bf0fda3416492bb532b60f1136236241b44168eb842feedfdb74073e789",
+        "old": "57a8ff327d754ff60cde09330683a21324f24e3b216ed1a6e687546381bf754e"
+      },
+      "development_evaluation_relative": "runs/evaluation_003",
+      "development_results_sha256": "b4c0370288b2a490289ef8bdb5e99704c825279d1bb21b60359f5bdbc46d05ed",
+      "development_predictions_sha256": "54ac6360a37c9f64ef1724cee144fccfbb74bdccb85f4180d91cd96a76da49eb"
+    },
+    {
+      "execution_id": "CT-PILOT-004",
+      "seed": 20260919,
+      "config_sha256": "f4c74e7151aacf295e72013217d9467d955122c792fbc9da16e1d372f30fdb38",
+      "source_results": {
+        "CT_PILOT_004_RESULTS_2026-09-16.json": "0b31ef8f01d4ea0cf9b6e9793797b361dffe7544dd87e7e5b5ddfbc5dacb2d47",
+        "CT_PILOT_004_CONTROL_RESULTS_2026-09-16.json": "ecc1185257a55926b43dc7b9766ff1c0a266f8259d30e74e4e99f5b839c3ccc9",
+        "CT_PILOT_004_DISTILLATION_RESULTS_2026-09-16.json": "c2346eb833919389cf3aaf01b48e3f22f3f92f7794c75de04a835e0b01e02392"
+      },
+      "execution_policy_file": "config/preanalysis/ct_update_execution_004_2026-09-15.json",
+      "checkpoints": {
+        "old": {
+          "path": "runs/pilot_004/old.pt",
+          "receipt": {
+            "phase": "old",
+            "steps": 20000,
+            "seed": 20260919,
+            "parent_sha256": null,
+            "config_sha256": "f4c74e7151aacf295e72013217d9467d955122c792fbc9da16e1d372f30fdb38",
+            "execution_id": "CT-PILOT-004",
+            "checkpoint_sha256": "4360fef36efa2829e12a998873820ae51c7608e902d32a6ae6e395fd96ced7c2",
+            "checkpoint_bytes": 19242585,
+            "eligible_training_patients": 113,
+            "elapsed_seconds": 1201.194853745401,
+            "peak_allocated_bytes": 560962048,
+            "status": "TRAINING_COMPLETE"
+          }
+        },
+        "new": {
+          "path": "runs/pilot_004/new.pt",
+          "receipt": {
+            "phase": "new",
+            "steps": 10000,
+            "seed": 20260919,
+            "parent_sha256": "4360fef36efa2829e12a998873820ae51c7608e902d32a6ae6e395fd96ced7c2",
+            "config_sha256": "f4c74e7151aacf295e72013217d9467d955122c792fbc9da16e1d372f30fdb38",
+            "execution_id": "CT-PILOT-004",
+            "checkpoint_sha256": "5e6c804ee26fdebe7dd283933d16b5c571d97ac18a9885886a1893839a0517bb",
+            "checkpoint_bytes": 19242649,
+            "eligible_training_patients": 225,
+            "elapsed_seconds": 586.8313702140003,
+            "peak_allocated_bytes": 560962048,
+            "status": "TRAINING_COMPLETE"
+          }
+        },
+        "continued": {
+          "path": "runs/pilot_004/continued.pt",
+          "receipt": {
+            "phase": "continued",
+            "steps": 10000,
+            "seed": 20260919,
+            "parent_sha256": "4360fef36efa2829e12a998873820ae51c7608e902d32a6ae6e395fd96ced7c2",
+            "config_sha256": "f4c74e7151aacf295e72013217d9467d955122c792fbc9da16e1d372f30fdb38",
+            "execution_id": "CT-PILOT-004",
+            "checkpoint_sha256": "519a94a84fde14523d4722b613bfec94478599e44a8c705756d6727c43903745",
+            "checkpoint_bytes": 19242649,
+            "eligible_training_patients": 113,
+            "elapsed_seconds": 593.0094272345304,
+            "peak_allocated_bytes": 560962048,
+            "status": "TRAINING_COMPLETE"
+          }
+        },
+        "scratch_base": {
+          "path": "runs/controls_004/scratch_base.pt",
+          "receipt": {
+            "phase": "scratch_base",
+            "steps": 20000,
+            "seed": 20260919,
+            "parent_sha256": null,
+            "config_sha256": "f4c74e7151aacf295e72013217d9467d955122c792fbc9da16e1d372f30fdb38",
+            "execution_id": "CT-PILOT-004",
+            "checkpoint_sha256": "6ca65744bab66dbe9e7abb5ca515857d8223265b85f7d5149101fd4402628e51",
+            "checkpoint_bytes": 19242585,
+            "eligible_training_patients": 225,
+            "elapsed_seconds": 1221.2574759889394,
+            "peak_allocated_bytes": 520551936,
+            "status": "TRAINING_COMPLETE"
+          }
+        },
+        "scratch": {
+          "path": "runs/controls_004/scratch.pt",
+          "receipt": {
+            "phase": "scratch",
+            "steps": 10000,
+            "seed": 20260919,
+            "parent_sha256": "6ca65744bab66dbe9e7abb5ca515857d8223265b85f7d5149101fd4402628e51",
+            "config_sha256": "f4c74e7151aacf295e72013217d9467d955122c792fbc9da16e1d372f30fdb38",
+            "execution_id": "CT-PILOT-004",
+            "checkpoint_sha256": "7f7b04faf1e18ee492d245543d96df60bd1bfb68736946dd76a5a29ede19760b",
+            "checkpoint_bytes": 19242649,
+            "eligible_training_patients": 225,
+            "elapsed_seconds": 553.9975815359503,
+            "peak_allocated_bytes": 563059200,
+            "status": "TRAINING_COMPLETE"
+          }
+        },
+        "kd_001": {
+          "path": "runs/distillation_004/kd_001.pt",
+          "receipt": {
+            "phase": "kd_001",
+            "steps": 10000,
+            "seed": 20260919,
+            "parent_sha256": "4360fef36efa2829e12a998873820ae51c7608e902d32a6ae6e395fd96ced7c2",
+            "config_sha256": "f4c74e7151aacf295e72013217d9467d955122c792fbc9da16e1d372f30fdb38",
+            "teacher_sha256": "4360fef36efa2829e12a998873820ae51c7608e902d32a6ae6e395fd96ced7c2",
+            "distillation_policy_sha256": "ff6d1cc1c0d84051298e146a7fab8f1d2e7fc06ce9fd15cdc6704b1c9ec2b7c3",
+            "coefficient": 1.0,
+            "temperature": 2.0,
+            "status": "TRAINING_COMPLETE",
+            "execution_id": "CT-PILOT-004",
+            "checkpoint_sha256": "8212f466b80f1ed9f7b09dc14f2fb554a1fef4312c2edcd3482b849f813ba9db",
+            "checkpoint_bytes": 19242841,
+            "teacher_unchanged": true,
+            "teacher_state_sha256": "ba39d43aa3c68c412c85c74043c41b3bb0db9e4922c32c50bc960decb3207f83",
+            "eligible_training_patients": 225,
+            "elapsed_seconds": 549.7802379671484,
+            "peak_allocated_bytes": 585697792
+          }
+        },
+        "kd_010": {
+          "path": "runs/distillation_004/kd_010.pt",
+          "receipt": {
+            "phase": "kd_010",
+            "steps": 10000,
+            "seed": 20260919,
+            "parent_sha256": "4360fef36efa2829e12a998873820ae51c7608e902d32a6ae6e395fd96ced7c2",
+            "config_sha256": "f4c74e7151aacf295e72013217d9467d955122c792fbc9da16e1d372f30fdb38",
+            "teacher_sha256": "4360fef36efa2829e12a998873820ae51c7608e902d32a6ae6e395fd96ced7c2",
+            "distillation_policy_sha256": "ff6d1cc1c0d84051298e146a7fab8f1d2e7fc06ce9fd15cdc6704b1c9ec2b7c3",
+            "coefficient": 10.0,
+            "temperature": 2.0,
+            "status": "TRAINING_COMPLETE",
+            "execution_id": "CT-PILOT-004",
+            "checkpoint_sha256": "be5a5fdaeca3c4e1484f5feba813ff62bf5c124575d8a3e958e0979e9364b3d7",
+            "checkpoint_bytes": 19242841,
+            "teacher_unchanged": true,
+            "teacher_state_sha256": "ba39d43aa3c68c412c85c74043c41b3bb0db9e4922c32c50bc960decb3207f83",
+            "eligible_training_patients": 225,
+            "elapsed_seconds": 524.7489511426538,
+            "peak_allocated_bytes": 585697792
+          }
+        }
+      },
+      "state_sha256": {
+        "scratch": "d201592c57728534c46bf892471c83e661632ffbe3b29fc6940625ab6fa7b29f",
+        "bcwi_025": "8d8b29016ce1b85fbb91d3c76148770325e76ddb0725a584e9a588af297da923",
+        "bcwi_050": "b81c936aecb46d9af8026e3d59629f90dde3f002dd0cb327ab7f700347c25280",
+        "bcwi_075": "90c6c0c21d57cb8d58ca10be28f68e5bb380f7d7888eddc7f28b0d1934ea8a50",
+        "kd_001": "64722ad4485d2c9c4061f10e8e2628f8509b1296dad8482bd533a2d2e369a4e7",
+        "kd_010": "e615f3ffe19ea5e6831e9959596a6a6c831c883457bf1288e6d3074498819174",
+        "old": "ba39d43aa3c68c412c85c74043c41b3bb0db9e4922c32c50bc960decb3207f83"
+      },
+      "development_evaluation_relative": "runs/evaluation_004",
+      "development_results_sha256": "0b31ef8f01d4ea0cf9b6e9793797b361dffe7544dd87e7e5b5ddfbc5dacb2d47",
+      "development_predictions_sha256": "d4c659230e86c7f64052414b1d9d414765644c8f376820414a49778fce50eb27"
+    }
+  ]
+}

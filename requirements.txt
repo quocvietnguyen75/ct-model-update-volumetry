@@ -1,0 +1,10 @@
+# Versions used for the experiments (Python 3.10.12, CUDA 12.4 build of PyTorch).
+numpy==2.2.6
+scipy==1.15.3
+torch==2.6.0
+monai==1.5.1
+nibabel==5.3.2
+# Stronger-model replication only (CT-UPDATE-017).
+nnunetv2==2.8.1
+# Manuscript figures only.
+matplotlib>=3.10

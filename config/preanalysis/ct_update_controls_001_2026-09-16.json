@@ -1,0 +1,17 @@
+{
+  "analysis_id": "CT-CONTROLS-001",
+  "amendment": "CT-UPDATE-005",
+  "source_config_sha256": "b551561e947a08fdde894dc7c5f43e48c0b82aeb69f30dca49c8f7c234aefba3",
+  "execution_ids": ["CT-PILOT-002", "CT-PILOT-003", "CT-PILOT-004"],
+  "training_seeds": [20260915, 20260917, 20260919],
+  "scratch_stage_steps": [20000, 10000],
+  "scratch_stage_data": "all_training_patients_both_stages",
+  "optimizer_restart_at_step": 20000,
+  "scratch_checkpoint_selection": "final",
+  "bcwi_old_weight_alphas": [0.25, 0.5, 0.75],
+  "bcwi_source": "https://aclanthology.org/2024.eacl-long.174.pdf",
+  "bootstrap_draws": 2000,
+  "bootstrap_seed": 20260916,
+  "test_values_permitted": false,
+  "confirmatory_inference": false
+}

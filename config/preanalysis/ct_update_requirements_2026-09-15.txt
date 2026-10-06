@@ -1,0 +1,5 @@
+# Install only into the approved isolated CT package directory.
+# Existing runtime: Python 3.10.12, torch 2.6.0+cu124, numpy 2.2.6, scipy 1.15.3.
+nibabel==5.3.2
+monai==1.5.1
+importlib_resources==7.1.0

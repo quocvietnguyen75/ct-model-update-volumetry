@@ -1,0 +1,8 @@
+{
+  "execution_id": "CT-PILOT-003",
+  "amendment": "CT-UPDATE-004",
+  "source_config_sha256": "b551561e947a08fdde894dc7c5f43e48c0b82aeb69f30dca49c8f7c234aefba3",
+  "seed": 20260917,
+  "old_steps": 20000,
+  "update_steps": 10000
+}

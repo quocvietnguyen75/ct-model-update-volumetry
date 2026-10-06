@@ -1,0 +1,21 @@
+{
+  "analysis_id": "CT-CALIBRATION-001",
+  "amendment": "CT-UPDATE-004",
+  "source_config_sha256": "b551561e947a08fdde894dc7c5f43e48c0b82aeb69f30dca49c8f7c234aefba3",
+  "folds": 3,
+  "fold_salt": "ct-update-004:calibration:",
+  "fit_timepoint": "bl",
+  "fit_target": "paired_model_predictions_only",
+  "weighting": "patient_then_lesion_equal",
+  "slope_constraint": "nonnegative",
+  "degenerate_variance_relative_tolerance": 1e-12,
+  "degenerate_slope": 1.0,
+  "mapped_volume_floor_ml": 0.0,
+  "directions": [["old", "new"], ["new", "old"], ["old", "continued"], ["continued", "old"]],
+  "bootstrap_draws": 2000,
+  "bootstrap_seed": 20260920,
+  "bootstrap": "patient_within_fixed_fold_with_refitting",
+  "reference_sensitivity": "csv",
+  "test_values_permitted": false,
+  "confirmatory_inference": false
+}

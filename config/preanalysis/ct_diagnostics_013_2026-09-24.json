@@ -1,0 +1,40 @@
+{
+  "protocol_id": "CT-UPDATE-013",
+  "date": "2026-09-24",
+  "post_hoc": true,
+  "project_root_env": "CT_UPDATE_REMOTE_ROOT",
+  "seeds": [
+    20260915,
+    20260917,
+    20260919
+  ],
+  "expected_patients": 45,
+  "expected_pairs": 181,
+  "internal_test_values_permitted": false,
+  "training_permitted": false,
+  "downloads_permitted": false,
+  "output_relative": "runs/pantrack_diagnostic_013",
+  "size_bins_ml": [
+    1,
+    10
+  ],
+  "new_inferential_tests": false,
+  "original_result_sha256": "73b27a3890e359222c0d338a5615ec8762431e9b4a0c3a11af6cd71d544a04fc",
+  "original_policy_sha256": "f163b3dbb647b4d9fd28f279a520aa69ab67964de9bf2980b33082737a93fdd9",
+  "checkpoint_registry_sha256": "48ddb5bc56d807c993859761bead4b0a384ab27dd279430fbc70e9acc59e637f",
+  "model_freeze_sha256": "b663dbc94ed8cc0f5b4923cdd2b1c1552f516eea62ee4b99128fd1ccec5197b0",
+  "preprocessing_report_sha256": "c7d9270b1059d72432367714a54919644f9c7971f6185b7df1bc47d7ccc2b0e9",
+  "index_sha256": "d8fc72e81e7f366d8446b3ef682ee4c604e110da4a2d462ca289c552ed960b52",
+  "amendment_sha256": "33b8e3db2525ad33639882eacfd00e2212a86c8999984078a633048284678b0a",
+  "seed_receipt_sha256": {
+    "20260915": "903fb5740d1a5a3856ccaf0e9236c2c6249f12e346658329265b739a0cb938af",
+    "20260917": "07df29b9932ecdee3a5ec8e33bdf08e835c472b1d4586b5d8aa5454d4431c9a7",
+    "20260919": "b02021ecde0b9b9f29b62710c18871f8b952a1e21e5e439c91f6416c0b78945f"
+  },
+  "storage": {
+    "study_cap_bytes": 268435456000,
+    "project_cap_bytes": 966367641600,
+    "planned_additional_bytes": 67108864
+  },
+  "output_cap_bytes": 33554432
+}

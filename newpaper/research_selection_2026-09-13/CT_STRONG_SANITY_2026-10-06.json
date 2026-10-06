@@ -1,0 +1,20 @@
+{
+  "status": "STRONG_SANITY_PASS",
+  "protocol_id": "CT-UPDATE-017",
+  "correction": "A",
+  "seed": 20261201,
+  "patches": 20,
+  "data": "old-model training patches",
+  "minimum_mean_dice": 0.5,
+  "mean_dice": {
+    "old": 0.8779696265526493,
+    "new": 0.8382422099010286,
+    "continued": 0.8687420591141333
+  },
+  "device": "NVIDIA H100 80GB HBM3 MIG 3g.40gb",
+  "correction_sha256": "1de63b9463bf8f48a3e614c323e62427436a7ae1d2ef068d92a33f5829a3f446",
+  "source_manifest_sha256": "09270340f6c5141844e4ba64b89d8d6678a3c50c34be25373ce5f21c1eaea37d",
+  "schedule_sha256": "85fe89363b0ade83af9a407a43511d6bbb021bea23b8414fdd43278b5ca0ef2a",
+  "evaluation_cohorts_read": false,
+  "completed_at_utc": "2026-10-06T01:36:42.288348+00:00"
+}

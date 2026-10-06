@@ -1,0 +1,19 @@
+{
+  "analysis_id": "CT-DISTILLATION-001",
+  "amendment": "CT-UPDATE-006",
+  "source_config_sha256": "b551561e947a08fdde894dc7c5f43e48c0b82aeb69f30dca49c8f7c234aefba3",
+  "execution_ids": ["CT-PILOT-002", "CT-PILOT-003", "CT-PILOT-004"],
+  "training_seeds": [20260915, 20260917, 20260919],
+  "student_steps": 10000,
+  "temperature": 2.0,
+  "candidates": {"kd_001": 1.0, "kd_010": 10.0},
+  "teacher_phase": "old",
+  "teacher_input": "same_augmented_image_as_student",
+  "loss": "supervised_DiceCE_plus_lambda_temperature_squared_binary_KL_teacher_to_student_mean_all_voxels",
+  "training_data": "all_eligible_training_patients",
+  "checkpoint_selection": "final",
+  "bootstrap_draws": 2000,
+  "bootstrap_seed": 20260916,
+  "test_values_permitted": false,
+  "confirmatory_inference": false
+}

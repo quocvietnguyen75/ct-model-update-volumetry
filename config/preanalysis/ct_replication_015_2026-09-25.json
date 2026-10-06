@@ -1,0 +1,117 @@
+{
+  "protocol_id": "CT-UPDATE-015",
+  "date": "2026-09-25",
+  "question_id": "IMG-ALT-01",
+  "role": "training_run_replication_on_fixed_inspected_cohorts_no_tuning",
+  "amendment_file": "newpaper/plan/CT_EXPERIMENT_AMENDMENT_015_2026-09-25.md",
+  "amendment_sha256": "5f95f9d6ed8f9db82d9d03ad7eb71888ef4efab71fa73e11d35c496a48664751",
+  "project_root_env": "CT_UPDATE_REMOTE_ROOT",
+  "internal_dataset_root_env": "CT_UPDATE_REMOTE_DATA_ROOT",
+  "pantrack_dataset_root_env": "CT_UPDATE_PANTRACK_REMOTE_ROOT",
+  "source_config_file": "config/preanalysis/ct_update_001_2026-09-15.json",
+  "source_config_sha256": "60e7165e3761b0d57e17a48e52edc568c3a788ca9a0b0bdaed5c46dac17bb508",
+  "source_config_canonical_sha256": "b551561e947a08fdde894dc7c5f43e48c0b82aeb69f30dca49c8f7c234aefba3",
+  "internal_policy_file": "config/preanalysis/ct_internal_holdout_014_2026-09-24.json",
+  "internal_policy_sha256": "71cef07135960f3f826ecaebbc71435022fcc1581944a133cde39e3105fb8079",
+  "internal_freeze_sha256": "b176125a4d741ec7281c43d7b4f9064bb9cd175c434a8bcccf38c8faa0598f23",
+  "pantrack_policy_file": "config/preanalysis/ct_pantrack_confirmation_010_2026-09-18.json",
+  "pantrack_policy_sha256": "f163b3dbb647b4d9fd28f279a520aa69ab67964de9bf2980b33082737a93fdd9",
+  "pantrack_registry_file": "config/preanalysis/ct_pantrack_checkpoints_010_2026-09-18.json",
+  "pantrack_registry_sha256": "48ddb5bc56d807c993859761bead4b0a384ab27dd279430fbc70e9acc59e637f",
+  "pantrack_model_freeze_sha256": "b663dbc94ed8cc0f5b4923cdd2b1c1552f516eea62ee4b99128fd1ccec5197b0",
+  "development_cache_relative": "derived/patches_001",
+  "run_root_relative": "runs/replication_015",
+  "original_seeds": [
+    20260915,
+    20260917,
+    20260919
+  ],
+  "seeds": [
+    20261001,
+    20261002,
+    20261003,
+    20261004,
+    20261005,
+    20261006,
+    20261007,
+    20261008,
+    20261009,
+    20261010,
+    20261011,
+    20261012,
+    20261013,
+    20261014,
+    20261015,
+    20261016,
+    20261017,
+    20261018,
+    20261019,
+    20261020
+  ],
+  "execution_id_prefix": "CT-REPL-015-",
+  "training": {
+    "old_steps": 20000,
+    "update_steps": 10000,
+    "phases": [
+      "old",
+      "new",
+      "continued"
+    ],
+    "eligible_training_patients": {
+      "old": 113,
+      "new": 225,
+      "continued": 113
+    }
+  },
+  "models": [
+    "old",
+    "new",
+    "continued"
+  ],
+  "cohorts": {
+    "internal": {
+      "patients": 29,
+      "pairs": 277
+    },
+    "pantrack": {
+      "patients": 45,
+      "pairs": 181
+    }
+  },
+  "analysis": {
+    "primary_contrasts": [
+      "retaining_baseline_cost",
+      "ordinary_update_benefit",
+      "contour_benefit"
+    ],
+    "primary_family_size": 6,
+    "bootstrap": "two_way_independent_run_and_patient_percentile",
+    "bootstrap_draws": 10000,
+    "bootstrap_seed": 20261021,
+    "draw_order": [
+      "runs_shared_across_cohorts",
+      "internal_patients",
+      "pantrack_patients"
+    ],
+    "weighting": "pair_losses_within_patient_then_equal_patients_then_equal_runs",
+    "primary_runs": "new_seeds_only_original_runs_displayed_not_pooled",
+    "minimum_completed_runs": 15,
+    "clinical_margin_ml": null
+  },
+  "execution": {
+    "partition": "mig",
+    "gres": "gpu:nvidia_h100_80gb_hbm3_3g.40gb:1",
+    "cpus_per_task": 8,
+    "memory": "48G",
+    "time": "0",
+    "concurrent_allocations": 1,
+    "scoring_workers": 6,
+    "max_cumulative_allocation_hours": 80,
+    "technical_resubmissions_per_seed": 1
+  },
+  "storage": {
+    "study_cap_bytes": 268435456000,
+    "project_cap_bytes": 966367641600,
+    "planned_additional_bytes": 5368709120
+  }
+}

@@ -1,0 +1,164 @@
+{
+  "protocol_id": "CT-UPDATE-017",
+  "date": "2026-10-02",
+  "question_id": "IMG-ALT-01",
+  "role": "stronger_model_replication_nnunet_resenc_m_on_frozen_patches",
+  "amendment_file": "newpaper/plan/CT_EXPERIMENT_AMENDMENT_017_2026-10-02.md",
+  "amendment_sha256": "f591321493508dd94b4e2eca93d92c8ce9f74a668eb4c958020a3ebe45cafd0a",
+  "replication_policy_file": "config/preanalysis/ct_replication_015_2026-09-25.json",
+  "replication_policy_sha256": "3f629e057c05896d3bba9ffefdccb45e481c15cd9412e73199e4c9c789171820",
+  "development_cache_relative": "derived/patches_001",
+  "development_cache_index_sha256": "ffd054e0f927516fe03d8b50d5e4f4a7c82886d33715a14ec2e100f3b797d56e",
+  "nnunet": {
+    "version": "2.8.1",
+    "wheel_archive_sha256": "65c6a81945066df586474ff2defcb8849baec34346d197a2ab8c077ba38f348b",
+    "package_root_relative": "runtime/nnunet_packages",
+    "planner": "nnUNetPlannerResEncM",
+    "plans": "nnUNetResEncUNetMPlans",
+    "configuration": "3d_fullres",
+    "fold": "all",
+    "normalization": "noNorm",
+    "plans_source_dataset": "old",
+    "iterations_per_epoch": 250,
+    "val_iterations_per_epoch": 50,
+    "inference": {
+      "tile_step_size": 0.5,
+      "use_gaussian": true,
+      "use_mirroring": true
+    },
+    "compile": false,
+    "augmentation_workers": 6,
+    "root_relative": "runs/strong_017"
+  },
+  "datasets": {
+    "old": {
+      "id": 901,
+      "patients": 113,
+      "cases": 1952
+    },
+    "expanded": {
+      "id": 902,
+      "patients": 225,
+      "cases": 4048
+    }
+  },
+  "epoch_schedules": {
+    "long": {
+      "old": 500,
+      "new": 250,
+      "continued": 250
+    },
+    "short": {
+      "old": 250,
+      "new": 125,
+      "continued": 125
+    }
+  },
+  "schedule_rule": {
+    "smoke_epochs": 3,
+    "timing_epochs": [
+      2,
+      3
+    ],
+    "long_epoch_total": 1000,
+    "evaluation_allowance_hours": 1.5,
+    "long_if_projected_run_hours_at_most": 30.0
+  },
+  "seeds": [
+    20261201,
+    20261202,
+    20261203,
+    20261204,
+    20261205,
+    20261206,
+    20261207,
+    20261208,
+    20261209,
+    20261210
+  ],
+  "runs": 10,
+  "minimum_completed_runs": 8,
+  "models": [
+    "old",
+    "new",
+    "continued"
+  ],
+  "cohorts": {
+    "internal": {
+      "patients": 29,
+      "pairs": 277
+    },
+    "pantrack": {
+      "patients": 45,
+      "pairs": 181
+    }
+  },
+  "analysis": {
+    "primary_contrasts": [
+      "retaining_baseline_cost",
+      "ordinary_update_benefit",
+      "contour_benefit"
+    ],
+    "primary_family_size": 6,
+    "bootstrap": "two_way_independent_runs_and_patients",
+    "bootstrap_draws": 10000,
+    "bootstrap_seed": 20261211,
+    "weighting": "pairs_within_patient_then_patients_and_runs_equal"
+  },
+  "descriptive": {
+    "size_strata_ml": [
+      [
+        "lt1",
+        0.0,
+        1.0
+      ],
+      [
+        "1to10",
+        1.0,
+        10.0
+      ],
+      [
+        "ge10",
+        10.0,
+        null
+      ]
+    ],
+    "minimum_patients_for_interval": 5,
+    "stratum_bootstrap": {
+      "draws": 10000,
+      "seed": 20261101,
+      "order": "runs_then_cohort_strata_in_policy_order"
+    },
+    "sensitivity_bootstrap": {
+      "draws": 100000,
+      "seed": 20261102,
+      "family_size": 6
+    },
+    "shift_quantiles": [
+      0.05,
+      0.25,
+      0.5,
+      0.75,
+      0.95
+    ],
+    "response_diameter_thresholds": {
+      "decrease": -0.3,
+      "increase": 0.2
+    }
+  },
+  "execution": {
+    "partition": "mig",
+    "gres": "gpu:nvidia_h100_80gb_hbm3_3g.40gb:1",
+    "cpus_per_task": 8,
+    "memory": "48G",
+    "time": "0",
+    "array_concurrency": 5,
+    "scoring_workers": 6
+  },
+  "storage": {
+    "study_cap_bytes": 268435456000,
+    "project_cap_bytes": 966367641600,
+    "planned_additional_bytes": 68719476736
+  },
+  "patient_level_values_in_outputs": false
+}

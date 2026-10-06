@@ -1,0 +1,92 @@
+{
+  "protocol_id": "CT-UPDATE-016",
+  "date": "2026-10-02",
+  "question_id": "IMG-ALT-01",
+  "role": "post_hoc_descriptive_analyses_of_existing_replication_predictions",
+  "amendment_file": "newpaper/plan/CT_EXPERIMENT_AMENDMENT_016_2026-10-02.md",
+  "amendment_sha256": "27ba047e03009a9143f226cb583ce2ad4fbdeec059f0f378c9cef2e2c052b57b",
+  "replication_policy_file": "config/preanalysis/ct_replication_015_2026-09-25.json",
+  "replication_policy_sha256": "3f629e057c05896d3bba9ffefdccb45e481c15cd9412e73199e4c9c789171820",
+  "replication_source_manifest_sha256": "74feac6e7300fd6f2caabc2379f7ac738547c0be6d63fe34c6851670c23a7166",
+  "replication_results_relative": "runs/replication_015/analysis/replication_results.json",
+  "replication_results_sha256": "2c53cd697997c19948e458eccfc94cdd3fb344e219118507163e3d3d2d7f21bf",
+  "output_root_relative": "runs/posthoc_016",
+  "cohorts": {
+    "internal": {
+      "patients": 29,
+      "pairs": 277
+    },
+    "pantrack": {
+      "patients": 45,
+      "pairs": 181
+    }
+  },
+  "runs": 20,
+  "size_strata_ml": [
+    [
+      "lt1",
+      0.0,
+      1.0
+    ],
+    [
+      "1to10",
+      1.0,
+      10.0
+    ],
+    [
+      "ge10",
+      10.0,
+      null
+    ]
+  ],
+  "minimum_patients_for_interval": 5,
+  "stratum_bootstrap": {
+    "draws": 10000,
+    "seed": 20261101,
+    "order": "runs_then_cohort_strata_in_policy_order"
+  },
+  "sensitivity_bootstrap": {
+    "draws": 100000,
+    "seed": 20261102,
+    "family_size": 6
+  },
+  "shift_quantiles": [
+    0.05,
+    0.25,
+    0.5,
+    0.75,
+    0.95
+  ],
+  "response_diameter_thresholds": {
+    "decrease": -0.3,
+    "increase": 0.2
+  },
+  "weighting": "pairs_within_patient_then_patients_and_runs_equal; lesion_weighted_variant_pairs_equal_within_run",
+  "review_precomputed": {
+    "spearman_contour_benefit_vs_shift": {
+      "internal": 0.23,
+      "pantrack": 0.74
+    },
+    "spearman_shift_vs_retention_cost": {
+      "internal": 0.35,
+      "pantrack": 0.27
+    },
+    "negative_shift_runs_with_positive_cost_pooled": [
+      8,
+      9
+    ]
+  },
+  "execution": {
+    "partition": "mig",
+    "gres": null,
+    "cpus_per_task": 4,
+    "memory": "24G",
+    "time": "04:00:00"
+  },
+  "storage": {
+    "study_cap_bytes": 268435456000,
+    "project_cap_bytes": 966367641600,
+    "planned_additional_bytes": 10485760
+  },
+  "patient_level_values_in_outputs": false
+}

@@ -1,0 +1,1503 @@
+{
+  "status": "EXTERNAL_EVALUATION_COMPLETE",
+  "protocol_id": "CT-UPDATE-010",
+  "cohort": "PanTrack",
+  "patients": 45,
+  "pairs": 181,
+  "seeds": 3,
+  "seed_averaged": {
+    "strategies": {
+      "old_old": {
+        "mae_ml": 8.89511625768636,
+        "signed_error_ml": -1.086914794168887
+      },
+      "old_new": {
+        "mae_ml": 11.103391555155396,
+        "signed_error_ml": 4.38077449879736
+      },
+      "new_new": {
+        "mae_ml": 9.863374271255104,
+        "signed_error_ml": -1.045569693144167
+      },
+      "old_continued": {
+        "mae_ml": 9.356864768683096,
+        "signed_error_ml": 0.07459491548778681
+      },
+      "continued_continued": {
+        "mae_ml": 8.694837025818613,
+        "signed_error_ml": -0.6189524387225407
+      },
+      "old_scratch": {
+        "mae_ml": 10.698897939815733,
+        "signed_error_ml": 5.375428301962464
+      },
+      "scratch_scratch": {
+        "mae_ml": 8.887816968352391,
+        "signed_error_ml": -0.7059230072901999
+      },
+      "old_bcwi_025": {
+        "mae_ml": 10.68380535360099,
+        "signed_error_ml": 4.8175514786127795
+      },
+      "bcwi_025_bcwi_025": {
+        "mae_ml": 9.732581362156509,
+        "signed_error_ml": -0.9039332752331344
+      },
+      "old_bcwi_050": {
+        "mae_ml": 10.053231935893342,
+        "signed_error_ml": 4.1521339602296035
+      },
+      "bcwi_050_bcwi_050": {
+        "mae_ml": 9.499542499364175,
+        "signed_error_ml": -0.7587562461718327
+      },
+      "old_bcwi_075": {
+        "mae_ml": 9.1909513395602,
+        "signed_error_ml": 2.1316873301603394
+      },
+      "bcwi_075_bcwi_075": {
+        "mae_ml": 9.248180831169384,
+        "signed_error_ml": -0.8227652540955687
+      },
+      "old_kd_001": {
+        "mae_ml": 9.743671792866191,
+        "signed_error_ml": 2.9289818813377653
+      },
+      "kd_001_kd_001": {
+        "mae_ml": 8.11536371835944,
+        "signed_error_ml": -0.6443201817757166
+      },
+      "old_kd_010": {
+        "mae_ml": 9.006596641239371,
+        "signed_error_ml": 0.2995969237762255
+      },
+      "kd_010_kd_010": {
+        "mae_ml": 7.961891075156829,
+        "signed_error_ml": -1.4319925453692128
+      },
+      "mapped_old_new": {
+        "mae_ml": 12.72665323433923,
+        "signed_error_ml": -2.9259098199860767
+      },
+      "old_mapped_new": {
+        "mae_ml": 9.188826318099702,
+        "signed_error_ml": -4.448957121763688
+      },
+      "mapped_old_continued": {
+        "mae_ml": 9.309516983373602,
+        "signed_error_ml": -0.5167966851789377
+      },
+      "old_mapped_continued": {
+        "mae_ml": 9.037169940530502,
+        "signed_error_ml": -2.0783537237955607
+      }
+    },
+    "patient_mean_followup_dice": {
+      "old": 0.548078510600207,
+      "new": 0.626657194449916,
+      "continued": 0.5740521995436688,
+      "scratch": 0.6330929740983933,
+      "bcwi_025": 0.6385865729319056,
+      "bcwi_050": 0.6291188986405473,
+      "bcwi_075": 0.6025040248566608,
+      "kd_001": 0.6347800147332094,
+      "kd_010": 0.6007516755256559
+    },
+    "primary_contrasts": {
+      "ordinary_update_benefit": {
+        "mean": -2.2082752974690374,
+        "percentile_95_interval": [
+          -3.862966938915691,
+          -0.7736215285433607
+        ],
+        "bonferroni_family_interval": [
+          -4.410511615446846,
+          -0.39423203144151936
+        ],
+        "halfwidth_95_ml": 1.5446727051861653,
+        "halfwidth_adjusted_ml": 2.0081397920026633,
+        "precision_target_95_met": true,
+        "precision_target_adjusted_met": true
+      },
+      "retaining_baseline_cost": {
+        "mean": 1.24001728390029,
+        "percentile_95_interval": [
+          -0.39810302448189405,
+          3.157190671744428
+        ],
+        "bonferroni_family_interval": [
+          -0.8740279983604632,
+          3.784562605523301
+        ],
+        "halfwidth_95_ml": 1.777646848113161,
+        "halfwidth_adjusted_ml": 2.3292953019418823,
+        "precision_target_95_met": true,
+        "precision_target_adjusted_met": true
+      },
+      "contour_benefit": {
+        "mean": 0.0785786838497091,
+        "percentile_95_interval": [
+          0.05245327608494619,
+          0.11000394441227541
+        ],
+        "bonferroni_family_interval": [
+          0.044716732115946504,
+          0.12150264837495361
+        ]
+      }
+    },
+    "descriptive_secondary_contrasts": {
+      "continued_mixed_benefit": {
+        "mean": 1.7465267864723009,
+        "percentile_95_interval": [
+          0.45964483684889207,
+          3.2396087540598564
+        ]
+      },
+      "continued_dice_difference": {
+        "mean": -0.0526049949062474,
+        "percentile_95_interval": [
+          -0.08529209902508877,
+          -0.027153560841782907
+        ]
+      },
+      "continued_cost_vs_new_reprocessing": {
+        "mean": -0.5065095025720106,
+        "percentile_95_interval": [
+          -1.8626093212580508,
+          0.8891260744173775
+        ]
+      },
+      "scratch_mixed_benefit": {
+        "mean": 0.404493615339662,
+        "percentile_95_interval": [
+          -0.6455846307217454,
+          1.569108036146059
+        ]
+      },
+      "scratch_dice_difference": {
+        "mean": 0.006435779648477239,
+        "percentile_95_interval": [
+          -0.011210715404886738,
+          0.02462869733464723
+        ]
+      },
+      "scratch_cost_vs_new_reprocessing": {
+        "mean": 0.835523668560628,
+        "percentile_95_interval": [
+          -0.7088454180919465,
+          2.5335624205040985
+        ]
+      },
+      "bcwi_025_mixed_benefit": {
+        "mean": 0.4195862015544049,
+        "percentile_95_interval": [
+          0.045963617118848214,
+          0.8663995188624776
+        ]
+      },
+      "bcwi_025_dice_difference": {
+        "mean": 0.011929378481989559,
+        "percentile_95_interval": [
+          0.0009432236316356928,
+          0.023426315835884774
+        ]
+      },
+      "bcwi_025_cost_vs_new_reprocessing": {
+        "mean": 0.8204310823458851,
+        "percentile_95_interval": [
+          -0.6675574758626583,
+          2.5197930412995104
+        ]
+      },
+      "bcwi_050_mixed_benefit": {
+        "mean": 1.0501596192620564,
+        "percentile_95_interval": [
+          0.33991551747572807,
+          1.873828539545044
+        ]
+      },
+      "bcwi_050_dice_difference": {
+        "mean": 0.0024617041906312,
+        "percentile_95_interval": [
+          -0.021665936641790003,
+          0.022839761079102072
+        ]
+      },
+      "bcwi_050_cost_vs_new_reprocessing": {
+        "mean": 0.18985766463823367,
+        "percentile_95_interval": [
+          -1.129197320261906,
+          1.6875602559745209
+        ]
+      },
+      "bcwi_075_mixed_benefit": {
+        "mean": 1.9124402155951938,
+        "percentile_95_interval": [
+          0.7326275307914435,
+          3.2745599793741422
+        ]
+      },
+      "bcwi_075_dice_difference": {
+        "mean": -0.02415316959325534,
+        "percentile_95_interval": [
+          -0.054362800866418044,
+          0.001146869506674237
+        ]
+      },
+      "bcwi_075_cost_vs_new_reprocessing": {
+        "mean": -0.6724229316949036,
+        "percentile_95_interval": [
+          -1.9141293905872232,
+          0.6253065258530524
+        ]
+      },
+      "kd_001_mixed_benefit": {
+        "mean": 1.359719762289204,
+        "percentile_95_interval": [
+          0.35540273543157896,
+          2.5346258844667653
+        ]
+      },
+      "kd_001_dice_difference": {
+        "mean": 0.008122820283293294,
+        "percentile_95_interval": [
+          -0.0095680288798332,
+          0.025291552748730784
+        ]
+      },
+      "kd_001_cost_vs_new_reprocessing": {
+        "mean": -0.11970247838891367,
+        "percentile_95_interval": [
+          -1.331083267094322,
+          1.1996793842890485
+        ]
+      },
+      "kd_010_mixed_benefit": {
+        "mean": 2.0967949139160234,
+        "percentile_95_interval": [
+          0.7393174485899024,
+          3.6409331918508014
+        ]
+      },
+      "kd_010_dice_difference": {
+        "mean": -0.025905518924260122,
+        "percentile_95_interval": [
+          -0.04779666250593206,
+          -0.005993431167849432
+        ]
+      },
+      "kd_010_cost_vs_new_reprocessing": {
+        "mean": -0.8567776300157333,
+        "percentile_95_interval": [
+          -2.297603951123288,
+          0.5777528218212326
+        ]
+      },
+      "mapped_old_new_benefit": {
+        "mean": -1.623261679183837,
+        "percentile_95_interval": [
+          -2.5947432685925964,
+          -0.6663297730328975
+        ]
+      },
+      "old_mapped_new_benefit": {
+        "mean": 1.914565237055695,
+        "percentile_95_interval": [
+          0.3342975282315557,
+          3.6736855429011666
+        ]
+      },
+      "mapped_old_continued_benefit": {
+        "mean": 0.04734778530949397,
+        "percentile_95_interval": [
+          -0.1278399733390743,
+          0.2234507215445224
+        ]
+      },
+      "old_mapped_continued_benefit": {
+        "mean": 0.3196948281525949,
+        "percentile_95_interval": [
+          -0.1287711474859541,
+          0.7878805372520792
+        ]
+      }
+    }
+  },
+  "per_seed": [
+    {
+      "strategies": {
+        "old_old": {
+          "mae_ml": 8.687733140356384,
+          "signed_error_ml": -0.8705214936536556
+        },
+        "old_new": {
+          "mae_ml": 9.625979559852142,
+          "signed_error_ml": 3.11475695684737
+        },
+        "new_new": {
+          "mae_ml": 8.899885108064566,
+          "signed_error_ml": -0.7578935424004688
+        },
+        "old_continued": {
+          "mae_ml": 9.318676415083173,
+          "signed_error_ml": -0.496063891440872
+        },
+        "continued_continued": {
+          "mae_ml": 7.803256468788599,
+          "signed_error_ml": -1.4731467616480416
+        },
+        "old_scratch": {
+          "mae_ml": 9.74056262994568,
+          "signed_error_ml": 5.190914219758376
+        },
+        "scratch_scratch": {
+          "mae_ml": 8.049543861304041,
+          "signed_error_ml": 0.23050834655430122
+        },
+        "old_bcwi_025": {
+          "mae_ml": 9.743684148595145,
+          "signed_error_ml": 4.144237090658558
+        },
+        "bcwi_025_bcwi_025": {
+          "mae_ml": 8.922271411238492,
+          "signed_error_ml": -0.5709154258878922
+        },
+        "old_bcwi_050": {
+          "mae_ml": 9.355766153633965,
+          "signed_error_ml": 3.7612293979154305
+        },
+        "bcwi_050_bcwi_050": {
+          "mae_ml": 8.946977963158686,
+          "signed_error_ml": -0.53210603578587
+        },
+        "old_bcwi_075": {
+          "mae_ml": 8.700074198739012,
+          "signed_error_ml": 1.9024430608379825
+        },
+        "bcwi_075_bcwi_075": {
+          "mae_ml": 8.881710396813013,
+          "signed_error_ml": -0.693997788726618
+        },
+        "old_kd_001": {
+          "mae_ml": 9.017174272706244,
+          "signed_error_ml": 2.100622087702706
+        },
+        "kd_001_kd_001": {
+          "mae_ml": 7.36320638932285,
+          "signed_error_ml": -0.36531901466943967
+        },
+        "old_kd_010": {
+          "mae_ml": 8.730667652638717,
+          "signed_error_ml": -1.3736198961154389
+        },
+        "kd_010_kd_010": {
+          "mae_ml": 7.816032680099206,
+          "signed_error_ml": -1.1776220302086986
+        },
+        "mapped_old_new": {
+          "mae_ml": 12.5434690843884,
+          "signed_error_ml": -5.983398223982208
+        },
+        "old_mapped_new": {
+          "mae_ml": 9.78464602961569,
+          "signed_error_ml": -5.19554185989736
+        },
+        "mapped_old_continued": {
+          "mae_ml": 9.299865541988286,
+          "signed_error_ml": -1.944781911445442
+        },
+        "old_mapped_continued": {
+          "mae_ml": 9.377668696432414,
+          "signed_error_ml": -2.8172769972250795
+        }
+      },
+      "patient_mean_followup_dice": {
+        "old": 0.5282451545250131,
+        "new": 0.6304329577855065,
+        "continued": 0.5840277604341336,
+        "scratch": 0.6523773690296668,
+        "bcwi_025": 0.639530310863251,
+        "bcwi_050": 0.6222413608114612,
+        "bcwi_075": 0.5877759863181863,
+        "kd_001": 0.62645393062343,
+        "kd_010": 0.5621171131624888
+      },
+      "primary_contrasts": {
+        "ordinary_update_benefit": {
+          "mean": -0.938246419495759,
+          "percentile_95_interval": [
+            -2.2301812132249963,
+            0.34668313886841245
+          ]
+        },
+        "retaining_baseline_cost": {
+          "mean": 0.7260944517875757,
+          "percentile_95_interval": [
+            -0.47465242621758486,
+            2.01247922212647
+          ]
+        },
+        "contour_benefit": {
+          "mean": 0.10218780326049336,
+          "percentile_95_interval": [
+            0.05460859025245672,
+            0.1542052013008923
+          ]
+        }
+      },
+      "descriptive_secondary_contrasts": {
+        "continued_mixed_benefit": {
+          "mean": 0.3073031447689688,
+          "percentile_95_interval": [
+            -1.124339789610724,
+            1.6941420198927715
+          ]
+        },
+        "continued_dice_difference": {
+          "mean": -0.046405197351372635,
+          "percentile_95_interval": [
+            -0.09714869238142661,
+            -0.0031606080009696142
+          ]
+        },
+        "continued_cost_vs_new_reprocessing": {
+          "mean": 0.4187913070186066,
+          "percentile_95_interval": [
+            -0.9696685119670523,
+            1.8876284649939905
+          ]
+        },
+        "scratch_mixed_benefit": {
+          "mean": -0.11458307009353877,
+          "percentile_95_interval": [
+            -1.9431100323106663,
+            1.789204964109981
+          ]
+        },
+        "scratch_dice_difference": {
+          "mean": 0.021944411244160508,
+          "percentile_95_interval": [
+            -0.020682547252127845,
+            0.06533336326347597
+          ]
+        },
+        "scratch_cost_vs_new_reprocessing": {
+          "mean": 0.8406775218811143,
+          "percentile_95_interval": [
+            -1.2037242488982138,
+            2.8811191326453938
+          ]
+        },
+        "bcwi_025_mixed_benefit": {
+          "mean": -0.11770458874300303,
+          "percentile_95_interval": [
+            -0.7771843690005514,
+            0.5208644465504668
+          ]
+        },
+        "bcwi_025_dice_difference": {
+          "mean": 0.009097353077744593,
+          "percentile_95_interval": [
+            -0.008392828506615317,
+            0.026272762706618342
+          ]
+        },
+        "bcwi_025_cost_vs_new_reprocessing": {
+          "mean": 0.8437990405305786,
+          "percentile_95_interval": [
+            -0.32027039624750747,
+            2.1175374869504537
+          ]
+        },
+        "bcwi_050_mixed_benefit": {
+          "mean": 0.27021340621817597,
+          "percentile_95_interval": [
+            -0.639911214544155,
+            1.2333922771124621
+          ]
+        },
+        "bcwi_050_dice_difference": {
+          "mean": -0.008191596974045156,
+          "percentile_95_interval": [
+            -0.04534360647706915,
+            0.021211136150709922
+          ]
+        },
+        "bcwi_050_cost_vs_new_reprocessing": {
+          "mean": 0.4558810455693997,
+          "percentile_95_interval": [
+            -0.6965883044181129,
+            1.6808868045763676
+          ]
+        },
+        "bcwi_075_mixed_benefit": {
+          "mean": 0.9259053611131293,
+          "percentile_95_interval": [
+            -0.11866209727083389,
+            2.091537494781721
+          ]
+        },
+        "bcwi_075_dice_difference": {
+          "mean": -0.04265697146732011,
+          "percentile_95_interval": [
+            -0.08584390864147894,
+            -0.004595566849272391
+          ]
+        },
+        "bcwi_075_cost_vs_new_reprocessing": {
+          "mean": -0.19981090932555384,
+          "percentile_95_interval": [
+            -1.3198489583462232,
+            0.9025783825799649
+          ]
+        },
+        "kd_001_mixed_benefit": {
+          "mean": 0.6088052871458967,
+          "percentile_95_interval": [
+            -0.5505681077615794,
+            1.8734529691837556
+          ]
+        },
+        "kd_001_dice_difference": {
+          "mean": -0.0039790271620762235,
+          "percentile_95_interval": [
+            -0.0391806298668025,
+            0.028296639801781813
+          ]
+        },
+        "kd_001_cost_vs_new_reprocessing": {
+          "mean": 0.11728916464167918,
+          "percentile_95_interval": [
+            -1.2640962499493704,
+            1.4674767314158714
+          ]
+        },
+        "kd_010_mixed_benefit": {
+          "mean": 0.8953119072134256,
+          "percentile_95_interval": [
+            -0.6304945134645004,
+            2.4753281367232667
+          ]
+        },
+        "kd_010_dice_difference": {
+          "mean": -0.06831584462301761,
+          "percentile_95_interval": [
+            -0.1065822783543004,
+            -0.03235077027302931
+          ]
+        },
+        "kd_010_cost_vs_new_reprocessing": {
+          "mean": -0.16921745542584993,
+          "percentile_95_interval": [
+            -1.4597343084064085,
+            1.1401850129040239
+          ]
+        },
+        "mapped_old_new_benefit": {
+          "mean": -2.917489524536258,
+          "percentile_95_interval": [
+            -4.859611771914411,
+            -1.0863894558592313
+          ]
+        },
+        "old_mapped_new_benefit": {
+          "mean": -0.15866646976354734,
+          "percentile_95_interval": [
+            -2.7425486730004,
+            2.101594473599905
+          ]
+        },
+        "mapped_old_continued_benefit": {
+          "mean": 0.018810873094887163,
+          "percentile_95_interval": [
+            -0.2837762902980287,
+            0.3208564770369157
+          ]
+        },
+        "old_mapped_continued_benefit": {
+          "mean": -0.05899228134924061,
+          "percentile_95_interval": [
+            -0.7893440638421622,
+            0.6237434425738365
+          ]
+        }
+      },
+      "boundary_diagnostics": {
+        "old": {
+          "empty_followup_predictions": 0,
+          "patients_with_defined_hd95": 45,
+          "patient_mean_hd95_mm_nonempty_only": 9.35719928053131
+        },
+        "new": {
+          "empty_followup_predictions": 0,
+          "patients_with_defined_hd95": 45,
+          "patient_mean_hd95_mm_nonempty_only": 8.046268937688556
+        },
+        "continued": {
+          "empty_followup_predictions": 0,
+          "patients_with_defined_hd95": 45,
+          "patient_mean_hd95_mm_nonempty_only": 8.878564116150043
+        },
+        "scratch": {
+          "empty_followup_predictions": 0,
+          "patients_with_defined_hd95": 45,
+          "patient_mean_hd95_mm_nonempty_only": 7.32573625397984
+        },
+        "bcwi_025": {
+          "empty_followup_predictions": 0,
+          "patients_with_defined_hd95": 45,
+          "patient_mean_hd95_mm_nonempty_only": 7.960638321989905
+        },
+        "bcwi_050": {
+          "empty_followup_predictions": 0,
+          "patients_with_defined_hd95": 45,
+          "patient_mean_hd95_mm_nonempty_only": 8.125569808437973
+        },
+        "bcwi_075": {
+          "empty_followup_predictions": 0,
+          "patients_with_defined_hd95": 45,
+          "patient_mean_hd95_mm_nonempty_only": 8.55920886330459
+        },
+        "kd_001": {
+          "empty_followup_predictions": 0,
+          "patients_with_defined_hd95": 45,
+          "patient_mean_hd95_mm_nonempty_only": 8.099835147478352
+        },
+        "kd_010": {
+          "empty_followup_predictions": 0,
+          "patients_with_defined_hd95": 45,
+          "patient_mean_hd95_mm_nonempty_only": 8.70716715054888
+        }
+      },
+      "training_seed": 20260915
+    },
+    {
+      "strategies": {
+        "old_old": {
+          "mae_ml": 9.584765830178025,
+          "signed_error_ml": -0.7589874970427789
+        },
+        "old_new": {
+          "mae_ml": 8.93260316296411,
+          "signed_error_ml": -0.7693048976765507
+        },
+        "new_new": {
+          "mae_ml": 8.251904154719794,
+          "signed_error_ml": -2.151297584414249
+        },
+        "old_continued": {
+          "mae_ml": 9.574843738376858,
+          "signed_error_ml": -0.6706372068540989
+        },
+        "continued_continued": {
+          "mae_ml": 8.901057556678436,
+          "signed_error_ml": -0.6662628699735063
+        },
+        "old_scratch": {
+          "mae_ml": 10.789812395258537,
+          "signed_error_ml": 2.3278615591136793
+        },
+        "scratch_scratch": {
+          "mae_ml": 8.86459436191725,
+          "signed_error_ml": -1.72028592765471
+        },
+        "old_bcwi_025": {
+          "mae_ml": 9.379381462006714,
+          "signed_error_ml": 1.5270050601315566
+        },
+        "bcwi_025_bcwi_025": {
+          "mae_ml": 8.783118350762873,
+          "signed_error_ml": -2.1517339181106365
+        },
+        "old_bcwi_050": {
+          "mae_ml": 9.915800141198504,
+          "signed_error_ml": 2.501529595390709
+        },
+        "bcwi_050_bcwi_050": {
+          "mae_ml": 9.137346882148053,
+          "signed_error_ml": -1.7296308881255689
+        },
+        "old_bcwi_075": {
+          "mae_ml": 9.967601604770469,
+          "signed_error_ml": 1.6800580926012454
+        },
+        "bcwi_075_bcwi_075": {
+          "mae_ml": 9.369943734744215,
+          "signed_error_ml": -1.3013654179847636
+        },
+        "old_kd_001": {
+          "mae_ml": 9.076567128382287,
+          "signed_error_ml": 0.9401143062998696
+        },
+        "kd_001_kd_001": {
+          "mae_ml": 7.799860588452274,
+          "signed_error_ml": -0.988735807254599
+        },
+        "old_kd_010": {
+          "mae_ml": 9.407622179758091,
+          "signed_error_ml": -1.2258758550350144
+        },
+        "kd_010_kd_010": {
+          "mae_ml": 8.357302655103505,
+          "signed_error_ml": -1.8069461997684357
+        },
+        "mapped_old_new": {
+          "mae_ml": 10.676622513908265,
+          "signed_error_ml": -4.770366574642285
+        },
+        "old_mapped_new": {
+          "mae_ml": 8.669500012694334,
+          "signed_error_ml": -4.966822022356714
+        },
+        "mapped_old_continued": {
+          "mae_ml": 9.541925794765067,
+          "signed_error_ml": -1.4926935849124958
+        },
+        "old_mapped_continued": {
+          "mae_ml": 9.036655805178725,
+          "signed_error_ml": -4.480893037301622
+        }
+      },
+      "patient_mean_followup_dice": {
+        "old": 0.5853632040069309,
+        "new": 0.6401615047834847,
+        "continued": 0.6032900411115617,
+        "scratch": 0.6170401125605097,
+        "bcwi_025": 0.6616493413813175,
+        "bcwi_050": 0.6508963791356233,
+        "bcwi_075": 0.6265386551781033,
+        "kd_001": 0.6588232231451941,
+        "kd_010": 0.6135208842765272
+      },
+      "primary_contrasts": {
+        "ordinary_update_benefit": {
+          "mean": 0.6521626672139146,
+          "percentile_95_interval": [
+            -0.6452401046452015,
+            2.0412845570379448
+          ]
+        },
+        "retaining_baseline_cost": {
+          "mean": 0.6806990082443168,
+          "percentile_95_interval": [
+            -0.9381197740302708,
+            2.2370992455686234
+          ]
+        },
+        "contour_benefit": {
+          "mean": 0.05479830077655379,
+          "percentile_95_interval": [
+            0.01274226126222007,
+            0.1050588357685542
+          ]
+        }
+      },
+      "descriptive_secondary_contrasts": {
+        "continued_mixed_benefit": {
+          "mean": -0.6422405754127475,
+          "percentile_95_interval": [
+            -1.8122992321711615,
+            0.45983310092154533
+          ]
+        },
+        "continued_dice_difference": {
+          "mean": -0.03687146367192288,
+          "percentile_95_interval": [
+            -0.08573763512641873,
+            0.0032219940509863165
+          ]
+        },
+        "continued_cost_vs_new_reprocessing": {
+          "mean": 1.322939583657064,
+          "percentile_95_interval": [
+            -0.590558348906962,
+            3.383171112717265
+          ]
+        },
+        "scratch_mixed_benefit": {
+          "mean": -1.8572092322944243,
+          "percentile_95_interval": [
+            -4.167770098121734,
+            0.20910665966243802
+          ]
+        },
+        "scratch_dice_difference": {
+          "mean": -0.02312139222297485,
+          "percentile_95_interval": [
+            -0.059459067282727276,
+            0.011814105169907118
+          ]
+        },
+        "scratch_cost_vs_new_reprocessing": {
+          "mean": 2.5379082405387408,
+          "percentile_95_interval": [
+            0.3462249671990623,
+            4.897931957295995
+          ]
+        },
+        "bcwi_025_mixed_benefit": {
+          "mean": -0.4467782990426042,
+          "percentile_95_interval": [
+            -1.0824723045134994,
+            0.2225223951129546
+          ]
+        },
+        "bcwi_025_dice_difference": {
+          "mean": 0.021487836597832807,
+          "percentile_95_interval": [
+            0.005295846514516841,
+            0.038523310327300414
+          ]
+        },
+        "bcwi_025_cost_vs_new_reprocessing": {
+          "mean": 1.127477307286921,
+          "percentile_95_interval": [
+            -0.6441777933064005,
+            2.9779107475445876
+          ]
+        },
+        "bcwi_050_mixed_benefit": {
+          "mean": -0.9831969782343928,
+          "percentile_95_interval": [
+            -1.8303612963202376,
+            -0.1764097364396383
+          ]
+        },
+        "bcwi_050_dice_difference": {
+          "mean": 0.010734874352138473,
+          "percentile_95_interval": [
+            -0.023525238621754915,
+            0.04124362582665023
+          ]
+        },
+        "bcwi_050_cost_vs_new_reprocessing": {
+          "mean": 1.6638959864787093,
+          "percentile_95_interval": [
+            -0.2425193775744736,
+            3.661015608261452
+          ]
+        },
+        "bcwi_075_mixed_benefit": {
+          "mean": -1.0349984418063578,
+          "percentile_95_interval": [
+            -2.0883018205596175,
+            -0.07550042263265333
+          ]
+        },
+        "bcwi_075_dice_difference": {
+          "mean": -0.013622849605381385,
+          "percentile_95_interval": [
+            -0.060861209502259386,
+            0.024944065980242052
+          ]
+        },
+        "bcwi_075_cost_vs_new_reprocessing": {
+          "mean": 1.715697450050675,
+          "percentile_95_interval": [
+            -0.16529838500690086,
+            3.6791971876196694
+          ]
+        },
+        "kd_001_mixed_benefit": {
+          "mean": -0.1439639654181779,
+          "percentile_95_interval": [
+            -1.2948759183399183,
+            1.1749862162097742
+          ]
+        },
+        "kd_001_dice_difference": {
+          "mean": 0.01866171836170952,
+          "percentile_95_interval": [
+            -0.0014053702335894637,
+            0.039250495297852975
+          ]
+        },
+        "kd_001_cost_vs_new_reprocessing": {
+          "mean": 0.8246629736624947,
+          "percentile_95_interval": [
+            -0.8295801728267213,
+            2.552552861695901
+          ]
+        },
+        "kd_010_mixed_benefit": {
+          "mean": -0.47501901679398034,
+          "percentile_95_interval": [
+            -1.5809963874042874,
+            0.5076017876390192
+          ]
+        },
+        "kd_010_dice_difference": {
+          "mean": -0.026640620506957428,
+          "percentile_95_interval": [
+            -0.054942827240082454,
+            -9.918427338350426e-05
+          ]
+        },
+        "kd_010_cost_vs_new_reprocessing": {
+          "mean": 1.1557180250382972,
+          "percentile_95_interval": [
+            -0.8995413551838485,
+            3.3327592270138617
+          ]
+        },
+        "mapped_old_new_benefit": {
+          "mean": -1.7440193509441562,
+          "percentile_95_interval": [
+            -2.71763822394538,
+            -0.8403123308889991
+          ]
+        },
+        "old_mapped_new_benefit": {
+          "mean": 0.26310315026977604,
+          "percentile_95_interval": [
+            -0.8339754512471124,
+            1.4438396754408485
+          ]
+        },
+        "mapped_old_continued_benefit": {
+          "mean": 0.03291794361178998,
+          "percentile_95_interval": [
+            -0.2660240939504503,
+            0.3301090408045464
+          ]
+        },
+        "old_mapped_continued_benefit": {
+          "mean": 0.5381879331981319,
+          "percentile_95_interval": [
+            -0.40854656009877344,
+            1.4834654356992132
+          ]
+        }
+      },
+      "boundary_diagnostics": {
+        "old": {
+          "empty_followup_predictions": 0,
+          "patients_with_defined_hd95": 45,
+          "patient_mean_hd95_mm_nonempty_only": 8.784464294142472
+        },
+        "new": {
+          "empty_followup_predictions": 0,
+          "patients_with_defined_hd95": 45,
+          "patient_mean_hd95_mm_nonempty_only": 7.9372433968869665
+        },
+        "continued": {
+          "empty_followup_predictions": 0,
+          "patients_with_defined_hd95": 45,
+          "patient_mean_hd95_mm_nonempty_only": 8.700166525670667
+        },
+        "scratch": {
+          "empty_followup_predictions": 0,
+          "patients_with_defined_hd95": 45,
+          "patient_mean_hd95_mm_nonempty_only": 8.121350067308564
+        },
+        "bcwi_025": {
+          "empty_followup_predictions": 0,
+          "patients_with_defined_hd95": 45,
+          "patient_mean_hd95_mm_nonempty_only": 7.649293458939322
+        },
+        "bcwi_050": {
+          "empty_followup_predictions": 0,
+          "patients_with_defined_hd95": 45,
+          "patient_mean_hd95_mm_nonempty_only": 7.7788341135581405
+        },
+        "bcwi_075": {
+          "empty_followup_predictions": 0,
+          "patients_with_defined_hd95": 45,
+          "patient_mean_hd95_mm_nonempty_only": 8.145987726541517
+        },
+        "kd_001": {
+          "empty_followup_predictions": 0,
+          "patients_with_defined_hd95": 45,
+          "patient_mean_hd95_mm_nonempty_only": 7.690293469175462
+        },
+        "kd_010": {
+          "empty_followup_predictions": 0,
+          "patients_with_defined_hd95": 45,
+          "patient_mean_hd95_mm_nonempty_only": 8.059689900267804
+        }
+      },
+      "training_seed": 20260917
+    },
+    {
+      "strategies": {
+        "old_old": {
+          "mae_ml": 8.412849802524667,
+          "signed_error_ml": -1.6312353918102276
+        },
+        "old_new": {
+          "mae_ml": 14.751591942649933,
+          "signed_error_ml": 10.79687143722126
+        },
+        "new_new": {
+          "mae_ml": 12.438333550980959,
+          "signed_error_ml": -0.22751795261778313
+        },
+        "old_continued": {
+          "mae_ml": 9.177074152589254,
+          "signed_error_ml": 1.3904858447583315
+        },
+        "continued_continued": {
+          "mae_ml": 9.380197051988802,
+          "signed_error_ml": 0.28255231545392606
+        },
+        "old_scratch": {
+          "mae_ml": 11.566318794242987,
+          "signed_error_ml": 8.607509127015335
+        },
+        "scratch_scratch": {
+          "mae_ml": 9.749312681835885,
+          "signed_error_ml": -0.6279914407701913
+        },
+        "old_bcwi_025": {
+          "mae_ml": 12.92835045020111,
+          "signed_error_ml": 8.781412285048223
+        },
+        "bcwi_025_bcwi_025": {
+          "mae_ml": 11.492354324468161,
+          "signed_error_ml": 0.010849518299126674
+        },
+        "old_bcwi_050": {
+          "mae_ml": 10.888129512847549,
+          "signed_error_ml": 6.193642887382671
+        },
+        "bcwi_050_bcwi_050": {
+          "mae_ml": 10.414302652785782,
+          "signed_error_ml": -0.014531814604058132
+        },
+        "old_bcwi_075": {
+          "mae_ml": 8.905178215171125,
+          "signed_error_ml": 2.8125608370417914
+        },
+        "bcwi_075_bcwi_075": {
+          "mae_ml": 9.492888361950923,
+          "signed_error_ml": -0.47293255557532476
+        },
+        "old_kd_001": {
+          "mae_ml": 11.137273977510043,
+          "signed_error_ml": 5.74620925001072
+        },
+        "kd_001_kd_001": {
+          "mae_ml": 9.183024177303194,
+          "signed_error_ml": -0.5789057234031112
+        },
+        "old_kd_010": {
+          "mae_ml": 8.881500091321309,
+          "signed_error_ml": 3.4982865224791295
+        },
+        "kd_010_kd_010": {
+          "mae_ml": 7.712337890267771,
+          "signed_error_ml": -1.311409406130503
+        },
+        "mapped_old_new": {
+          "mae_ml": 14.959868104721032,
+          "signed_error_ml": 1.9760353386662624
+        },
+        "old_mapped_new": {
+          "mae_ml": 9.112332911989078,
+          "signed_error_ml": -3.1845074830369917
+        },
+        "mapped_old_continued": {
+          "mae_ml": 9.086759613367446,
+          "signed_error_ml": 1.8870854408211242
+        },
+        "old_mapped_continued": {
+          "mae_ml": 8.697185319980361,
+          "signed_error_ml": 1.0631088631400196
+        }
+      },
+      "patient_mean_followup_dice": {
+        "old": 0.5306271732686771,
+        "new": 0.6093771207807573,
+        "continued": 0.5348387970853108,
+        "scratch": 0.6298614407050034,
+        "bcwi_025": 0.6145800665511486,
+        "bcwi_050": 0.6142189559745576,
+        "bcwi_075": 0.5931974330736928,
+        "kd_001": 0.6190628904310039,
+        "kd_010": 0.626617029137952
+      },
+      "primary_contrasts": {
+        "ordinary_update_benefit": {
+          "mean": -6.3387421401252695,
+          "percentile_95_interval": [
+            -10.310229315013625,
+            -2.859397720005261
+          ]
+        },
+        "retaining_baseline_cost": {
+          "mean": 2.313258391668979,
+          "percentile_95_interval": [
+            -1.2580888373234766,
+            6.4100858232394895
+          ]
+        },
+        "contour_benefit": {
+          "mean": 0.07874994751208016,
+          "percentile_95_interval": [
+            0.03546991358432981,
+            0.12290200077038557
+          ]
+        }
+      },
+      "descriptive_secondary_contrasts": {
+        "continued_mixed_benefit": {
+          "mean": 5.574517790060681,
+          "percentile_95_interval": [
+            2.4760073635953046,
+            9.139195491497109
+          ]
+        },
+        "continued_dice_difference": {
+          "mean": -0.07453832369544663,
+          "percentile_95_interval": [
+            -0.11138064219939278,
+            -0.03916210311893784
+          ]
+        },
+        "continued_cost_vs_new_reprocessing": {
+          "mean": -3.2612593983917026,
+          "percentile_95_interval": [
+            -5.820512822655705,
+            -0.8111237249274748
+          ]
+        },
+        "scratch_mixed_benefit": {
+          "mean": 3.18527314840695,
+          "percentile_95_interval": [
+            0.7994020143738597,
+            5.879142534656989
+          ]
+        },
+        "scratch_dice_difference": {
+          "mean": 0.02048431992424608,
+          "percentile_95_interval": [
+            -0.011075919762534218,
+            0.05104567849642271
+          ]
+        },
+        "scratch_cost_vs_new_reprocessing": {
+          "mean": -0.8720147567379715,
+          "percentile_95_interval": [
+            -4.129198595167626,
+            2.5498515126759904
+          ]
+        },
+        "bcwi_025_mixed_benefit": {
+          "mean": 1.8232414924488234,
+          "percentile_95_interval": [
+            0.9920073247221739,
+            2.7615815442037768
+          ]
+        },
+        "bcwi_025_dice_difference": {
+          "mean": 0.005202945770391279,
+          "percentile_95_interval": [
+            -0.007019993203781209,
+            0.017113221704397275
+          ]
+        },
+        "bcwi_025_cost_vs_new_reprocessing": {
+          "mean": 0.49001689922015507,
+          "percentile_95_interval": [
+            -2.6954373380820833,
+            4.034315766551531
+          ]
+        },
+        "bcwi_050_mixed_benefit": {
+          "mean": 3.863462429802387,
+          "percentile_95_interval": [
+            2.0472757572143276,
+            5.919339770853582
+          ]
+        },
+        "bcwi_050_dice_difference": {
+          "mean": 0.004841835193800293,
+          "percentile_95_interval": [
+            -0.01819843108894082,
+            0.02868398553139088
+          ]
+        },
+        "bcwi_050_cost_vs_new_reprocessing": {
+          "mean": -1.550204038133408,
+          "percentile_95_interval": [
+            -4.405295794192434,
+            1.30759717852738
+          ]
+        },
+        "bcwi_075_mixed_benefit": {
+          "mean": 5.846413727478811,
+          "percentile_95_interval": [
+            2.9162981102731385,
+            9.113637005336322
+          ]
+        },
+        "bcwi_075_dice_difference": {
+          "mean": -0.016179687707064516,
+          "percentile_95_interval": [
+            -0.0499171934415582,
+            0.01838543951473166
+          ]
+        },
+        "bcwi_075_cost_vs_new_reprocessing": {
+          "mean": -3.533155335809832,
+          "percentile_95_interval": [
+            -6.22474871385,
+            -1.1004421368432855
+          ]
+        },
+        "kd_001_mixed_benefit": {
+          "mean": 3.6143179651398936,
+          "percentile_95_interval": [
+            1.4132659705920714,
+            6.094288516147556
+          ]
+        },
+        "kd_001_dice_difference": {
+          "mean": 0.009685769650246548,
+          "percentile_95_interval": [
+            -0.022166269333424776,
+            0.03829922804746412
+          ]
+        },
+        "kd_001_cost_vs_new_reprocessing": {
+          "mean": -1.3010595734709147,
+          "percentile_95_interval": [
+            -4.184528594946682,
+            1.6204576450249006
+          ]
+        },
+        "kd_010_mixed_benefit": {
+          "mean": 5.870091851328625,
+          "percentile_95_interval": [
+            2.732726663982233,
+            9.553997705365404
+          ]
+        },
+        "kd_010_dice_difference": {
+          "mean": 0.017239908357194703,
+          "percentile_95_interval": [
+            -0.015875119327508153,
+            0.055564314323820294
+          ]
+        },
+        "kd_010_cost_vs_new_reprocessing": {
+          "mean": -3.556833459659648,
+          "percentile_95_interval": [
+            -6.388795472980149,
+            -0.9159381104654044
+          ]
+        },
+        "mapped_old_new_benefit": {
+          "mean": -0.20827616207109684,
+          "percentile_95_interval": [
+            -1.8188137761037844,
+            1.4387585257522955
+          ]
+        },
+        "old_mapped_new_benefit": {
+          "mean": 5.639259030660856,
+          "percentile_95_interval": [
+            2.2660870918970852,
+            9.513759631024547
+          ]
+        },
+        "mapped_old_continued_benefit": {
+          "mean": 0.0903145392218056,
+          "percentile_95_interval": [
+            -0.08760809504615293,
+            0.2553701824642593
+          ]
+        },
+        "old_mapped_continued_benefit": {
+          "mean": 0.479888832608893,
+          "percentile_95_interval": [
+            0.16372557691750525,
+            0.8582688871075431
+          ]
+        }
+      },
+      "boundary_diagnostics": {
+        "old": {
+          "empty_followup_predictions": 0,
+          "patients_with_defined_hd95": 45,
+          "patient_mean_hd95_mm_nonempty_only": 9.609618549040105
+        },
+        "new": {
+          "empty_followup_predictions": 0,
+          "patients_with_defined_hd95": 45,
+          "patient_mean_hd95_mm_nonempty_only": 8.595552386529222
+        },
+        "continued": {
+          "empty_followup_predictions": 0,
+          "patients_with_defined_hd95": 45,
+          "patient_mean_hd95_mm_nonempty_only": 9.33743728215899
+        },
+        "scratch": {
+          "empty_followup_predictions": 0,
+          "patients_with_defined_hd95": 45,
+          "patient_mean_hd95_mm_nonempty_only": 7.902717141909462
+        },
+        "bcwi_025": {
+          "empty_followup_predictions": 0,
+          "patients_with_defined_hd95": 45,
+          "patient_mean_hd95_mm_nonempty_only": 8.183285430453726
+        },
+        "bcwi_050": {
+          "empty_followup_predictions": 0,
+          "patients_with_defined_hd95": 45,
+          "patient_mean_hd95_mm_nonempty_only": 8.0454801714461
+        },
+        "bcwi_075": {
+          "empty_followup_predictions": 0,
+          "patients_with_defined_hd95": 45,
+          "patient_mean_hd95_mm_nonempty_only": 8.295251935187277
+        },
+        "kd_001": {
+          "empty_followup_predictions": 0,
+          "patients_with_defined_hd95": 45,
+          "patient_mean_hd95_mm_nonempty_only": 7.9561232610938895
+        },
+        "kd_010": {
+          "empty_followup_predictions": 0,
+          "patients_with_defined_hd95": 45,
+          "patient_mean_hd95_mm_nonempty_only": 7.922677636194374
+        }
+      },
+      "training_seed": 20260919
+    }
+  ],
+  "bootstrap_draws": 10000,
+  "bootstrap_seed": 20260924,
+  "primary_family_size": 6,
+  "precision_target_halfwidth_ml": 5.0,
+  "clinical_equivalence_margin_ml": null,
+  "intervals_conditional_on_fixed_models_and_calibration": true,
+  "patient_resampling": true,
+  "internal_test_values_read": false,
+  "external_fitting_performed": false,
+  "completed_at_utc": "2026-09-19T06:23:03.630013+00:00",
+  "policy_sha256": "f163b3dbb647b4d9fd28f279a520aa69ab67964de9bf2980b33082737a93fdd9",
+  "checkpoint_registry_sha256": "48ddb5bc56d807c993859761bead4b0a384ab27dd279430fbc70e9acc59e637f",
+  "model_freeze_sha256": "b663dbc94ed8cc0f5b4923cdd2b1c1552f516eea62ee4b99128fd1ccec5197b0",
+  "preprocessing_report_sha256": "c7d9270b1059d72432367714a54919644f9c7971f6185b7df1bc47d7ccc2b0e9",
+  "seed_receipts": [
+    {
+      "status": "EXTERNAL_SEED_COMPLETE",
+      "protocol_id": "CT-UPDATE-010",
+      "seed": 20260915,
+      "patients": 45,
+      "pairs": 181,
+      "timepoints": 362,
+      "models": [
+        "old",
+        "new",
+        "continued",
+        "scratch",
+        "bcwi_025",
+        "bcwi_050",
+        "bcwi_075",
+        "kd_001",
+        "kd_010"
+      ],
+      "policy_sha256": "f163b3dbb647b4d9fd28f279a520aa69ab67964de9bf2980b33082737a93fdd9",
+      "preprocessing_report_sha256": "c7d9270b1059d72432367714a54919644f9c7971f6185b7df1bc47d7ccc2b0e9",
+      "index_sha256": "d8fc72e81e7f366d8446b3ef682ee4c604e110da4a2d462ca289c552ed960b52",
+      "model_freeze_sha256": "b663dbc94ed8cc0f5b4923cdd2b1c1552f516eea62ee4b99128fd1ccec5197b0",
+      "checkpoint_registry_sha256": "48ddb5bc56d807c993859761bead4b0a384ab27dd279430fbc70e9acc59e637f",
+      "model_state_sha256": {
+        "old": "370a53495aa05f5441ef2091d1df1223ea14725d6c77d61fcb4820edd24f8799",
+        "new": "c5719044682636712aef4bf5fea21606156447fd7669a589f707a0031bbf8187",
+        "continued": "92562b89387df599e389867c85e5201e3dc1cb6bb1419d3e6a9f50a6fe7d9ea1",
+        "scratch": "ae1a8027eca98853cf8658be70f72f340e6494fb1ec947e5c9dd275e196aac92",
+        "kd_001": "64c0825c498cb7f6a070dd8730865ef1e3e124129e9f96c2e5eb6046fafde1ed",
+        "kd_010": "e25ae9c5755a859a8381337e2660ed61bbcc017ddcf6de357fc728507a318b92",
+        "bcwi_025": "f82fdfbe42981f4462629f920b028a2f339f0e3136e533584f0cd49284715902",
+        "bcwi_050": "f2cd8c31b5fc888857899646be76583bffb74cd11675c45eaa5748d1e6827008",
+        "bcwi_075": "df2fd43a2f9577647338a69d3a607351a83314da5341483c7c471882bc3c850c"
+      },
+      "private_predictions_sha256": "f3d95efa61815a5c3c4815f72eeb0c28f4da3bd5f8f1bf5df8c97f2c3bd91fd1",
+      "elapsed_seconds": 28219.58974137716,
+      "peak_gpu_allocated_bytes": 211664896,
+      "internal_test_values_read": false
+    },
+    {
+      "status": "EXTERNAL_SEED_COMPLETE",
+      "protocol_id": "CT-UPDATE-010",
+      "seed": 20260917,
+      "patients": 45,
+      "pairs": 181,
+      "timepoints": 362,
+      "models": [
+        "old",
+        "new",
+        "continued",
+        "scratch",
+        "bcwi_025",
+        "bcwi_050",
+        "bcwi_075",
+        "kd_001",
+        "kd_010"
+      ],
+      "policy_sha256": "f163b3dbb647b4d9fd28f279a520aa69ab67964de9bf2980b33082737a93fdd9",
+      "preprocessing_report_sha256": "c7d9270b1059d72432367714a54919644f9c7971f6185b7df1bc47d7ccc2b0e9",
+      "index_sha256": "d8fc72e81e7f366d8446b3ef682ee4c604e110da4a2d462ca289c552ed960b52",
+      "model_freeze_sha256": "b663dbc94ed8cc0f5b4923cdd2b1c1552f516eea62ee4b99128fd1ccec5197b0",
+      "checkpoint_registry_sha256": "48ddb5bc56d807c993859761bead4b0a384ab27dd279430fbc70e9acc59e637f",
+      "model_state_sha256": {
+        "old": "57a8ff327d754ff60cde09330683a21324f24e3b216ed1a6e687546381bf754e",
+        "new": "98a61d68b6a67c3c39536e1e65eff6c8ba42491be2ba3d35ae1242a1da1995c5",
+        "continued": "896e3c40537b79712d4dc54268adc2a6dd8076a488ac2de530b05b4845372cc0",
+        "scratch": "55857c28a8f55e2ac8c874f292d82b3116141b4822209155ab9ed86dacfcc9b3",
+        "kd_001": "a47d3aa31e8737cff739a86d4438a7a7593dce41b2cd9f81073d969170b9c106",
+        "kd_010": "f0564bf0fda3416492bb532b60f1136236241b44168eb842feedfdb74073e789",
+        "bcwi_025": "ee0e348fbc5a274d81103bacda60a791ebf4337fd6263bcd1c1fc3947a123e01",
+        "bcwi_050": "0359b83f4da1f14664320e2e7ace144a1cca20bf4e41374ef35cd257b11770df",
+        "bcwi_075": "dff7dbb62457cfd660c9ff3028e3c97052baa786618dfb62bfec537fec79fb41"
+      },
+      "private_predictions_sha256": "76c003ac75cbc089548b77a59c7bf86f3198ec4ceb3b5627c0b324183d8ec751",
+      "elapsed_seconds": 28229.440926358104,
+      "peak_gpu_allocated_bytes": 211664896,
+      "internal_test_values_read": false
+    },
+    {
+      "status": "EXTERNAL_SEED_COMPLETE",
+      "protocol_id": "CT-UPDATE-010",
+      "seed": 20260919,
+      "patients": 45,
+      "pairs": 181,
+      "timepoints": 362,
+      "models": [
+        "old",
+        "new",
+        "continued",
+        "scratch",
+        "bcwi_025",
+        "bcwi_050",
+        "bcwi_075",
+        "kd_001",
+        "kd_010"
+      ],
+      "policy_sha256": "f163b3dbb647b4d9fd28f279a520aa69ab67964de9bf2980b33082737a93fdd9",
+      "preprocessing_report_sha256": "c7d9270b1059d72432367714a54919644f9c7971f6185b7df1bc47d7ccc2b0e9",
+      "index_sha256": "d8fc72e81e7f366d8446b3ef682ee4c604e110da4a2d462ca289c552ed960b52",
+      "model_freeze_sha256": "b663dbc94ed8cc0f5b4923cdd2b1c1552f516eea62ee4b99128fd1ccec5197b0",
+      "checkpoint_registry_sha256": "48ddb5bc56d807c993859761bead4b0a384ab27dd279430fbc70e9acc59e637f",
+      "model_state_sha256": {
+        "old": "ba39d43aa3c68c412c85c74043c41b3bb0db9e4922c32c50bc960decb3207f83",
+        "new": "fd0303c115e896bc8cf4b230279fe33d9373ab88b1f2edd7a98ebc74774f3339",
+        "continued": "161721d08f6aa96be64e69d44297c370dca825098791c702a533e976cc642f38",
+        "scratch": "d201592c57728534c46bf892471c83e661632ffbe3b29fc6940625ab6fa7b29f",
+        "kd_001": "64722ad4485d2c9c4061f10e8e2628f8509b1296dad8482bd533a2d2e369a4e7",
+        "kd_010": "e615f3ffe19ea5e6831e9959596a6a6c831c883457bf1288e6d3074498819174",
+        "bcwi_025": "8d8b29016ce1b85fbb91d3c76148770325e76ddb0725a584e9a588af297da923",
+        "bcwi_050": "b81c936aecb46d9af8026e3d59629f90dde3f002dd0cb327ab7f700347c25280",
+        "bcwi_075": "90c6c0c21d57cb8d58ca10be28f68e5bb380f7d7888eddc7f28b0d1934ea8a50"
+      },
+      "private_predictions_sha256": "f95f9dce73f9e739b9cf0239df342346116cfcf9ccd9eb7379e3708f599833fa",
+      "elapsed_seconds": 27975.2659842968,
+      "peak_gpu_allocated_bytes": 211664896,
+      "internal_test_values_read": false
+    }
+  ]
+}

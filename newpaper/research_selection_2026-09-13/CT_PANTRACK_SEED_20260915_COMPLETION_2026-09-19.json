@@ -1,0 +1,39 @@
+{
+  "status": "EXTERNAL_SEED_COMPLETE",
+  "protocol_id": "CT-UPDATE-010",
+  "seed": 20260915,
+  "patients": 45,
+  "pairs": 181,
+  "timepoints": 362,
+  "models": [
+    "old",
+    "new",
+    "continued",
+    "scratch",
+    "bcwi_025",
+    "bcwi_050",
+    "bcwi_075",
+    "kd_001",
+    "kd_010"
+  ],
+  "policy_sha256": "f163b3dbb647b4d9fd28f279a520aa69ab67964de9bf2980b33082737a93fdd9",
+  "preprocessing_report_sha256": "c7d9270b1059d72432367714a54919644f9c7971f6185b7df1bc47d7ccc2b0e9",
+  "index_sha256": "d8fc72e81e7f366d8446b3ef682ee4c604e110da4a2d462ca289c552ed960b52",
+  "model_freeze_sha256": "b663dbc94ed8cc0f5b4923cdd2b1c1552f516eea62ee4b99128fd1ccec5197b0",
+  "checkpoint_registry_sha256": "48ddb5bc56d807c993859761bead4b0a384ab27dd279430fbc70e9acc59e637f",
+  "model_state_sha256": {
+    "old": "370a53495aa05f5441ef2091d1df1223ea14725d6c77d61fcb4820edd24f8799",
+    "new": "c5719044682636712aef4bf5fea21606156447fd7669a589f707a0031bbf8187",
+    "continued": "92562b89387df599e389867c85e5201e3dc1cb6bb1419d3e6a9f50a6fe7d9ea1",
+    "scratch": "ae1a8027eca98853cf8658be70f72f340e6494fb1ec947e5c9dd275e196aac92",
+    "kd_001": "64c0825c498cb7f6a070dd8730865ef1e3e124129e9f96c2e5eb6046fafde1ed",
+    "kd_010": "e25ae9c5755a859a8381337e2660ed61bbcc017ddcf6de357fc728507a318b92",
+    "bcwi_025": "f82fdfbe42981f4462629f920b028a2f339f0e3136e533584f0cd49284715902",
+    "bcwi_050": "f2cd8c31b5fc888857899646be76583bffb74cd11675c45eaa5748d1e6827008",
+    "bcwi_075": "df2fd43a2f9577647338a69d3a607351a83314da5341483c7c471882bc3c850c"
+  },
+  "private_predictions_sha256": "f3d95efa61815a5c3c4815f72eeb0c28f4da3bd5f8f1bf5df8c97f2c3bd91fd1",
+  "elapsed_seconds": 28219.58974137716,
+  "peak_gpu_allocated_bytes": 211664896,
+  "internal_test_values_read": false
+}

@@ -1,0 +1,1622 @@
+{
+  "status": "REPLICATION_ANALYSIS_COMPLETE",
+  "protocol_id": "CT-UPDATE-015",
+  "runs": 20,
+  "seeds": [
+    20261001,
+    20261002,
+    20261003,
+    20261004,
+    20261005,
+    20261006,
+    20261007,
+    20261008,
+    20261009,
+    20261010,
+    20261011,
+    20261012,
+    20261013,
+    20261014,
+    20261015,
+    20261016,
+    20261017,
+    20261018,
+    20261019,
+    20261020
+  ],
+  "missing_seeds": [],
+  "models": [
+    "old",
+    "new",
+    "continued"
+  ],
+  "primary_contrasts": [
+    "retaining_baseline_cost",
+    "ordinary_update_benefit",
+    "contour_benefit"
+  ],
+  "primary_family_size": 6,
+  "bootstrap": "two_way_independent_run_and_patient_percentile",
+  "bootstrap_draws": 10000,
+  "bootstrap_seed": 20261021,
+  "weighting": "pair_losses_within_patient_then_equal_patients_then_equal_runs",
+  "original_runs_pooled": false,
+  "cohorts_pooled": false,
+  "intervals_resample_training_runs": true,
+  "patient_level_values_included": false,
+  "cohorts": {
+    "internal": {
+      "patients": 29,
+      "pairs": 277,
+      "primary_contrasts": {
+        "retaining_baseline_cost": {
+          "mean": 0.5241724928328285,
+          "two_way_percentile_95": [
+            0.21005561736294703,
+            0.9015272601645596
+          ],
+          "patient_only_percentile_95": [
+            0.29305336285351336,
+            0.7876892398750633
+          ],
+          "run_only_percentile_95": [
+            0.35606029496910435,
+            0.6888775943056011
+          ],
+          "per_run_means": [
+            0.8073770618402631,
+            0.46468274256413244,
+            0.267747047426666,
+            0.2587708897753516,
+            1.128204428065952,
+            0.3364802771748771,
+            1.3017989046140495,
+            0.8090928887682888,
+            0.5131224814351438,
+            0.45974683984816056,
+            0.8631131403409673,
+            0.520081320596936,
+            0.008027125057171635,
+            0.41383422831235633,
+            -0.4433070592633963,
+            0.332034954466589,
+            0.8627104974345713,
+            0.3062381343573606,
+            0.8581518430722987,
+            0.41554211076882974
+          ],
+          "run_standard_deviation": 0.3948371938322811,
+          "runs_positive": 19,
+          "runs_negative": 1,
+          "two_way_family_interval": [
+            0.09209583340367863,
+            1.0602687585999089
+          ],
+          "family_interval_excludes_zero": true
+        },
+        "ordinary_update_benefit": {
+          "mean": 0.13932911611584797,
+          "two_way_percentile_95": [
+            -0.3899254347429205,
+            1.0699660813690994
+          ],
+          "patient_only_percentile_95": [
+            -0.3283684851197575,
+            0.8917966533715662
+          ],
+          "run_only_percentile_95": [
+            -0.10117837779155446,
+            0.38129180269023427
+          ],
+          "per_run_means": [
+            1.0651095935167916,
+            -0.6146905752196542,
+            0.603622701729407,
+            0.11490775268072995,
+            -0.22541386963697602,
+            -0.8888668539362401,
+            0.9223105336078032,
+            1.1554484288986975,
+            0.12274009439389809,
+            -0.20480807648668403,
+            0.13743773005709262,
+            0.03377559907555197,
+            0.7294711152141008,
+            -0.5955964332302732,
+            0.3483408503797395,
+            0.6466289602481539,
+            -0.12386172912111922,
+            -0.21208532666252464,
+            -0.043287305163387454,
+            -0.18460086802814804
+          ],
+          "run_standard_deviation": 0.5679082907921427,
+          "runs_positive": 11,
+          "runs_negative": 9,
+          "two_way_family_interval": [
+            -0.5286668301000437,
+            1.6008297360553283
+          ],
+          "family_interval_excludes_zero": false
+        },
+        "contour_benefit": {
+          "mean": 0.04423737296244377,
+          "two_way_percentile_95": [
+            0.030825048203737878,
+            0.05905506984486077
+          ],
+          "patient_only_percentile_95": [
+            0.03538602339358437,
+            0.054512478091526526
+          ],
+          "run_only_percentile_95": [
+            0.03607469365656801,
+            0.05226760917767881
+          ],
+          "per_run_means": [
+            0.05473310010369348,
+            0.004055404813580009,
+            0.0635472234775087,
+            0.023109305508429018,
+            0.05083668134266978,
+            0.023684116750034998,
+            0.05470397872139285,
+            0.019028085343217243,
+            0.039083587882466124,
+            0.04566041234412607,
+            0.07173217726830894,
+            0.053170729540671605,
+            0.07801925383165789,
+            0.03799981063403033,
+            0.025715919922817135,
+            0.0685749897178496,
+            0.054283152183695775,
+            0.03326487944137534,
+            0.0476150235598233,
+            0.03592962686152715
+          ],
+          "run_standard_deviation": 0.01924447185622248,
+          "runs_positive": 20,
+          "runs_negative": 0,
+          "two_way_family_interval": [
+            0.026367791133847938,
+            0.06499975224161886
+          ],
+          "family_interval_excludes_zero": true
+        }
+      },
+      "secondary_contrasts": {
+        "baseline_version_shift_ml": {
+          "mean": 0.4833737036885521,
+          "two_way_percentile_95": [
+            -0.02021772352687301,
+            1.2069316289275327
+          ],
+          "patient_only_percentile_95": [
+            0.05490651014929051,
+            0.9935511720224411
+          ],
+          "run_only_percentile_95": [
+            0.16245040352563328,
+            0.7922407788250335
+          ],
+          "per_run_means": [
+            0.457184030883959,
+            -0.2994460270954184,
+            1.259684535724373,
+            -0.3839097719347716,
+            1.3347947337646324,
+            0.6459506138778133,
+            -0.5707634899866515,
+            1.7249776435848234,
+            -0.7116149506078189,
+            0.6942639918997319,
+            1.55479386793155,
+            0.17232825610441102,
+            0.6178402569221362,
+            0.8823867948690619,
+            -0.7129279898598331,
+            0.3284338195364236,
+            1.0296962733262953,
+            0.6215679280838876,
+            0.9789875457277392,
+            0.04324601101869501
+          ],
+          "run_standard_deviation": 0.7426473860696314,
+          "runs_positive": 15,
+          "runs_negative": 5
+        },
+        "same_version_change_benefit": {
+          "mean": 0.6635016089486764,
+          "two_way_percentile_95": [
+            0.09035761726978085,
+            1.6519571548436955
+          ],
+          "patient_only_percentile_95": [
+            0.1822104838367902,
+            1.461931600778973
+          ],
+          "run_only_percentile_95": [
+            0.3559530262300965,
+            0.9816257673019071
+          ],
+          "per_run_means": [
+            1.872486655357055,
+            -0.1500078326555217,
+            0.8713697491560732,
+            0.37367864245608157,
+            0.9027905584289762,
+            -0.5523865767613633,
+            2.2241094382218534,
+            1.9645413176669861,
+            0.635862575829042,
+            0.2549387633614766,
+            1.00055087039806,
+            0.5538569196724881,
+            0.7374982402712721,
+            -0.1817622049179168,
+            -0.09496620888365703,
+            0.978663914714743,
+            0.738848768313452,
+            0.09415280769483587,
+            0.8148645379089116,
+            0.23094124274068173
+          ],
+          "run_standard_deviation": 0.7306164172442946,
+          "runs_positive": 16,
+          "runs_negative": 4
+        },
+        "added_data_mixed_benefit": {
+          "mean": 0.34947804892791473,
+          "two_way_percentile_95": [
+            -0.242072047434926,
+            1.358793472765483
+          ],
+          "patient_only_percentile_95": [
+            -0.15388221701418028,
+            1.2095746740589608
+          ],
+          "run_only_percentile_95": [
+            0.13271445585658312,
+            0.5679971307763012
+          ],
+          "per_run_means": [
+            0.9996677961055911,
+            -0.6154174421032309,
+            0.8103251618489106,
+            0.33905349263709633,
+            -0.06153434938024101,
+            0.48379066452062236,
+            1.1386876217524955,
+            0.4971006184108404,
+            1.1132706124547682,
+            0.14715158509557116,
+            0.3048689771071628,
+            0.24729754385191818,
+            1.106937247943025,
+            0.16594902990766985,
+            0.31430049719056835,
+            0.4474571787119346,
+            -0.2728156174228069,
+            -0.11178672589450525,
+            -0.3978614616159573,
+            0.33311854743686004
+          ],
+          "run_standard_deviation": 0.5032360114355511,
+          "runs_positive": 15,
+          "runs_negative": 5
+        },
+        "continued_retaining_baseline_cost": {
+          "mean": 0.44534794306241154,
+          "two_way_percentile_95": [
+            0.11453060411658147,
+            0.8389057400333941
+          ],
+          "patient_only_percentile_95": [
+            0.19749866494734997,
+            0.7358247063394935
+          ],
+          "run_only_percentile_95": [
+            0.2761051578407375,
+            0.6151718918975667
+          ],
+          "per_run_means": [
+            0.5383997986154301,
+            0.4055316801033096,
+            0.5698382229101623,
+            -0.3194479423215571,
+            0.7663512598975142,
+            0.004835437353660395,
+            1.1907146336164465,
+            0.44666907793347405,
+            1.0435845967131792,
+            0.5280903182275428,
+            1.0008671602757622,
+            0.03900495800522627,
+            0.148651073768667,
+            0.17332516697417769,
+            -0.1606109257163345,
+            0.37117514787174666,
+            0.8251830244297234,
+            0.5557588318762618,
+            0.43969604939935025,
+            0.3393412913144862
+          ],
+          "run_standard_deviation": 0.3976390591506757,
+          "runs_positive": 18,
+          "runs_negative": 2
+        },
+        "added_data_contour_benefit": {
+          "mean": 0.031111445441083307,
+          "two_way_percentile_95": [
+            0.016422479329486383,
+            0.048923939199115356
+          ],
+          "patient_only_percentile_95": [
+            0.02040119975677948,
+            0.04533476264330776
+          ],
+          "run_only_percentile_95": [
+            0.02248823730588294,
+            0.04001071158585171
+          ],
+          "per_run_means": [
+            0.022814289366567368,
+            0.02039323246508235,
+            0.05552402646155013,
+            0.002280447428560095,
+            0.0286531007009201,
+            0.020666890890097107,
+            0.048416770016037586,
+            0.00480767104803281,
+            0.0655310365987505,
+            0.024764571424483673,
+            0.025327945651541884,
+            0.03197281090337772,
+            0.08067935025620906,
+            0.041495433184167416,
+            0.00025854777308545126,
+            0.025842584267326697,
+            0.04213475151415531,
+            0.014626004091004117,
+            0.020349302893804423,
+            0.045690141886912256
+          ],
+          "run_standard_deviation": 0.020828512914375538,
+          "runs_positive": 20,
+          "runs_negative": 0
+        }
+      },
+      "strategies": {
+        "old_old": {
+          "mae_ml": 4.370558354551477,
+          "signed_error_ml": -1.4014577082374287
+        },
+        "old_new": {
+          "mae_ml": 4.231229238435629,
+          "signed_error_ml": -1.007067304109601
+        },
+        "new_new": {
+          "mae_ml": 3.7070567456028005,
+          "signed_error_ml": -1.4904410077981527
+        },
+        "old_continued": {
+          "mae_ml": 4.580707287363544,
+          "signed_error_ml": -1.5809602198148553
+        },
+        "continued_continued": {
+          "mae_ml": 4.135359344301132,
+          "signed_error_ml": -1.5256044714690926
+        }
+      },
+      "followup_dice": {
+        "old": 0.5406681143209381,
+        "new": 0.5849054872833818,
+        "continued": 0.5537940418422986
+      },
+      "per_run_boundary": [
+        {
+          "seed": 20261001,
+          "models": {
+            "old": {
+              "empty_followup_predictions": 1,
+              "patients_with_defined_hd95": 29,
+              "patient_mean_hd95_mm_nonempty_only": 6.1691185410179985
+            },
+            "new": {
+              "empty_followup_predictions": 0,
+              "patients_with_defined_hd95": 29,
+              "patient_mean_hd95_mm_nonempty_only": 5.3883035706819955
+            },
+            "continued": {
+              "empty_followup_predictions": 0,
+              "patients_with_defined_hd95": 29,
+              "patient_mean_hd95_mm_nonempty_only": 5.729543240805071
+            }
+          }
+        },
+        {
+          "seed": 20261002,
+          "models": {
+            "old": {
+              "empty_followup_predictions": 0,
+              "patients_with_defined_hd95": 29,
+              "patient_mean_hd95_mm_nonempty_only": 5.599625448451471
+            },
+            "new": {
+              "empty_followup_predictions": 5,
+              "patients_with_defined_hd95": 29,
+              "patient_mean_hd95_mm_nonempty_only": 5.184675584476569
+            },
+            "continued": {
+              "empty_followup_predictions": 1,
+              "patients_with_defined_hd95": 29,
+              "patient_mean_hd95_mm_nonempty_only": 5.805330147577547
+            }
+          }
+        },
+        {
+          "seed": 20261003,
+          "models": {
+            "old": {
+              "empty_followup_predictions": 1,
+              "patients_with_defined_hd95": 29,
+              "patient_mean_hd95_mm_nonempty_only": 6.204189459871015
+            },
+            "new": {
+              "empty_followup_predictions": 0,
+              "patients_with_defined_hd95": 29,
+              "patient_mean_hd95_mm_nonempty_only": 4.924891882422656
+            },
+            "continued": {
+              "empty_followup_predictions": 1,
+              "patients_with_defined_hd95": 29,
+              "patient_mean_hd95_mm_nonempty_only": 5.547440476490248
+            }
+          }
+        },
+        {
+          "seed": 20261004,
+          "models": {
+            "old": {
+              "empty_followup_predictions": 1,
+              "patients_with_defined_hd95": 29,
+              "patient_mean_hd95_mm_nonempty_only": 5.1435854199707896
+            },
+            "new": {
+              "empty_followup_predictions": 0,
+              "patients_with_defined_hd95": 29,
+              "patient_mean_hd95_mm_nonempty_only": 4.781596770557131
+            },
+            "continued": {
+              "empty_followup_predictions": 1,
+              "patients_with_defined_hd95": 29,
+              "patient_mean_hd95_mm_nonempty_only": 5.029675996855324
+            }
+          }
+        },
+        {
+          "seed": 20261005,
+          "models": {
+            "old": {
+              "empty_followup_predictions": 1,
+              "patients_with_defined_hd95": 29,
+              "patient_mean_hd95_mm_nonempty_only": 6.013997698579196
+            },
+            "new": {
+              "empty_followup_predictions": 1,
+              "patients_with_defined_hd95": 29,
+              "patient_mean_hd95_mm_nonempty_only": 5.259023233551868
+            },
+            "continued": {
+              "empty_followup_predictions": 1,
+              "patients_with_defined_hd95": 29,
+              "patient_mean_hd95_mm_nonempty_only": 5.710706381108072
+            }
+          }
+        },
+        {
+          "seed": 20261006,
+          "models": {
+            "old": {
+              "empty_followup_predictions": 0,
+              "patients_with_defined_hd95": 29,
+              "patient_mean_hd95_mm_nonempty_only": 5.469736906756821
+            },
+            "new": {
+              "empty_followup_predictions": 0,
+              "patients_with_defined_hd95": 29,
+              "patient_mean_hd95_mm_nonempty_only": 5.4865441364609815
+            },
+            "continued": {
+              "empty_followup_predictions": 0,
+              "patients_with_defined_hd95": 29,
+              "patient_mean_hd95_mm_nonempty_only": 5.585488211240219
+            }
+          }
+        },
+        {
+          "seed": 20261007,
+          "models": {
+            "old": {
+              "empty_followup_predictions": 0,
+              "patients_with_defined_hd95": 29,
+              "patient_mean_hd95_mm_nonempty_only": 5.8854907676007695
+            },
+            "new": {
+              "empty_followup_predictions": 1,
+              "patients_with_defined_hd95": 29,
+              "patient_mean_hd95_mm_nonempty_only": 4.955001648556226
+            },
+            "continued": {
+              "empty_followup_predictions": 2,
+              "patients_with_defined_hd95": 29,
+              "patient_mean_hd95_mm_nonempty_only": 6.001575850510575
+            }
+          }
+        },
+        {
+          "seed": 20261008,
+          "models": {
+            "old": {
+              "empty_followup_predictions": 1,
+              "patients_with_defined_hd95": 29,
+              "patient_mean_hd95_mm_nonempty_only": 5.567556359372884
+            },
+            "new": {
+              "empty_followup_predictions": 2,
+              "patients_with_defined_hd95": 29,
+              "patient_mean_hd95_mm_nonempty_only": 4.848919087431234
+            },
+            "continued": {
+              "empty_followup_predictions": 1,
+              "patients_with_defined_hd95": 29,
+              "patient_mean_hd95_mm_nonempty_only": 5.231781335640721
+            }
+          }
+        },
+        {
+          "seed": 20261009,
+          "models": {
+            "old": {
+              "empty_followup_predictions": 0,
+              "patients_with_defined_hd95": 29,
+              "patient_mean_hd95_mm_nonempty_only": 5.729774548495932
+            },
+            "new": {
+              "empty_followup_predictions": 0,
+              "patients_with_defined_hd95": 29,
+              "patient_mean_hd95_mm_nonempty_only": 5.363224130514171
+            },
+            "continued": {
+              "empty_followup_predictions": 3,
+              "patients_with_defined_hd95": 29,
+              "patient_mean_hd95_mm_nonempty_only": 7.827473062529725
+            }
+          }
+        },
+        {
+          "seed": 20261010,
+          "models": {
+            "old": {
+              "empty_followup_predictions": 1,
+              "patients_with_defined_hd95": 29,
+              "patient_mean_hd95_mm_nonempty_only": 5.673064947504127
+            },
+            "new": {
+              "empty_followup_predictions": 3,
+              "patients_with_defined_hd95": 29,
+              "patient_mean_hd95_mm_nonempty_only": 4.990867472037608
+            },
+            "continued": {
+              "empty_followup_predictions": 0,
+              "patients_with_defined_hd95": 29,
+              "patient_mean_hd95_mm_nonempty_only": 5.1491604112150275
+            }
+          }
+        },
+        {
+          "seed": 20261011,
+          "models": {
+            "old": {
+              "empty_followup_predictions": 7,
+              "patients_with_defined_hd95": 29,
+              "patient_mean_hd95_mm_nonempty_only": 5.636868033968165
+            },
+            "new": {
+              "empty_followup_predictions": 0,
+              "patients_with_defined_hd95": 29,
+              "patient_mean_hd95_mm_nonempty_only": 4.932937590197621
+            },
+            "continued": {
+              "empty_followup_predictions": 2,
+              "patients_with_defined_hd95": 29,
+              "patient_mean_hd95_mm_nonempty_only": 5.756151822937565
+            }
+          }
+        },
+        {
+          "seed": 20261012,
+          "models": {
+            "old": {
+              "empty_followup_predictions": 0,
+              "patients_with_defined_hd95": 29,
+              "patient_mean_hd95_mm_nonempty_only": 5.88084507973127
+            },
+            "new": {
+              "empty_followup_predictions": 0,
+              "patients_with_defined_hd95": 29,
+              "patient_mean_hd95_mm_nonempty_only": 5.458872012355571
+            },
+            "continued": {
+              "empty_followup_predictions": 1,
+              "patients_with_defined_hd95": 29,
+              "patient_mean_hd95_mm_nonempty_only": 5.579236755735593
+            }
+          }
+        },
+        {
+          "seed": 20261013,
+          "models": {
+            "old": {
+              "empty_followup_predictions": 1,
+              "patients_with_defined_hd95": 29,
+              "patient_mean_hd95_mm_nonempty_only": 6.4661301494263155
+            },
+            "new": {
+              "empty_followup_predictions": 0,
+              "patients_with_defined_hd95": 29,
+              "patient_mean_hd95_mm_nonempty_only": 5.227261081740012
+            },
+            "continued": {
+              "empty_followup_predictions": 0,
+              "patients_with_defined_hd95": 29,
+              "patient_mean_hd95_mm_nonempty_only": 6.062520220560333
+            }
+          }
+        },
+        {
+          "seed": 20261014,
+          "models": {
+            "old": {
+              "empty_followup_predictions": 0,
+              "patients_with_defined_hd95": 29,
+              "patient_mean_hd95_mm_nonempty_only": 5.883387947260844
+            },
+            "new": {
+              "empty_followup_predictions": 0,
+              "patients_with_defined_hd95": 29,
+              "patient_mean_hd95_mm_nonempty_only": 5.6849483797533376
+            },
+            "continued": {
+              "empty_followup_predictions": 1,
+              "patients_with_defined_hd95": 29,
+              "patient_mean_hd95_mm_nonempty_only": 5.658970100013675
+            }
+          }
+        },
+        {
+          "seed": 20261015,
+          "models": {
+            "old": {
+              "empty_followup_predictions": 0,
+              "patients_with_defined_hd95": 29,
+              "patient_mean_hd95_mm_nonempty_only": 6.002498555053184
+            },
+            "new": {
+              "empty_followup_predictions": 1,
+              "patients_with_defined_hd95": 29,
+              "patient_mean_hd95_mm_nonempty_only": 5.766557731101134
+            },
+            "continued": {
+              "empty_followup_predictions": 0,
+              "patients_with_defined_hd95": 29,
+              "patient_mean_hd95_mm_nonempty_only": 5.775438477845015
+            }
+          }
+        },
+        {
+          "seed": 20261016,
+          "models": {
+            "old": {
+              "empty_followup_predictions": 3,
+              "patients_with_defined_hd95": 29,
+              "patient_mean_hd95_mm_nonempty_only": 5.980763797117444
+            },
+            "new": {
+              "empty_followup_predictions": 0,
+              "patients_with_defined_hd95": 29,
+              "patient_mean_hd95_mm_nonempty_only": 5.1653573629809175
+            },
+            "continued": {
+              "empty_followup_predictions": 1,
+              "patients_with_defined_hd95": 29,
+              "patient_mean_hd95_mm_nonempty_only": 5.761897101063837
+            }
+          }
+        },
+        {
+          "seed": 20261017,
+          "models": {
+            "old": {
+              "empty_followup_predictions": 2,
+              "patients_with_defined_hd95": 29,
+              "patient_mean_hd95_mm_nonempty_only": 6.114251643694229
+            },
+            "new": {
+              "empty_followup_predictions": 2,
+              "patients_with_defined_hd95": 29,
+              "patient_mean_hd95_mm_nonempty_only": 5.786025284772185
+            },
+            "continued": {
+              "empty_followup_predictions": 3,
+              "patients_with_defined_hd95": 29,
+              "patient_mean_hd95_mm_nonempty_only": 6.461730765080133
+            }
+          }
+        },
+        {
+          "seed": 20261018,
+          "models": {
+            "old": {
+              "empty_followup_predictions": 0,
+              "patients_with_defined_hd95": 29,
+              "patient_mean_hd95_mm_nonempty_only": 5.958918457621755
+            },
+            "new": {
+              "empty_followup_predictions": 0,
+              "patients_with_defined_hd95": 29,
+              "patient_mean_hd95_mm_nonempty_only": 5.306442443004634
+            },
+            "continued": {
+              "empty_followup_predictions": 1,
+              "patients_with_defined_hd95": 29,
+              "patient_mean_hd95_mm_nonempty_only": 5.841257342821762
+            }
+          }
+        },
+        {
+          "seed": 20261019,
+          "models": {
+            "old": {
+              "empty_followup_predictions": 1,
+              "patients_with_defined_hd95": 29,
+              "patient_mean_hd95_mm_nonempty_only": 5.977805154724696
+            },
+            "new": {
+              "empty_followup_predictions": 0,
+              "patients_with_defined_hd95": 29,
+              "patient_mean_hd95_mm_nonempty_only": 5.503213679944533
+            },
+            "continued": {
+              "empty_followup_predictions": 4,
+              "patients_with_defined_hd95": 29,
+              "patient_mean_hd95_mm_nonempty_only": 5.328665087218881
+            }
+          }
+        },
+        {
+          "seed": 20261020,
+          "models": {
+            "old": {
+              "empty_followup_predictions": 0,
+              "patients_with_defined_hd95": 29,
+              "patient_mean_hd95_mm_nonempty_only": 5.560995887626492
+            },
+            "new": {
+              "empty_followup_predictions": 0,
+              "patients_with_defined_hd95": 29,
+              "patient_mean_hd95_mm_nonempty_only": 5.0791251614267
+            },
+            "continued": {
+              "empty_followup_predictions": 1,
+              "patients_with_defined_hd95": 29,
+              "patient_mean_hd95_mm_nonempty_only": 5.810862348401231
+            }
+          }
+        }
+      ]
+    },
+    "pantrack": {
+      "patients": 45,
+      "pairs": 181,
+      "primary_contrasts": {
+        "retaining_baseline_cost": {
+          "mean": 2.2173619705595593,
+          "two_way_percentile_95": [
+            1.03263423112617,
+            3.735260363275709
+          ],
+          "patient_only_percentile_95": [
+            1.2061573348763308,
+            3.4857575355485975
+          ],
+          "run_only_percentile_95": [
+            1.6490440350005378,
+            2.8026573350453265
+          ],
+          "per_run_means": [
+            3.3784404090302864,
+            1.3748813001222604,
+            2.349259447020454,
+            2.8933438847959154,
+            4.448594883947741,
+            0.9504268591095957,
+            2.4840532003006603,
+            4.8631132788670595,
+            3.634647497504644,
+            0.5418785555486616,
+            0.7905592835139065,
+            2.441549004540348,
+            3.0945043780036796,
+            -0.2272618267836162,
+            1.341021168000705,
+            2.3649099425536075,
+            2.82302302038196,
+            2.902630353232997,
+            0.7792847884628268,
+            1.1183799830375007
+          ],
+          "run_standard_deviation": 1.352121071493513,
+          "runs_positive": 19,
+          "runs_negative": 1,
+          "two_way_family_interval": [
+            0.7289638409251348,
+            4.442738311675623
+          ],
+          "family_interval_excludes_zero": true
+        },
+        "ordinary_update_benefit": {
+          "mean": -1.6471094841635943,
+          "two_way_percentile_95": [
+            -3.1733006737005733,
+            -0.3134372907798546
+          ],
+          "patient_only_percentile_95": [
+            -2.809040418836535,
+            -0.5116595418160453
+          ],
+          "run_only_percentile_95": [
+            -2.4946725956382174,
+            -0.9463647118697676
+          ],
+          "per_run_means": [
+            -3.492783167116224,
+            -1.0751770739180193,
+            -0.20496757568468643,
+            -1.5048491618579134,
+            -1.115065123563758,
+            -0.24268607530594397,
+            -0.40999682858099457,
+            -6.483242058511188,
+            0.4066392284471732,
+            -0.4303326525468722,
+            -1.6030643780661213,
+            -0.5434177552828643,
+            -2.228167511379677,
+            -0.620501665385234,
+            -0.35919684428124715,
+            -2.6462676541857344,
+            -5.097923499430232,
+            -3.7376146501372274,
+            -1.6995768637875435,
+            0.14600162730242217
+          ],
+          "run_standard_deviation": 1.8277272948152359,
+          "runs_positive": 2,
+          "runs_negative": 18,
+          "two_way_family_interval": [
+            -3.825629452367809,
+            0.15709062620026057
+          ],
+          "family_interval_excludes_zero": false
+        },
+        "contour_benefit": {
+          "mean": 0.06357331841617071,
+          "two_way_percentile_95": [
+            0.03295199755510884,
+            0.09650729370703175
+          ],
+          "patient_only_percentile_95": [
+            0.04575755323599662,
+            0.08242879512275936
+          ],
+          "run_only_percentile_95": [
+            0.03980109331394221,
+            0.08852828332822678
+          ],
+          "per_run_means": [
+            0.061612158797413344,
+            -0.02507489126272268,
+            0.14151701111873088,
+            -0.021798675083998326,
+            0.1374082709923683,
+            0.003699986497686478,
+            0.03412902506674982,
+            0.12181406833320026,
+            0.03336544332209703,
+            0.026805087416999353,
+            0.0702920316950738,
+            0.07066921662512657,
+            0.05294568459862362,
+            0.03603087490126638,
+            0.056464377149689556,
+            0.02281889112757835,
+            0.15602789809982032,
+            0.1753229464304288,
+            0.09751890828976607,
+            0.019898054207516183
+          ],
+          "run_standard_deviation": 0.057838195459218464,
+          "runs_positive": 18,
+          "runs_negative": 2,
+          "two_way_family_interval": [
+            0.024006350052398737,
+            0.10941498063540302
+          ],
+          "family_interval_excludes_zero": true
+        }
+      },
+      "secondary_contrasts": {
+        "baseline_version_shift_ml": {
+          "mean": 3.5634194696154626,
+          "two_way_percentile_95": [
+            1.3911616222467413,
+            6.12988795948123
+          ],
+          "patient_only_percentile_95": [
+            2.2906005459873193,
+            5.057418917736143
+          ],
+          "run_only_percentile_95": [
+            1.6824588334707384,
+            5.463205044061532
+          ],
+          "per_run_means": [
+            8.217685721185111,
+            -2.2672813988935374,
+            2.88371301811998,
+            -3.0456484908749157,
+            5.850684497935399,
+            2.9427861789733876,
+            -1.0985621695186165,
+            12.202000188882154,
+            -3.8917489107915064,
+            0.9368164626811251,
+            5.55416133040668,
+            3.9238190692753077,
+            5.171527225984157,
+            4.0351767890049235,
+            0.44366656774528707,
+            4.464625666142704,
+            9.311083203546236,
+            9.617520789790785,
+            5.79280416435551,
+            0.22355948835906783
+          ],
+          "run_standard_deviation": 4.398053888004035,
+          "runs_positive": 16,
+          "runs_negative": 4
+        },
+        "same_version_change_benefit": {
+          "mean": 0.5702524863959655,
+          "two_way_percentile_95": [
+            -0.5836257940175651,
+            1.9272116012715836
+          ],
+          "patient_only_percentile_95": [
+            -0.2645015320848531,
+            1.6610761539494718
+          ],
+          "run_only_percentile_95": [
+            -0.11162519026896911,
+            1.2701411704354102
+          ],
+          "per_run_means": [
+            -0.1143427580859377,
+            0.2997042262042408,
+            2.1442918713357675,
+            1.388494722938002,
+            3.3335297603839824,
+            0.7077407838036522,
+            2.0740563717196663,
+            -1.6201287796441288,
+            4.041286725951817,
+            0.11154590300178949,
+            -0.8125050945522146,
+            1.8981312492574833,
+            0.8663368666240018,
+            -0.84776349216885,
+            0.981824323719458,
+            -0.2813577116321268,
+            -2.2749004790482714,
+            -0.8349842969042313,
+            -0.9202920753247169,
+            1.2643816103399232
+          ],
+          "run_standard_deviation": 1.6238801741450866,
+          "runs_positive": 12,
+          "runs_negative": 8
+        },
+        "added_data_mixed_benefit": {
+          "mean": -0.7062636989252548,
+          "two_way_percentile_95": [
+            -1.9474011292096147,
+            0.529760003588056
+          ],
+          "patient_only_percentile_95": [
+            -1.5346092939733729,
+            0.22247374338953818
+          ],
+          "run_only_percentile_95": [
+            -1.4537777981801603,
+            0.07436133147516094
+          ],
+          "per_run_means": [
+            -2.6256742004037985,
+            -0.29042949999902673,
+            0.0739170031059715,
+            -0.5928030222004866,
+            -1.641858536026529,
+            2.4907926080690186,
+            0.15004496460879493,
+            -2.441091144621107,
+            1.9711261828837936,
+            -1.196915633314155,
+            2.4342774332754145,
+            -1.6733243977932022,
+            -2.6506085210619728,
+            0.08488122187872295,
+            -0.01634530398651282,
+            -0.6004241662907295,
+            -3.9211960166572575,
+            -2.7745183081599865,
+            -1.31681156978379,
+            0.4116869279717434
+          ],
+          "run_standard_deviation": 1.7570159233433538,
+          "runs_positive": 7,
+          "runs_negative": 13
+        },
+        "continued_retaining_baseline_cost": {
+          "mean": 1.4693761575983197,
+          "two_way_percentile_95": [
+            0.5507069895677073,
+            2.6706845903937153
+          ],
+          "patient_only_percentile_95": [
+            0.8191998206743839,
+            2.250013824076577
+          ],
+          "run_only_percentile_95": [
+            0.8413699106238589,
+            2.269481600454726
+          ],
+          "per_run_means": [
+            1.2765238238981025,
+            0.6716952478204266,
+            1.274948052028818,
+            2.313021862197902,
+            3.5611823443354327,
+            7.08450104968836,
+            2.810424105882775,
+            2.190236630424654,
+            1.8773605073141975,
+            0.3145861790716373,
+            0.8715523046718179,
+            2.0980164559162517,
+            0.6101189977383417,
+            1.0208440858523948,
+            0.7746913059603707,
+            0.8158595614952939,
+            -0.3896135100669429,
+            0.3933553223586688,
+            0.08306949024148413,
+            -0.26485066486359066
+          ],
+          "run_standard_deviation": 1.6747530464565357,
+          "runs_positive": 18,
+          "runs_negative": 2
+        },
+        "added_data_contour_benefit": {
+          "mean": 0.07186274823540045,
+          "two_way_percentile_95": [
+            0.04471299713469116,
+            0.10007830842110928
+          ],
+          "patient_only_percentile_95": [
+            0.05313481241451765,
+            0.09189703593094144
+          ],
+          "run_only_percentile_95": [
+            0.053385644111937164,
+            0.0884370403478947
+          ],
+          "per_run_means": [
+            0.0793479482396231,
+            0.07825607189173747,
+            0.08040283051009349,
+            -0.03610553543606577,
+            0.10097028674605184,
+            0.09452587514584918,
+            0.011500885519430648,
+            0.0763339480111946,
+            0.06335806570581227,
+            0.012798121451432064,
+            0.08233455273717522,
+            0.03567165829637186,
+            0.11658519322947186,
+            0.13659606416452993,
+            0.04845428601227758,
+            0.07602978811611927,
+            0.1260841785154123,
+            0.0950831588270468,
+            0.07689512587460968,
+            0.0821324611498358
+          ],
+          "run_standard_deviation": 0.04116563088106815,
+          "runs_positive": 19,
+          "runs_negative": 1
+        }
+      },
+      "strategies": {
+        "old_old": {
+          "mae_ml": 9.499087353108349,
+          "signed_error_ml": -0.922272058233022
+        },
+        "old_new": {
+          "mae_ml": 11.146196837271944,
+          "signed_error_ml": 2.954752309953323
+        },
+        "new_new": {
+          "mae_ml": 8.928834866712384,
+          "signed_error_ml": -0.6086671596621391
+        },
+        "old_continued": {
+          "mae_ml": 10.439933138346689,
+          "signed_error_ml": -1.9907770835729308
+        },
+        "continued_continued": {
+          "mae_ml": 8.970556980748368,
+          "signed_error_ml": -0.7996550397907896
+        }
+      },
+      "followup_dice": {
+        "old": 0.550192360892995,
+        "new": 0.6137656793091657,
+        "continued": 0.5419029310737653
+      },
+      "per_run_boundary": [
+        {
+          "seed": 20261001,
+          "models": {
+            "old": {
+              "empty_followup_predictions": 0,
+              "patients_with_defined_hd95": 45,
+              "patient_mean_hd95_mm_nonempty_only": 9.299144512045622
+            },
+            "new": {
+              "empty_followup_predictions": 0,
+              "patients_with_defined_hd95": 45,
+              "patient_mean_hd95_mm_nonempty_only": 8.331371076808479
+            },
+            "continued": {
+              "empty_followup_predictions": 0,
+              "patients_with_defined_hd95": 45,
+              "patient_mean_hd95_mm_nonempty_only": 8.98093615977751
+            }
+          }
+        },
+        {
+          "seed": 20261002,
+          "models": {
+            "old": {
+              "empty_followup_predictions": 0,
+              "patients_with_defined_hd95": 45,
+              "patient_mean_hd95_mm_nonempty_only": 8.823691458717576
+            },
+            "new": {
+              "empty_followup_predictions": 0,
+              "patients_with_defined_hd95": 45,
+              "patient_mean_hd95_mm_nonempty_only": 8.733440164902031
+            },
+            "continued": {
+              "empty_followup_predictions": 0,
+              "patients_with_defined_hd95": 45,
+              "patient_mean_hd95_mm_nonempty_only": 9.778979520870367
+            }
+          }
+        },
+        {
+          "seed": 20261003,
+          "models": {
+            "old": {
+              "empty_followup_predictions": 0,
+              "patients_with_defined_hd95": 45,
+              "patient_mean_hd95_mm_nonempty_only": 10.299369733765937
+            },
+            "new": {
+              "empty_followup_predictions": 0,
+              "patients_with_defined_hd95": 45,
+              "patient_mean_hd95_mm_nonempty_only": 8.352431703632643
+            },
+            "continued": {
+              "empty_followup_predictions": 0,
+              "patients_with_defined_hd95": 45,
+              "patient_mean_hd95_mm_nonempty_only": 9.54402584880697
+            }
+          }
+        },
+        {
+          "seed": 20261004,
+          "models": {
+            "old": {
+              "empty_followup_predictions": 0,
+              "patients_with_defined_hd95": 45,
+              "patient_mean_hd95_mm_nonempty_only": 8.812727969083754
+            },
+            "new": {
+              "empty_followup_predictions": 0,
+              "patients_with_defined_hd95": 45,
+              "patient_mean_hd95_mm_nonempty_only": 8.707370352511123
+            },
+            "continued": {
+              "empty_followup_predictions": 0,
+              "patients_with_defined_hd95": 45,
+              "patient_mean_hd95_mm_nonempty_only": 8.786876666384227
+            }
+          }
+        },
+        {
+          "seed": 20261005,
+          "models": {
+            "old": {
+              "empty_followup_predictions": 0,
+              "patients_with_defined_hd95": 45,
+              "patient_mean_hd95_mm_nonempty_only": 10.7594810413078
+            },
+            "new": {
+              "empty_followup_predictions": 0,
+              "patients_with_defined_hd95": 45,
+              "patient_mean_hd95_mm_nonempty_only": 8.339952127084384
+            },
+            "continued": {
+              "empty_followup_predictions": 0,
+              "patients_with_defined_hd95": 45,
+              "patient_mean_hd95_mm_nonempty_only": 9.472215754271385
+            }
+          }
+        },
+        {
+          "seed": 20261006,
+          "models": {
+            "old": {
+              "empty_followup_predictions": 0,
+              "patients_with_defined_hd95": 45,
+              "patient_mean_hd95_mm_nonempty_only": 9.426881258238188
+            },
+            "new": {
+              "empty_followup_predictions": 0,
+              "patients_with_defined_hd95": 45,
+              "patient_mean_hd95_mm_nonempty_only": 8.887650503342314
+            },
+            "continued": {
+              "empty_followup_predictions": 0,
+              "patients_with_defined_hd95": 45,
+              "patient_mean_hd95_mm_nonempty_only": 9.669463379171786
+            }
+          }
+        },
+        {
+          "seed": 20261007,
+          "models": {
+            "old": {
+              "empty_followup_predictions": 0,
+              "patients_with_defined_hd95": 45,
+              "patient_mean_hd95_mm_nonempty_only": 9.793757990499765
+            },
+            "new": {
+              "empty_followup_predictions": 0,
+              "patients_with_defined_hd95": 45,
+              "patient_mean_hd95_mm_nonempty_only": 9.73863348489764
+            },
+            "continued": {
+              "empty_followup_predictions": 0,
+              "patients_with_defined_hd95": 45,
+              "patient_mean_hd95_mm_nonempty_only": 9.311482483369408
+            }
+          }
+        },
+        {
+          "seed": 20261008,
+          "models": {
+            "old": {
+              "empty_followup_predictions": 2,
+              "patients_with_defined_hd95": 45,
+              "patient_mean_hd95_mm_nonempty_only": 9.49069749199227
+            },
+            "new": {
+              "empty_followup_predictions": 0,
+              "patients_with_defined_hd95": 45,
+              "patient_mean_hd95_mm_nonempty_only": 8.127696652283365
+            },
+            "continued": {
+              "empty_followup_predictions": 0,
+              "patients_with_defined_hd95": 45,
+              "patient_mean_hd95_mm_nonempty_only": 9.129465214559842
+            }
+          }
+        },
+        {
+          "seed": 20261009,
+          "models": {
+            "old": {
+              "empty_followup_predictions": 0,
+              "patients_with_defined_hd95": 45,
+              "patient_mean_hd95_mm_nonempty_only": 9.118497022188485
+            },
+            "new": {
+              "empty_followup_predictions": 0,
+              "patients_with_defined_hd95": 45,
+              "patient_mean_hd95_mm_nonempty_only": 8.18005262081887
+            },
+            "continued": {
+              "empty_followup_predictions": 0,
+              "patients_with_defined_hd95": 45,
+              "patient_mean_hd95_mm_nonempty_only": 10.398250001348751
+            }
+          }
+        },
+        {
+          "seed": 20261010,
+          "models": {
+            "old": {
+              "empty_followup_predictions": 0,
+              "patients_with_defined_hd95": 45,
+              "patient_mean_hd95_mm_nonempty_only": 8.780854705859893
+            },
+            "new": {
+              "empty_followup_predictions": 0,
+              "patients_with_defined_hd95": 45,
+              "patient_mean_hd95_mm_nonempty_only": 8.381745235912557
+            },
+            "continued": {
+              "empty_followup_predictions": 0,
+              "patients_with_defined_hd95": 45,
+              "patient_mean_hd95_mm_nonempty_only": 8.652840646591338
+            }
+          }
+        },
+        {
+          "seed": 20261011,
+          "models": {
+            "old": {
+              "empty_followup_predictions": 0,
+              "patients_with_defined_hd95": 45,
+              "patient_mean_hd95_mm_nonempty_only": 8.599434161343073
+            },
+            "new": {
+              "empty_followup_predictions": 0,
+              "patients_with_defined_hd95": 45,
+              "patient_mean_hd95_mm_nonempty_only": 7.64712562904885
+            },
+            "continued": {
+              "empty_followup_predictions": 0,
+              "patients_with_defined_hd95": 45,
+              "patient_mean_hd95_mm_nonempty_only": 9.851419264974638
+            }
+          }
+        },
+        {
+          "seed": 20261012,
+          "models": {
+            "old": {
+              "empty_followup_predictions": 0,
+              "patients_with_defined_hd95": 45,
+              "patient_mean_hd95_mm_nonempty_only": 9.69509397907476
+            },
+            "new": {
+              "empty_followup_predictions": 0,
+              "patients_with_defined_hd95": 45,
+              "patient_mean_hd95_mm_nonempty_only": 8.406467879141141
+            },
+            "continued": {
+              "empty_followup_predictions": 0,
+              "patients_with_defined_hd95": 45,
+              "patient_mean_hd95_mm_nonempty_only": 9.042813296663013
+            }
+          }
+        },
+        {
+          "seed": 20261013,
+          "models": {
+            "old": {
+              "empty_followup_predictions": 0,
+              "patients_with_defined_hd95": 45,
+              "patient_mean_hd95_mm_nonempty_only": 9.208857383113834
+            },
+            "new": {
+              "empty_followup_predictions": 0,
+              "patients_with_defined_hd95": 45,
+              "patient_mean_hd95_mm_nonempty_only": 8.416895555496271
+            },
+            "continued": {
+              "empty_followup_predictions": 0,
+              "patients_with_defined_hd95": 45,
+              "patient_mean_hd95_mm_nonempty_only": 9.782620953812884
+            }
+          }
+        },
+        {
+          "seed": 20261014,
+          "models": {
+            "old": {
+              "empty_followup_predictions": 0,
+              "patients_with_defined_hd95": 45,
+              "patient_mean_hd95_mm_nonempty_only": 8.72069761562291
+            },
+            "new": {
+              "empty_followup_predictions": 0,
+              "patients_with_defined_hd95": 45,
+              "patient_mean_hd95_mm_nonempty_only": 8.178748170934549
+            },
+            "continued": {
+              "empty_followup_predictions": 0,
+              "patients_with_defined_hd95": 45,
+              "patient_mean_hd95_mm_nonempty_only": 10.242867511272733
+            }
+          }
+        },
+        {
+          "seed": 20261015,
+          "models": {
+            "old": {
+              "empty_followup_predictions": 0,
+              "patients_with_defined_hd95": 45,
+              "patient_mean_hd95_mm_nonempty_only": 9.906789295567027
+            },
+            "new": {
+              "empty_followup_predictions": 0,
+              "patients_with_defined_hd95": 45,
+              "patient_mean_hd95_mm_nonempty_only": 8.805771643471804
+            },
+            "continued": {
+              "empty_followup_predictions": 0,
+              "patients_with_defined_hd95": 45,
+              "patient_mean_hd95_mm_nonempty_only": 9.364393273770778
+            }
+          }
+        },
+        {
+          "seed": 20261016,
+          "models": {
+            "old": {
+              "empty_followup_predictions": 0,
+              "patients_with_defined_hd95": 45,
+              "patient_mean_hd95_mm_nonempty_only": 8.4148649932288
+            },
+            "new": {
+              "empty_followup_predictions": 0,
+              "patients_with_defined_hd95": 45,
+              "patient_mean_hd95_mm_nonempty_only": 7.940065794710586
+            },
+            "continued": {
+              "empty_followup_predictions": 0,
+              "patients_with_defined_hd95": 45,
+              "patient_mean_hd95_mm_nonempty_only": 9.618546539679437
+            }
+          }
+        },
+        {
+          "seed": 20261017,
+          "models": {
+            "old": {
+              "empty_followup_predictions": 0,
+              "patients_with_defined_hd95": 45,
+              "patient_mean_hd95_mm_nonempty_only": 10.004188754625963
+            },
+            "new": {
+              "empty_followup_predictions": 0,
+              "patients_with_defined_hd95": 45,
+              "patient_mean_hd95_mm_nonempty_only": 8.296547730586576
+            },
+            "continued": {
+              "empty_followup_predictions": 0,
+              "patients_with_defined_hd95": 45,
+              "patient_mean_hd95_mm_nonempty_only": 10.081323734656955
+            }
+          }
+        },
+        {
+          "seed": 20261018,
+          "models": {
+            "old": {
+              "empty_followup_predictions": 0,
+              "patients_with_defined_hd95": 45,
+              "patient_mean_hd95_mm_nonempty_only": 10.102197547755248
+            },
+            "new": {
+              "empty_followup_predictions": 0,
+              "patients_with_defined_hd95": 45,
+              "patient_mean_hd95_mm_nonempty_only": 7.921517076376729
+            },
+            "continued": {
+              "empty_followup_predictions": 0,
+              "patients_with_defined_hd95": 45,
+              "patient_mean_hd95_mm_nonempty_only": 9.602312848425367
+            }
+          }
+        },
+        {
+          "seed": 20261019,
+          "models": {
+            "old": {
+              "empty_followup_predictions": 0,
+              "patients_with_defined_hd95": 45,
+              "patient_mean_hd95_mm_nonempty_only": 9.596598755187877
+            },
+            "new": {
+              "empty_followup_predictions": 0,
+              "patients_with_defined_hd95": 45,
+              "patient_mean_hd95_mm_nonempty_only": 8.26134802436486
+            },
+            "continued": {
+              "empty_followup_predictions": 0,
+              "patients_with_defined_hd95": 45,
+              "patient_mean_hd95_mm_nonempty_only": 9.580431345418946
+            }
+          }
+        },
+        {
+          "seed": 20261020,
+          "models": {
+            "old": {
+              "empty_followup_predictions": 0,
+              "patients_with_defined_hd95": 45,
+              "patient_mean_hd95_mm_nonempty_only": 8.546094288041285
+            },
+            "new": {
+              "empty_followup_predictions": 0,
+              "patients_with_defined_hd95": 45,
+              "patient_mean_hd95_mm_nonempty_only": 8.192942458015342
+            },
+            "continued": {
+              "empty_followup_predictions": 0,
+              "patients_with_defined_hd95": 45,
+              "patient_mean_hd95_mm_nonempty_only": 9.434733674641867
+            }
+          }
+        }
+      ]
+    }
+  },
+  "completed_at_utc": "2026-09-27T04:20:48.744902+00:00",
+  "policy_sha256": "3f629e057c05896d3bba9ffefdccb45e481c15cd9412e73199e4c9c789171820",
+  "source_manifest_sha256": "74feac6e7300fd6f2caabc2379f7ac738547c0be6d63fe34c6851670c23a7166",
+  "amendment_sha256": "5f95f9d6ed8f9db82d9d03ad7eb71888ef4efab71fa73e11d35c496a48664751",
+  "seed_receipt_sha256": {
+    "20261001": "124f5a502a0fcfbb7092d633b3d36d24537e6f323ea80ec0fbba34e2e4afb4da",
+    "20261002": "bbe38ab5438c7f9272798dcf94b0b947a523278b5d23e412c1ad855d44938594",
+    "20261003": "910384ed57fb304579c51ca0293643e875732cb6a9648227b8e40661d8063ce1",
+    "20261004": "97e2342fe1192c9d5edbb2d2e7e50a18844dd9dc560b991fe9dd5b2f82b7a9a9",
+    "20261005": "6b51ba5b24bb440ba475b7b4ad94067f29297ae3a9f1f02a24bd51b45cd8116e",
+    "20261006": "b93bce3a4762716fa836ec7ccdadb1feadcbad9c6457671587f833858d4783cc",
+    "20261007": "60adfaae97f3d5549ffd95757d1ad322b3015bab4f7d40938c8ae37fe62bc44f",
+    "20261008": "08fb719eadd27a1b9603259131a73ed3cccf8f21c643b1e069ffd0a1584deb15",
+    "20261009": "689325839b959ad8a206edb9ba4578696d4a294cb9363999ff1a996ea6102eb5",
+    "20261010": "e8c4cc3281f65ec2db3b80ab446db057c06fe98ef44abdd961c17d39880467bb",
+    "20261011": "51473e33b31a549fdceeb168b67cacb4be3d8bf5b9a38718c33a40634b35c684",
+    "20261012": "3eb3927537f787b100da286bec04b3d22a7e8c0f7d44c66d00e5bef7cc9af293",
+    "20261013": "0719276f2f15f0202be9a1e59ff63b991468cec36d2f3660f19a4bfa36ed3eb7",
+    "20261014": "de09817cf960a564c33e5c7220ebf9cf849554120d188278cff39308b177986b",
+    "20261015": "c616529e89da4cf7850725773db4c35a15264c227272bd6cd727ea50b99840de",
+    "20261016": "7022376117629149a40ca4434f339e718c378107047533d712920debc03adbda",
+    "20261017": "6467f1af7711dbaeb6c7622920d2b876363581f7c1238cde54640789454ba87c",
+    "20261018": "2039ccee22c690aa80c364e576ba46837a269161228cbe5580b96df5042fb1ba",
+    "20261019": "63c919f7f5c09aff572eae660d4b43707db9a335d195f179c0b9c477e8f83530",
+    "20261020": "8d705523f2bc9d91a644ec214621c7ac2588130fe99df9ebde5e4ad0878c0a67"
+  },
+  "training_elapsed_seconds": 58957.44455851987,
+  "evaluation_elapsed_seconds": 81455.5190434549,
+  "arithmetic_verification_pending": true
+}

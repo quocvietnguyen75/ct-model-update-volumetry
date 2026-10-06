@@ -1,0 +1,97 @@
+{
+  "protocol_id": "CT-UPDATE-014",
+  "date": "2026-09-24",
+  "question_id": "IMG-ALT-01",
+  "cohort": "Longitudinal-CT internal test",
+  "role": "internal_evaluation_only_no_tuning",
+  "project_root_env": "CT_UPDATE_REMOTE_ROOT",
+  "dataset_root_env": "CT_UPDATE_REMOTE_DATA_ROOT",
+  "nominal_test_patients": 30,
+  "seeds": [
+    20260915,
+    20260917,
+    20260919
+  ],
+  "models": [
+    "old",
+    "new",
+    "continued",
+    "scratch",
+    "bcwi_025",
+    "bcwi_050",
+    "bcwi_075",
+    "kd_001",
+    "kd_010"
+  ],
+  "training_permitted": false,
+  "fitting_permitted": false,
+  "test_references_permitted_after_metadata": true,
+  "test_predictions_permitted_after_freeze": true,
+  "model_input_roles": [
+    "ct_image",
+    "reference_centroid"
+  ],
+  "time_policy": "supplied_BL_FU_pair_only_no_elapsed_time_claim",
+  "eligibility": {
+    "topology": "UNCHANGED",
+    "require_explicit_clear_link": true,
+    "filter_target_lesion": false,
+    "filter_use_for_challenge": false
+  },
+  "patch": {
+    "shape": [
+      96,
+      96,
+      96
+    ],
+    "spacing_mm": [
+      1.5,
+      1.5,
+      1.5
+    ],
+    "hu_clip": [
+      -1000,
+      1000
+    ],
+    "image_dtype": "float16",
+    "mask_dtype": "uint8"
+  },
+  "analysis": {
+    "bootstrap_draws": 10000,
+    "bootstrap_seed": 20260924,
+    "primary_family_size": 6,
+    "precision_target_halfwidth_ml": 5.0,
+    "primary_contrasts": [
+      "ordinary_update_benefit",
+      "retaining_baseline_cost",
+      "contour_benefit"
+    ],
+    "weighting": "pair_losses_within_patient_then_seed_average_then_equal_patients",
+    "clinical_margin_ml": null,
+    "csv_reference_sensitivity": true
+  },
+  "schema_csv_resolution": "amendment_002_exact_native_recount_only",
+  "source_config_file": "config/preanalysis/ct_update_001_2026-09-15.json",
+  "source_config_sha256": "60e7165e3761b0d57e17a48e52edc568c3a788ca9a0b0bdaed5c46dac17bb508",
+  "transfer_receipt_sha256": "cbba263f4eb3025abd4d2d2e3a69016e31c455bbeb80a9b555c55e873d29a9e7",
+  "source_manifest_sha256": "f96c8cd80b6a6ca089b01b3692d3e6188e1451d0a0d584b9296f18eb5eda5883",
+  "checkpoint_registry_file": "config/preanalysis/ct_pantrack_checkpoints_010_2026-09-18.json",
+  "checkpoint_registry_sha256": "48ddb5bc56d807c993859761bead4b0a384ab27dd279430fbc70e9acc59e637f",
+  "model_freeze_sha256": "b663dbc94ed8cc0f5b4923cdd2b1c1552f516eea62ee4b99128fd1ccec5197b0",
+  "reference_seed_receipt_sha256": {
+    "20260915": "903fb5740d1a5a3856ccaf0e9236c2c6249f12e346658329265b739a0cb938af",
+    "20260917": "07df29b9932ecdee3a5ec8e33bdf08e835c472b1d4586b5d8aa5454d4431c9a7",
+    "20260919": "b02021ecde0b9b9f29b62710c18871f8b952a1e21e5e439c91f6416c0b78945f"
+  },
+  "amendment_file": "newpaper/plan/CT_EXPERIMENT_AMENDMENT_014_2026-09-24.md",
+  "amendment_sha256": "4880d9a770fd9137db3c91c2ad8f70ff30e4d39a7132df53df0b7d204d047dd3",
+  "storage": {
+    "study_cap_bytes": 268435456000,
+    "project_cap_bytes": 966367641600,
+    "planned_additional_bytes": 17179869184,
+    "cache_cap_bytes": 8589934592,
+    "artifact_cap_bytes": 536870912
+  },
+  "cache_relative": "derived/internal_holdout_014",
+  "freeze_relative": "control/internal_holdout_014_freeze.json"
+}

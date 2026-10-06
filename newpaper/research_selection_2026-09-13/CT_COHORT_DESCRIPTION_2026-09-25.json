@@ -1,0 +1,249 @@
+{
+  "status": "AGGREGATE_COHORT_DESCRIPTION",
+  "protocol_id": "IMG-ALT-01 reporting query",
+  "model_outputs_read": false,
+  "identifiers_included": false,
+  "volume_unit": "mL (native-mask reference)",
+  "input_sha256": {
+    "development": "ffd054e0f927516fe03d8b50d5e4f4a7c82886d33715a14ec2e100f3b797d56e",
+    "internal_holdout": "40a459d0897df36fd216a69568b17c1049c48c4052f81355fe3886e793e21bd6",
+    "pantrack": "d8fc72e81e7f366d8446b3ef682ee4c604e110da4a2d462ca289c552ed960b52"
+  },
+  "cohorts": {
+    "expanded_training_pool": {
+      "patients": 225,
+      "pairs": 2024,
+      "distinct_lesions": 2024,
+      "pairs_per_patient": {
+        "median": 5.0,
+        "q1": 3.0,
+        "q3": 11.0,
+        "minimum": 1,
+        "maximum": 75
+      },
+      "baseline_volume_ml": {
+        "median": 0.5484,
+        "q1": 0.1474,
+        "q3": 2.1812,
+        "minimum": 0.0076,
+        "maximum": 2349.5906
+      },
+      "followup_volume_ml": {
+        "median": 0.3986,
+        "q1": 0.1186,
+        "q3": 1.6999,
+        "minimum": 0.0016,
+        "maximum": 1892.1693
+      },
+      "change_ml": {
+        "median": -0.0523,
+        "q1": -0.6148,
+        "q3": 0.2442,
+        "minimum": -1890.5665,
+        "maximum": 1746.5251
+      },
+      "absolute_change_ml": {
+        "median": 0.4254,
+        "q1": 0.1025,
+        "q3": 1.9611,
+        "minimum": 0.0,
+        "maximum": 1890.5665
+      },
+      "pairs_increasing": 842,
+      "pairs_decreasing": 1181,
+      "baseline_size_strata_pairs": {
+        "lt1": 1270,
+        "from1_to_lt10": 563,
+        "ge10": 191
+      }
+    },
+    "old_model_subset": {
+      "patients": 113,
+      "pairs": 976,
+      "distinct_lesions": 976,
+      "pairs_per_patient": {
+        "median": 5.0,
+        "q1": 2.0,
+        "q3": 11.0,
+        "minimum": 1,
+        "maximum": 75
+      },
+      "baseline_volume_ml": {
+        "median": 0.4607,
+        "q1": 0.1405,
+        "q3": 2.1326,
+        "minimum": 0.0155,
+        "maximum": 2089.6628
+      },
+      "followup_volume_ml": {
+        "median": 0.3822,
+        "q1": 0.1141,
+        "q3": 1.5054,
+        "minimum": 0.0016,
+        "maximum": 1892.1693
+      },
+      "change_ml": {
+        "median": -0.0343,
+        "q1": -0.5656,
+        "q3": 0.247,
+        "minimum": -617.0383,
+        "maximum": 1746.5251
+      },
+      "absolute_change_ml": {
+        "median": 0.3764,
+        "q1": 0.1084,
+        "q3": 1.864,
+        "minimum": 0.0,
+        "maximum": 1746.5251
+      },
+      "pairs_increasing": 430,
+      "pairs_decreasing": 545,
+      "baseline_size_strata_pairs": {
+        "lt1": 628,
+        "from1_to_lt10": 245,
+        "ge10": 103
+      }
+    },
+    "development_validation": {
+      "patients": 27,
+      "pairs": 198,
+      "distinct_lesions": 198,
+      "pairs_per_patient": {
+        "median": 5.0,
+        "q1": 2.5,
+        "q3": 7.0,
+        "minimum": 1,
+        "maximum": 48
+      },
+      "baseline_volume_ml": {
+        "median": 0.7532,
+        "q1": 0.2019,
+        "q3": 2.2745,
+        "minimum": 0.0154,
+        "maximum": 361.1625
+      },
+      "followup_volume_ml": {
+        "median": 1.1805,
+        "q1": 0.2023,
+        "q3": 4.4866,
+        "minimum": 0.0117,
+        "maximum": 383.7585
+      },
+      "change_ml": {
+        "median": -0.0152,
+        "q1": -0.4117,
+        "q3": 1.9575,
+        "minimum": -296.483,
+        "maximum": 201.0885
+      },
+      "absolute_change_ml": {
+        "median": 0.8105,
+        "q1": 0.0975,
+        "q3": 4.0898,
+        "minimum": 0.0007,
+        "maximum": 296.483
+      },
+      "pairs_increasing": 90,
+      "pairs_decreasing": 108,
+      "baseline_size_strata_pairs": {
+        "lt1": 113,
+        "from1_to_lt10": 70,
+        "ge10": 15
+      }
+    },
+    "internal_holdout": {
+      "patients": 29,
+      "pairs": 277,
+      "distinct_lesions": 277,
+      "pairs_per_patient": {
+        "median": 6.0,
+        "q1": 3.0,
+        "q3": 12.0,
+        "minimum": 1,
+        "maximum": 40
+      },
+      "baseline_volume_ml": {
+        "median": 0.2597,
+        "q1": 0.1051,
+        "q3": 1.0869,
+        "minimum": 0.011,
+        "maximum": 91.756
+      },
+      "followup_volume_ml": {
+        "median": 0.214,
+        "q1": 0.0853,
+        "q3": 0.8038,
+        "minimum": 0.0044,
+        "maximum": 404.2146
+      },
+      "change_ml": {
+        "median": -0.0361,
+        "q1": -0.3538,
+        "q3": 0.0964,
+        "minimum": -87.7909,
+        "maximum": 389.0422
+      },
+      "absolute_change_ml": {
+        "median": 0.196,
+        "q1": 0.0572,
+        "q3": 1.1001,
+        "minimum": 0.0003,
+        "maximum": 389.0422
+      },
+      "pairs_increasing": 110,
+      "pairs_decreasing": 167,
+      "baseline_size_strata_pairs": {
+        "lt1": 205,
+        "from1_to_lt10": 51,
+        "ge10": 21
+      }
+    },
+    "pantrack": {
+      "patients": 45,
+      "pairs": 181,
+      "distinct_lesions": 88,
+      "pairs_per_patient": {
+        "median": 2.0,
+        "q1": 1.0,
+        "q3": 4.0,
+        "minimum": 1,
+        "maximum": 23
+      },
+      "baseline_volume_ml": {
+        "median": 9.8126,
+        "q1": 3.8876,
+        "q3": 24.2484,
+        "minimum": 0.2072,
+        "maximum": 133.6868
+      },
+      "followup_volume_ml": {
+        "median": 9.7533,
+        "q1": 3.7949,
+        "q3": 24.0819,
+        "minimum": 0.1988,
+        "maximum": 192.917
+      },
+      "change_ml": {
+        "median": -0.1543,
+        "q1": -3.4225,
+        "q3": 1.8781,
+        "minimum": -103.9185,
+        "maximum": 113.6015
+      },
+      "absolute_change_ml": {
+        "median": 2.7167,
+        "q1": 1.0026,
+        "q3": 7.9174,
+        "minimum": 0.0032,
+        "maximum": 113.6015
+      },
+      "pairs_increasing": 87,
+      "pairs_decreasing": 94,
+      "baseline_size_strata_pairs": {
+        "lt1": 14,
+        "from1_to_lt10": 79,
+        "ge10": 88
+      }
+    }
+  }
+}

@@ -1,0 +1,200 @@
+{
+  "status": "DEVELOPMENT_ONLY",
+  "patients": 27,
+  "lesions": 198,
+  "strategies": {
+    "old_old": {
+      "mae_ml": 16.845245251025805,
+      "signed_error_ml": 7.991354746683551
+    },
+    "old_new": {
+      "mae_ml": 18.92107343834352,
+      "signed_error_ml": 6.849479261344315
+    },
+    "new_new": {
+      "mae_ml": 10.353572276259932,
+      "signed_error_ml": -1.931180103017061
+    },
+    "old_continued": {
+      "mae_ml": 18.455345226251314,
+      "signed_error_ml": 6.0435591495765895
+    },
+    "continued_continued": {
+      "mae_ml": 17.054743624254403,
+      "signed_error_ml": 6.376770738011144
+    }
+  },
+  "contrasts": {
+    "ordinary_update_benefit": {
+      "mean_ml": -2.0758281873177205,
+      "exploratory_95_percentile_interval_ml": [
+        -5.913651977852834,
+        0.072047064428814
+      ]
+    },
+    "retaining_baseline_cost": {
+      "mean_ml": 8.567501162083591,
+      "exploratory_95_percentile_interval_ml": [
+        -0.3432216588559723,
+        22.546026773872036
+      ]
+    },
+    "refresh_benefit": {
+      "mean_ml": 6.49167297476587,
+      "exploratory_95_percentile_interval_ml": [
+        -1.0035741805188152,
+        19.923805987071493
+      ]
+    },
+    "added_data_vs_same_data_mixed": {
+      "mean_ml": -0.465728212092209,
+      "exploratory_95_percentile_interval_ml": [
+        -1.1207200343131238,
+        0.011075114535821457
+      ]
+    }
+  },
+  "patient_mean_followup_dice": {
+    "old": 0.5683525415932714,
+    "new": 0.6156508330073026,
+    "continued": 0.5600733587183403
+  },
+  "bootstrap_draws": 2000,
+  "bootstrap_seed": 20260916,
+  "test_evaluated": false,
+  "confirmatory_inference": false,
+  "protocol_id": "CT-UPDATE-001",
+  "date": "2026-09-15",
+  "checkpoint_receipts": {
+    "old": {
+      "phase": "old",
+      "steps": 20000,
+      "seed": 20260919,
+      "parent_sha256": null,
+      "config_sha256": "f4c74e7151aacf295e72013217d9467d955122c792fbc9da16e1d372f30fdb38",
+      "execution_id": "CT-PILOT-004",
+      "checkpoint_sha256": "4360fef36efa2829e12a998873820ae51c7608e902d32a6ae6e395fd96ced7c2",
+      "checkpoint_bytes": 19242585,
+      "eligible_training_patients": 113,
+      "elapsed_seconds": 1201.194853745401,
+      "peak_allocated_bytes": 560962048,
+      "status": "TRAINING_COMPLETE"
+    },
+    "new": {
+      "phase": "new",
+      "steps": 10000,
+      "seed": 20260919,
+      "parent_sha256": "4360fef36efa2829e12a998873820ae51c7608e902d32a6ae6e395fd96ced7c2",
+      "config_sha256": "f4c74e7151aacf295e72013217d9467d955122c792fbc9da16e1d372f30fdb38",
+      "execution_id": "CT-PILOT-004",
+      "checkpoint_sha256": "5e6c804ee26fdebe7dd283933d16b5c571d97ac18a9885886a1893839a0517bb",
+      "checkpoint_bytes": 19242649,
+      "eligible_training_patients": 225,
+      "elapsed_seconds": 586.8313702140003,
+      "peak_allocated_bytes": 560962048,
+      "status": "TRAINING_COMPLETE"
+    },
+    "continued": {
+      "phase": "continued",
+      "steps": 10000,
+      "seed": 20260919,
+      "parent_sha256": "4360fef36efa2829e12a998873820ae51c7608e902d32a6ae6e395fd96ced7c2",
+      "config_sha256": "f4c74e7151aacf295e72013217d9467d955122c792fbc9da16e1d372f30fdb38",
+      "execution_id": "CT-PILOT-004",
+      "checkpoint_sha256": "519a94a84fde14523d4722b613bfec94478599e44a8c705756d6727c43903745",
+      "checkpoint_bytes": 19242649,
+      "eligible_training_patients": 113,
+      "elapsed_seconds": 593.0094272345304,
+      "peak_allocated_bytes": 560962048,
+      "status": "TRAINING_COMPLETE"
+    }
+  },
+  "execution_id": "CT-PILOT-004",
+  "csv_reference_sensitivity": {
+    "status": "DEVELOPMENT_ONLY",
+    "patients": 27,
+    "lesions": 198,
+    "strategies": {
+      "old_old": {
+        "mae_ml": 16.845569726614045,
+        "signed_error_ml": 7.990763221101499
+      },
+      "old_new": {
+        "mae_ml": 18.921386606430673,
+        "signed_error_ml": 6.848887735762264
+      },
+      "new_new": {
+        "mae_ml": 10.353885285697954,
+        "signed_error_ml": -1.9317716285991113
+      },
+      "old_continued": {
+        "mae_ml": 18.455756401927278,
+        "signed_error_ml": 6.042967623994538
+      },
+      "continued_continued": {
+        "mae_ml": 17.055154644061734,
+        "signed_error_ml": 6.376179212429093
+      }
+    },
+    "contrasts": {
+      "ordinary_update_benefit": {
+        "mean_ml": -2.07581687981663,
+        "exploratory_95_percentile_interval_ml": [
+          -5.913640952586866,
+          0.07205865475714576
+        ]
+      },
+      "retaining_baseline_cost": {
+        "mean_ml": 8.567501320732719,
+        "exploratory_95_percentile_interval_ml": [
+          -0.34322150330938683,
+          22.546027084239995
+        ]
+      },
+      "refresh_benefit": {
+        "mean_ml": 6.4916844409160905,
+        "exploratory_95_percentile_interval_ml": [
+          -1.0035408142360178,
+          19.923817299678543
+        ]
+      },
+      "added_data_vs_same_data_mixed": {
+        "mean_ml": -0.46563020450339665,
+        "exploratory_95_percentile_interval_ml": [
+          -1.1206371934984998,
+          0.011173121389562633
+        ]
+      }
+    },
+    "patient_mean_followup_dice": {
+      "old": 0.5683525415932714,
+      "new": 0.6156508330073026,
+      "continued": 0.5600733587183403
+    },
+    "bootstrap_draws": 2000,
+    "bootstrap_seed": 20260916,
+    "test_evaluated": false,
+    "confirmatory_inference": false
+  },
+  "boundary_diagnostics": {
+    "old": {
+      "patient_mean_hd95_mm_nonempty_only": 6.71678355107555,
+      "empty_followup_predictions": 0,
+      "patients_with_defined_hd95": 27
+    },
+    "new": {
+      "patient_mean_hd95_mm_nonempty_only": 6.573209266287794,
+      "empty_followup_predictions": 0,
+      "patients_with_defined_hd95": 27
+    },
+    "continued": {
+      "patient_mean_hd95_mm_nonempty_only": 6.960864813213191,
+      "empty_followup_predictions": 0,
+      "patients_with_defined_hd95": 27
+    }
+  },
+  "elapsed_seconds": 1916.9755533710122,
+  "config_sha256": "f4c74e7151aacf295e72013217d9467d955122c792fbc9da16e1d372f30fdb38",
+  "peak_gpu_allocated_bytes": 101779968,
+  "private_predictions_sha256": "d4c659230e86c7f64052414b1d9d414765644c8f376820414a49778fce50eb27"
+}

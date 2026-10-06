@@ -1,0 +1,79 @@
+{
+  "protocol_id": "CT-UPDATE-010",
+  "date": "2026-09-18",
+  "dataset_root_env": "CT_UPDATE_PANTRACK_REMOTE_ROOT",
+  "project_root_env": "CT_UPDATE_REMOTE_ROOT",
+  "models": [
+    "old",
+    "new",
+    "continued",
+    "scratch",
+    "bcwi_025",
+    "bcwi_050",
+    "bcwi_075",
+    "kd_001",
+    "kd_010"
+  ],
+  "seeds": [
+    20260915,
+    20260917,
+    20260919
+  ],
+  "cohort": "PanTrack",
+  "role": "external_evaluation_only_no_tuning",
+  "expected_patients": 45,
+  "expected_pairs": 181,
+  "intake_sha256": "c7dfb3b20c8d0adfdde3392809c89c6efeb4f9255e04f8182fa69fda0bb21b1b",
+  "candidate_sha256": "fedc14af04c54dc78a1c19f051c85ea4811afa767682ace1878758f84cd0e2c2",
+  "file_manifest_sha256": "dd9ef5f3c10024a1a82cb333f8a0eca54b28683a778b82d1fcc0abb80866a72b",
+  "metadata_sha256": "791e7865d8ce27952d55d867854c4f932928628dc7647c311576ca486dd07426",
+  "checkpoint_registry_sha256": "48ddb5bc56d807c993859761bead4b0a384ab27dd279430fbc70e9acc59e637f",
+  "model_input_roles": [
+    "ct_image",
+    "reference_centroid"
+  ],
+  "internal_test_values_permitted": false,
+  "training_permitted": false,
+  "external_fitting_permitted": false,
+  "inspect_native_references_after_intake": true,
+  "inspect_predictions_after_reference_gate": true,
+  "patch": {
+    "shape": [
+      96,
+      96,
+      96
+    ],
+    "spacing_mm": [
+      1.5,
+      1.5,
+      1.5
+    ],
+    "hu_clip": [
+      -1000,
+      1000
+    ],
+    "image_dtype": "float16",
+    "mask_dtype": "uint8"
+  },
+  "centroid_tolerance_voxels": 1.05,
+  "analysis": {
+    "bootstrap_draws": 10000,
+    "bootstrap_seed": 20260924,
+    "primary_family_size": 6,
+    "precision_target_halfwidth_ml": 5.0,
+    "primary_contrasts": [
+      "ordinary_update_benefit",
+      "retaining_baseline_cost",
+      "contour_benefit"
+    ],
+    "weighting": "pair_losses_within_patient_then_seed_average_then_equal_patients",
+    "clinical_margin_ml": null,
+    "csv_reference_sensitivity": false
+  },
+  "storage": {
+    "study_cap_bytes": 268435456000,
+    "project_cap_bytes": 966367641600,
+    "planned_additional_bytes": 5368709120,
+    "cache_cap_bytes": 2147483648
+  }
+}

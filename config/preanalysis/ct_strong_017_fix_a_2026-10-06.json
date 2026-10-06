@@ -1,0 +1,43 @@
+{
+ "protocol_id": "CT-UPDATE-017",
+ "correction": "A",
+ "date": "2026-10-06",
+ "question_id": "IMG-ALT-01",
+ "role": "re-evaluate the trained nnU-Net checkpoints after an evaluation that used untrained networks",
+ "amendment_file": "newpaper/plan/CT_EXPERIMENT_AMENDMENT_017A_2026-10-06.md",
+ "amendment_sha256": "e19711b2f99068f65ef22c646bd4983d8df038ed018e136f57b0701394ceace0",
+ "base_policy_file": "config/preanalysis/ct_strong_017_2026-10-02.json",
+ "base_policy_sha256": "7470667550c0ad159c1b0193013790156e804cb701568f7dae0e8ad1c763a3b2",
+ "training_source_manifest_sha256": "71da4506b4d1e204528adc3c786cac36c64085e92743396277f908b7ebddd0f5",
+ "prepare_receipt_sha256": "64292af888dfb686fa52b3bbf8b193bc29562ff3afcdb08098774cdc860494a3",
+ "schedule_sha256": "85fe89363b0ade83af9a407a43511d6bbb021bea23b8414fdd43278b5ca0ef2a",
+ "training_complete_sha256": {
+  "20261201": "61bacffc4204c054beda463c1608862957d66fb07de0117c9a1b9de9f3fc5431",
+  "20261202": "0be8e4df1728e3a3dc7691f3365f2e6a9542e1704c10f562a2579a190842a5ab",
+  "20261203": "0d3e6677b3eed8316dcb1ae3148c46dc5c4b4b8e99b9946fadc7c87bed8ed8f1",
+  "20261204": "6ef39eb27ca066328192300b070a24c346fcaad26d40f5920457bd3c4060ff35",
+  "20261205": "04bb3fbad5618cbef52cf84127b347154525d962723d42104a199b227131e7e7",
+  "20261206": "1d796f075aee9a15b160b2aa707176c61dc2cf1667d7a5b9a970bfd4a6608573",
+  "20261207": "c54443fa12450653bae9e2cd1b9b9912a949f09119111f69eba8d39a8c24ecf0",
+  "20261208": "cf06463f218f35d7d72063acbc22d8038324abf6ed437d30385cbdd96d64269f",
+  "20261209": "5487b8eb94a4953603fa21c5f2db5cfdbbe27df1cf86fe4abee22db7bb65a82e",
+  "20261210": "8502108fcae53e3c8a475c1e3db53ac0ce8d142b286c43016d9424d010ed8008"
+ },
+ "retrain": false,
+ "sanity": {
+  "seed": 20261201,
+  "development_subset": "old",
+  "patches": 20,
+  "require_nonempty_target": true,
+  "minimum_mean_dice": 0.5,
+  "receipt_relative": "sanity_fix_a.json"
+ },
+ "invalid_attempt": {
+  "results_sha256": "78247f46472868899fa0700754b9dd8674881c34c7c3ea0bc1923fbd7d23858a",
+  "verification_sha256": "0492a32c835a2efb823169306a0d1ffbba981be90844405d68461371d4c91389",
+  "evaluation_folder_renamed_to": "evaluation_attempt002_untrained",
+  "analysis_folder_renamed_to": "analysis_attempt002_untrained",
+  "cause": "evaluation used freshly initialized networks; trained weights were never loaded"
+ },
+ "patient_level_values_in_outputs": false
+}

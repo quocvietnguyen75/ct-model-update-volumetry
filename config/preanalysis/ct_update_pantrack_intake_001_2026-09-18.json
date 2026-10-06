@@ -1,0 +1,50 @@
+{
+  "protocol_id": "CT-UPDATE-007",
+  "date": "2026-09-18",
+  "dataset_root_env": "CT_UPDATE_PANTRACK_REMOTE_ROOT",
+  "project_root_env": "CT_UPDATE_REMOTE_ROOT",
+  "expected_files": 330,
+  "expected_bytes": 57820749445,
+  "expected_patients": 45,
+  "expected_scans": 161,
+  "expected_metadata_sha256": "791e7865d8ce27952d55d867854c4f932928628dc7647c311576ca486dd07426",
+  "manifest_hashes": {
+    "patients.json": "e2e8a2130fbaccd48acd59824a2d3a519ac0e54ef7c92cba3612f6d378eb9172",
+    "tracking.json": "a2f3709386669dcc20c83d6720760533ea5fce677122a2e607fe0f97a9609dc4",
+    "recommended_split.json": "f0472068b3d60774ccc6d526cdb7d83c6e73139f5ef7e087479d287d809c8ec6"
+  },
+  "root_filenames": [
+    ".gitattributes",
+    "PanTrack.jpg",
+    "README.md",
+    "config.json",
+    "organ_annotations.json",
+    "patients.json",
+    "recommended_split.json",
+    "tracking.json"
+  ],
+  "tracking_fields": [
+    "img_bl",
+    "img_fu",
+    "bl_point",
+    "fu_point",
+    "fu_point_prop",
+    "merged_lesions"
+  ],
+  "model_input_roles": [
+    "ct_image",
+    "reference_centroid"
+  ],
+  "eligibility": "finite_points_unchanged_single_positive_label_unique_target",
+  "external_role": "evaluation_only_no_tuning",
+  "inspect_image_voxels": false,
+  "inspect_label_voxels": false,
+  "inspect_model_outputs": false,
+  "internal_test_values_permitted": false,
+  "max_metadata_file_bytes": 10485760,
+  "storage": {
+    "study_cap_bytes": 268435456000,
+    "project_cap_bytes": 966367641600,
+    "planned_additional_bytes": 1073741824
+  }
+}

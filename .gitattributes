@@ -1,0 +1,6 @@
+# Configurations, amendments and records are bound by SHA-256 of their exact bytes:
+# store them without end-of-line conversion.
+config/preanalysis/ct_* -text
+newpaper/** -text
+*.sbatch text eol=lf
+*.py text eol=lf

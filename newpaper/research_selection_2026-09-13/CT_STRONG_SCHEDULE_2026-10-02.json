@@ -1,0 +1,24 @@
+{
+  "schedule": "long",
+  "epochs": {
+    "old": 500,
+    "new": 250,
+    "continued": 250
+  },
+  "seconds_per_epoch": 49.33598220348358,
+  "projected_long_run_hours": 15.204439500967661,
+  "epoch_seconds": [
+    51.09404683113098,
+    49.32142639160156,
+    49.3505380153656
+  ],
+  "status": "STRONG_SCHEDULE_FIXED",
+  "protocol_id": "CT-UPDATE-017",
+  "policy_sha256": "7470667550c0ad159c1b0193013790156e804cb701568f7dae0e8ad1c763a3b2",
+  "source_manifest_sha256": "71da4506b4d1e204528adc3c786cac36c64085e92743396277f908b7ebddd0f5",
+  "prepare_receipt_sha256": "64292af888dfb686fa52b3bbf8b193bc29562ff3afcdb08098774cdc860494a3",
+  "device": "NVIDIA H100 80GB HBM3 MIG 3g.40gb",
+  "smoke_checkpoint_sha256": "c73f279aced522326acf57235a6d608a3d76aff24114fcf011031a67e69bc78b",
+  "outcomes_inspected": false,
+  "decided_at_utc": "2026-10-02T12:14:35.312983+00:00"
+}

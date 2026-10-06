@@ -1,0 +1,16 @@
+{
+  "status": "REPLICATION_ARITHMETIC_REPRODUCED",
+  "numeric_values_checked": 770,
+  "max_absolute_difference": 3.552713678800501e-15,
+  "primary_intervals_reproduced": true,
+  "secondary_intervals_recomputed": false,
+  "runs": 20,
+  "protocol_id": "CT-UPDATE-015",
+  "checked_at_utc": "2026-09-27T04:20:57.856673+00:00",
+  "result_sha256": "2c53cd697997c19948e458eccfc94cdd3fb344e219118507163e3d3d2d7f21bf",
+  "policy_sha256": "3f629e057c05896d3bba9ffefdccb45e481c15cd9412e73199e4c9c789171820",
+  "source_manifest_sha256": "74feac6e7300fd6f2caabc2379f7ac738547c0be6d63fe34c6851670c23a7166",
+  "inference_rerun": false,
+  "independent_agent": false,
+  "human_reading": "not_attested"
+}
