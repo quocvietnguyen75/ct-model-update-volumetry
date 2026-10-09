@@ -43,7 +43,7 @@ From the repository root:
 PYTHONPATH=src python -m unittest discover -s tests
 ```
 
-The suite runs 216 tests. Tests that need PyTorch, MONAI or nnU-Net are skipped when those packages are absent.
+The suite runs 222 tests. Tests that need PyTorch, MONAI or nnU-Net are skipped when those packages are absent.
 
 To regenerate the manuscript's figures, table fragments and supplementary CSVs from the verified results:
 

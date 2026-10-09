@@ -10,7 +10,8 @@ import json
 from pathlib import Path
 
 from careport.ct_manuscript_figures import (REPLICATION_LEGEND, THREE_RUN_LEGEND, contrast_figure,
-                                            diagnostic_figure, save_pdf, strategy_schematic)
+                                            diagnostic_figure, model_comparison_figure, model_comparison_panels,
+                                            save_pdf, update_explainer)
 from careport.ct_replication_report import COHORT_NAMES, COHORTS, ORIGINAL_SEEDS, PRIMARY, panel_data
 
 RECORD = Path('newpaper/research_selection_2026-09-13')
@@ -74,6 +75,8 @@ def diagnostic_inputs():
 
 def main():
     results = json.loads((RECORD/'CT_REPLICATION_RESULTS_2026-09-27.json').read_text(encoding='utf-8'))
+    posthoc = json.loads((RECORD/'CT_POSTHOC_RESULTS_2026-10-02.json').read_text(encoding='utf-8'))
+    strong = json.loads((RECORD/'CT_STRONG_RESULTS_2026-10-06.json').read_text(encoding='utf-8'))
     replication, three_run = replication_panels(results), three_run_panels()
     for name in PRIMARY:  # Both figures must show the same three original runs.
         for cohort in COHORTS:
@@ -81,9 +84,12 @@ def main():
             if any(abs(x - y) > 1e-9 for x, y in zip(a, b)):
                 raise ValueError(f'Original-run values disagree for {cohort} / {name}')
     labels = cohort_labels(results)
-    figures = {'figure1_strategies.pdf': strategy_schematic(),
+    models = model_comparison_panels(results, posthoc, strong, strong['descriptive'])
+    figures = {'figure1_update_explainer.pdf': update_explainer(),
                'figure2_replication_runs.pdf': contrast_figure(replication, labels, REPLICATION_LEGEND),
-               'figure3_three_run_contrasts.pdf': contrast_figure(three_run, labels, THREE_RUN_LEGEND),
+               'figure3_model_comparison.pdf': model_comparison_figure(models, labels,
+                                                                       {'unet': 'U-Net', 'nnunet': 'nnU-Net'}),
+               'figure4_three_run_contrasts.pdf': contrast_figure(three_run, labels, THREE_RUN_LEGEND),
                'figureS1_pantrack_diagnostics.pdf': diagnostic_figure(*diagnostic_inputs())}
     for name, fig in figures.items():
         save_pdf(fig, OUT/name)

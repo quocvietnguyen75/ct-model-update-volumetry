@@ -197,8 +197,9 @@ def main():
         (LATEX/f'{name}.tex').write_text(text, encoding='utf-8')
     write_run_export(rows)
     write_run_export(strong_rows, 's7_strong_replication_runs.csv')
-    figures = (('figure1_strategies.pdf', 'figure1.pdf'), ('figure2_replication_runs.pdf', 'figure2.pdf'),
-               ('figure3_three_run_contrasts.pdf', 'figure3.pdf'), ('figureS1_pantrack_diagnostics.pdf', 'figureS1.pdf'))
+    figures = (('figure1_update_explainer.pdf', 'figure1.pdf'), ('figure2_replication_runs.pdf', 'figure2.pdf'),
+               ('figure3_model_comparison.pdf', 'figure3.pdf'), ('figure4_three_run_contrasts.pdf', 'figure4.pdf'),
+               ('figureS1_pantrack_diagnostics.pdf', 'figureS1.pdf'))
     for source, target in figures:
         shutil.copyfile(FIGURES/source, LATEX/target)
     print(f'wrote {len(fragments)} table fragments, {len(figures)} figures, s6 ({len(rows)} rows) and s7 ({len(strong_rows)} rows)')
