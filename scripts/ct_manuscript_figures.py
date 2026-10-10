@@ -1,17 +1,22 @@
 """Write the print-size CT manuscript figures from the verified aggregate files.
 
-Run from the repository root with PYTHONPATH=src. Reads aggregates only. Writes new PDFs to
-newpaper/ct_manuscript/figures/print/; the earlier hash-bound figures and receipts are not touched.
-scripts/ct_manuscript_latex.py then copies these files into the submission folder.
+Run from the repository root with PYTHONPATH=src. Reads aggregates only, except that the example-pair figure
+(amendment CT-UPDATE-018) is drawn when CT_EXAMPLE_PRIVATE_NPZ names its private crop file; without it the figure
+is skipped. Writes new PDFs to newpaper/ct_manuscript/figures/print/; the earlier hash-bound figures and receipts are
+not touched. scripts/ct_manuscript_latex.py then copies these files into the submission folder.
 """
 import csv
 import hashlib
 import json
+import os
 from pathlib import Path
 
+import numpy as np
+
 from careport.ct_manuscript_figures import (REPLICATION_LEGEND, THREE_RUN_LEGEND, contrast_figure,
-                                            diagnostic_figure, model_comparison_figure, model_comparison_panels,
-                                            save_pdf, update_explainer)
+                                            diagnostic_figure, example_figure, example_from_arrays,
+                                            model_comparison_figure, model_comparison_panels, save_pdf,
+                                            update_explainer)
 from careport.ct_replication_report import COHORT_NAMES, COHORTS, ORIGINAL_SEEDS, PRIMARY, panel_data
 
 RECORD = Path('newpaper/research_selection_2026-09-13')
@@ -89,8 +94,14 @@ def main():
                'figure2_replication_runs.pdf': contrast_figure(replication, labels, REPLICATION_LEGEND),
                'figure3_model_comparison.pdf': model_comparison_figure(models, labels,
                                                                        {'unet': 'U-Net', 'nnunet': 'nnU-Net'}),
-               'figure4_three_run_contrasts.pdf': contrast_figure(three_run, labels, THREE_RUN_LEGEND),
+               'figure5_three_run_contrasts.pdf': contrast_figure(three_run, labels, THREE_RUN_LEGEND),
                'figureS1_pantrack_diagnostics.pdf': diagnostic_figure(*diagnostic_inputs())}
+    private = os.environ.get('CT_EXAMPLE_PRIVATE_NPZ')
+    if private:  # Patient-level crops: read from outside the repository, never written into it except as this figure.
+        with np.load(private, allow_pickle=False) as arrays:
+            figures['figure4_example_pair.pdf'] = example_figure(example_from_arrays(arrays))
+    else:
+        print('example-pair figure skipped: CT_EXAMPLE_PRIVATE_NPZ is not set')
     for name, fig in figures.items():
         save_pdf(fig, OUT/name)
     print(f'wrote {len(figures)} figures to {OUT}')

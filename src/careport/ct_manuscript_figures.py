@@ -10,9 +10,10 @@ from pathlib import Path
 
 import matplotlib
 import matplotlib.pyplot as plt
+import numpy as np
 from matplotlib.figure import Figure
 from matplotlib.lines import Line2D
-from matplotlib.patches import Circle, FancyBboxPatch
+from matplotlib.patches import FancyBboxPatch
 from matplotlib.text import Annotation, Text
 
 from careport.ct_manuscript import MANUSCRIPT_CONTRASTS
@@ -34,10 +35,14 @@ COMPONENTS = (('old_new_minus_old_old', 'Old/new − old/old'), ('old_new_minus_
 STRATA = (('lt1', '<1 mL'), ('1to10', '1–<10 mL'), ('ge10', '≥10 mL'))
 BAR_COLOURS = ('#273c75', '#d28a25', '#9cc9bc')
 INK, MUTED, RUN_FILL, GRID, UPDATED_FILL = '#1a1a1a', '#555555', '#8c8c8c', '#e6e6e6', '#4d4d4d'
-# Model versions in the explainer (old: amber, updated: navy) and segmenters in the model comparison (U-Net: black
-# squares, nnU-Net: teal circles); the two encodings never share a colour, and each pair differs in greyscale too.
-VERSION_INK = {'old': '#b8731a', 'new': '#273c75'}
-VERSION_FILL = {'old': '#fbe9cf', 'new': '#273c75'}
+# Model versions share one palette in Figures 1 and 4: amber for the old model and sky blue for the updated one
+# (Okabe-Ito hues, kept apart under colour-vision deficiency). Full hues draw outlines; light tints carry text. The
+# segmenters in the model comparison (U-Net: black squares, nnU-Net: teal circles) never share these colours.
+VERSION_LINE = {'old': '#f5a623', 'new': '#56b4e9'}
+VERSION_FILL = {'old': '#fdecd2', 'new': '#dcf0fb'}
+VERSION_TERM = '#1d5f8a'  # the version-difference term of the identity, readable on its highlight
+BAND = (*matplotlib.colors.to_rgb(VERSION_LINE['new']), 0.65)  # the difference between versions, translucent
+SCAN = {'background': '#1c2025', 'organ': '#7d848c', 'lesion': '#4d535a'}  # stylised scan tiles (Figure 1)
 MODEL_STYLE = {'unet': dict(ink=INK, runs=RUN_FILL, marker='s'), 'nnunet': dict(ink='#16706b', runs='#9cc9bc', marker='o')}
 MODELS = tuple(MODEL_STYLE)
 COHORT_KEYS = ('internal', 'pantrack')
@@ -117,11 +122,56 @@ def contrast_figure(panels: dict, cohorts, legend: dict) -> Figure:
     return fig
 
 
+def _radius(theta, radius: float, harmonics) -> np.ndarray:
+    """Radius of a smooth closed shape: radius * (1 + sum of a*cos(k*theta + phase)) over (k, a, phase)."""
+    return radius * (1 + sum(a * np.cos(k * theta + phase) for k, a, phase in harmonics))
+
+
+def _shape(centre, radius: float, harmonics, scale: float = 1.0, smooth: float = 1.0,
+           shift=(0.0, 0.0)) -> tuple:
+    """A shape as (centre, radius, harmonics), optionally scaled, smoothed (weaker harmonics) and moved."""
+    return ((centre[0] + shift[0], centre[1] + shift[1]), radius * scale,
+            tuple((k, a * smooth, phase) for k, a, phase in harmonics))
+
+
+def _outline(shape, offset=(0.0, 0.0), points: int = 360) -> np.ndarray:
+    (cx, cy), radius, harmonics = shape
+    theta = np.linspace(0, 2 * np.pi, points, endpoint=False)
+    r = _radius(theta, radius, harmonics)
+    return np.column_stack([offset[0] + cx + r * np.cos(theta), offset[1] + cy + r * np.sin(theta)])
+
+
+def _scan_tile(size: float, organ, lesion, pixels: int = 360) -> np.ndarray:
+    """A stylised scan (an illustration, not data): a softly shaded organ on a dark field, with a darker lesion."""
+    half = size / 2
+    u = np.linspace(-half, half, pixels)
+    x, y = np.meshgrid(u, -u)  # image row 0 is the top of the tile
+
+    def weight(shape, softness):
+        (cx, cy), radius, harmonics = shape
+        rho, theta = np.hypot(x - cx, y - cy), np.arctan2(y - cy, x - cx)
+        return 1 / (1 + np.exp(np.clip((rho - _radius(theta, radius, harmonics)) / softness, -50, 50)))
+
+    colour = {k: np.array(matplotlib.colors.to_rgb(v)) for k, v in SCAN.items()}
+    (ox, oy), oradius, _ = organ
+    shade = 0.84 + 0.16 * np.clip(1 - ((x - ox) ** 2 + (y - oy) ** 2) / oradius ** 2, 0, 1)
+    in_organ, in_lesion = weight(organ, 0.006)[..., None], weight(lesion, 0.012)[..., None]
+    image = colour['background'] * (1 - in_organ) + colour['organ'] * shade[..., None] * in_organ
+    image = image * (1 - in_lesion * in_organ) + colour['lesion'] * in_lesion * in_organ
+    return np.clip(image, 0, 1)
+
+
 def update_explainer() -> Figure:
     """Illustration, not data: (a) how a measurement that mixes model versions takes up the between-version
     difference at baseline, and (b) which model measures each scan under the three core strategies, with the
     primary contrasts."""
+    from matplotlib import patheffects
+    from matplotlib.patches import PathPatch, Rectangle
+    from matplotlib.path import Path as MplPath
     width, height = TEXT_WIDTH_IN, 4.5
+    edge = [patheffects.withStroke(linewidth=2.6, foreground='#111111')]
+    styles = {'reference': dict(color='white', linewidth=1.1, linestyle=(0, (3, 2))),
+              'old': dict(color=VERSION_LINE['old'], linewidth=1.4), 'new': dict(color=VERSION_LINE['new'], linewidth=1.4)}
     with plt.rc_context(STYLE):
         fig = plt.figure(figsize=(width, height))
         ax = fig.add_axes((0, 0, 1, 1))
@@ -134,29 +184,61 @@ def update_explainer() -> Figure:
             ax.text(0.04, y, letter, va='center', fontsize=10, fontweight='bold', color=INK)
             ax.text(0.26, y, title, va='center', fontsize=9, fontweight='bold', color=INK)
 
-        # (a) One lesion pair; circles are drawn to scale only within each scan and carry no study data.
+        # (a) One lesion pair on stylised scans; the shapes are drawn to scale within each scan and carry no data.
         heading(height - 0.16, 'a', 'How mixing model versions enters the measured change')
-        tile, top = 1.12, height - 0.38
-        radii = {'Baseline scan': (0.27, 0.17, 0.25), 'Follow-up scan': (0.39, 0.27, 0.36)}
-        for x0, (label, (r_ref, r_old, r_new)) in zip((0.3, 1.62), radii.items()):
+        tile, top = 1.15, height - 0.38
+        organ = ((0.16, -0.06), 0.58, ((2, 0.07, 0.5), (3, 0.04, 2.0)))
+        lesions = {'baseline': ((-0.04, 0.03), 0.23, ((2, 0.09, 0.4), (3, 0.06, 2.3), (5, 0.025, 1.1))),
+                   'followup': ((-0.04, 0.03), 0.30, ((2, 0.10, 0.6), (3, 0.05, 2.6), (5, 0.03, 0.8)))}
+        # The models trace smoother outlines than the reference; the old model's lies inside the updated one's.
+        fits = {'baseline': (0.93, 0.74), 'followup': (0.95, 0.80)}
+        outlines = {}
+        for x0, (scan, label) in zip((0.3, 1.75), (('baseline', 'Baseline scan'), ('followup', 'Follow-up scan'))):
             centre = (x0 + tile / 2, top - tile / 2)
-            ax.add_patch(FancyBboxPatch((x0, top - tile), tile, tile, boxstyle='round,pad=0,rounding_size=0.08',
-                                        facecolor='#dedede', edgecolor='none'))
-            ax.add_patch(Circle(centre, r_ref, facecolor='#a9a9a9', edgecolor=INK, linewidth=1.0, linestyle=(0, (3, 2))))
-            ax.add_patch(Circle(centre, r_old, facecolor='none', edgecolor=VERSION_INK['old'], linewidth=1.6))
-            ax.add_patch(Circle(centre, r_new, facecolor='none', edgecolor=VERSION_INK['new'], linewidth=1.6))
+            frame = FancyBboxPatch((x0, top - tile), tile, tile, boxstyle='round,pad=0,rounding_size=0.08',
+                                   facecolor='none', edgecolor='none')
+            ax.add_patch(frame)
+            image = ax.imshow(_scan_tile(tile, organ, lesions[scan]), extent=(x0, x0 + tile, top - tile, top),
+                              interpolation='bilinear', aspect='auto', zorder=1, gid=f'explainer:scan:{scan}')
+            image.set_clip_path(frame)
+            new_scale, old_scale = fits[scan]
+            shapes = {'reference': lesions[scan],
+                      'new': _shape(*lesions[scan], scale=new_scale, smooth=0.75),
+                      'old': _shape(*lesions[scan], scale=new_scale * old_scale, smooth=0.525, shift=(0.01, -0.008))}
+            outlines[scan] = {layer: _outline(shape, centre) for layer, shape in shapes.items()}
+            if scan == 'baseline':
+                # The version difference: the band between the old and the updated model's baseline outlines.
+                outer, inner = outlines[scan]['new'], outlines[scan]['old'][::-1]
+                vertices = np.vstack([outer, outer[:1], inner, inner[:1]])
+                codes = ([MplPath.MOVETO] + [MplPath.LINETO] * (len(outer) - 1) + [MplPath.CLOSEPOLY]
+                         + [MplPath.MOVETO] + [MplPath.LINETO] * (len(inner) - 1) + [MplPath.CLOSEPOLY])
+                ax.add_patch(PathPatch(MplPath(vertices, codes), facecolor=BAND, edgecolor='none', zorder=2,
+                                       gid='explainer:version_difference'))
+            for layer in ('reference', 'old', 'new'):
+                points = np.vstack([outlines[scan][layer], outlines[scan][layer][:1]])
+                line = ax.plot(points[:, 0], points[:, 1], zorder=3, solid_joinstyle='round',
+                               gid=f'explainer:outline:{scan}:{layer}', **styles[layer])[0]
+                line.set_path_effects(edge)
             ax.text(x0 + tile / 2, top - tile - 0.15, label, ha='center', va='center', fontsize=9, color=INK)
-        # Contour key under the tiles, too wide for one row there: the reference, then the two model versions.
-        key_y, key_row = top - tile - 0.42, 0.19
-        for row, entries in enumerate(((('Reference', INK, (0, (3, 2))),),
-                                       (('Old model', VERSION_INK['old'], '-'),
-                                        ('Updated model', VERSION_INK['new'], '-')))):
-            x, y = 0.3, key_y - key_row * row
-            for text, colour, style in entries:
-                ax.plot([x, x + 0.22], [y] * 2, color=colour, linewidth=1.6 if style == '-' else 1.0,
-                        linestyle=style, gid=f'key:{text}:handle')
-                label = ax.text(x + 0.29, y, text, va='center', fontsize=8, color=INK, gid=f'key:{text}:label')
-                x += 0.29 + label.get_window_extent(renderer).width / fig.dpi + 0.25
+        ax.annotate('', xy=(1.75 - 0.05, top - tile / 2), xytext=(0.3 + tile + 0.05, top - tile / 2),
+                    arrowprops=dict(arrowstyle='-|>', color=MUTED, linewidth=1.0, shrinkA=0, shrinkB=0))
+        # Key under the tiles, in two rows: the reference and the version difference, then the two model versions.
+        # Each handle sits on a chip of the scan's dark field, so it looks exactly as it does on the scans.
+        key_y, key_row = top - tile - 0.42, 0.2
+        for row, entries in enumerate((('Reference', 'Version difference'), ('Old model', 'Updated model'))):
+            x, y = 0.34, key_y - key_row * row
+            for text in entries:
+                ax.add_patch(FancyBboxPatch((x - 0.04, y - 0.065), 0.30, 0.13, boxstyle='round,pad=0,rounding_size=0.03',
+                                            facecolor=SCAN['background'], edgecolor='none', zorder=1))
+                if text == 'Version difference':
+                    ax.add_patch(Rectangle((x, y - 0.04), 0.22, 0.08, facecolor=BAND, edgecolor='none', zorder=2,
+                                           gid=f'key:{text}:handle'))
+                else:
+                    layer = {'Reference': 'reference', 'Old model': 'old', 'Updated model': 'new'}[text]
+                    handle = ax.plot([x, x + 0.22], [y] * 2, zorder=3, gid=f'key:{text}:handle', **styles[layer])[0]
+                    handle.set_path_effects(edge)
+                label = ax.text(x + 0.34, y, text, va='center', fontsize=8, color=INK, gid=f'key:{text}:label')
+                x += 0.34 + label.get_window_extent(renderer).width / fig.dpi + 0.28
         lines = (('One version (new/new)', 'bold'), ('change = FU(new) − BL(new)', 'normal'), ('', 'normal'),
                  ('Mixed versions (old/new)', 'bold'), ('change = FU(new) − BL(old)', 'normal'),
                  ('= [FU(new) − BL(new)] + ', 'normal'), ('', 'normal'),
@@ -166,12 +248,12 @@ def update_explainer() -> Figure:
             if not text:
                 continue
             y = top - 0.08 - 0.165 * k
-            shown = ax.text(3.08, y, text, va='center', fontsize=8, fontweight=weight, color=INK)
+            shown = ax.text(3.12, y, text, va='center', fontsize=8, fontweight=weight, color=INK)
             if text.startswith('= ['):
-                # The between-version term, in the updated model's colour, follows the same-version change.
+                # The between-version term, highlighted in the band's colour, follows the same-version change.
                 width = shown.get_window_extent(renderer).width / fig.dpi
-                ax.text(3.08 + width, y, '[BL(new) − BL(old)]', va='center', fontsize=8, fontweight='bold',
-                        color=VERSION_INK['new'])
+                ax.text(3.12 + width + 0.03, y, '[BL(new) − BL(old)]', va='center', fontsize=8, fontweight='bold',
+                        color=VERSION_TERM, bbox=dict(boxstyle='round,pad=0.15', facecolor=BAND, edgecolor='none'))
 
         # (b) The three core strategies and the primary contrasts.
         b_top = key_y - key_row - 0.36
@@ -183,6 +265,7 @@ def update_explainer() -> Figure:
                       ('old/new', 'Retain the old baseline', ('old', 'new')),
                       ('new/new', 'Reprocess the baseline', ('new', 'new')))
         ys = [b_top - 0.66 - 0.42 * k for k in range(3)]
+        badges = {'old': 0, 'new': 0}
         for (code, description, models), y in zip(strategies, ys):
             ax.text(0.08, y + 0.08, code, va='center', fontsize=9, fontweight='bold', color=INK)
             ax.text(0.08, y - 0.1, description, va='center', fontsize=8, color=INK)
@@ -190,10 +273,11 @@ def update_explainer() -> Figure:
                 x = centres[column]
                 ax.add_patch(FancyBboxPatch((x - box_w / 2, y - box_h / 2), box_w, box_h,
                                             boxstyle='round,pad=0.02,rounding_size=0.05',
-                                            facecolor=VERSION_FILL[model], edgecolor=VERSION_INK[model],
-                                            linewidth=0.9))
+                                            facecolor=VERSION_FILL[model], edgecolor=VERSION_LINE[model],
+                                            linewidth=1.2, gid=f'explainer:badge:{model}:{badges[model]}'))
+                badges[model] += 1
                 ax.text(x, y, 'Old model' if model == 'old' else 'Updated model', ha='center', va='center',
-                        fontsize=8, color=INK if model == 'old' else 'white')
+                        fontsize=8, color=INK)
         x0 = 3.92
 
         def bracket(upper: float, lower: float, label: str) -> None:
@@ -326,6 +410,122 @@ def model_comparison_figure(panels: dict, cohorts, legend: dict) -> Figure:
             handles.append(Line2D([], [], marker=style['marker'], color=style['ink'], linewidth=1.5, markersize=4.5,
                                   label=f'{legend[model]}: mean and interval'))
         fig.legend(handles=handles, loc='outside lower center', ncol=2, frameon=False, fontsize=8)
+    return fig
+
+
+# The example pair (CT-UPDATE-018) uses Figure 1's version palette; a black outline keeps each contour visible on
+# dark and bright tissue alike, and in the legend.
+EXAMPLE_LAYERS = (('reference', 'Reference', '#ffffff', (0, (3, 2))), ('old', 'Old model', VERSION_LINE['old'], '-'),
+                  ('new', 'Updated model', VERSION_LINE['new'], '-'))
+EXAMPLE_STRATEGIES = (('old_old', 'old/old'), ('old_new', 'old/new'), ('new_new', 'new/new'))
+
+
+def _signed(value: float, digits: int = 2) -> str:
+    return f'{value:+.{digits}f}'.replace('-', '−')
+
+
+def example_from_arrays(arrays) -> dict:
+    """The example_figure input from the arrays careport.ct_example_run saves (example_private.npz)."""
+    import json
+    needed = {f'{t}_{k}' for t in ('bl', 'fu') for k in ('image', 'reference', 'old', 'new', 'spacing_mm')}
+    if not needed | {'values_json'} <= set(arrays):
+        raise ValueError('The example arrays are incomplete')
+    values = json.loads(str(np.asarray(arrays['values_json'])))
+    timepoints = {}
+    for timepoint in ('bl', 'fu'):
+        view = {k: np.asarray(arrays[f'{timepoint}_{k}']) for k in ('image', 'reference', 'old', 'new')}
+        view['spacing'] = tuple(float(v) for v in np.asarray(arrays[f'{timepoint}_spacing_mm']))
+        timepoints[timepoint] = view
+    return dict(timepoints=timepoints, volumes=values['volumes'], table=values['table'],
+                window_hu=tuple(values['window_hu']))
+
+
+def example_figure(example: dict) -> Figure:
+    """One real lesion pair (amendment CT-UPDATE-018): the baseline and follow-up crops with the reference,
+    old-model and updated-model contours, the stored volumes, and each strategy's measured change and error.
+
+    example['timepoints'][t] holds 'image' (HU), the boolean 'reference', 'old' and 'new' crops and 'spacing'
+    (row, column mm); 'volumes', 'table' (from careport.ct_example.change_table) and 'window_hu' give the rest.
+    """
+    from matplotlib import patheffects
+    for timepoint in ('bl', 'fu'):
+        view = example['timepoints'].get(timepoint) or {}
+        shape = np.shape(view.get('image'))
+        if len(shape) != 2:
+            raise ValueError(f'The {timepoint} image is not one slice')
+        for layer, *_ in EXAMPLE_LAYERS:
+            mask = np.asarray(view.get(layer))
+            if mask.shape != shape or not mask.any():
+                raise ValueError(f'The {layer} layer at {timepoint} is empty or has another shape')
+    outline = [patheffects.withStroke(linewidth=2.6, foreground='black')]
+    width, height, size = TEXT_WIDTH_IN, 2.95, 1.9
+    vmin, vmax = example['window_hu']
+    with plt.rc_context(STYLE):
+        fig = plt.figure(figsize=(width, height))
+        base = fig.add_axes((0, 0, 1, 1))
+        base.set_xlim(0, width)
+        base.set_ylim(0, height)
+        base.axis('off')
+        bottom = height - 0.3 - size
+        for left, (timepoint, title) in zip((0.08, 0.08 + size + 0.2), (('bl', 'Baseline scan'),
+                                                                        ('fu', 'Follow-up scan'))):
+            view = example['timepoints'][timepoint]
+            rows, cols = np.shape(view['image'])
+            row_mm, col_mm = view['spacing']
+            ax = fig.add_axes((left / width, bottom / height, size / width, size / height))
+            ax.imshow(view['image'], cmap='gray', vmin=vmin, vmax=vmax, interpolation='nearest',
+                      extent=(0, cols * col_mm, rows * row_mm, 0), gid=f'example:image:{timepoint}')
+            x, y = (np.arange(cols) + 0.5) * col_mm, (np.arange(rows) + 0.5) * row_mm
+            for layer, _, colour, style in EXAMPLE_LAYERS:
+                contour = ax.contour(x, y, np.asarray(view[layer], dtype=float), levels=[0.5], colors=[colour],
+                                     linewidths=1.2, linestyles=[style])
+                contour.set_path_effects(outline)
+                contour.set_gid(f'example:contour:{timepoint}:{layer}')
+            ax.set_xlim(0, cols * col_mm)
+            ax.set_ylim(rows * row_mm, 0)
+            ax.set_xticks([])
+            ax.set_yticks([])
+            ax.set_title(title, loc='left', fontsize=9, color=INK)
+            if timepoint == 'bl':
+                start, level = 0.07 * cols * col_mm, 0.92 * rows * row_mm
+                bar = ax.plot([start, start + 10], [level, level], color='white', linewidth=2.0, solid_capstyle='butt')
+                bar[0].set_path_effects(outline)
+                label = ax.text(start + 5, level - 0.04 * rows * row_mm, '10 mm', ha='center', va='bottom',
+                                fontsize=8, color='white')
+                label.set_path_effects([patheffects.withStroke(linewidth=2.0, foreground='black')])
+            for k, (layer, name, _, _) in enumerate(EXAMPLE_LAYERS):
+                level = bottom - 0.17 - 0.16 * k
+                base.text(left, level, name, va='center', fontsize=8, color=INK)
+                base.text(left + size, level, f"{example['volumes'][layer][timepoint]:.2f} mL", ha='right',
+                          va='center', fontsize=8, color=INK, gid=f'example:volume:{timepoint}:{layer}')
+        # Each strategy's measured change and its error against the reference change, in mL.
+        table, columns = example['table'], (4.42, 5.38, 5.94)
+        top = height - 0.42
+        base.text(columns[0], top, 'Change and error (mL)', va='center', fontsize=8, fontweight='bold', color=INK)
+        for x, text in zip(columns[1:], ('Change', 'Error')):
+            base.text(x, top - 0.22, text, ha='right', va='center', fontsize=8, color=MUTED)
+        rows = {r['strategy']: r for r in table['rows']}
+        for k, (name, label) in enumerate(EXAMPLE_STRATEGIES):
+            level = top - 0.42 - 0.18 * k
+            base.text(columns[0], level, label, va='center', fontsize=8, color=INK, gid=f'example:strategy:{name}')
+            base.text(columns[1], level, _signed(rows[name]['change']), ha='right', va='center', fontsize=8,
+                      color=INK, gid=f'example:change:{name}')
+            base.text(columns[2], level, _signed(rows[name]['error']), ha='right', va='center', fontsize=8,
+                      color=INK, gid=f'example:error:{name}')
+        level = top - 0.42 - 0.18 * len(EXAMPLE_STRATEGIES)
+        base.text(columns[0], level, 'Reference', va='center', fontsize=8, color=INK)
+        base.text(columns[1], level, _signed(table['reference_change']), ha='right', va='center', fontsize=8,
+                  color=INK, gid='example:reference_change')
+        base.plot([columns[0], columns[2]], [level + 0.1] * 2, color=GRID, linewidth=0.8)
+        base.text(columns[0], level - 0.32, f"Retention cost of this pair:\n{_signed(table['retention_cost'])} mL",
+                  va='top', fontsize=8, color=INK, linespacing=1.4, gid='example:retention_cost')
+        handles = []
+        for _, name, colour, style in EXAMPLE_LAYERS:
+            handle = Line2D([], [], color=colour, linestyle=style, linewidth=1.2, label=name)
+            handle.set_path_effects(outline)
+            handles.append(handle)
+        base.legend(handles=handles, loc='lower left', bbox_to_anchor=(columns[0] - 0.1, 0.12),
+                    bbox_transform=base.transData, frameon=False, fontsize=8, handlelength=2.2)
     return fig
 
 

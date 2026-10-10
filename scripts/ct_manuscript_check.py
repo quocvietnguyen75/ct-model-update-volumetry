@@ -26,7 +26,7 @@ JSON_SOURCES = ['CT_REPLICATION_RESULTS_2026-09-27.json', 'CT_REPLICATION_VERIFI
 DESIGN = {'1.05': 'centroid tolerance (voxels)', '1.5': 'isotropic spacing (mm)', '0.5': 'flip probability; 0.5% rule',
           '0.25': 'interpolation weight', '0.50': 'interpolation weight', '0.75': 'interpolation weight',
           '0.05': 'family error rate', '3.6': 'verification difference 3.6e-15',
-          '0.001': 'display threshold for sign probabilities'}
+          '0.001': 'display threshold for sign probabilities', '4.0': 'Creative Commons licence version (CC BY-NC 4.0)'}
 MAIN_SECTIONS = ('Introduction', 'Methods', 'Results', 'Discussion', 'Conclusion')
 
 

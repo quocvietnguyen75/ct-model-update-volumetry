@@ -2,7 +2,7 @@
 
 Analysis code, frozen analysis configurations, dated protocol amendments and verified aggregate results for the manuscript:
 
-> Quoc Viet Nguyen, Phuc Tai Duong, Duc Hoai Anh Nguyen and Zengchang Qin. *Longitudinal tumour volumetry after CT segmentation model updates: a controlled evaluation across training runs and cohorts.* Submitted to *Physics in Medicine & Biology*, 2026.
+> Quoc Viet Nguyen, Phuc Tai Duong, Duc Hoai Anh Nguyen, Dzung Van Dinh and Zengchang Qin. *Longitudinal tumour volumetry after CT segmentation model updates: a controlled evaluation across training runs and cohorts.* Submitted to *Physics in Medicine & Biology*, 2026.
 
 The study updates a CT tumour segmentation model with more training data. It then measures how retaining baseline measurements made by the old model, instead of reprocessing the baseline scan, changes the error of measured tumour-volume change. It compares a three-dimensional residual U-Net (three original runs and a prespecified 20-run replication) with nnU-Net (a ten-run replication), on an internal Longitudinal-CT holdout and the external PanTrack cohort.
 
@@ -43,7 +43,7 @@ From the repository root:
 PYTHONPATH=src python -m unittest discover -s tests
 ```
 
-The suite runs 222 tests. Tests that need PyTorch, MONAI or nnU-Net are skipped when those packages are absent.
+The suite runs 247 tests. Tests that need PyTorch, MONAI or nnU-Net are skipped when those packages are absent.
 
 To regenerate the manuscript's figures, table fragments and supplementary CSVs from the verified results:
 
@@ -53,7 +53,7 @@ mkdir -p newpaper/ct_manuscript/pmb_submission
 PYTHONPATH=src python scripts/ct_manuscript_latex.py     # LaTeX table fragments and s6/s7 CSVs
 ```
 
-The regenerated table fragments are identical to those in the submitted manuscript.
+The regenerated figures and table fragments are identical to those in the submitted manuscript, except Figure 4. That figure shows one PanTrack lesion pair, chosen by the rule in amendment 018. It is drawn from CT image crops, which this repository does not hold, so the figure script skips it. To draw it, run the 018 stage, which needs the downloaded PanTrack data and the nnU-Net models trained in the 017 stage, then set `CT_EXAMPLE_PRIVATE_NPZ` to the crop file it writes.
 
 ## Running the experiments
 
@@ -75,6 +75,7 @@ Each stage is a module run by one Slurm script. A stage refuses to run unless th
 | 20-run replication | 015 | `ct_replication_seed`, `ct_replication_analysis` | `ct_replication_run` |
 | Post hoc descriptions | 016 | `ct_posthoc_016` | `ct_posthoc_run` |
 | nnU-Net replication | 017, 017A | `ct_strong_017` | `ct_strong_run` |
+| Example lesion pair (Figure 4) | 018 | `ct_example_018` | `ct_example_run` |
 
 The amendment numbers above are a guide; the amendments themselves are authoritative. The analyses ran from hash-recorded code bundles of earlier versions of this code. Those execution records are available from the corresponding author.
 

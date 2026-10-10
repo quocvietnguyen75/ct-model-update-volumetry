@@ -1,12 +1,15 @@
-"""Synthetic contracts for the print-size CT manuscript figures (aggregates only)."""
+"""Synthetic contracts for the print-size CT manuscript figures (synthetic values only)."""
 import re
 import tempfile
 import unittest
 from pathlib import Path
 
+import numpy as np
+
 try:
     import matplotlib
     matplotlib.use('Agg')
+    from matplotlib.text import Text
     HAVE_MPL = True
 except ImportError:  # pragma: no cover - matplotlib is part of the figure environment
     HAVE_MPL = False
@@ -62,6 +65,28 @@ def replication(runs, scale):
 
 
 MODEL_LEGEND = {'unet': 'U-Net', 'nnunet': 'nnU-Net'}
+
+
+def disc(size, centre, radius):
+    rows, cols = np.ogrid[:size, :size]
+    return (rows - centre[0]) ** 2 + (cols - centre[1]) ** 2 <= radius ** 2
+
+
+def example():
+    """Synthetic example pair shaped like the CT-UPDATE-018 private crops (no study data)."""
+    timepoints = {}
+    for timepoint, radius in (('bl', 14), ('fu', 17)):
+        image = np.full((80, 80), -20.0)
+        image[disc(80, (40, 40), radius)] = 60.0
+        timepoints[timepoint] = dict(image=image, reference=disc(80, (40, 40), radius),
+                                     old=disc(80, (40, 41), radius - 3), new=disc(80, (41, 40), radius),
+                                     spacing=(0.75, 0.75))
+    volumes = {'reference': {'bl': 12.5, 'fu': 18.25}, 'old': {'bl': 9.75, 'fu': 14.5},
+               'new': {'bl': 12.0, 'fu': 18.0}}
+    rows = [dict(strategy='old_old', change=4.75, error=-1.0), dict(strategy='old_new', change=8.25, error=2.5),
+            dict(strategy='new_new', change=6.0, error=0.25)]
+    return dict(timepoints=timepoints, volumes=volumes,
+                table=dict(reference_change=5.75, rows=rows, retention_cost=2.25), window_hu=(-160.0, 240.0))
 
 
 @unittest.skipUnless(HAVE_MPL, 'matplotlib unavailable')
@@ -129,12 +154,50 @@ class PrintFigureTests(unittest.TestCase):
         self.assertIn('a', self.f.figure_texts(fig))
         self.assertIn('b', self.f.figure_texts(fig))
 
+    def test_update_explainer_shades_the_version_difference_and_highlights_its_term(self):
+        from matplotlib.path import Path as MplPath
+        fig = self.f.update_explainer()
+        drawn = {a.get_gid(): a for a in fig.findobj(lambda a: str(a.get_gid()).startswith('explainer:'))}
+        for scan in ('baseline', 'followup'):
+            self.assertIn(f'explainer:scan:{scan}', drawn)
+            for layer in ('reference', 'old', 'new'):
+                self.assertIn(f'explainer:outline:{scan}:{layer}', drawn)
+
+        def outline(scan, layer):
+            line = drawn[f'explainer:outline:{scan}:{layer}']
+            return np.column_stack([line.get_xdata(), line.get_ydata()])
+
+        def area(points):
+            x, y = points[:, 0], points[:, 1]
+            return 0.5 * abs(np.dot(x, np.roll(y, 1)) - np.dot(y, np.roll(x, 1)))
+
+        # Lesions are drawn as organic outlines, not circles.
+        reference = outline('baseline', 'reference')
+        radius = np.hypot(*(reference - reference.mean(axis=0)).T)
+        self.assertGreater(radius.max() / radius.min(), 1.1)
+        # The shaded band is exactly the region between the two versions' baseline outlines.
+        old, new = outline('baseline', 'old'), outline('baseline', 'new')
+        self.assertTrue(MplPath(new).contains_points(old).all())
+        band = drawn['explainer:version_difference']
+        band_area = sum(area(p) * (1 if k == 0 else -1) for k, p in enumerate(band.get_path().to_polygons()))
+        self.assertAlmostEqual(band_area, area(new) - area(old), delta=0.01 * area(new))
+        # The highlighted term of the identity carries the band's colour.
+        term = [t for t in fig.findobj(Text) if t.get_text() == '[BL(new) − BL(old)]']
+        self.assertEqual(len(term), 1)
+        self.assertEqual(tuple(term[0].get_bbox_patch().get_facecolor()), tuple(band.get_facecolor()))
+        # One palette: each strategy badge has the colour of that version's outline.
+        for version, label in (('old', 'Old model'), ('new', 'Updated model')):
+            badges = [a for a in fig.findobj(lambda a: str(a.get_gid()).startswith(f'explainer:badge:{version}'))]
+            self.assertEqual(len(badges), 3)
+            colour = matplotlib.colors.to_rgba(drawn[f'explainer:outline:baseline:{version}'].get_color())
+            self.assertTrue(all(tuple(b.get_edgecolor()) == colour for b in badges), label)
+
     def test_update_explainer_key_entries_and_labels_keep_clear(self):
         fig = self.f.update_explainer()
         renderer = fig.canvas.get_renderer()
         key = {a.get_gid(): a.get_window_extent(renderer)
                for a in fig.findobj(lambda a: str(a.get_gid()).startswith('key:'))}
-        names = ('Reference', 'Old model', 'Updated model')
+        names = ('Reference', 'Version difference', 'Old model', 'Updated model')
         self.assertEqual(set(key), {f'key:{n}:{part}' for n in names for part in ('handle', 'label')})
         inch = fig.dpi
         for name in names:
@@ -219,6 +282,58 @@ class PrintFigureTests(unittest.TestCase):
         self.assertEqual(len(estimates), 2)
         self.assertNotEqual(estimates[0].get_marker(), estimates[1].get_marker())
         self.assertNotEqual(estimates[0].get_color(), estimates[1].get_color())
+
+    def test_example_figure_draws_every_contour_and_prints_the_given_values(self):
+        data = example()
+        fig = self.f.example_figure(data)
+        self.check_print_size(fig)
+        drawn = {a.get_gid() for a in fig.findobj(lambda a: str(a.get_gid()).startswith('example:'))}
+        for timepoint in ('bl', 'fu'):
+            self.assertIn(f'example:image:{timepoint}', drawn)
+            for layer in ('reference', 'old', 'new'):
+                self.assertIn(f'example:contour:{timepoint}:{layer}', drawn)
+        texts = {t.get_gid(): t.get_text() for t in fig.findobj(Text) if str(t.get_gid()).startswith('example:')}
+        self.assertEqual(texts['example:volume:bl:reference'], '12.50 mL')
+        self.assertEqual(texts['example:volume:fu:old'], '14.50 mL')
+        self.assertEqual(texts['example:change:old_new'], '+8.25')
+        self.assertEqual(texts['example:error:old_old'], '−1.00')
+        self.assertEqual(texts['example:reference_change'], '+5.75')
+        self.assertIn('+2.25 mL', texts['example:retention_cost'])
+        strategies = [t.get_text() for t in sorted((t for t in fig.findobj(Text)
+                                                    if str(t.get_gid()).startswith('example:strategy:')),
+                                                   key=lambda t: -t.get_position()[1])]
+        self.assertEqual(strategies, ['old/old', 'old/new', 'new/new'])
+
+    def test_example_inputs_are_read_from_the_runner_arrays(self):
+        import json
+        data = example()
+        arrays = {}
+        for timepoint, view in data['timepoints'].items():
+            for layer in ('image', 'reference', 'old', 'new'):
+                arrays[f'{timepoint}_{layer}'] = view[layer]
+            arrays[f'{timepoint}_spacing_mm'] = np.asarray(view['spacing'])
+        arrays['values_json'] = np.array(json.dumps(dict(volumes=data['volumes'], table=data['table'],
+                                                         window_hu=list(data['window_hu']), crop_side_mm=60.0,
+                                                         seed=20261205, cohort='pantrack')))
+        read = self.f.example_from_arrays(arrays)
+        self.assertEqual(read['volumes'], data['volumes'])
+        self.assertEqual(read['table'], data['table'])
+        self.assertEqual(tuple(read['window_hu']), data['window_hu'])
+        self.assertEqual(read['timepoints']['fu']['spacing'], (0.75, 0.75))
+        self.assertTrue(np.array_equal(read['timepoints']['bl']['old'], data['timepoints']['bl']['old']))
+        del arrays['fu_new']
+        with self.assertRaises(ValueError):
+            self.f.example_from_arrays(arrays)
+
+    def test_example_figure_rejects_an_empty_or_misshapen_layer(self):
+        data = example()
+        data['timepoints']['fu']['new'] = np.zeros((80, 80), dtype=bool)
+        with self.assertRaises(ValueError):
+            self.f.example_figure(data)
+        data = example()
+        data['timepoints']['bl']['old'] = np.ones((70, 80), dtype=bool)
+        with self.assertRaises(ValueError):
+            self.f.example_figure(data)
 
     def test_diagnostic_figure_fits_the_text_width_with_legible_labels(self):
         fig = self.f.diagnostic_figure(batches(), ['20260915', '20260917', '20260919', 'Three-run\naverage'],

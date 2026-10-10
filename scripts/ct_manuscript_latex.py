@@ -26,6 +26,11 @@ CONTRASTS = MANUSCRIPT_CONTRASTS
 SHORT = {'retaining_baseline_cost': 'Retention|cost', 'ordinary_update_benefit': 'Update|benefit',
          'contour_benefit': 'Contour|benefit'}
 FIGURES = MANUSCRIPT/'figures'/'print'
+EXAMPLE_FIGURE = 'figure4_example_pair.pdf'
+FIGURE_COPIES = (('figure1_update_explainer.pdf', 'figure1.pdf'), ('figure2_replication_runs.pdf', 'figure2.pdf'),
+                 ('figure3_model_comparison.pdf', 'figure3.pdf'), (EXAMPLE_FIGURE, 'figure4.pdf'),
+                 ('figure5_three_run_contrasts.pdf', 'figure5.pdf'),
+                 ('figureS1_pantrack_diagnostics.pdf', 'figureS1.pdf'))
 STRATEGIES = ('old_old', 'old_new', 'new_new', 'old_continued', 'continued_continued', 'old_scratch',
               'scratch_scratch', 'old_bcwi_025', 'bcwi_025_bcwi_025', 'old_bcwi_050', 'bcwi_050_bcwi_050',
               'old_bcwi_075', 'bcwi_075_bcwi_075', 'old_kd_001', 'kd_001_kd_001', 'old_kd_010', 'kd_010_kd_010',
@@ -175,6 +180,17 @@ def write_run_export(rows, filename='s6_replication_runs.csv'):
         writer.writerows({**r, 'cohort': COHORT_NAMES[r['cohort']]} for r in rows)
 
 
+def copy_figures(source, target):
+    """Copy the print figures under their manuscript names and return the names written."""
+    written = []
+    for name, manuscript_name in FIGURE_COPIES:
+        if name == EXAMPLE_FIGURE and not (source/name).exists():
+            continue  # drawn only from private crops (CT-UPDATE-018); absent outside the authors' repository
+        shutil.copyfile(source/name, target/manuscript_name)
+        written.append(manuscript_name)
+    return written
+
+
 def main():
     results = json.loads((RECORD/'CT_REPLICATION_RESULTS_2026-09-27.json').read_text(encoding='utf-8'))
     posthoc = json.loads((RECORD/'CT_POSTHOC_RESULTS_2026-10-02.json').read_text(encoding='utf-8'))
@@ -197,11 +213,7 @@ def main():
         (LATEX/f'{name}.tex').write_text(text, encoding='utf-8')
     write_run_export(rows)
     write_run_export(strong_rows, 's7_strong_replication_runs.csv')
-    figures = (('figure1_update_explainer.pdf', 'figure1.pdf'), ('figure2_replication_runs.pdf', 'figure2.pdf'),
-               ('figure3_model_comparison.pdf', 'figure3.pdf'), ('figure4_three_run_contrasts.pdf', 'figure4.pdf'),
-               ('figureS1_pantrack_diagnostics.pdf', 'figureS1.pdf'))
-    for source, target in figures:
-        shutil.copyfile(FIGURES/source, LATEX/target)
+    figures = copy_figures(FIGURES, LATEX)
     print(f'wrote {len(fragments)} table fragments, {len(figures)} figures, s6 ({len(rows)} rows) and s7 ({len(strong_rows)} rows)')
 
 
