@@ -1,0 +1,369 @@
+% T1 (machine-learning update compatibility; model updating in medical AI)
+% Recommended papers only. Bibliographic metadata were taken from the registry or
+% official proceedings page named in each entry's note field (Crossref, NeurIPS/PMLR/JMLR/ICLR
+% proceedings pages, arXiv), not from memory. Priorities refer to NOTES.md section 2.
+% Authors must still check every source before citing it (IOP requirement).
+
+% ---------------------------------------------------------------- essential
+% priority: essential (Introduction; Methods compatibility-metric definition)
+@article{bansal2019updates,
+  author  = {Bansal, Gagan and Nushi, Besmira and Kamar, Ece and Weld, Daniel S. and Lasecki, Walter S. and Horvitz, Eric},
+  title   = {Updates in Human-{AI} Teams: Understanding and Addressing the Performance/Compatibility Tradeoff},
+  journal = {Proceedings of the AAAI Conference on Artificial Intelligence},
+  year    = {2019},
+  volume  = {33},
+  number  = {01},
+  pages   = {2429--2437},
+  doi     = {10.1609/aaai.v33i01.33012429},
+  note    = {Metadata: Crossref, DOI 10.1609/aaai.v33i01.33012429}
+}
+
+% priority: essential (Methods; Discussion)
+@inproceedings{srivastava2020empirical,
+  author    = {Srivastava, Megha and Nushi, Besmira and Kamar, Ece and Shah, Shital and Horvitz, Eric},
+  title     = {An Empirical Analysis of Backward Compatibility in Machine Learning Systems},
+  booktitle = {Proceedings of the 26th {ACM} {SIGKDD} International Conference on Knowledge Discovery \& Data Mining},
+  year      = {2020},
+  pages     = {3272--3280},
+  doi       = {10.1145/3394486.3403379},
+  note      = {Metadata: Crossref, DOI 10.1145/3394486.3403379; preprint arXiv:2008.04572}
+}
+
+% priority: essential (Methods; churn definition)
+@inproceedings{milanifard2016launch,
+  author    = {Milani Fard, Mahdi and Cormier, Quentin and Canini, Kevin and Gupta, Maya},
+  title     = {Launch and Iterate: Reducing Prediction Churn},
+  booktitle = {Advances in Neural Information Processing Systems 29},
+  editor    = {Lee, D. and Sugiyama, M. and Luxburg, U. and Guyon, I. and Garnett, R.},
+  publisher = {Curran Associates, Inc.},
+  year      = {2016},
+  url       = {https://proceedings.neurips.cc/paper_files/paper/2016/file/dc5c768b5dc76a084531934b34601977-Paper.pdf},
+  note      = {Metadata: official NeurIPS proceedings BibTeX (no DOI, no page numbers). The PDF title block lists Q. Cormier above the Google authors; author order here follows the proceedings metadata}
+}
+
+% priority: essential (Introduction; Methods template for a cross-version criterion)
+@inproceedings{shen2020towards,
+  author    = {Shen, Yantao and Xiong, Yuanjun and Xia, Wei and Soatto, Stefano},
+  title     = {Towards Backward-Compatible Representation Learning},
+  booktitle = {2020 {IEEE/CVF} Conference on Computer Vision and Pattern Recognition ({CVPR})},
+  year      = {2020},
+  pages     = {6367--6376},
+  doi       = {10.1109/CVPR42600.2020.00640},
+  note      = {Metadata: Crossref, DOI 10.1109/cvpr42600.2020.00640; preprint arXiv:2003.11942}
+}
+
+% priority: essential (Introduction; Discussion: stored predictions vs backfilling)
+@inproceedings{trauble2021backward,
+  author    = {Tr{\"a}uble, Frederik and von K{\"u}gelgen, Julius and Kleindessner, Matth{\"a}us and Locatello, Francesco and Sch{\"o}lkopf, Bernhard and Gehler, Peter},
+  title     = {Backward-Compatible Prediction Updates: A Probabilistic Approach},
+  booktitle = {Advances in Neural Information Processing Systems 34},
+  editor    = {Ranzato, M. and Beygelzimer, A. and Dauphin, Y. and Liang, P. S. and Wortman Vaughan, J.},
+  publisher = {Curran Associates, Inc.},
+  year      = {2021},
+  pages     = {116--128},
+  url       = {https://proceedings.neurips.cc/paper_files/paper/2021/file/012d9fe15b2493f21902cd55603382ec-Paper.pdf},
+  note      = {Metadata: official NeurIPS proceedings BibTeX (no DOI); preprint arXiv:2107.01057}
+}
+
+% priority: essential (Methods; novelty boundary: compatibility for continuous outputs)
+@inproceedings{otles2023updating,
+  author    = {{\"O}tle{\c{s}}, Erkin and Denton, Brian T. and Wiens, Jenna},
+  title     = {Updating Clinical Risk Stratification Models Using Rank-Based Compatibility: Approaches for Evaluating and Optimizing Clinician-Model Team Performance},
+  booktitle = {Proceedings of the 8th Machine Learning for Healthcare Conference},
+  series    = {Proceedings of Machine Learning Research},
+  volume    = {219},
+  pages     = {529--547},
+  publisher = {PMLR},
+  year      = {2023},
+  url       = {https://proceedings.mlr.press/v219/otles23a.html},
+  note      = {Metadata: PMLR volume 219 index page (no DOI); preprint arXiv:2308.05619}
+}
+
+% priority: essential (Methods; novelty boundary: compatibility for continuous scores)
+@inproceedings{echterhoff2024muscle,
+  author    = {Echterhoff, Jessica Maria and Faghri, Fartash and Vemulapalli, Raviteja and Hu, Ting-Yao and Li, Chun-Liang and Tuzel, Oncel and Pouransari, Hadi},
+  title     = {{MUSCLE}: A Model Update Strategy for Compatible {LLM} Evolution},
+  booktitle = {Findings of the Association for Computational Linguistics: {EMNLP} 2024},
+  year      = {2024},
+  pages     = {7320--7332},
+  doi       = {10.18653/v1/2024.findings-emnlp.430},
+  note      = {Metadata: Crossref, DOI 10.18653/v1/2024.findings-emnlp.430; preprint arXiv:2407.09435}
+}
+
+% ---------------------------------------------------------------- useful
+% priority: useful (Methods: individual-level absolute difference between two models' continuous outputs)
+@article{riley2023stability,
+  author  = {Riley, Richard D. and Collins, Gary S.},
+  title   = {Stability of clinical prediction models developed using statistical or machine learning methods},
+  journal = {Biometrical Journal},
+  year    = {2023},
+  volume  = {65},
+  number  = {8},
+  pages   = {2200302},
+  doi     = {10.1002/bimj.202200302},
+  note    = {Metadata: Crossref, DOI 10.1002/bimj.202200302 (article number 2200302)}
+}
+
+% priority: useful (Discussion: stored outputs as undeclared consumers; silent recalibration)
+@inproceedings{sculley2015hidden,
+  author    = {Sculley, D. and Holt, Gary and Golovin, Daniel and Davydov, Eugene and Phillips, Todd and Ebner, Dietmar and Chaudhary, Vinay and Young, Michael and Crespo, Jean-Fran{\c{c}}ois and Dennison, Dan},
+  title     = {Hidden Technical Debt in Machine Learning Systems},
+  booktitle = {Advances in Neural Information Processing Systems 28},
+  editor    = {Cortes, C. and Lawrence, N. and Lee, D. and Sugiyama, M. and Garnett, R.},
+  publisher = {Curran Associates, Inc.},
+  year      = {2015},
+  url       = {https://proceedings.neurips.cc/paper_files/paper/2015/file/86df7dcfd896fcaf2674f757a2463eba-Paper.pdf},
+  note      = {Metadata: official NeurIPS proceedings BibTeX (no DOI, no page numbers)}
+}
+
+% priority: useful (Discussion: keep-all, no-update and version-to-version transformation strategies)
+@inproceedings{hu2022learning,
+  author    = {Hu, Weihua and Bansal, Rajas and Cao, Kaidi and Rao, Nikhil and Subbian, Karthik and Leskovec, Jure},
+  title     = {Learning Backward Compatible Embeddings},
+  booktitle = {Proceedings of the 28th {ACM} {SIGKDD} Conference on Knowledge Discovery and Data Mining},
+  year      = {2022},
+  pages     = {3018--3028},
+  doi       = {10.1145/3534678.3539194},
+  note      = {Metadata: Crossref, DOI 10.1145/3534678.3539194; preprint arXiv:2206.03040}
+}
+
+% priority: useful (Discussion: partly reprocessed records; mixed-version comparisons during backfilling)
+@inproceedings{zhang2022hot,
+  author    = {Zhang, Binjie and Ge, Yixiao and Shen, Yantao and Li, Yu and Yuan, Chun and Xu, Xuyuan and Wang, Yexin and Shan, Ying},
+  title     = {Hot-Refresh Model Upgrades with Regression-Free Compatible Training in Image Retrieval},
+  booktitle = {International Conference on Learning Representations ({ICLR})},
+  year      = {2022},
+  url       = {https://openreview.net/forum?id=HTp-6yLGGX},
+  note      = {Metadata: ICLR 2022 conference poster page (iclr.cc/virtual/2022/poster/5920) and arXiv:2201.09724 (preprint title: Regression-Alleviating instead of Regression-Free); no DOI}
+}
+
+% priority: useful (Methods: unified view of classification compatibility metrics; abstract-level only)
+@inproceedings{sakai2022generalized,
+  author    = {Sakai, Tomoya},
+  title     = {A Generalized Backward Compatibility Metric},
+  booktitle = {Proceedings of the 28th {ACM} {SIGKDD} Conference on Knowledge Discovery and Data Mining},
+  year      = {2022},
+  pages     = {1525--1535},
+  doi       = {10.1145/3534678.3539465},
+  note      = {Metadata: Crossref, DOI 10.1145/3534678.3539465. Full text not read (abstract only)}
+}
+
+% priority: useful (Introduction/Discussion: monitoring and updating clinical AI)
+@article{feng2022clinical,
+  author  = {Feng, Jean and Phillips, Rachael V. and Malenica, Ivana and Bishara, Andrew and Hubbard, Alan E. and Celi, Leo A. and Pirracchio, Romain},
+  title   = {Clinical artificial intelligence quality improvement: towards continual monitoring and updating of {AI} algorithms in healthcare},
+  journal = {npj Digital Medicine},
+  year    = {2022},
+  volume  = {5},
+  pages   = {66},
+  doi     = {10.1038/s41746-022-00611-y},
+  note    = {Metadata: Crossref, DOI 10.1038/s41746-022-00611-y (article 66)}
+}
+
+% priority: useful (Introduction: continuous-learning AI in radiology; abstract-level only)
+@article{pianykh2020continuous,
+  author  = {Pianykh, Oleg S. and Langs, Georg and Dewey, Marc and Enzmann, Dieter R. and Herold, Christian J. and Schoenberg, Stefan O. and Brink, James A.},
+  title   = {Continuous Learning {AI} in Radiology: Implementation Principles and Early Applications},
+  journal = {Radiology},
+  year    = {2020},
+  volume  = {297},
+  number  = {1},
+  pages   = {6--14},
+  doi     = {10.1148/radiol.2020200038},
+  note    = {Metadata: Crossref, DOI 10.1148/radiol.2020200038}
+}
+
+% priority: useful (Discussion: diachronic change of adaptive systems during care)
+@article{hatherley2023diachronic,
+  author  = {Hatherley, Joshua and Sparrow, Robert},
+  title   = {Diachronic and synchronic variation in the performance of adaptive machine learning systems: the ethical challenges},
+  journal = {Journal of the American Medical Informatics Association},
+  year    = {2023},
+  volume  = {30},
+  number  = {2},
+  pages   = {361--366},
+  doi     = {10.1093/jamia/ocac218},
+  note    = {Metadata: Crossref, DOI 10.1093/jamia/ocac218 (published online 15 November 2022)}
+}
+
+% priority: useful (Discussion: update opacity; record the version behind stored measurements)
+@article{hatherley2025moving,
+  author  = {Hatherley, Joshua},
+  title   = {A moving target in {AI}-assisted decision-making: dataset shift, model updating, and the problem of update opacity},
+  journal = {Ethics and Information Technology},
+  year    = {2025},
+  volume  = {27},
+  number  = {2},
+  pages   = {20},
+  doi     = {10.1007/s10676-025-09829-2},
+  note    = {Metadata: Crossref, DOI 10.1007/s10676-025-09829-2 (article 20). Abstract-level reading}
+}
+
+% priority: useful (Methods/Discussion: distillation from the old model as a churn constraint)
+@inproceedings{jiang2022churn,
+  author    = {Jiang, Heinrich and Narasimhan, Harikrishna and Bahri, Dara and Cotter, Andrew and Rostamizadeh, Afshin},
+  title     = {Churn Reduction via Distillation},
+  booktitle = {International Conference on Learning Representations ({ICLR})},
+  year      = {2022},
+  eprint    = {2106.02654},
+  archivePrefix = {arXiv},
+  note      = {Metadata: arXiv:2106.02654v2 (journal reference ICLR 2022; camera-ready header 'Published as a conference paper at ICLR 2022'); OpenReview record not reachable; no DOI}
+}
+
+% priority: useful (Discussion: how sequential updates of medical segmenters are evaluated)
+@article{gonzalez2023lifelong,
+  author  = {Gonz{\'a}lez, Camila and Ranem, Amin and Pinto dos Santos, Daniel and Othman, Ahmed and Mukhopadhyay, Anirban},
+  title   = {Lifelong {nnU-Net}: a framework for standardized medical continual learning},
+  journal = {Scientific Reports},
+  year    = {2023},
+  volume  = {13},
+  pages   = {9381},
+  doi     = {10.1038/s41598-023-34484-2},
+  note    = {Metadata: Crossref, DOI 10.1038/s41598-023-34484-2 (article 9381)}
+}
+
+% priority: useful (Methods: backward transfer is a performance-retention metric, not compatibility)
+@inproceedings{lopezpaz2017gradient,
+  author    = {Lopez-Paz, David and Ranzato, Marc'Aurelio},
+  title     = {Gradient Episodic Memory for Continual Learning},
+  booktitle = {Advances in Neural Information Processing Systems 30},
+  editor    = {Guyon, I. and Von Luxburg, U. and Bengio, S. and Wallach, H. and Fergus, R. and Vishwanathan, S. and Garnett, R.},
+  publisher = {Curran Associates, Inc.},
+  year      = {2017},
+  url       = {https://proceedings.neurips.cc/paper_files/paper/2017/file/f87522788a2be2d171666752f97ddebb-Paper.pdf},
+  note      = {Metadata: official NeurIPS proceedings BibTeX (no DOI, no page numbers)}
+}
+
+% ---------------------------------------------------------------- optional
+% priority: optional (Introduction: regulation of continual learning; overlaps T6)
+@article{vokinger2021continual,
+  author  = {Vokinger, Kerstin N. and Feuerriegel, Stefan and Kesselheim, Aaron S.},
+  title   = {Continual learning in medical devices: {FDA}'s action plan and beyond},
+  journal = {The Lancet Digital Health},
+  year    = {2021},
+  volume  = {3},
+  number  = {6},
+  pages   = {e337--e338},
+  doi     = {10.1016/S2589-7500(21)00076-5},
+  note    = {Metadata: Crossref, DOI 10.1016/s2589-7500(21)00076-5. Only the first paragraph was read}
+}
+
+% priority: optional (Methods: regression-testing framing of negative flips)
+@inproceedings{xie2021regression,
+  author    = {Xie, Yuqing and Lai, Yi-An and Xiong, Yuanjun and Zhang, Yi and Soatto, Stefano},
+  title     = {Regression Bugs Are In Your Model! Measuring, Reducing and Analyzing Regressions In {NLP} Model Updates},
+  booktitle = {Proceedings of the 59th Annual Meeting of the Association for Computational Linguistics and the 11th International Joint Conference on Natural Language Processing (Volume 1: Long Papers)},
+  year      = {2021},
+  pages     = {6589--6602},
+  doi       = {10.18653/v1/2021.acl-long.515},
+  note      = {Metadata: Crossref, DOI 10.18653/v1/2021.acl-long.515}
+}
+
+% priority: optional (Discussion: a component improvement need not improve the system output)
+@inproceedings{wu2021fixes,
+  author    = {Wu, Ruihan and Guo, Chuan and Hannun, Awni and van der Maaten, Laurens},
+  title     = {Fixes That Fail: Self-Defeating Improvements in Machine-Learning Systems},
+  booktitle = {Advances in Neural Information Processing Systems 34},
+  editor    = {Ranzato, M. and Beygelzimer, A. and Dauphin, Y. and Liang, P. S. and Wortman Vaughan, J.},
+  publisher = {Curran Associates, Inc.},
+  year      = {2021},
+  pages     = {11745--11756},
+  url       = {https://proceedings.neurips.cc/paper_files/paper/2021/file/619427579e7b067421f6aa89d4a8990c-Paper.pdf},
+  note      = {Metadata: official NeurIPS proceedings BibTeX (no DOI); preprint arXiv:2103.11766}
+}
+
+% priority: optional (Discussion: the only medical-imaging audit of output consistency across model versions found)
+@article{zhang2026teacher,
+  author  = {Zhang, Jiaqiang and Wen, Shaodi and Du, Xiaoyue and Jia, Xutao and Shi, Jinshan and Du, Dongyang and Li, Ru and Shen, Bo},
+  title   = {Teacher-Referenced Heatmap Coverage for Auditing Attribution Shifts in Updated {CT} Classifiers},
+  journal = {Journal of Imaging Informatics in Medicine},
+  year    = {2026},
+  doi     = {10.1007/s10278-026-02310-6},
+  note    = {Metadata: Crossref, DOI 10.1007/s10278-026-02310-6; published online 22 September 2026, volume and pages not yet assigned. Abstract-level reading}
+}
+
+% priority: optional (Discussion: equivalent held-out performance, different deployed behaviour)
+@article{damour2022underspecification,
+  author  = {D'Amour, Alexander and Heller, Katherine and Moldovan, Dan and Adlam, Ben and Alipanahi, Babak and Beutel, Alex and Chen, Christina and Deaton, Jonathan and Eisenstein, Jacob and Hoffman, Matthew D. and others},
+  title   = {Underspecification Presents Challenges for Credibility in Modern Machine Learning},
+  journal = {Journal of Machine Learning Research},
+  year    = {2022},
+  volume  = {23},
+  number  = {226},
+  pages   = {1--61},
+  url     = {https://jmlr.org/papers/v23/20-1335.html},
+  note    = {Metadata: official JMLR page (no DOI). Abstract-level reading}
+}
+
+% priority: optional (Discussion: an AI quantitative score shifting between software versions; overlaps T2)
+@article{oya2025comparison,
+  author  = {Oya, Akiko and Nakayama, Michihiro and Uno, Takahiro and Ueda, Haruka and Yoshida, Ippei and Fujiya, Atsushi and Nomura, Yurina and Okizaki, Atsutaka},
+  title   = {Comparison of the diagnostic accuracy of {VSBONE} {BSI} versions for detecting bone metastases in breast and prostate carcinoma patients using conventional and {CZT} detector gamma cameras},
+  journal = {Annals of Nuclear Medicine},
+  year    = {2025},
+  volume  = {39},
+  number  = {5},
+  pages   = {466--475},
+  doi     = {10.1007/s12149-025-02020-z},
+  note    = {Metadata: Crossref, DOI 10.1007/s12149-025-02020-z. Abstract-level reading}
+}
+
+% priority: optional (Discussion: longitudinal consistency of a deep-learning quantitative pipeline amid upgrades; overlaps T2)
+@article{ying2025accuracy,
+  author  = {Ying, Chunwei and Chen, Yasheng and Yan, Yan and Flores, Shaney and Laforest, Richard and Benzinger, Tammie L. S. and An, Hongyu},
+  title   = {Accuracy and Longitudinal Consistency of {PET/MR} Attenuation Correction in Amyloid {PET} Imaging amid Software and Hardware Upgrades},
+  journal = {American Journal of Neuroradiology},
+  year    = {2025},
+  volume  = {46},
+  number  = {3},
+  pages   = {635--642},
+  doi     = {10.3174/ajnr.A8490},
+  note    = {Metadata: Crossref, DOI 10.3174/ajnr.a8490 (published online 9 September 2024). Abstract-level reading}
+}
+
+% priority: optional (Introduction: current survey of continual learning in medical image analysis)
+@article{kumari2025continual,
+  author  = {Kumari, Pratibha and Chauhan, Joohi and Bozorgpour, Afshin and Huang, Boqiang and Azad, Reza and Merhof, Dorit},
+  title   = {Continual learning in medical image analysis: A comprehensive review of recent advancements and future prospects},
+  journal = {Medical Image Analysis},
+  year    = {2025},
+  volume  = {106},
+  pages   = {103730},
+  doi     = {10.1016/j.media.2025.103730},
+  note    = {Metadata: Crossref, DOI 10.1016/j.media.2025.103730 (article 103730). Abstract-level reading}
+}
+
+% priority: optional (Discussion: similar aggregate performance, different individual predictions)
+@article{yusufujiang2026prediction,
+  author  = {Yusufujiang, Maerziya and Andaur Navarro, Constanza L. and Damen, Johanna A. A. and Takada, Toshihiko and Geersing, Geert-Jan and Hooft, Lotty and Schuit, Ewoud and Moons, Karel G. M. and de Jong, Valentijn M. T. and van Smeden, Maarten},
+  title   = {Prediction models developed using artificial intelligence: similar predictive performances with highly varying predictions for individuals -- an illustration in deep vein thrombosis},
+  journal = {Diagnostic and Prognostic Research},
+  year    = {2026},
+  volume  = {10},
+  number  = {1},
+  pages   = {1},
+  doi     = {10.1186/s41512-025-00216-5},
+  note    = {Metadata: Crossref, DOI 10.1186/s41512-025-00216-5 (article 1). Abstract-level reading}
+}
+
+% priority: optional (Discussion: silent model updates go unnoticed by users)
+@inproceedings{mohanty2025what,
+  author    = {Mohanty, Vikram and Lim, Jude and Luther, Kurt},
+  title     = {What Lies Beneath? Exploring the Impact of Underlying {AI} Model Updates in {AI}-Infused Systems},
+  booktitle = {Proceedings of the 2025 {CHI} Conference on Human Factors in Computing Systems},
+  year      = {2025},
+  pages     = {1--21},
+  doi       = {10.1145/3706598.3713751},
+  note      = {Metadata: Crossref, DOI 10.1145/3706598.3713751. Abstract-level reading}
+}
+
+% priority: optional, preprint (Discussion: cross-version score transformation in production; not peer reviewed)
+@misc{correia2026muse,
+  author        = {Correia, Cl{\'a}udio and Ferreira, Alberto E. A. and Martins, Lucas and Bento, Miguel P. and Guerreiro, Sofia and Pereira, Ricardo Ribeiro and Gomes, Ana Sofia and Bono, Jacopo and Ferreira, Hugo and Bizarro, Pedro},
+  title         = {{MUSE}: Multi-Tenant Model Serving With Seamless Model Updates},
+  year          = {2026},
+  eprint        = {2602.11776},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.LG},
+  note          = {Metadata: arXiv abstract page (v1, 12 February 2026; comment: under review for KDD 2026 ADS). No published version found in Crossref on 12 October 2026}
+}

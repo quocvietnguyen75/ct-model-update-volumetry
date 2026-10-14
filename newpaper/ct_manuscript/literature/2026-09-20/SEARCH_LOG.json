@@ -1,0 +1,1522 @@
+{
+  "review_date": "2026-09-20",
+  "question_id": "IMG-ALT-01",
+  "review_type": "critical_scoping_review",
+  "scope_file": "CT_POSTRESULT_REVIEW_SCOPE_2026-09-20.md",
+  "search_method": "Browser web search, official/author source access, targeted title checks and citation chaining; no bibliographic API client",
+  "query_count": 38,
+  "call_batch_count": 20,
+  "included_unique_papers": 23,
+  "included_reused_from_A_U_registers": 13,
+  "included_additional_to_A_U_registers": 10,
+  "count_caveat": "Returned source records below are search-engine records and access records, including duplicates and irrelevant hits. They are not independently screened study counts or a PRISMA census.",
+  "date_filter": "No lower cutoff; relevant material available through 2026-09-20",
+  "deduplication": "Title plus DOI/arXiv/publication identity. Consolidate mirrors and preprint/published versions.",
+  "access_caveat": "Direct primary opens sometimes failed. Indexed primary excerpts or previously documented selected-section reading are explicitly identified in the evidence register. No complete full-text reading claim.",
+  "batches": [
+    {
+      "batch": "S01",
+      "parameters": {
+        "search_query": [
+          {
+            "q": "\"model update\" \"segmentation\" \"volume\" compatibility"
+          },
+          {
+            "q": "\"backward compatibility\" \"medical\" \"segmentation\""
+          },
+          {
+            "q": "\"Lung nodule volumetry\" \"same software\" interchangeably"
+          },
+          {
+            "q": "\"medical image segmentation\" \"random seed\" volume"
+          }
+        ]
+      },
+      "returned_source_records": [
+        {
+          "title": "Lung nodule volumetry: segmentation algorithms within the same software package cannot be used interchangeably - PMC",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2899012/"
+        },
+        {
+          "title": "Use of Volumetry for Lung Nodule Management: Theory and Practice | Radiology",
+          "url": "https://pubs.rsna.org/doi/10.1148/radiol.2017151022"
+        },
+        {
+          "title": "Variability of semiautomated volume measurements between different versions of the same CT lung nodule volumetry software.",
+          "url": "https://air.unipr.it/handle/11381/2536125"
+        },
+        {
+          "title": "A Comparison of Lung Nodule Segmentation Algorithms: Methods and Results from a Multi-institutional Study - PMC",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4942386/"
+        },
+        {
+          "title": "group.bmj.com",
+          "url": "https://citeseerx.ist.psu.edu/document?doi=5fe495ae1f0d19f9d7e72859650290255b4f7961&repid=rep1&type=pdf"
+        },
+        {
+          "title": "The TSANZ Practical Guide for Clinicians in the Management of Screen‐ and Incidentally‐Detected Nodules - Brims - 2025 - Respirology - Wiley Online Library",
+          "url": "https://onlinelibrary.wiley.com/doi/10.1111/resp.70065"
+        },
+        {
+          "title": "untitled",
+          "url": "https://thorax.bmj.com/content/thoraxjnl/70/Suppl_2/ii1.full.pdf"
+        },
+        {
+          "title": "Lung nodules: size still matters | European Respiratory Society",
+          "url": "https://publications.ersnet.org/content/errev/26/146/170025"
+        },
+        {
+          "title": "2D or 3D measurements of pulmonary nodules: preliminary answers and more open questions - de Margerie-Mellon - Journal of Thoracic Disease",
+          "url": "https://jtd.amegroups.org/article/view/18945/html"
+        },
+        {
+          "title": "Lung cancer screening with low-dose CT: definition of positive, indeterminate, and negative screen results. A nodule management recommendation from the European Society of Thoracic Imaging",
+          "url": "https://d-nb.info/1386544310/34"
+        },
+        {
+          "title": "Diameter versus volumetry: a narrative review on current recommendations to measure and monitor screening detected lung nodules - Sartorio - Shanghai Chest",
+          "url": "https://shc.amegroups.org/article/view/6889/html"
+        },
+        {
+          "title": "Lung cancer screening and the impact of lung",
+          "url": "https://ubibliorum.ubi.pt/bitstreams/810ed4e2-9db0-4945-bfa1-763f136b1d27/download"
+        },
+        {
+          "title": "Hindawi Publishing Corporation",
+          "url": "https://citeseerx.ist.psu.edu/document?doi=6e417f0fc0341768b3f6837c310c153846374252&repid=rep1&type=pdf"
+        },
+        {
+          "title": "Translating potential improvement in the precision and accuracy of lung nodule measurements on computed tomography scans by software derived from artificial intelligence into impact on clinical practice—a simulation study | BJR|Artificial Intelligence | Oxford Academic",
+          "url": "https://doi.org/10.1093/bjrai%2Fubae010"
+        },
+        {
+          "title": "European lung cancer screening: valuable trial evidence for optimal practice implementation | British Journal of Radiology | Oxford Academic",
+          "url": "https://academic.oup.com/bjr/article-abstract/doi/10.1259/bjr.20200260/7477374"
+        },
+        {
+          "title": "Volumetric measurement of pulmonary nodules at low-dose chest CT: effect of reconstruction setting on measurement variability - PMC",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2850527/"
+        },
+        {
+          "title": "Volumetric Analysis of Non-Calcified Lung Nodules with Thoracic CT: an Updated Review of Related work over the Last 5 Years",
+          "url": "https://www.jscimedcentral.com/jounal-article-info/Journal-of-Radiology-and-Radiation-Therapy/Volumetric-Analysis-of-Non-Calcified-Lung-Nodules-with--Thoracic-CT%3A-an-Updated-Review-of-Related-work-over-the-Last-5--Years-9420"
+        }
+      ]
+    },
+    {
+      "batch": "S02",
+      "parameters": {
+        "search_query": [
+          {
+            "q": "\"backward\" \"compatibility\" \"medical image segmentation\""
+          },
+          {
+            "q": "\"model updates\" \"segmentation\" regression"
+          },
+          {
+            "q": "\"Accounting for Variance in Machine Learning Benchmarks\""
+          }
+        ]
+      },
+      "returned_source_records": [
+        {
+          "title": "Accounting for Variance in Machine Learning Benchmarks",
+          "url": "https://arxiv.org/abs/2103.03098"
+        },
+        {
+          "title": "Paper page - Accounting for Variance in Machine Learning Benchmarks",
+          "url": "https://huggingface.co/papers/2103.03098"
+        },
+        {
+          "title": "Accounting for Variance in Machine Learning Benchmarks",
+          "url": "https://proceedings.mlsys.org/paper_files/paper/2021/file/0184b0cd3cfb185989f858a1d9f5c1eb-Paper.pdf"
+        },
+        {
+          "title": "ACCOUNTING FOR VARIANCE IN MACHINE LEARNING BENCHMARKS",
+          "url": "https://arxiv.org/pdf/2103.03098"
+        },
+        {
+          "title": "Accounting for Variance in Machine Learning Benchmarks",
+          "url": "https://voletiv.github.io/docs/publications/2021a_MLSys2021_Variance_in_ML_Benchmarks.pdf"
+        },
+        {
+          "title": "ACCOUNTING FOR VARIANCE IN MACHINE LEARNING BENCHMARKS",
+          "url": "https://www.readkong.com/page/accounting-for-variance-in-machine-learning-benchmarks-8965113"
+        },
+        {
+          "title": "Error Consistency for Machine Learning Evaluation and Validation with Application to Biomedical Diagnostics - PMC",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10093437/"
+        },
+        {
+          "title": "MLSys 2021 Accounting For Variance in Machine Learning Benchmarks Paper | PDF | Estimator | Variance",
+          "url": "https://www.scribd.com/document/823931320/MLSys-2021-Accounting-for-Variance-in-Machine-Learning-Benchmarks-Paper"
+        },
+        {
+          "title": "Test-time Adaptation for Foundation Medical Segmentation Model Without Parametric Updates",
+          "url": "https://openaccess.thecvf.com/content/ICCV2025/papers/Chen_Test-time_Adaptation_for_Foundation_Medical_Segmentation_Model_Without_Parametric_Updates_ICCV_2025_paper.pdf"
+        },
+        {
+          "title": "Smart Split-Federated Learning over Noisy Channels for Embryo Image Segmentation",
+          "url": "https://arxiv.org/abs/2601.18948"
+        },
+        {
+          "title": "Evaluating Machine Learning Models and Their Diagnostic Value | Springer Nature Link",
+          "url": "https://link.springer.com/protocol/10.1007/978-1-0716-3195-9_20"
+        },
+        {
+          "title": "MUDGUARD: Taming Malicious Majorities in Federated Learning using Privacy-Preserving Byzantine-Robust Clustering",
+          "url": "https://arxiv.org/abs/2208.10161"
+        },
+        {
+          "title": "What’s new in 0.6 — MONAI 1.3.1 Documentation",
+          "url": "https://monai.readthedocs.io/en/1.3.1/whatsnew_0_6.html"
+        },
+        {
+          "title": "RaSP: Relation-aware Semantic Prior for Weakly Supervised Incremental Segmentation",
+          "url": "https://arxiv.org/abs/2305.19879"
+        },
+        {
+          "title": "When your validation curve is too noisy to trust | Learn AI",
+          "url": "https://learn.pranaymahendrakar.com/learn/reading-training-curves/noisy-validation-curves"
+        },
+        {
+          "title": "Measuring and Reducing Model Update Regression in Structured Prediction for NLP — Lacuna",
+          "url": "https://lacuna.tiptreesystems.com/paper/measuring-and-reducing-model-update-regression-in-structured-prediction-for-nlp/art_93623f7ae94944c7b4491a068df351fa"
+        },
+        {
+          "title": "Image annotation and curation in radiology: an overview for machine learning practitioners - PMC",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10844188/"
+        },
+        {
+          "title": "Incremental Nuclei Segmentation from Histopathological I...",
+          "url": "https://bytez.com/docs/cvpr/30852/paper?_c=eyJ2IjoxLCJyZWxhdGVkIjpbImNvZGUiLCJyZWZlcmVuY2VzIiwiY29uZmVyZW5jZSJdfQ%3D%3D"
+        },
+        {
+          "title": "Relative backward (y-axis) and forward (x-axis) transfer for the... | Download Scientific Diagram",
+          "url": "https://www.researchgate.net/figure/Relative-backward-y-axis-and-forward-x-axis-transfer-for-the-continual-segmentation_fig3_371447913"
+        },
+        {
+          "title": "Anatomy‐Guided, Modality‐Agnostic Segmentation of Neuroimaging Abnormalities - PMC",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12441204/"
+        }
+      ]
+    },
+    {
+      "batch": "S03",
+      "parameters": {
+        "search_query": [
+          {
+            "q": "\"Metrics Reloaded\" \"recommendations\" image analysis validation"
+          },
+          {
+            "q": "\"nnU-Net Revisited\" rigorous validation medical segmentation"
+          },
+          {
+            "q": "\"Measuring and Reducing Model Update Regression\" structured prediction"
+          }
+        ]
+      },
+      "returned_source_records": [
+        {
+          "title": "Metrics reloaded: recommendations for image analysis validation | Nature Methods",
+          "url": "https://www.nature.com/articles/s41592-023-02151-z"
+        },
+        {
+          "title": "Measuring and Reducing Model Update Regression in Structured Prediction for NLP",
+          "url": "https://arxiv.org/abs/2202.02976"
+        },
+        {
+          "title": "nature methods",
+          "url": "https://sites.broadinstitute.org/files/ciminilab/files/metrics_reloaded_recommendations_for.pdf"
+        },
+        {
+          "title": "nnU-Net Revisited Paper: Rigorous 3D Segmentation Validation",
+          "url": "https://nnunet.com/nnunet-revisited-paper.html"
+        },
+        {
+          "title": "Measuring and Reducing Model Update Regression in",
+          "url": "https://assets.amazon.science/4e/cd/03f8d1534d2c9ff3db919ebdd74d/measuring-and-reducing-model-update-regression-in-structured-prediction-for-nlp.pdf"
+        },
+        {
+          "title": "Metrics Reloaded: Recommendations for image analysis validation - PMC",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11182665/"
+        },
+        {
+          "title": "nnU-Net Revisited: A Call for Rigorous Validation in 3D Medical Image Segmentation",
+          "url": "https://arxiv.org/abs/2404.09556"
+        },
+        {
+          "title": "Metrics reloaded: Pitfalls and recommendations for image analysis validation",
+          "url": "https://www.catalyzex.com/paper/metrics-reloaded-pitfalls-and-recommendations"
+        },
+        {
+          "title": "Advancing standards in biomedical image analysis validation: A perspective on Metrics Reloaded - Reinke - 2025 - Clinical and Translational Medicine - Wiley Online Library",
+          "url": "https://doi.org/10.1002/ctm2.70237"
+        },
+        {
+          "title": "Metrics reloaded: recommendations for image analysis validation | Nature Methods",
+          "url": "https://doi.org/10.1038/s41592-023-02151-z"
+        },
+        {
+          "title": "Metrics reloaded: Recommendations for image analysis validation",
+          "url": "https://arxiv.org/abs/2206.01653"
+        },
+        {
+          "title": "Measuring and Reducing Model Update Regression in Structured Prediction for NLP",
+          "url": "https://papers.nips.cc/paper_files/paper/2022/hash/7af8e3dfefe6e3141144197b8fa44f79-Abstract-Conference.html"
+        },
+        {
+          "title": "Metrics for Image Analysis Validation | BIOP Wiki Resources",
+          "url": "https://wiki-biop.epfl.ch/en/ipa/metrics"
+        },
+        {
+          "title": "(PDF) Measuring and Reducing Model Update Regression in Structured Prediction for NLP",
+          "url": "https://www.researchgate.net/publication/358422770_Measuring_and_Reducing_Model_Update_Regression_in_Structured_Prediction_for_NLP?_tp=eyJjb250ZXh0Ijp7InBhZ2UiOiJzY2llbnRpZmljQ29udHJpYnV0aW9ucyIsInByZXZpb3VzUGFnZSI6bnVsbCwic3ViUGFnZSI6bnVsbH19"
+        },
+        {
+          "title": "Measuring and Reducing Model Update Regression in Structured Prediction for NLP — Lacuna",
+          "url": "https://lacuna.tiptreesystems.com/paper/measuring-and-reducing-model-update-regression-in-structured-prediction-for-nlp/art_93623f7ae94944c7b4491a068df351fa"
+        },
+        {
+          "title": "Metrics Reloaded · Fovea Lab",
+          "url": "https://www.fovealab.com/lab-notes/method/metrics-reloaded"
+        },
+        {
+          "title": "Metrics Reloaded: Recommendations for image analysis validation",
+          "url": "https://arodes.hes-so.ch/record/15759/files/Muller_2024_Metrics_reloaded.pdf"
+        },
+        {
+          "title": "Metrics Reloaded",
+          "url": "https://www.cse.cuhk.edu.hk/~qdou/public/medneurips2022/52.pdf"
+        },
+        {
+          "title": "Measuring and Reducing Model Update Regression in Structured Prediction for NLP [Quick Review]",
+          "url": "https://liner.com/review/measuring-and-reducing-model-update-regression-in-structured-prediction-for"
+        }
+      ]
+    },
+    {
+      "batch": "S04",
+      "parameters": {
+        "search_query": [
+          {
+            "q": "\"Unbiased longitudinal image processing with FreeSurfer\""
+          },
+          {
+            "q": "\"medical image segmentation\" \"model update\" compatibility volumetry"
+          },
+          {
+            "q": "\"medical image segmentation\" \"random seeds\" variability 2025 2026"
+          }
+        ]
+      },
+      "returned_source_records": [
+        {
+          "title": "LongitudinalProcessing - Free Surfer Wiki",
+          "url": "https://surfer.nmr.mgh.harvard.edu/fswiki/LongitudinalProcessing"
+        },
+        {
+          "title": "Random effects during training: Implications for deep learning-based medical image segmentation - ScienceDirect",
+          "url": "https://www.sciencedirect.com/science/article/pii/S0010482524010291"
+        },
+        {
+          "title": "Diffusion-Based Data Augmentation for Medical Image Segmentation",
+          "url": "https://openaccess.thecvf.com/content/ICCV2025W/CVAMD/papers/Nazir_Diffusion-Based_Data_Augmentation_for_Medical_Image_Segmentation_ICCVW_2025_paper.pdf"
+        },
+        {
+          "title": "SIGMA: spectral-implicit guidance for Multi-Teacher adaptation in unsupervised cross-modality 3D medical image segmentation | Journal of King Saud University Computer and Information Sciences | Springer Nature Link",
+          "url": "https://link.springer.com/article/10.1007/s44443-026-01125-3"
+        },
+        {
+          "title": "Avoiding asymmetry-induced bias in longitudinal image processing - ScienceDirect",
+          "url": "https://www.sciencedirect.com/science/article/abs/pii/S1053811911002539"
+        },
+        {
+          "title": "ARTICLE IN PRESS",
+          "url": "https://www.nature.com/articles/s41598-026-46169-7_reference.pdf"
+        },
+        {
+          "title": "Lost in the Folds: When Cross-Validation Is Not a Deep Ensemble for Uncertainty Estimation",
+          "url": "https://arxiv.org/abs/2605.18329"
+        },
+        {
+          "title": "MAUP: Training-free Multi-center Adaptive Uncertainty-aware Prompting for Cross-domain Few-shot Medical Image Segmentation | MICCAI 2025 - Open Access",
+          "url": "https://papers.miccai.org/miccai-2025/0532-Paper3542.html"
+        },
+        {
+          "title": "Frontiers | Bridging global context and local precision using a disagreement-based region specific ensemble of Swin UNETR and SegResNet for 3D glioma segmentation",
+          "url": "https://www.frontiersin.org/journals/artificial-intelligence/articles/10.3389/frai.2026.1812932/full"
+        },
+        {
+          "title": "Within-subject template estimation for unbiased longitudinal image analysis - ScienceDirect",
+          "url": "https://www.sciencedirect.com/science/article/pii/S1053811912002765"
+        },
+        {
+          "title": "(PDF) Controlled Factorial Analysis of Architecture-Loss Interactions in Cardiac MRI Segmentation",
+          "url": "https://www.researchgate.net/publication/411901081_Controlled_Factorial_Analysis_of_Architecture-Loss_Interactions_in_Cardiac_MRI_Segmentation"
+        },
+        {
+          "title": "Machine Learning-based Individual Assessment of Cortical Atrophy Pattern in Alzheimer’s Disease Spectrum: Development of the Classifier and Longitudinal Evaluation | Scientific Reports",
+          "url": "https://www.nature.com/articles/s41598-018-22277-x"
+        },
+        {
+          "title": "Towards fair decentralized benchmarking of healthcare AI algorithms with the Federated Tumor Segmentation (FeTS) challenge | Nature Communications",
+          "url": "https://doi.org/10.1038/s41467-025-60466-1"
+        },
+        {
+          "title": "Corticometrics resubmitted full application",
+          "url": "https://www.nia.nih.gov/sites/default/files/2021-06/Corticometrics_Resubmission_Full_Application.pdf"
+        },
+        {
+          "title": "Under review as a conference paper at ICLR 2026",
+          "url": "https://openreview.net/pdf?id=0EXuliYnfW"
+        },
+        {
+          "title": "Precision estimates of longitudinal brain aging capture unexpected individual differences in one year | Nature Communications",
+          "url": "https://www.nature.com/articles/s41467-026-68886-3"
+        },
+        {
+          "title": "Frontiers | Target-label-free artificial intelligence framework for cross-anatomical RNFL biomarker segmentation in optical coherence tomography",
+          "url": "https://www.frontiersin.org/journals/cell-and-developmental-biology/articles/10.3389/fcell.2026.1890734/full"
+        },
+        {
+          "title": "Advancing patient care with AI: a unified framework for medical image segmentation using transfer learning and hybrid feature extraction",
+          "url": "https://www.frontiersin.org/journals/medicine/articles/10.3389/fmed.2025.1589587/pdf"
+        },
+        {
+          "title": "On-the-Fly Test-time Adaptation for Medical Image Segmentation",
+          "url": "https://arxiv.org/abs/2203.05574"
+        },
+        {
+          "title": "FedMix: Mixed Supervised Federated Learning for Medical Image Segmentation",
+          "url": "https://arxiv.org/abs/2205.01840"
+        },
+        {
+          "title": "Heed the Noise in Performance Evaluations in Neural Architecture Search",
+          "url": "https://arxiv.org/abs/2202.02078"
+        }
+      ]
+    },
+    {
+      "batch": "V01",
+      "parameters": {
+        "open": [
+          {
+            "ref_id": "https://www.sciencedirect.com/science/article/pii/S0010482524010291"
+          },
+          {
+            "ref_id": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2899012/"
+          },
+          {
+            "ref_id": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7944589/"
+          },
+          {
+            "ref_id": "https://air.unipr.it/handle/11381/2536125"
+          }
+        ],
+        "response_length": "long"
+      },
+      "returned_source_records": [
+        {
+          "title": "Checking your browser - reCAPTCHA",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2899012/"
+        },
+        {
+          "title": "Inter- and intra-software reproducibility of computed tomography lung density measurements - PMC",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7944589/"
+        }
+      ]
+    },
+    {
+      "batch": "S05",
+      "parameters": {
+        "search_query": [
+          {
+            "q": "\"Random effects during training\" \"108944\""
+          },
+          {
+            "q": "\"nnU-Net Revisited\" site:papers.miccai.org"
+          },
+          {
+            "q": "\"prediction churn\" \"segmentation\" medical longitudinal"
+          },
+          {
+            "q": "\"model update\" \"volumetric\" segmentation"
+          }
+        ]
+      },
+      "returned_source_records": [
+        {
+          "title": "Random effects during training : Implications for deep learning-based medical image segmentation | Lund University Publications",
+          "url": "https://lup.lub.lu.se/search/publication/cf0176e7-ae75-466b-9380-08041058a0c3"
+        },
+        {
+          "title": "nnU-Net Revisited: A Call for Rigorous Validation in 3D Medical Image Segmentation | MICCAI 2024 - Open Access",
+          "url": "https://papers.miccai.org/miccai-2024/562-Paper2847.html"
+        },
+        {
+          "title": "Predictability & explainability of survival analysis in churn prediction | Journal of Marketing Analytics | Springer Nature Link",
+          "url": "https://link.springer.com/article/10.1057/s41270-025-00450-2"
+        },
+        {
+          "title": "(PDF) Interactive modelling for AR applications",
+          "url": "https://www.researchgate.net/publication/221221195_Interactive_modelling_for_AR_applications"
+        },
+        {
+          "title": "TestFit: A plug-and-play one-pass test time method for medical image segmentation - ScienceDirect",
+          "url": "https://www.sciencedirect.com/science/article/abs/pii/S1361841523003298"
+        },
+        {
+          "title": "Assessing the Macro and Micro Effects of Random Seeds on Fine-Tuning",
+          "url": "https://openreview.net/attachment?id=SnJh6fszp5&name=pdf"
+        },
+        {
+          "title": "GitHub - TanjinToma/Cell-Segmentation: Deep learning pipeline for 3D instance segmentation through Euclidean distance map estimation and semantic segmentation. · GitHub",
+          "url": "https://github.com/TanjinToma/Cell-Segmentation"
+        },
+        {
+          "title": "nnU-Net Revisited 9",
+          "url": "https://papers.miccai.org/miccai-2024/paper/2847_paper.pdf"
+        },
+        {
+          "title": "A Multi-Layer Analytical Framework for Customer Retention in Voluntary Health Insurance by Katherin Molina :: SSRN",
+          "url": "https://papers.ssrn.com/sol3/Delivery.cfm/6658118.pdf?abstractid=6658118&mirid=1&type=2"
+        },
+        {
+          "title": "An updating approach for knowledge-based planning models to improve plan quality and variability in volumetric-modulated arc therapy for prostate cancer.",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/34338435/"
+        },
+        {
+          "title": "Generative design of synthetic gene circuits for functional and evolutionary properties",
+          "url": "https://ora.ox.ac.uk/objects/uuid%3A9d42d3b9-18fe-4d93-aef9-40bdacd25859/files/rbn999927z"
+        },
+        {
+          "title": "Change Detection and Model Update Framework",
+          "url": "https://montrealrobotics.ca/test-of-time-workshop/assets/pdf/papers/Change_Detection_and_Model_Update_Framework_for_Accurate_Long-Term_Localization.pdf"
+        },
+        {
+          "title": "Adaptive anomaly detection via dual autoencoders with automated hyperparameter and batch optimization",
+          "url": "https://fund.pkru.ac.th/storage/download/69bcbfde8b87bc00017c54fd?bucket=publish_paper&sector=files2026&sk=4eca69765d75d174269c61702931e9f3&ver=0"
+        },
+        {
+          "title": "Customer Churn Prediction in Banking–Machine Learning Application - Hoang - 2026 - Applied Computational Intelligence and Soft Computing - Wiley Online Library",
+          "url": "https://onlinelibrary.wiley.com/doi/10.1155/acis/8889093"
+        },
+        {
+          "title": "| www.nature.com/scientificreports --- | ---OPEN",
+          "url": "https://www.nature.com/articles/s41598-025-07410-x.pdf"
+        },
+        {
+          "title": "Data-Driven Telecom Marketing Optimization: A Machine Learning-Based Churn Prediction and Customer Segmentation Framework",
+          "url": "https://arxiv.org/abs/2607.10260"
+        },
+        {
+          "title": "Patient Analytics | Chryselys",
+          "url": "https://chryselys.com/patient-analytics/"
+        },
+        {
+          "title": "Full article: Image processing, geometric modeling and data management for development of a virtual bone surgery system",
+          "url": "https://www.tandfonline.com/doi/full/10.3109/10929080701882598"
+        },
+        {
+          "title": "A comprehensive framework for customer retention in E-commerce using machine learning based on churn prediction, customer segmentation, and recommendation",
+          "url": "https://ideas.repec.org/a/spr/elcore/v26y2026i1d10.1007_s10660-024-09936-0.html"
+        },
+        {
+          "title": "SeqNAS: Neural Architecture Search for Event Sequence Classification",
+          "url": "https://arxiv.org/abs/2401.03246"
+        },
+        {
+          "title": "Explainability, risk modeling, and segmentation based customer churn analytics for personalized retention in e-commerce",
+          "url": "https://arxiv.org/abs/2510.11604"
+        },
+        {
+          "title": "DXP: Billing Data Preparation for Big Data Analytics",
+          "url": "https://arxiv.org/abs/2312.12902"
+        }
+      ]
+    },
+    {
+      "batch": "V02",
+      "parameters": {
+        "open": [
+          {
+            "ref_id": "https://lup.lub.lu.se/search/publication/cf0176e7-ae75-466b-9380-08041058a0c3"
+          },
+          {
+            "ref_id": "https://papers.miccai.org/miccai-2024/562-Paper2847.html"
+          },
+          {
+            "ref_id": "https://aclanthology.org/2024.eacl-long.174/"
+          },
+          {
+            "ref_id": "https://openaccess.thecvf.com/content/CVPR2024/html/Wang_Incremental_Nuclei_Segmentation_from_Histopathological_Images_via_Future-class_Awareness_and_CVPR_2024_paper.html"
+          }
+        ],
+        "response_length": "short"
+      },
+      "returned_source_records": [
+        {
+          "title": "Random effects during training : Implications for deep learning-based medical image segmentation | Lund University Publications",
+          "url": "https://lup.lub.lu.se/search/publication/cf0176e7-ae75-466b-9380-08041058a0c3"
+        },
+        {
+          "title": "nnU-Net Revisited: A Call for Rigorous Validation in 3D Medical Image Segmentation | MICCAI 2024 - Open Access",
+          "url": "https://papers.miccai.org/miccai-2024/562-Paper2847.html"
+        },
+        {
+          "title": "Backward Compatibility During Data Updates by Weight Interpolation - ACL Anthology",
+          "url": "https://aclanthology.org/2024.eacl-long.174/"
+        }
+      ]
+    },
+    {
+      "batch": "S06",
+      "parameters": {
+        "search_query": [
+          {
+            "q": "\"Understanding metric-related pitfalls in image analysis validation\""
+          },
+          {
+            "q": "\"Freesurfer Software Update Significantly Impacts Striatal Volumes\""
+          },
+          {
+            "q": "\"Real-world clinical impact\" \"updating\" \"70768\""
+          },
+          {
+            "q": "\"Incremental Nuclei Segmentation\" \"Future-class\" site:openaccess.thecvf.com"
+          }
+        ],
+        "response_length": "medium"
+      },
+      "returned_source_records": [
+        {
+          "title": "Understanding metric-related pitfalls in image analysis validation - PMC",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10029046.2/"
+        },
+        {
+          "title": "CVPR 2024 Open Access Repository",
+          "url": "https://openaccess.thecvf.com/content/CVPR2024/html/Wang_Incremental_Nuclei_Segmentation_from_Histopathological_Images_via_Future-class_Awareness_and_CVPR_2024_paper.html"
+        },
+        {
+          "title": "Understanding metric-related pitfalls in image analysis validation - UCL Discovery",
+          "url": "https://discovery.ucl.ac.uk/id/eprint/10183142/"
+        },
+        {
+          "title": "Understanding metric-related pitfalls in image analysis validation",
+          "url": "https://arxiv.org/abs/2302.01790"
+        },
+        {
+          "title": "Understanding metric-related pitfalls in image analysis validation - UCL Discovery",
+          "url": "https://discovery.ucl.ac.uk/id/eprint/10191651/"
+        },
+        {
+          "title": "Understanding metric-related pitfalls in image analysis validation.",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/38347140/"
+        },
+        {
+          "title": "Understanding metric-related pitfalls in image analysis validation | VALIANT | Vanderbilt University",
+          "url": "https://www.vanderbilt.edu/valiant/2024/04/22/understanding-metric-related-pitfalls-in-image-analysis-validation/"
+        },
+        {
+          "title": "Understanding metric-related pitfalls in image analysis validation - IT-University of Copenhagen",
+          "url": "https://pure.itu.dk/en/publications/understanding-metric-related-pitfalls-in-image-analysis-validatio/"
+        },
+        {
+          "title": "Understanding metric-related pitfalls in image analysis validation - PMC",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10029046/"
+        },
+        {
+          "title": "Understanding metric-related pitfalls in image analysis validation",
+          "url": "https://publica.fraunhofer.de/handle/publica/475275"
+        },
+        {
+          "title": "Understanding metric-related pitfalls in image analysis validation. | Broad Institute",
+          "url": "https://www.broadinstitute.org/publications/broad1341996"
+        },
+        {
+          "title": "Incremental Nuclei Segmentation from Histopathological Images via Future-class Awareness and Compatibility-inspired Distillation",
+          "url": "https://openaccess.thecvf.com/content/CVPR2024/papers/Wang_Incremental_Nuclei_Segmentation_from_Histopathological_Images_via_Future-class_Awareness_and_CVPR_2024_paper.pdf"
+        },
+        {
+          "title": "Understanding metric-related pitfalls in image analysis validation - PMC",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/11181963/"
+        },
+        {
+          "title": "Understanding metric-related pitfalls in image analysis validation",
+          "url": "https://scholarworks.indianapolis.iu.edu/items/dbdfc72b-f0b0-4281-9d87-35db2705deee"
+        },
+        {
+          "title": "Understanding metric-related pitfalls in image analysis validation",
+          "url": "https://www.research.ed.ac.uk/files/412698042/Understanding_metric-related_pitfalls_in_image_analysis_validation.pdf"
+        },
+        {
+          "title": "Incremental Nuclei Segmentation from Histopathological Images via",
+          "url": "https://openaccess.thecvf.com/content/CVPR2024/supplemental/Wang_Incremental_Nuclei_Segmentation_CVPR_2024_supplemental.pdf"
+        }
+      ]
+    },
+    {
+      "batch": "S07",
+      "parameters": {
+        "search_query": [
+          {
+            "q": "\"10.3233/JHD-231512\""
+          },
+          {
+            "q": "\"10.1002/acm2.70768\""
+          },
+          {
+            "q": "\"Lung nodule volumetry\" \"Ashraf\" 2010 better segmentation"
+          }
+        ],
+        "response_length": "medium"
+      },
+      "returned_source_records": [
+        {
+          "title": "Lung nodule volumetry: segmentation algorithms within the same software package cannot be used interchangeably - PubMed",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/20306082/"
+        },
+        {
+          "title": "Lung nodule volumetry: segmentation algorithms within the same software package cannot be used interchangeably - PMC",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2899012/"
+        },
+        {
+          "title": "Eur Radiol (2010) 20: 1878–1885",
+          "url": "https://citeseerx.ist.psu.edu/document?doi=717bd3392475fdd0baac93f3efbd5bdff96d25b3&repid=rep1&type=pdf"
+        },
+        {
+          "title": "Lung nodule volumetry: segmentation algorithms within the same software package cannot be used interchangeably",
+          "url": "https://openalex.org/W2165991930"
+        },
+        {
+          "title": "Real-world clinical impact of implementing and updating a deep learning-based automatic contouring system in rectal cancer radiotherapy.",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42665916/"
+        },
+        {
+          "title": "Use of Volumetry for Lung Nodule Management: Theory and Practice | Radiology",
+          "url": "https://pubs.rsna.org/doi/10.1148/radiol.2017151022"
+        },
+        {
+          "title": "Lung nodule volumetry: Segmentation algorithms within the same software package cannot be used interchangeably. - The Capital Region of Denmark's Research Portal",
+          "url": "https://research.regionh.dk/en/publications/lung-nodule-volumetry-segmentation-algorithms-within-the-same-sof"
+        },
+        {
+          "title": "Lung nodule volumetry: segmentation algorithms within the same software package cannot be used interchangeably",
+          "url": "https://ouci.dntb.gov.ua/works/7BxOwqwl/"
+        },
+        {
+          "title": "Journal of Huntington’s Disease 13 (2024) 77–90",
+          "url": "https://journals.sagepub.com/doi/pdf/10.3233/JHD-231512?download=true"
+        },
+        {
+          "title": "Lung nodule volumetry: segmentation algorithms within the same software package cannot be used interchangeably (pdf) | Paperity",
+          "url": "https://paperity.org/p/6507561/lung-nodule-volumetry-segmentation-algorithms-within-the-same-software-package-cannot-be"
+        },
+        {
+          "title": "Freesurfer Software Update Significantly Impacts Striatal Volumes in the Huntington’s Disease Young Adult Study and Will Influence HD-ISS Staging - UCL Discovery",
+          "url": "https://discovery.ucl.ac.uk/id/eprint/10190671/"
+        },
+        {
+          "title": "Search Results | Scholarly Articles, Journals, and E-Books | EBSCOhost",
+          "url": "https://openurl.ebsco.com/results?bquery=AU+Dai%2C+Jianrong&page=1&sid=ebsco%3Aocu_results%3Acache"
+        },
+        {
+          "title": "Guidelines for Management of Incidental Pulmonary Nodules Detected on CT Images: From the Fleischner Society 2017 | Radiology",
+          "url": "https://pubs.rsna.org/doi/10.1148/radiol.2017161659"
+        },
+        {
+          "title": "untitled",
+          "url": "https://seicat.org/download/2/documentos-publicos/2134/british-thoracic-society-guidelines-for-the-investigation-and-management-of-pulmonary-nodules.pdf"
+        },
+        {
+          "title": "untitled",
+          "url": "https://thorax.bmj.com/content/thoraxjnl/70/Suppl_2/ii1.full.pdf"
+        },
+        {
+          "title": "QIBA Profile: Small Lung Nodule Assessment in CT Screening Profile - 2018",
+          "url": "https://qibawiki.rsna.org/images/8/86/QIBA_CT_Vol_SmallLungNoduleAssessmentInCTScreening_2018.11.18-clean-4.pdf"
+        }
+      ]
+    },
+    {
+      "batch": "V03",
+      "parameters": {
+        "open": [
+          {
+            "ref_id": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13525157/"
+          },
+          {
+            "ref_id": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4609285/"
+          },
+          {
+            "ref_id": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4263694/"
+          },
+          {
+            "ref_id": "https://www.nature.com/articles/s41592-023-02150-0"
+          }
+        ],
+        "response_length": "short"
+      },
+      "returned_source_records": [
+        {
+          "title": "Checking your browser - reCAPTCHA",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13525157/"
+        },
+        {
+          "title": "Checking your browser - reCAPTCHA",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4609285/"
+        },
+        {
+          "title": "Checking your browser - reCAPTCHA",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4263694/"
+        }
+      ]
+    },
+    {
+      "batch": "S08",
+      "parameters": {
+        "search_query": [
+          {
+            "q": "site:pmc.ncbi.nlm.nih.gov/articles/PMC4609285 \"Methods\" \"31\""
+          },
+          {
+            "q": "site:pmc.ncbi.nlm.nih.gov/articles/PMC4263694 \"equivalence\""
+          },
+          {
+            "q": "site:pmc.ncbi.nlm.nih.gov/articles/PMC13525157 \"Methods\""
+          },
+          {
+            "q": "\"Within-subject template estimation for unbiased longitudinal image analysis\" \"2012\""
+          }
+        ],
+        "response_length": "medium"
+      },
+      "returned_source_records": [
+        {
+          "title": "Quantitative Imaging Biomarkers: A Review of Statistical Methods for Computer Algorithm Comparisons - PMC",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4263694/"
+        },
+        {
+          "title": "Within-subject template estimation for unbiased longitudinal image analysis.",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/22430496/"
+        },
+        {
+          "title": "mri_robust_template - Free Surfer Wiki",
+          "url": "https://surfer.nmr.mgh.harvard.edu/fswiki/mri_robust_template"
+        },
+        {
+          "title": "Publications - Free Surfer Wiki",
+          "url": "https://freesurfer.net/fswiki/Publications"
+        },
+        {
+          "title": "Inter-method Performance Study of Tumor Volumetry Assessment on Computed Tomography Test-retest Data - PMC",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4609285/"
+        },
+        {
+          "title": "Within-subject template estimation for unbiased longitudinal image analysis - PMC",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3389460/"
+        },
+        {
+          "title": "Reuter Laboratory - HMS/MIT - welcome - news",
+          "url": "https://reuter.mit.edu/welcome/news/"
+        },
+        {
+          "title": "LinearMixedEffectsModels - Free Surfer Wiki",
+          "url": "https://freesurfer.net/fswiki/LinearMixedEffectsModels"
+        },
+        {
+          "title": "Reuter Laboratory - HMS/MIT - research - neuroimaging - longitudinal",
+          "url": "https://reuter.mit.edu/research/neuroimg/longitudinal/"
+        },
+        {
+          "title": "MartinReuter - Free Surfer Wiki",
+          "url": "https://surfer.nmr.mgh.harvard.edu/fswiki/MartinReuter"
+        },
+        {
+          "title": "PMC User Guide - PMC",
+          "url": "https://pmc.ncbi.nlm.nih.gov/about/userguide/"
+        },
+        {
+          "title": "April 2001 letters.qxd",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/instance/1313986/pdf/11458489.pdf"
+        },
+        {
+          "title": "PMC Home",
+          "url": "https://pmc.ncbi.nlm.nih.gov/"
+        },
+        {
+          "title": "Within-subject template estimation for unbiased longitudinal image analysis",
+          "url": "https://ftp.nmr.mgh.harvard.edu/pub/articles/2012/2012_-_Reuter_et_al._-_NeuroImage.pdf"
+        },
+        {
+          "title": "Supplemental Material 2",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/instance/6501454/bin/Responses_to_NV_Across_Cultures_Supplement.pdf"
+        },
+        {
+          "title": "Estimating anatomical trajectories with Bayesian mixed-effects modeling",
+          "url": "https://www.fil.ion.ucl.ac.uk/~wpenny/publications/ziegler15.pdf"
+        },
+        {
+          "title": "Research Snippets",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6434767/pdf/IDOJ-10-193.pdf"
+        },
+        {
+          "title": "PERSPECTIVE",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4471980/pdf/wps0014-0231.pdf"
+        }
+      ]
+    },
+    {
+      "batch": "V04",
+      "parameters": {
+        "open": [
+          {
+            "ref_id": "https://arxiv.org/html/2605.23118v1"
+          },
+          {
+            "ref_id": "https://openaccess.thecvf.com/content/CVPR2025/html/Ulrich_LesionLocator_Zero-Shot_Universal_Tumor_Segmentation_and_Tracking_in_3D_Whole-Body_CVPR_2025_paper.html"
+          },
+          {
+            "ref_id": "https://pubmed.ncbi.nlm.nih.gov/42665916/"
+          },
+          {
+            "ref_id": "https://www.nature.com/articles/s41597-024-04085-3"
+          },
+          {
+            "ref_id": "https://www.nature.com/articles/s41597-026-07466-y"
+          }
+        ],
+        "response_length": "short"
+      },
+      "returned_source_records": [
+        {
+          "title": "Exploiting Longitudinal Context in Clinician-Verified Interactive Lesion Tracking",
+          "url": "https://arxiv.org/html/2605.23118v1"
+        },
+        {
+          "title": "Real-world clinical impact of implementing and updating a deep learning-based automatic contouring system in rectal cancer radiotherapy - PubMed",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42665916/"
+        },
+        {
+          "title": "Annotated test-retest dataset of lung cancer CT scan images reconstructed at multiple imaging parameters | Scientific Data",
+          "url": "https://www.nature.com/articles/s41597-024-04085-3"
+        }
+      ]
+    },
+    {
+      "batch": "S09",
+      "parameters": {
+        "search_query": [
+          {
+            "q": "\"LesionLocator\" site:openaccess.thecvf.com/content/CVPR2025"
+          },
+          {
+            "q": "\"A longitudinal whole-body CT dataset with manually annotated tumor lesions\""
+          },
+          {
+            "q": "\"model update\" \"segmentation\" \"compatibility\" 2025 2026 -site:researchgate.net -site:medium.com -site:liner.com"
+          }
+        ],
+        "find": [
+          {
+            "ref_id": "https://pubmed.ncbi.nlm.nih.gov/42665916/",
+            "pattern": "Abstract"
+          },
+          {
+            "ref_id": "https://www.nature.com/articles/s41597-024-04085-3",
+            "pattern": "Abstract"
+          },
+          {
+            "ref_id": "https://aclanthology.org/2024.eacl-long.174/",
+            "pattern": "Abstract"
+          }
+        ],
+        "response_length": "medium"
+      },
+      "returned_source_records": [
+        {
+          "title": "A longitudinal whole-body CT dataset with manually annotated tumor lesions - PMC",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13443671/"
+        },
+        {
+          "title": "CVPR 2025 Open Access Repository",
+          "url": "https://openaccess.thecvf.com/content/CVPR2025/html/Rokuss_LesionLocator_Zero-Shot_Universal_Tumor_Segmentation_and_Tracking_in_3D_Whole-Body_CVPR_2025_paper.html"
+        },
+        {
+          "title": "ARTICLE IN PRESS",
+          "url": "https://www.nature.com/articles/s41597-026-07466-y_reference.pdf"
+        },
+        {
+          "title": "LesionLocator: Zero-Shot Universal Tumor Segmentation and Tracking in 3D Whole-Body Imaging",
+          "url": "https://openaccess.thecvf.com/content/CVPR2025/papers/Rokuss_LesionLocator_Zero-Shot_Universal_Tumor_Segmentation_and_Tracking_in_3D_Whole-Body_CVPR_2025_paper.pdf"
+        },
+        {
+          "title": "LesionLocator: Zero-Shot Universal Tumor Segmentation and Tracking in 3D Whole-Body Imaging",
+          "url": "https://openaccess.thecvf.com/content/CVPR2025/supplemental/Rokuss_LesionLocator_Zero-Shot_Universal_CVPR_2025_supplemental.pdf"
+        },
+        {
+          "title": "[dhkweon] RECIST 조사2",
+          "url": "https://team-pni.tistory.com/70"
+        },
+        {
+          "title": "A whole-body FDG-PET/CT Dataset with manually annotated Tumor Lesions - PMC",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9532417/"
+        },
+        {
+          "title": "FedLiverNet: a federated learning framework for privacy-preserving and efficient liver cancer detection | Scientific Reports",
+          "url": "https://www.nature.com/articles/s41598-026-46244-z"
+        },
+        {
+          "title": "Dataset - autoPET/CT IV - Grand Challenge",
+          "url": "https://autopet-iv.grand-challenge.org/dataset/"
+        },
+        {
+          "title": "Releases · ultralytics/yolo-flutter-app · GitHub",
+          "url": "https://github.com/ultralytics/yolo-flutter-app/releases"
+        },
+        {
+          "title": "CVPR 2025 Open Access Repository",
+          "url": "https://openaccess.thecvf.com/CVPR2025?day=all"
+        },
+        {
+          "title": "From performance to practice: knowledge-distilled segmentator for on-premises clinical workflows - PMC",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13331745/"
+        },
+        {
+          "title": "Changelog - SD.Next Documentation",
+          "url": "https://vladmandic.github.io/sdnext-docs/CHANGELOG/"
+        },
+        {
+          "title": "Enhanced brain tumour segmentation using a hybrid dual encoder–decoder model in federated learning | Scientific Reports",
+          "url": "https://www.nature.com/articles/s41598-025-17432-0"
+        },
+        {
+          "title": "Altair HyperMesh 2026 Release Notes",
+          "url": "https://help.altair.com/hwdesktop/altair_help/topics/release_notes/rn_2026_hypermesh_r.htm"
+        },
+        {
+          "title": "Real-world clinical impact of implementing and updating a deep learning-based automatic contouring system in rectal cancer radiotherapy - PubMed",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42665916/"
+        },
+        {
+          "title": "Annotated test-retest dataset of lung cancer CT scan images reconstructed at multiple imaging parameters | Scientific Data",
+          "url": "https://www.nature.com/articles/s41597-024-04085-3"
+        },
+        {
+          "title": "Backward Compatibility During Data Updates by Weight Interpolation - ACL Anthology",
+          "url": "https://aclanthology.org/2024.eacl-long.174/"
+        }
+      ]
+    },
+    {
+      "batch": "V05",
+      "parameters": {
+        "open": [
+          {
+            "ref_id": "https://pubmed.ncbi.nlm.nih.gov/42665916/",
+            "lineno": 230
+          },
+          {
+            "ref_id": "https://www.nature.com/articles/s41597-024-04085-3",
+            "lineno": 25
+          },
+          {
+            "ref_id": "https://aclanthology.org/2024.eacl-long.174/",
+            "lineno": 57
+          },
+          {
+            "ref_id": "https://openaccess.thecvf.com/content/CVPR2021/html/Yan_Positive-Congruent_Training_Towards_Regression-Free_Model_Updates_CVPR_2021_paper.html"
+          },
+          {
+            "ref_id": "https://proceedings.mlsys.org/paper_files/paper/2021/file/0184b0cd3cfb185989f858a1d9f5c1eb-Paper.pdf"
+          }
+        ],
+        "response_length": "short"
+      },
+      "returned_source_records": [
+        {
+          "title": "Real-world clinical impact of implementing and updating a deep learning-based automatic contouring system in rectal cancer radiotherapy - PubMed",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42665916/"
+        },
+        {
+          "title": "Annotated test-retest dataset of lung cancer CT scan images reconstructed at multiple imaging parameters | Scientific Data",
+          "url": "https://www.nature.com/articles/s41597-024-04085-3"
+        },
+        {
+          "title": "Backward Compatibility During Data Updates by Weight Interpolation - ACL Anthology",
+          "url": "https://aclanthology.org/2024.eacl-long.174/"
+        },
+        {
+          "title": "Accounting for Variance in Machine Learning Benchmarks",
+          "url": "https://proceedings.mlsys.org/paper_files/paper/2021/file/0184b0cd3cfb185989f858a1d9f5c1eb-Paper.pdf"
+        }
+      ]
+    },
+    {
+      "batch": "S10",
+      "parameters": {
+        "search_query": [
+          {
+            "q": "(\"backward-compatible\" OR \"backward-congruent\") segmentation medical tumor"
+          },
+          {
+            "q": "\"deep learning\" \"software versions\" \"volumetry\""
+          },
+          {
+            "q": "\"model updates\" \"longitudinal\" \"segmentation\""
+          }
+        ],
+        "response_length": "medium"
+      },
+      "returned_source_records": [
+        {
+          "title": "Dynamic Oculomics for Diagnostic Monitoring: Personal Ocular Trends, Risk Stratification and Treatment Response | MDPI",
+          "url": "https://www.mdpi.com/2075-4418/16/17/2699"
+        },
+        {
+          "title": "Model ChangeLists: Characterizing Updates to ML Models",
+          "url": "https://facctconference.org/static/papers24/facct24-162.pdf"
+        },
+        {
+          "title": "A FastSurfer Database for Age‐Specific Brain Volumes in Healthy Children: A Tool for Quantifying Localized and Global Brain Volume Alterations in Pediatric Patients - PMC",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12277543/"
+        },
+        {
+          "title": "Under review as a conference paper at ICLR 2026",
+          "url": "https://openreview.net/pdf/272875e1f7e6203ee2b7e6aa1b32a39cdd28c4b9.pdf"
+        },
+        {
+          "title": "No modality left behind: Adapting to missing modalities via knowledge distillation for brain tumor segmentation - ScienceDirect",
+          "url": "https://doi.org/10.1016/j.media.2026.104108"
+        },
+        {
+          "title": "(PDF) Incremental Learning in Medical Imaging: A Comprehensive Survey of Deep Neural Network Advances and Challenges",
+          "url": "https://www.researchgate.net/publication/400200395_Incremental_Learning_in_Medical_Imaging_A_Comprehensive_Survey_of_Deep_Neural_Network_Advances_and_Challenges"
+        },
+        {
+          "title": "ARTICLE IN PRESS",
+          "url": "https://www.nature.com/articles/s41746-026-02381-3_reference.pdf"
+        },
+        {
+          "title": "EYE ON AI None | | HOW ARTIFICIAL INTELLIGENCE IS CHANGING RADIOLOGY --- | --- | ---Quantitative Volumetry is",
+          "url": "https://pdfs.semanticscholar.org/79f4/e6c38e7ca49bb903b371063a4a986582edd1.pdf"
+        },
+        {
+          "title": "Hybrid Edge–Clou",
+          "url": "https://www.preprints.org/frontend/manuscript/fae13684c94a2319650e9d246f328a23/download_pub"
+        },
+        {
+          "title": "Cancer PathCHART Search",
+          "url": "https://seer.cancer.gov/cancerpathchart/search/"
+        },
+        {
+          "title": "SGAFNet: Robust brain tumor segmentation via learnable sequence-guided adaptive fusion in available MRI acquisitions - ScienceDirect",
+          "url": "https://www.sciencedirect.com/science/article/pii/S0895611126000066"
+        },
+        {
+          "title": "Federated learning with integrated attention multiscale model for brain tumor segmentation - PMC",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11976911/"
+        },
+        {
+          "title": "Cancer PathCHART: Multilevel, Interdisciplinary Review Process",
+          "url": "https://seer.cancer.gov/cancerpathchart/review.html"
+        },
+        {
+          "title": "Cone beam computed tomography based upper airway measurement after orthognathic surgery: a comparative evaluation of different imaging software | Scientific Reports",
+          "url": "https://www.nature.com/articles/s41598-024-83890-7"
+        },
+        {
+          "title": "(PDF) Quantitative Volumetry is Revolutionizing Neuroimaging",
+          "url": "https://www.researchgate.net/publication/357116635_Quantitative_Volumetry_is_Revolutionizing_Neuroimaging"
+        },
+        {
+          "title": "Auxiliary Clinical Prompt Integration into Vision-Language Prompt SAM for Brain Tumor Segmentation | medRxiv",
+          "url": "https://www.medrxiv.org/content/10.64898/2026.04.15.26351001v1.full"
+        },
+        {
+          "title": "Transferring cross-Dimensional knowledge via proxy task for medical image segmentation - ScienceDirect",
+          "url": "https://www.sciencedirect.com/science/article/pii/S0957417426000382"
+        },
+        {
+          "title": "Review Article on Lung Cancer Screening",
+          "url": "https://pdfs.semanticscholar.org/9ede/f02fc10d9e0bb079fb27cd9c01fb2cf500c3.pdf"
+        },
+        {
+          "title": "All-Around Real Label Supervision: Cyclic Prototype Consistency Learning for Semi-supervised Medical Image Segmentation",
+          "url": "https://arxiv.org/abs/2109.13930"
+        },
+        {
+          "title": "RA-UNet: A hybrid deep attention-aware network to extract liver and tumor in CT scans",
+          "url": "https://arxiv.org/abs/1811.01328"
+        },
+        {
+          "title": "Transformation Consistent Self-ensembling Model for Semi-supervised Medical Image Segmentation",
+          "url": "https://arxiv.org/abs/1903.00348"
+        },
+        {
+          "title": "Beyond CNNs: Exploiting Further Inherent Symmetries in Medical Image Segmentation",
+          "url": "https://arxiv.org/abs/2207.14472"
+        }
+      ]
+    },
+    {
+      "batch": "S11",
+      "parameters": {
+        "open": [
+          {
+            "ref_id": "https://facctconference.org/static/papers24/facct24-162.pdf"
+          }
+        ],
+        "search_query": [
+          {
+            "q": "\"Model ChangeLists: Characterizing Updates to ML Models\""
+          },
+          {
+            "q": "\"Positive-Congruent Training\" site:openaccess.thecvf.com/content/CVPR2021"
+          }
+        ],
+        "response_length": "medium"
+      },
+      "returned_source_records": [
+        {
+          "title": "Model ChangeLists: Characterizing updates to ML models - Amazon Science",
+          "url": "https://www.amazon.science/publications/model-changelists-characterizing-updates-to-ml-models"
+        },
+        {
+          "title": "Positive-Congruent Training: Towards Regression-Free Model Updates",
+          "url": "https://openaccess.thecvf.com/content/CVPR2021/papers/Yan_Positive-Congruent_Training_Towards_Regression-Free_Model_Updates_CVPR_2021_paper.pdf"
+        },
+        {
+          "title": "CVPR 2021 Open Access Repository",
+          "url": "https://openaccess.thecvf.com/content/CVPR2021/html/Yan_Positive-Congruent_Training_Towards_Regression-Free_Model_Updates_CVPR_2021_paper.html"
+        },
+        {
+          "title": "Model ChangeLists: Characterizing Updates to ML Models",
+          "url": "https://assets.amazon.science/c1/ed/e12b07034ffe92730a0c46fd561f/model-changelists-characterizing-updates-to-ml-models.pdf"
+        },
+        {
+          "title": "dblp: Model ChangeLists: Characterizing Updates to ML Models.",
+          "url": "https://dblp.org/rec/conf/fat/EyubogluGDCMRZ24.html"
+        },
+        {
+          "title": "Model ChangeLists: Characterizing Updates to ML Models | Request PDF",
+          "url": "https://www.researchgate.net/publication/381207708_Model_ChangeLists_Characterizing_Updates_to_ML_Models"
+        },
+        {
+          "title": "Mathew Monfort - Massachussets Institute of Technology",
+          "url": "https://people.csail.mit.edu/mmonfort/"
+        },
+        {
+          "title": "CVPR 2021 Open Access Repository",
+          "url": "https://openaccess.thecvf.com/CVPR2021?day=2021-06-24"
+        },
+        {
+          "title": "Supplementary Materials for",
+          "url": "https://openaccess.thecvf.com/content/CVPR2021/supplemental/Yan_Positive-Congruent_Training_Towards_CVPR_2021_supplemental.pdf"
+        },
+        {
+          "title": "ACM FAccT 2024 Accepted Papers",
+          "url": "https://facctconference.org/2024/acceptedpapers_old.html"
+        },
+        {
+          "title": "Lingjiao Chen's research works | Stanford University, Stanford (SU) and other places",
+          "url": "https://www.researchgate.net/scientific-contributions/Lingjiao-Chen-2176374106"
+        },
+        {
+          "title": "dblp: Christopher Ré",
+          "url": "https://dblp.org/pid/r/ChristopherRe.html"
+        },
+        {
+          "title": "Mathew Monfort - Amazon Science",
+          "url": "https://www.amazon.science/author/mathew-monfort"
+        },
+        {
+          "title": "Lingjiao Chen",
+          "url": "https://www.csauthors.net/lingjiao-chen/"
+        },
+        {
+          "title": "Lingjiao Chen’s Profile | The MIT Press, MDPI, Amazon Science Journalist | Muck Rack",
+          "url": "https://muckrack.com/lingjiao-chen"
+        },
+        {
+          "title": "Model ChangeLists: Characterizing Updates to ML Models",
+          "url": "https://facctconference.org/static/papers24/facct24-162.pdf"
+        }
+      ]
+    },
+    {
+      "batch": "V06",
+      "parameters": {
+        "find": [
+          {
+            "ref_id": "https://facctconference.org/static/papers24/facct24-162.pdf",
+            "pattern": "held-out"
+          },
+          {
+            "ref_id": "https://facctconference.org/static/papers24/facct24-162.pdf",
+            "pattern": "verification"
+          },
+          {
+            "ref_id": "https://proceedings.mlsys.org/paper_files/paper/2021/file/0184b0cd3cfb185989f858a1d9f5c1eb-Paper.pdf",
+            "pattern": "recommend"
+          },
+          {
+            "ref_id": "https://arxiv.org/html/2605.23118v1",
+            "pattern": "4.1"
+          },
+          {
+            "ref_id": "https://arxiv.org/html/2605.23118v1",
+            "pattern": "prospective"
+          }
+        ],
+        "response_length": "medium"
+      },
+      "returned_source_records": [
+        {
+          "title": "Model ChangeLists: Characterizing Updates to ML Models",
+          "url": "https://facctconference.org/static/papers24/facct24-162.pdf"
+        },
+        {
+          "title": "Model ChangeLists: Characterizing Updates to ML Models",
+          "url": "https://facctconference.org/static/papers24/facct24-162.pdf"
+        },
+        {
+          "title": "Accounting for Variance in Machine Learning Benchmarks",
+          "url": "https://proceedings.mlsys.org/paper_files/paper/2021/file/0184b0cd3cfb185989f858a1d9f5c1eb-Paper.pdf"
+        },
+        {
+          "title": "Exploiting Longitudinal Context in Clinician-Verified Interactive Lesion Tracking",
+          "url": "https://arxiv.org/html/2605.23118v1"
+        },
+        {
+          "title": "Exploiting Longitudinal Context in Clinician-Verified Interactive Lesion Tracking",
+          "url": "https://arxiv.org/html/2605.23118v1"
+        }
+      ]
+    },
+    {
+      "batch": "S12",
+      "parameters": {
+        "open": [
+          {
+            "ref_id": "https://arxiv.org/html/2507.19230v1"
+          }
+        ],
+        "search_query": [
+          {
+            "q": "\"Unstable prompts, unreliable segmentations\""
+          },
+          {
+            "q": "\"Liver lesion changes analysis\" \"simu-net\""
+          }
+        ],
+        "response_length": "medium"
+      },
+      "returned_source_records": [
+        {
+          "title": "Liver lesion changes analysis in longitudinal CECT scans by simultaneous deep learning voxel classification with SimU-Net.",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/36334393/"
+        },
+        {
+          "title": "Unstable Prompts, Unreliable Segmentations: A Challenge for Longitudinal Lesion Analysis",
+          "url": "https://arxiv.org/abs/2507.19230"
+        },
+        {
+          "title": "Unstable Prompts, Unreliable Segmentations: A Challenge for Longitudinal Lesion Analysis | Request PDF",
+          "url": "https://www.researchgate.net/publication/403367651_Unstable_Prompts_Unreliable_Segmentations_A_Challenge_for_Longitudinal_Lesion_Analysis"
+        },
+        {
+          "title": "(PDF) Unstable Prompts, Unreliable Segmentations: A Challenge for Longitudinal Lesion Analysis",
+          "url": "https://www.researchgate.net/publication/394049453_Unstable_Prompts_Unreliable_Segmentations_A_Challenge_for_Longitudinal_Lesion_Analysis"
+        },
+        {
+          "title": "Liver lesion changes analysis in longitudinal CECT scans by simultaneous deep learning voxel classification with SimU-Net",
+          "url": "https://openalex.org/W4308148830"
+        },
+        {
+          "title": "Unstable Prompts, Unreliable Segmentations: A Challenge for Longitudinal Lesion Analysis",
+          "url": "https://eurekamag.com/research/105/974/105974799.php"
+        },
+        {
+          "title": "dblp: Mathias Prokop",
+          "url": "https://dblp.org/pid/72/6910.html"
+        },
+        {
+          "title": "Unstable Prompts, Unreliable Segmentations: A Challenge for Longitudinal Lesion Analysis | AI Research Paper Details",
+          "url": "https://www.aimodels.fyi/papers/arxiv/unstable-prompts-unreliable-segmentations-challenge-longitudinal-lesion"
+        },
+        {
+          "title": "Unstable Prompts, Unreliable Segmentations: A Challenge for Longitudinal Lesion Analysis | Article Information | J-GLOBAL",
+          "url": "https://jglobal.jst.go.jp/en/detail?JGLOBAL_ID=202502220836910504"
+        },
+        {
+          "title": "DIAG Workshops at MICCAI 2025",
+          "url": "https://www.diagnijmegen.nl/news/2025-miccai-workshops/"
+        },
+        {
+          "title": "MICCAI 2025",
+          "url": "https://conferences.miccai.org/2025/files/downloads/MICCAI2025-Program-Book.pdf"
+        },
+        {
+          "title": "Proceedings of Machine Learning Research – nnn:1–16, 2025",
+          "url": "https://openreview.net/pdf/d7ad8e77e332be99d247d55b6e917ccd2a3b9f10.pdf"
+        },
+        {
+          "title": "Two is better than one: longitudinal detection and volumetric evaluation of brain metastases after Stereotactic Radiosurgery with a deep learning pipeline - PMC",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10876809/"
+        },
+        {
+          "title": "Two is better than one: longitudinal detection and volumetric evaluation of brain metastases after Stereotactic Radiosurgery with a deep learning pipeline | Journal of Neuro-Oncology | Springer Nature Link",
+          "url": "https://link.springer.com/article/10.1007/s11060-024-04580-y"
+        },
+        {
+          "title": "Liver Lesion Analysis with SimU-Net | PDF | Radiology | Image Segmentation",
+          "url": "https://www.scribd.com/document/924173087/1-s2-0-S1361841522003036-main"
+        },
+        {
+          "title": "LiFE-Net: Longitudinal Information Fusion for Enhanced Lesion Detection",
+          "url": "https://openreview.net/pdf?id=32h0bBn6YZ"
+        },
+        {
+          "title": "CECT-Mamba: a Hierarchical Contrast-enhanced-aware Model for Pancreatic Tumor Subtyping from Multi-phase CECT",
+          "url": "https://openaccess.thecvf.com/content/ICCV2025W/CVAMD/papers/Gong_CECT-Mamba_a_Hierarchical_Contrast-enhanced-aware_Model_for_Pancreatic_Tumor_Subtyping_from_ICCVW_2025_paper.pdf"
+        },
+        {
+          "title": "Mohit Nayak",
+          "url": "https://trepo.tuni.fi/bitstream/handle/10024/162213/NayakMohit.pdf?sequence=2"
+        },
+        {
+          "title": "Streamlining the annotation process by radiologists of volumetric medical images with few-shot learning",
+          "url": "https://d-nb.info/1375037951/34"
+        },
+        {
+          "title": "Unstable Prompts, Unreliable Segmentations: A Challenge for Longitudinal Lesion Analysis",
+          "url": "https://arxiv.org/html/2507.19230v1"
+        }
+      ]
+    },
+    {
+      "batch": "V07",
+      "parameters": {
+        "open": [
+          {
+            "ref_id": "https://link.springer.com/chapter/10.1007/978-3-032-16128-4_2"
+          },
+          {
+            "ref_id": "https://arxiv.org/html/2507.19230v1",
+            "lineno": 44
+          },
+          {
+            "ref_id": "https://proceedings.mlsys.org/paper_files/paper/2021/file/0184b0cd3cfb185989f858a1d9f5c1eb-Paper.pdf",
+            "lineno": 20
+          },
+          {
+            "ref_id": "https://facctconference.org/static/papers24/facct24-162.pdf",
+            "lineno": 20
+          }
+        ],
+        "response_length": "short"
+      },
+      "returned_source_records": [
+        {
+          "title": "Unstable Prompts, Unreliable Segmentations: A Challenge for Longitudinal Lesion Analysis | Springer Nature Link",
+          "url": "https://link.springer.com/chapter/10.1007/978-3-032-16128-4_2"
+        },
+        {
+          "title": "Unstable Prompts, Unreliable Segmentations: A Challenge for Longitudinal Lesion Analysis",
+          "url": "https://arxiv.org/html/2507.19230v1"
+        },
+        {
+          "title": "Accounting for Variance in Machine Learning Benchmarks",
+          "url": "https://proceedings.mlsys.org/paper_files/paper/2021/file/0184b0cd3cfb185989f858a1d9f5c1eb-Paper.pdf"
+        },
+        {
+          "title": "Model ChangeLists: Characterizing Updates to ML Models",
+          "url": "https://facctconference.org/static/papers24/facct24-162.pdf"
+        }
+      ]
+    },
+    {
+      "batch": "V08",
+      "parameters": {
+        "find": [
+          {
+            "ref_id": "https://link.springer.com/chapter/10.1007/978-3-032-16128-4_2",
+            "pattern": "Published"
+          },
+          {
+            "ref_id": "https://link.springer.com/chapter/10.1007/978-3-032-16128-4_2",
+            "pattern": "Cite this paper"
+          }
+        ],
+        "response_length": "short"
+      },
+      "returned_source_records": [
+        {
+          "title": "Unstable Prompts, Unreliable Segmentations: A Challenge for Longitudinal Lesion Analysis | Springer Nature Link",
+          "url": "https://link.springer.com/chapter/10.1007/978-3-032-16128-4_2"
+        },
+        {
+          "title": "Unstable Prompts, Unreliable Segmentations: A Challenge for Longitudinal Lesion Analysis | Springer Nature Link",
+          "url": "https://link.springer.com/chapter/10.1007/978-3-032-16128-4_2"
+        }
+      ]
+    }
+  ],
+  "selected_screening_dispositions": [
+    {
+      "title": "Variability of semiautomated volume measurements between different versions of the same CT lung nodule volumetry software",
+      "url": "https://air.unipr.it/handle/11381/2536125",
+      "status": "not_included",
+      "reason": "Institutional abstract identified; exact publication type and full-text context unresolved. Main interchangeability boundary supported by stronger inspected P01-P03 evidence."
+    },
+    {
+      "title": "Translating potential improvement in the precision and accuracy of lung nodule measurements on computed tomography scans by software derived from artificial intelligence into impact on clinical practice—a simulation study",
+      "url": "https://doi.org/10.1093/bjrai/ubae010",
+      "status": "title_screened_not_appraised",
+      "reason": "Simulation-to-clinical-utility question is indirect; not used to infer a clinical margin or benefit."
+    },
+    {
+      "title": "Error Consistency for Machine Learning Evaluation and Validation with Application to Biomedical Diagnostics",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10093437/",
+      "status": "not_included",
+      "reason": "Adjacent error-consistency framework; selected excerpts did not add a closer longitudinal measurement comparison than the included update and variance studies."
+    },
+    {
+      "title": "Test-time Adaptation for Foundation Medical Segmentation Model Without Parametric Updates",
+      "url": "https://openaccess.thecvf.com/content/ICCV2025/papers/Chen_Test-time_Adaptation_for_Foundation_Medical_Segmentation_Model_Without_Parametric_Updates_ICCV_2025_paper.pdf",
+      "status": "not_direct_comparator",
+      "reason": "Different adaptation intervention; not used as evidence about fixed-label training-data updates."
+    },
+    {
+      "title": "Lost in the Folds: When Cross-Validation Is Not a Deep Ensemble for Uncertainty Estimation",
+      "url": "https://arxiv.org/abs/2605.18329",
+      "status": "abstract_screened_not_included",
+      "reason": "Cross-validation versus deep-ensemble uncertainty target differs from the present fixed-model patient-bootstrap estimand."
+    },
+    {
+      "title": "Dynamic Oculomics for Diagnostic Monitoring: Personal Ocular Trends, Risk Stratification and Treatment Response",
+      "url": "https://www.mdpi.com/2075-4418/16/17/2699",
+      "status": "context_only_not_included",
+      "reason": "Conceptual monitoring/bridging discussion; not used as empirical evidence of CT update effects."
+    },
+    {
+      "title": "Unrelated architecture, customer-churn, software-release and third-party generated summaries",
+      "status": "not_used_as_evidence",
+      "reason": "Irrelevant retrievals or nonprimary summaries. Listed search records do not imply inclusion or full appraisal."
+    }
+  ],
+  "metadata_resolutions": [
+    "Rocholl et al.: 2025 preprint/LMID event; chapter published 2026-04-01. Counted once; published metadata verified.",
+    "Metrics Reloaded companion papers: final 2024 publications used, not counted again as 2022/2023 preprints.",
+    "Kirby et al.: publication year 2020; later PMC availability is not publication date. Avoid numerical TLV bias because abstract units conflict with Table II.",
+    "Model ChangeLists: official PDF author list includes James Zou, omitted from the author-company webpage citation.",
+    "LesionLocator: official CVPR 2025 Rokuss proceedings page used; one incorrectly constructed Ulrich URL failed and supplied no evidence.",
+    "LongiSeg 2.0: scientific reading pinned to arXiv v1; release availability not re-audited in this review."
+  ],
+  "human_read_status": "not_attested",
+  "independent_reviewer_used": false,
+  "new_experiments": false,
+  "payload_downloads": false
+}

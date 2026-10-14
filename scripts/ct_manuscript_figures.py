@@ -13,7 +13,8 @@ from pathlib import Path
 
 import numpy as np
 
-from careport.ct_manuscript_figures import (REPLICATION_LEGEND, THREE_RUN_LEGEND, contrast_figure,
+from careport.ct_manuscript_figures import (REPLICATION_LEGEND, THREE_RUN_LEGEND, compatibility_figure,
+                                            compatibility_panels, contrast_figure,
                                             diagnostic_figure, example_figure, example_from_arrays,
                                             model_comparison_figure, model_comparison_panels, save_pdf,
                                             update_explainer)
@@ -23,6 +24,10 @@ RECORD = Path('newpaper/research_selection_2026-09-13')
 MANUSCRIPT = Path('newpaper/ct_manuscript')
 OUT = MANUSCRIPT/'figures'/'print'
 DIAGNOSTIC_SHA256 = '176640452e16d49e102622f1798b806339ee03235fe082ddab932b1b45e070e9'
+# Verified CT-UPDATE-019 aggregates; Figure 5 is drawn once this record exists.
+COMPAT_RESULTS = RECORD/'CT_COMPAT_RESULTS_019_2026-10-12.json'
+COMPAT_LABELS = {('unet', 'internal'): 'U-Net, internal', ('unet', 'pantrack'): 'U-Net, PanTrack',
+                 ('nnunet', 'internal'): 'nnU-Net, internal', ('nnunet', 'pantrack'): 'nnU-Net, PanTrack'}
 
 
 def read_csv(path):
@@ -96,6 +101,11 @@ def main():
                                                                        {'unet': 'U-Net', 'nnunet': 'nnU-Net'}),
                'figure5_three_run_contrasts.pdf': contrast_figure(three_run, labels, THREE_RUN_LEGEND),
                'figureS1_pantrack_diagnostics.pdf': diagnostic_figure(*diagnostic_inputs())}
+    if COMPAT_RESULTS.exists():
+        compat = json.loads(COMPAT_RESULTS.read_text(encoding='utf-8'))
+        figures['figure5_compatibility.pdf'] = compatibility_figure(compatibility_panels(compat), COMPAT_LABELS)
+    else:
+        print('compatibility figure skipped: the CT-UPDATE-019 result is not yet recorded')
     private = os.environ.get('CT_EXAMPLE_PRIVATE_NPZ')
     if private:  # Patient-level crops: read from outside the repository, never written into it except as this figure.
         with np.load(private, allow_pickle=False) as arrays:

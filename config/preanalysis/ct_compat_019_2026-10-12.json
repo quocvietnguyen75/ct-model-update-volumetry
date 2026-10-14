@@ -1,0 +1,97 @@
+{
+  "protocol_id": "CT-UPDATE-019",
+  "date": "2026-10-12",
+  "question_id": "IMG-ALT-01",
+  "role": "post_hoc_descriptive_compatibility_and_patient_level_response_analyses_of_existing_replication_predictions",
+  "amendment_file": "newpaper/plan/CT_EXPERIMENT_AMENDMENT_019_2026-10-12.md",
+  "amendment_sha256": "aa8d10edd2311999893b259fc87950722d7fa0291d90b47a59697a72d47972dd",
+  "replication_policy_file": "config/preanalysis/ct_replication_015_2026-09-25.json",
+  "replication_policy_sha256": "3f629e057c05896d3bba9ffefdccb45e481c15cd9412e73199e4c9c789171820",
+  "replication_source_manifest_sha256": "74feac6e7300fd6f2caabc2379f7ac738547c0be6d63fe34c6851670c23a7166",
+  "replication_results_relative": "runs/replication_015/analysis/replication_results.json",
+  "replication_results_sha256": "2c53cd697997c19948e458eccfc94cdd3fb344e219118507163e3d3d2d7f21bf",
+  "strong_policy_file": "config/preanalysis/ct_strong_017_2026-10-02.json",
+  "strong_policy_sha256": "7470667550c0ad159c1b0193013790156e804cb701568f7dae0e8ad1c763a3b2",
+  "strong_results_relative": "runs/strong_017/analysis/strong_results.json",
+  "strong_results_sha256": "e8bddf9cc36e76f101d7ae5d5b63909e368ac6c3876917e021a53782f1c96bc7",
+  "output_root_relative": "runs/compat_019",
+  "cohorts": {
+    "internal": {
+      "patients": 29,
+      "pairs": 277
+    },
+    "pantrack": {
+      "patients": 45,
+      "pairs": 181
+    }
+  },
+  "segmenters": {
+    "unet": {
+      "runs": 20,
+      "seeds": [
+        20261001,
+        20261002,
+        20261003,
+        20261004,
+        20261005,
+        20261006,
+        20261007,
+        20261008,
+        20261009,
+        20261010,
+        20261011,
+        20261012,
+        20261013,
+        20261014,
+        20261015,
+        20261016,
+        20261017,
+        20261018,
+        20261019,
+        20261020
+      ],
+      "bootstrap_seed": 20261301
+    },
+    "nnunet": {
+      "runs": 10,
+      "seeds": [
+        20261201,
+        20261202,
+        20261203,
+        20261204,
+        20261205,
+        20261206,
+        20261207,
+        20261208,
+        20261209,
+        20261210
+      ],
+      "bootstrap_seed": 20261302
+    }
+  },
+  "bootstrap_draws": 10000,
+  "limits_of_agreement_multiplier": 1.96,
+  "response_diameter_thresholds": {
+    "decrease": -0.3,
+    "increase": 0.2
+  },
+  "assessment_unit": {
+    "internal": "patient",
+    "pantrack": "patient_and_consecutive_scan_pair"
+  },
+  "weighting": "pairs_within_patient_then_patients_within_run_then_runs_equal; ratios from two-way means of numerator and denominator",
+  "log_scale_valid_pair_run": "old and new baseline and new follow-up volumes positive; references positive by eligibility",
+  "execution": {
+    "partition": "mig,main",
+    "gres": null,
+    "cpus_per_task": 4,
+    "memory": "24G",
+    "time": "04:00:00"
+  },
+  "storage": {
+    "study_cap_bytes": 268435456000,
+    "project_cap_bytes": 966367641600,
+    "planned_additional_bytes": 10485760
+  },
+  "patient_level_values_in_outputs": false
+}

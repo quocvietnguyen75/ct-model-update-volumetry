@@ -21,7 +21,7 @@ from careport.ct_manuscript import MANUSCRIPT_CONTRASTS
 TEXT_WIDTH_IN = 153 / 25.4
 MIN_TEXT_PT = 8.0
 CONTRASTS = MANUSCRIPT_CONTRASTS
-TITLES = {'retaining_baseline_cost': 'Retention cost', 'ordinary_update_benefit': 'Update benefit',
+TITLES = {'retaining_baseline_cost': 'Compatibility cost', 'ordinary_update_benefit': 'Update benefit',
           'contour_benefit': 'Contour benefit'}
 XLABELS = {'retaining_baseline_cost': 'mL; > 0 favours\nreprocessing the baseline',
            'ordinary_update_benefit': 'mL; > 0 favours updating\nwith the old baseline kept',
@@ -65,7 +65,7 @@ def _require_panels(panels: dict, cohorts, legend: dict) -> None:
 
 
 def contrast_figure(panels: dict, cohorts, legend: dict) -> Figure:
-    """Three contrast panels (retention cost first) with one row per cohort.
+    """Three contrast panels (compatibility cost first) with one row per cohort.
 
     panels[contrast][cohort] holds 'estimate', 'interval' (family-wise), 'original' (original-run values)
     and, for the replication figure, 'runs' and 'positive'. The legend keys select what is drawn.
@@ -285,7 +285,7 @@ def update_explainer() -> Figure:
             ax.text(x0 + 0.16, (upper + lower) / 2, label, va='center', fontsize=8, color=INK)
 
         bracket(ys[0], ys[1] + 0.04, 'Update benefit\nMAE(old/old) − MAE(old/new)')
-        bracket(ys[1] - 0.04, ys[2], 'Retention cost\nMAE(old/new) − MAE(new/new)')
+        bracket(ys[1] - 0.04, ys[2], 'Compatibility cost\nMAE(old/new) − MAE(new/new)')
         ax.text((centres['baseline'] + centres['followup']) / 2, ys[2] - 0.38,
                 'Contour benefit: follow-up Dice of the updated model minus that of the old model',
                 ha='center', va='center', fontsize=8, color=INK)
@@ -302,7 +302,7 @@ def model_comparison_panels(unet: dict, unet_strata: dict, nnunet: dict, nnunet_
     """Values for the U-Net/nnU-Net figure, taken unchanged from the verified result files.
 
     'primary' holds each primary contrast per cohort and model: the mean, its family-wise interval and the per-run
-    means. 'strata' holds, per cohort, the descriptive retention cost by baseline-volume stratum (mean, two-way 95%
+    means. 'strata' holds, per cohort, the descriptive compatibility cost by baseline-volume stratum (mean, two-way 95%
     interval and per-run means) with a label giving the volume range and patients / pairs. The two replications
     measured the same lesions, so their strata must agree exactly.
     """
@@ -327,7 +327,7 @@ def model_comparison_panels(unet: dict, unet_strata: dict, nnunet: dict, nnunet_
             for model, entry in (('unet', u_entry), ('nnunet', n_entry)):
                 summary = entry.get('retaining_baseline_cost') or {}
                 if summary.get('two_way_percentile_95') is None:
-                    raise ValueError(f"No retention-cost interval for {cohort} {row['label']!r} ({model})")
+                    raise ValueError(f"No compatibility-cost interval for {cohort} {row['label']!r} ({model})")
                 row[model] = dict(estimate=summary['mean'], interval=tuple(summary['two_way_percentile_95']),
                                   runs=list(summary.get('per_run_means', [])))
             rows.append(row)
@@ -365,7 +365,7 @@ def _tidy(ax, title: str, xlabel: str) -> None:
 
 
 def model_comparison_figure(panels: dict, cohorts, legend: dict) -> Figure:
-    """(a) The three primary contrasts of both replications; (b) the descriptive retention cost by baseline volume.
+    """(a) The three primary contrasts of both replications; (b) the descriptive compatibility cost by baseline volume.
 
     cohorts: ((key, row label), ...); legend: model key -> display name. Every drawn estimate, interval and run
     carries a gid naming its panel, cohort, row and model, so tests can compare the drawing with the values.
@@ -387,7 +387,7 @@ def model_comparison_figure(panels: dict, cohorts, legend: dict) -> Figure:
             ax.set_yticks(list(rows.values()), [label for _, label in cohorts])
             _tidy(ax, TITLES[name], XLABELS[name])
         # Post hoc for the U-Net (CT-UPDATE-016), but specified before nnU-Net training (CT-UPDATE-017).
-        bottom_fig.suptitle('b   Retention cost by reference baseline volume (descriptive)', x=0.0, ha='left',
+        bottom_fig.suptitle('b   Compatibility cost by reference baseline volume (descriptive)', x=0.0, ha='left',
                             fontsize=9, fontweight='bold', color=INK)
         bottom_axes = bottom_fig.subplots(1, 2)
         for ax, (cohort, label) in zip(bottom_axes, cohorts):
@@ -406,7 +406,7 @@ def model_comparison_figure(panels: dict, cohorts, legend: dict) -> Figure:
         for model in MODELS:
             style = MODEL_STYLE[model]
             handles.append(Line2D([], [], marker='o', linestyle='', markerfacecolor=style['runs'],
-                                  markeredgecolor='white', markersize=4.5, label=f'{legend[model]}: training run (a)'))
+                                  markeredgecolor='white', markersize=4.5, label=f'{legend[model]}: one training run (panel a only)'))
             handles.append(Line2D([], [], marker=style['marker'], color=style['ink'], linewidth=1.5, markersize=4.5,
                                   label=f'{legend[model]}: mean and interval'))
         fig.legend(handles=handles, loc='outside lower center', ncol=2, frameon=False, fontsize=8)
@@ -517,8 +517,8 @@ def example_figure(example: dict) -> Figure:
         base.text(columns[1], level, _signed(table['reference_change']), ha='right', va='center', fontsize=8,
                   color=INK, gid='example:reference_change')
         base.plot([columns[0], columns[2]], [level + 0.1] * 2, color=GRID, linewidth=0.8)
-        base.text(columns[0], level - 0.32, f"Retention cost of this pair:\n{_signed(table['retention_cost'])} mL",
-                  va='top', fontsize=8, color=INK, linespacing=1.4, gid='example:retention_cost')
+        base.text(columns[0], level - 0.32, f"Compatibility cost\nof this pair: {_signed(table['retention_cost'])} mL",
+                  va='top', fontsize=8, color=INK, linespacing=1.4, gid='example:compatibility_cost')
         handles = []
         for _, name, colour, style in EXAMPLE_LAYERS:
             handle = Line2D([], [], color=colour, linestyle=style, linewidth=1.2, label=name)
@@ -560,6 +560,147 @@ def diagnostic_figure(batches: list[dict], labels: list[str], strata_patients: d
             for side in ('top', 'right'):
                 ax.spines[side].set_visible(False)
         axes[-1].set_xlabel('Original training run', fontsize=8)
+    return fig
+
+
+# Same-day repeat CT, computer-aided volumes of lung tumours: 95% limits of agreement in percent (Zhao et al 2009).
+REPEAT_CT_LIMITS = (-12.1, 13.4)
+COMPAT_ROWS = (('unet', 'internal'), ('unet', 'pantrack'), ('nnunet', 'internal'), ('nnunet', 'pantrack'))
+_PERCENT_TICKS = (-90, -75, -50, -25, 0, 25, 50, 100, 200, 400, 900)
+
+
+def compatibility_panels(result: dict) -> dict:
+    """Figure 5 values from the verified CT-UPDATE-019 result (aggregates only), per (segmenter, cohort)."""
+    panels = {}
+    for model, cohort in COMPAT_ROWS:
+        try:
+            entry = result['segmenters'][model]['cohorts'][cohort]
+            agreement, decomposition = entry['version_agreement'], entry['decomposition']
+            response = entry['patient_response']
+            panels[(model, cohort)] = dict(
+                bias=float(agreement['bias_percent']), limits=tuple(float(v) for v in agreement['limits_percent']),
+                kappa=float(decomposition['kappa']),
+                kappa_interval=tuple(float(v) for v in decomposition['kappa_two_way_95']),
+                observed=float(decomposition['observed_inflation_percent']),
+                observed_interval=tuple(float(v) for v in decomposition['observed_inflation_percent_two_way_95']),
+                differs=100 * float(response['differs']['mean']),
+                differs_interval=tuple(100 * float(v) for v in response['differs']['two_way_percentile_95']),
+                progression=100 * float(response['progression_split_differs']['mean']),
+                progression_interval=tuple(100 * float(v) for v in
+                                           response['progression_split_differs']['two_way_percentile_95']))
+        except (KeyError, TypeError, ValueError) as error:
+            raise ValueError(f'Missing compatibility values for {model} / {cohort}') from error
+    return panels
+
+
+def _percent_axis(ax, low: float, high: float) -> None:
+    """A log-ratio x axis labelled as percentage differences."""
+    ax.set_xscale('log')
+    ax.set_xlim(low, high)
+    # Over a wide range, keep roughly evenly spaced ticks on the log axis so that labels do not collide.
+    candidates = _PERCENT_TICKS if high / low < 8 else (-90, -75, -50, 0, 100, 300, 900)
+    ticks = [t for t in candidates if low <= 1 + t / 100 <= high]
+    ax.xaxis.set_major_locator(matplotlib.ticker.FixedLocator([1 + t / 100 for t in ticks]))
+    ax.xaxis.set_major_formatter(matplotlib.ticker.FixedFormatter(
+        ['0' if t == 0 else f'{t:+d}%'.replace('-', '−') for t in ticks]))
+    ax.xaxis.set_minor_locator(matplotlib.ticker.NullLocator())
+
+
+def _marker(ax, x: float, y: float, model: str, cohort: str, gid: str, size: float = 26) -> None:
+    style = MODEL_STYLE[model]
+    ax.scatter([x], [y], s=size, marker=style['marker'], facecolor=style['ink'] if cohort == 'pantrack' else 'white',
+               edgecolor=style['ink'], linewidth=1.0, zorder=5, gid=gid)
+
+
+def compatibility_figure(panels: dict, labels: dict) -> Figure:
+    """(a) Agreement between model versions on the same baseline scans, beside same-day repeat-CT limits; (b) the
+    increase of root-mean-square log change error against the compatibility index; (c) patient-level volumetric
+    response categories changed by mixing versions. Marker shape gives the segmenter and fill the cohort."""
+    rows = {key: float(len(COMPAT_ROWS) - 1 - k) for k, key in enumerate(COMPAT_ROWS)}
+    missing = [key for key in COMPAT_ROWS if key not in panels or key not in labels]
+    if missing:
+        raise ValueError(f'Missing compatibility panels: {missing}')
+    with plt.rc_context(STYLE):
+        fig = plt.figure(figsize=(TEXT_WIDTH_IN, 5.6), layout='constrained')
+        top_fig, bottom_fig = fig.subfigures(2, 1, height_ratios=(1.0, 1.25))
+        top_fig.suptitle('a   Agreement between model versions on the same baseline scans', x=0.0, ha='left',
+                         fontsize=9, fontweight='bold', color=INK)
+        ax = top_fig.subplots(1, 1)
+        low, high = REPEAT_CT_LIMITS
+        ratios = [1 + v / 100 for p in panels.values() for v in p['limits']] + [1 + low / 100, 1 + high / 100]
+        ax.axvspan(1 + low / 100, 1 + high / 100, color=GRID, zorder=0, gid='agreement:repeat_ct')
+        for key, y in rows.items():
+            model, cohort = key
+            style = MODEL_STYLE[model]
+            lower, upper = (1 + v / 100 for v in panels[key]['limits'])
+            ax.plot([lower, upper], [y, y], color=style['ink'], linewidth=1.5, solid_capstyle='butt', zorder=3,
+                    gid=f'agreement:{model}:{cohort}:limits')
+            for end in (lower, upper):
+                ax.plot([end, end], [y - 0.1, y + 0.1], color=style['ink'], linewidth=1.0, zorder=3)
+            _marker(ax, 1 + panels[key]['bias'] / 100, y, model, cohort, f'agreement:{model}:{cohort}:bias')
+        _percent_axis(ax, min(ratios) / 1.25, max(ratios) * 1.25)
+        ax.axvline(1, color=MUTED, linewidth=0.8, zorder=1)
+        ax.set_ylim(-0.6, len(COMPAT_ROWS) + 0.15)
+        ax.set_yticks(list(rows.values()), [labels[key] for key in rows])
+        ax.tick_params(axis='y', length=0)
+        # The band's label sits above the top row, centred on the band's geometric middle.
+        ax.text(np.sqrt((1 + low / 100) * (1 + high / 100)), len(COMPAT_ROWS) + 0.05,
+                'Same-day repeat CT, lung tumours', fontsize=8, color=MUTED, va='top', ha='center')
+        ax.set_xlabel('Updated-model volume relative to the old model on the same baseline lesion\n'
+                      '(bias and 95% limits of agreement)', fontsize=8, color=MUTED)
+        for side in ('top', 'right'):
+            ax.spines[side].set_visible(False)
+
+        left, right = bottom_fig.subplots(1, 2, width_ratios=(1.0, 1.15))
+        left.set_title('b   Increase in change error', loc='left', fontsize=9, fontweight='bold', color=INK)
+        top_kappa = max(p['kappa_interval'][1] for p in panels.values()) * 1.15
+        grid = np.linspace(0.0, top_kappa, 200)
+        left.plot(grid, 100 * (np.sqrt(1 + grid ** 2) - 1), color=MUTED, linestyle='--', linewidth=1.0, zorder=2,
+                  gid='inflation:curve')
+        handles = []
+        for key in COMPAT_ROWS:
+            model, cohort = key
+            p, style = panels[key], MODEL_STYLE[model]
+            left.plot(p['kappa_interval'], [p['observed']] * 2, color=style['ink'], linewidth=1.0, zorder=3)
+            left.plot([p['kappa']] * 2, p['observed_interval'], color=style['ink'], linewidth=1.0, zorder=3)
+            _marker(left, p['kappa'], p['observed'], model, cohort, f'inflation:{model}:{cohort}')
+            handles.append(Line2D([], [], marker=style['marker'], linestyle='', markersize=5, markeredgecolor=style['ink'],
+                                  markerfacecolor=style['ink'] if cohort == 'pantrack' else 'white',
+                                  label=labels[key]))
+        handles.append(Line2D([], [], color=MUTED, linestyle='--', linewidth=1.0, label='√(1 + κ²) − 1'))
+        left.set_xlim(0, top_kappa)
+        left.set_ylim(bottom=0)
+        left.set_xlabel('Compatibility index κ', fontsize=8, color=MUTED)
+        left.set_ylabel('Increase in RMS log change error (%)', fontsize=8, color=MUTED)
+        left.legend(handles=handles, loc='upper left', frameon=False, fontsize=8, handletextpad=0.3,
+                    borderaxespad=0.2)
+        left.grid(color=GRID, linewidth=0.6, zorder=0)
+        left.set_axisbelow(True)
+
+        right.set_title('c   Category changed', loc='left', fontsize=9, fontweight='bold', color=INK)
+        for key, y in rows.items():
+            model, cohort = key
+            p, style = panels[key], MODEL_STYLE[model]
+            for name, offset, marker in (('differs', 0.13, 'o'), ('progression', -0.13, 'D')):
+                lower, upper = p[f'{name}_interval']
+                right.plot([lower, upper], [y + offset] * 2, color=style['ink'], linewidth=1.2, zorder=3)
+                right.scatter([p[name]], [y + offset], s=20, marker=marker, color=style['ink'], edgecolor='white',
+                              linewidth=0.5, zorder=5, gid=f'response:{model}:{cohort}:{name}')
+        right.set_ylim(-0.6, len(COMPAT_ROWS) - 0.4)
+        right.set_yticks(list(rows.values()), [labels[key] for key in rows])
+        right.tick_params(axis='y', length=0)
+        right.set_xlim(left=0)
+        right.set_xlabel('Patient-level assessments (%)', fontsize=8, color=MUTED)
+        right.legend(handles=[Line2D([], [], marker='o', linestyle='', color=INK, markersize=4.5,
+                                    label='Any category'),
+                              Line2D([], [], marker='D', linestyle='', color=INK, markersize=4.5,
+                                    label='Increase vs not')],
+                     loc='lower right', frameon=False, fontsize=8, handletextpad=0.3, borderaxespad=0.2)
+        right.grid(axis='x', color=GRID, linewidth=0.6, zorder=0)
+        right.set_axisbelow(True)
+        for axis in (left, right):
+            for side in ('top', 'right'):
+                axis.spines[side].set_visible(False)
     return fig
 
 

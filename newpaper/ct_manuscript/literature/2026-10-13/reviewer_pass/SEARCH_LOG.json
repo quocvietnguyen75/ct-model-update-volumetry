@@ -1,0 +1,1603 @@
+{
+ "meta": {
+  "date": "2026-10-13",
+  "pass": "Independent reviewer-perspective pass for the CT manuscript (pmb_submission/main.tex, commit d2a49d3)",
+  "entries_total": 131,
+  "distinct_tool_query_pairs": 127,
+  "entries_by_family": {
+   "known_item": 95,
+   "exact_phrase": 6,
+   "boolean": 18,
+   "citation_forward": 4,
+   "regulatory": 5,
+   "venue_sweep": 3
+  },
+  "note": "Discovery searches are the boolean, exact_phrase, citation_forward (filter=cites), venue_sweep and regulatory search entries; the rest are known-item lookups, metadata and OA checks, abstract and full-text retrievals. Four entries (R-S114 to R-S117) were re-run because their output was lost locally. No e-mail address or mailto parameter was sent to any API."
+ },
+ "entries": [
+  {
+   "id": "R-S001",
+   "date": "2026-10-13",
+   "tool": "Crossref REST (query.bibliographic)",
+   "family": "known_item",
+   "query": "Isensee nnU-Net self-configuring method for deep learning-based biomedical image segmentation Nature Methods 2021",
+   "hits": 406034,
+   "screened": 5,
+   "kept": [
+    "R-P04"
+   ],
+   "notes": "Known-item lookup; first hit is the nnU-Net Nature Methods paper."
+  },
+  {
+   "id": "R-S002",
+   "date": "2026-10-13",
+   "tool": "Crossref REST (query.bibliographic)",
+   "family": "known_item",
+   "query": "Renard Guedria De Palma Vuillerme Variability and reproducibility in deep learning for medical image segmentation Scientific Reports 2020",
+   "hits": 183565,
+   "screened": 5,
+   "kept": [
+    "R-P12"
+   ],
+   "notes": "Known-item lookup; Renard et al. 2020 exists (Sci Rep 10:13724)."
+  },
+  {
+   "id": "R-S003",
+   "date": "2026-10-13",
+   "tool": "Crossref REST (query.bibliographic)",
+   "family": "known_item",
+   "query": "Therasse New guidelines to evaluate the response to treatment in solid tumors Journal of the National Cancer Institute 2000",
+   "hits": 1187544,
+   "screened": 5,
+   "kept": [
+    "R-P17"
+   ],
+   "notes": "Known-item lookup of the original RECIST (1.0) guideline."
+  },
+  {
+   "id": "R-S004",
+   "date": "2026-10-13",
+   "tool": "Crossref /works/{doi} + OpenAlex /works/doi:{doi}",
+   "family": "known_item",
+   "query": "10.1038/s41592-020-01008-z",
+   "hits": 1,
+   "screened": 1,
+   "kept": [
+    "R-P04"
+   ],
+   "notes": "Metadata and OA status (green via arXiv:1904.08128). [metadata and OA status]"
+  },
+  {
+   "id": "R-S005",
+   "date": "2026-10-13",
+   "tool": "Europe PMC REST (core, abstract)",
+   "family": "known_item",
+   "query": "DOI:\"10.1038/s41592-020-01008-z\"",
+   "hits": 1,
+   "screened": 1,
+   "kept": [
+    "R-P04"
+   ],
+   "notes": "Abstract read. [abstract]"
+  },
+  {
+   "id": "R-S006",
+   "date": "2026-10-13",
+   "tool": "Crossref /works/{doi} + OpenAlex /works/doi:{doi}",
+   "family": "known_item",
+   "query": "10.1038/s41598-020-69920-0",
+   "hits": 1,
+   "screened": 1,
+   "kept": [
+    "R-P12"
+   ],
+   "notes": "Metadata and OA status (gold). [metadata and OA status]"
+  },
+  {
+   "id": "R-S007",
+   "date": "2026-10-13",
+   "tool": "Europe PMC REST (core, abstract)",
+   "family": "known_item",
+   "query": "DOI:\"10.1038/s41598-020-69920-0\"",
+   "hits": 1,
+   "screened": 1,
+   "kept": [
+    "R-P12"
+   ],
+   "notes": "Abstract read. [abstract]"
+  },
+  {
+   "id": "R-S008",
+   "date": "2026-10-13",
+   "tool": "Europe PMC REST (fullTextXML)",
+   "family": "known_item",
+   "query": "PMC7426407",
+   "hits": 1,
+   "screened": 1,
+   "kept": [
+    "R-P12"
+   ],
+   "notes": "Full text read (review of 23 articles; recommendation to repeat training). [full text retrieved]"
+  },
+  {
+   "id": "R-S009",
+   "date": "2026-10-13",
+   "tool": "Crossref /works/{doi} + OpenAlex /works/doi:{doi}",
+   "family": "known_item",
+   "query": "10.1093/jnci/92.3.205",
+   "hits": 1,
+   "screened": 1,
+   "kept": [
+    "R-P17"
+   ],
+   "notes": "Metadata; OpenAlex reports closed access. [metadata and OA status]"
+  },
+  {
+   "id": "R-S010",
+   "date": "2026-10-13",
+   "tool": "Europe PMC REST (core, abstract)",
+   "family": "known_item",
+   "query": "DOI:\"10.1093/jnci/92.3.205\"",
+   "hits": 1,
+   "screened": 1,
+   "kept": [
+    "R-P17"
+   ],
+   "notes": "Abstract read; volume equivalents not in the abstract. [abstract]"
+  },
+  {
+   "id": "R-S011",
+   "date": "2026-10-13",
+   "tool": "Europe PMC REST (search, lite)",
+   "family": "exact_phrase",
+   "query": "\"73% increase in volume\" AND RECIST AND OPEN_ACCESS:y",
+   "hits": 9,
+   "screened": 9,
+   "kept": [],
+   "notes": "Looked for an open source stating the RECIST volume equivalents; Wesdorp 2021 (12 Oct M121) and Costelloe 2010 selected for reading."
+  },
+  {
+   "id": "R-S012",
+   "date": "2026-10-13",
+   "tool": "Europe PMC REST (search, lite)",
+   "family": "exact_phrase",
+   "query": "(\"65% decrease in volume\" OR \"65% reduction in volume\") AND RECIST AND OPEN_ACCESS:y",
+   "hits": 8,
+   "screened": 8,
+   "kept": [],
+   "notes": "Same purpose as R-S011; overlapping results."
+  },
+  {
+   "id": "R-S013",
+   "date": "2026-10-13",
+   "tool": "Europe PMC REST (fullTextXML)",
+   "family": "known_item",
+   "query": "PMC10455281",
+   "hits": 1,
+   "screened": 1,
+   "kept": [
+    "R-P17"
+   ],
+   "notes": "Wesdorp 2021 full text: attributes the 30%->65% and 20%->73% sphere relation to Therasse 2000 (its ref 13). Secondary evidence for R-P17. [full text retrieved]"
+  },
+  {
+   "id": "R-S014",
+   "date": "2026-10-13",
+   "tool": "Europe PMC REST (fullTextXML)",
+   "family": "known_item",
+   "query": "PMC2938069",
+   "hits": 1,
+   "screened": 1,
+   "kept": [],
+   "notes": "Costelloe 2010 full text: '20% increase ... calculated to be a 73% increase in volume, by the authors of the RECIST criteria' citing Eisenhauer 2009 (already cited). [full text retrieved]"
+  },
+  {
+   "id": "R-S015",
+   "date": "2026-10-13",
+   "tool": "PubMed E-utilities (esearch, sort=relevance)",
+   "family": "exact_phrase",
+   "query": "\"coefficient of individual agreement\"",
+   "hits": 25095,
+   "screened": 30,
+   "kept": [],
+   "notes": "PubMed did not treat the phrase as a phrase (automatic term mapping); results irrelevant. Superseded by R-S016 and R-S018."
+  },
+  {
+   "id": "R-S016",
+   "date": "2026-10-13",
+   "tool": "PubMed E-utilities (esearch, sort=relevance)",
+   "family": "boolean",
+   "query": "(\"individual bioequivalence\"[tiab] OR \"individual equivalence\"[tiab]) AND (agreement[tiab] OR interchangeab*[tiab]) AND (measurement*[tiab] OR method*[tiab])",
+   "hits": 44,
+   "screened": 20,
+   "kept": [
+    "R-P02",
+    "R-P15"
+   ],
+   "notes": "Also seen: Lin 2000 total deviation index (Stat Med), Chen 2000 individual bioequivalence criterion, Dong and Tsong 2014; not kept (statistical background only)."
+  },
+  {
+   "id": "R-S017",
+   "date": "2026-10-13",
+   "tool": "PubMed E-utilities (esearch, sort=relevance)",
+   "family": "known_item",
+   "query": "Obuchowski NA[au] AND interchangeab*[tiab]",
+   "hits": 5,
+   "screened": 5,
+   "kept": [
+    "R-P01"
+   ],
+   "notes": "Obuchowski interchangeability papers; Lou 2015 (manual vs automated TAVR annulus measurement interchangeability) seen, not kept."
+  },
+  {
+   "id": "R-S018",
+   "date": "2026-10-13",
+   "tool": "PubMed E-utilities (esearch, sort=relevance)",
+   "family": "exact_phrase",
+   "query": "\"individual equivalence index\"[tiab] OR \"individual equivalence\"[tiab]",
+   "hits": 37,
+   "screened": 30,
+   "kept": [
+    "R-P02",
+    "R-P15"
+   ],
+   "notes": "Radiology applications of individual equivalence mostly concern DL-reconstructed MRI protocols."
+  },
+  {
+   "id": "R-S019",
+   "date": "2026-10-13",
+   "tool": "Europe PMC REST (core, abstract)",
+   "family": "known_item",
+   "query": "DOI:\"10.1016/j.acra.2014.07.004\"",
+   "hits": 1,
+   "screened": 1,
+   "kept": [
+    "R-P01"
+   ],
+   "notes": "Abstract read. [abstract]"
+  },
+  {
+   "id": "R-S020",
+   "date": "2026-10-13",
+   "tool": "Crossref /works/{doi} + OpenAlex /works/doi:{doi}",
+   "family": "known_item",
+   "query": "10.1016/j.acra.2014.07.004",
+   "hits": 1,
+   "screened": 1,
+   "kept": [
+    "R-P01"
+   ],
+   "notes": "Metadata; closed access. [metadata and OA status]"
+  },
+  {
+   "id": "R-S021",
+   "date": "2026-10-13",
+   "tool": "Europe PMC REST (core, abstract)",
+   "family": "known_item",
+   "query": "DOI:\"10.1080/10543400701329489\"",
+   "hits": 1,
+   "screened": 1,
+   "kept": [
+    "R-P02"
+   ],
+   "notes": "Abstract read. [abstract]"
+  },
+  {
+   "id": "R-S022",
+   "date": "2026-10-13",
+   "tool": "Crossref /works/{doi} + OpenAlex /works/doi:{doi}",
+   "family": "known_item",
+   "query": "10.1080/10543400701329489",
+   "hits": 1,
+   "screened": 1,
+   "kept": [
+    "R-P02"
+   ],
+   "notes": "Metadata; closed access. [metadata and OA status]"
+  },
+  {
+   "id": "R-S023",
+   "date": "2026-10-13",
+   "tool": "OpenAlex works API (citation_forward)",
+   "family": "citation_forward",
+   "query": "filter=cites:W1972883344",
+   "hits": 61,
+   "screened": 60,
+   "kept": [
+    "R-P16"
+   ],
+   "notes": "Forward citations of Obuchowski 2014: mostly DL-reconstruction MRI interchangeability studies; no AI-segmentation version study."
+  },
+  {
+   "id": "R-S024",
+   "date": "2026-10-13",
+   "tool": "OpenAlex works API (citation_forward)",
+   "family": "citation_forward",
+   "query": "filter=cites:W2169064248",
+   "hits": 54,
+   "screened": 54,
+   "kept": [
+    "R-P15",
+    "R-P16"
+   ],
+   "notes": "Forward citations of Barnhart 2007 include Sullivan 2015 (QIBA metrology, 12 Oct M070) and Obuchowski 2015 (already cited), Barnhart-Haber-Lin 2007 overview, Tromp 2022 and 2021 Lancet Digit Health echo AI."
+  },
+  {
+   "id": "R-S025",
+   "date": "2026-10-13",
+   "tool": "Europe PMC REST (core, abstract)",
+   "family": "known_item",
+   "query": "DOI:\"10.1007/s00330-021-08325-7\"",
+   "hits": 1,
+   "screened": 1,
+   "kept": [
+    "R-P16"
+   ],
+   "notes": "Abstract field empty (commentary). [abstract]"
+  },
+  {
+   "id": "R-S026",
+   "date": "2026-10-13",
+   "tool": "Crossref /works/{doi} + OpenAlex /works/doi:{doi}",
+   "family": "known_item",
+   "query": "10.1007/s00330-021-08325-7",
+   "hits": 1,
+   "screened": 1,
+   "kept": [
+    "R-P16"
+   ],
+   "notes": "Metadata; hybrid OA. [metadata and OA status]"
+  },
+  {
+   "id": "R-S027",
+   "date": "2026-10-13",
+   "tool": "Europe PMC REST (core, abstract)",
+   "family": "known_item",
+   "query": "DOI:\"10.1038/s41467-022-34245-1\"",
+   "hits": 1,
+   "screened": 1,
+   "kept": [
+    "R-P15"
+   ],
+   "notes": "Abstract read. [abstract]"
+  },
+  {
+   "id": "R-S028",
+   "date": "2026-10-13",
+   "tool": "Europe PMC REST (fullTextXML)",
+   "family": "known_item",
+   "query": "PMC8921052",
+   "hits": 1,
+   "screened": 1,
+   "kept": [
+    "R-P16"
+   ],
+   "notes": "Full text read; refs 12 and 15 are Obuchowski 2014 and Barnhart 2007. [full text retrieved]"
+  },
+  {
+   "id": "R-S029",
+   "date": "2026-10-13",
+   "tool": "PubMed E-utilities (esearch, sort=relevance)",
+   "family": "boolean",
+   "query": "\"reference change value*\"[tiab] AND (\"different method*\"[tiab] OR \"method change\"[tiab] OR \"analytical method*\"[tiab] OR \"between-method\"[tiab] OR \"change of method\"[tiab] OR \"different analy*\"[tiab] OR \"different laborator*\"[tiab] OR \"different instrument*\"[tiab])",
+   "hits": 19,
+   "screened": 19,
+   "kept": [
+    "R-P19"
+   ],
+   "notes": "Also Ucar 2013 (HbA1c RCV with two analytical methods) seen; not kept."
+  },
+  {
+   "id": "R-S030",
+   "date": "2026-10-13",
+   "tool": "PubMed E-utilities (esearch, sort=relevance)",
+   "family": "known_item",
+   "query": "Fraser CG[au] AND \"reference change values\"[ti]",
+   "hits": 6,
+   "screened": 6,
+   "kept": [],
+   "notes": "Fraser 2011 (canonical RCV review) and Petersen 2016 (assay-bias change and RCV) found; alternatives to R-P19, not kept."
+  },
+  {
+   "id": "R-S031",
+   "date": "2026-10-13",
+   "tool": "Europe PMC REST (core, abstract)",
+   "family": "known_item",
+   "query": "DOI:\"10.1177/0004563216634376\"",
+   "hits": 1,
+   "screened": 1,
+   "kept": [],
+   "notes": "Petersen 2016 abstract: analytical performance specifications for a change in assay bias assessed by effects on RCV; not kept. [abstract]"
+  },
+  {
+   "id": "R-S032",
+   "date": "2026-10-13",
+   "tool": "Europe PMC REST (core, abstract)",
+   "family": "known_item",
+   "query": "DOI:\"10.11613/BM.2021.030902\"",
+   "hits": 1,
+   "screened": 1,
+   "kept": [
+    "R-P19"
+   ],
+   "notes": "Abstract read. [abstract]"
+  },
+  {
+   "id": "R-S033",
+   "date": "2026-10-13",
+   "tool": "Europe PMC REST (core, abstract)",
+   "family": "known_item",
+   "query": "DOI:\"10.1515/CCLM.2011.733\"",
+   "hits": 1,
+   "screened": 1,
+   "kept": [],
+   "notes": "Fraser 2011 abstract: RCV = 2^0.5 * Z * (CVA^2 + CVI^2)^0.5; canonical alternative citation to R-P19. [abstract]"
+  },
+  {
+   "id": "R-S034",
+   "date": "2026-10-13",
+   "tool": "Europe PMC REST (core, abstract)",
+   "family": "known_item",
+   "query": "DOI:\"10.1080/10543400701376480\"",
+   "hits": 1,
+   "screened": 1,
+   "kept": [],
+   "notes": "Barnhart, Haber and Lin 2007 overview abstract (descriptive, unscaled and scaled agreement indices); alternative to R-P02, not kept. [abstract]"
+  },
+  {
+   "id": "R-S035",
+   "date": "2026-10-13",
+   "tool": "Europe PMC REST (search, lite)",
+   "family": "boolean",
+   "query": "(\"individual equivalence\" OR interchangeab* OR \"coefficient of individual agreement\") AND (segmentation OR volumetry OR \"tumor volume\" OR \"tumour volume\") AND (\"deep learning\" OR \"software version\" OR \"automated\")",
+   "hits": 3641,
+   "screened": 25,
+   "kept": [],
+   "notes": "Full-text query too broad (3641 hits, newest first); first 25 screened, none relevant."
+  },
+  {
+   "id": "R-S036",
+   "date": "2026-10-13",
+   "tool": "PubMed E-utilities (esearch, sort=relevance)",
+   "family": "boolean",
+   "query": "(\"same-day\"[tiab] OR \"repeat CT\"[tiab] OR \"repeated CT\"[tiab] OR \"test-retest\"[tiab] OR \"scan-rescan\"[tiab] OR \"interscan\"[tiab] OR \"inter-scan\"[tiab] OR \"repeat scan*\"[tiab] OR \"repeated acquisition*\"[tiab]) AND (liver[tiab] OR hepatic[tiab] OR \"lymph node*\"[tiab] OR pancrea*[tiab] OR melanoma[tiab] OR metastas*[tiab]) AND (volum*[tiab]) AND (CT[tiab] OR \"computed tomography\"[tiab]) AND (tumor*[tiab] OR tumour*[tiab] OR lesion*[tiab] OR metastas*[tiab])",
+   "hits": 81,
+   "screened": 40,
+   "kept": [],
+   "notes": "No patient scan-rescan CT volumetry of liver, lymph-node, pancreatic or melanoma lesions among the top 40."
+  },
+  {
+   "id": "R-S037",
+   "date": "2026-10-13",
+   "tool": "PubMed E-utilities (esearch, sort=relevance)",
+   "family": "boolean",
+   "query": "(\"lymph node*\"[ti] OR \"liver metastas*\"[ti] OR \"hepatic metastas*\"[ti] OR \"liver lesion*\"[ti] OR \"liver tumo*\"[ti]) AND (volumetr*[ti] OR \"volume measurement*\"[ti] OR \"volumetric\"[ti]) AND (variability[tiab] OR reproducib*[tiab] OR repeatab*[tiab] OR precision[tiab] OR \"interobserver\"[tiab] OR \"inter-observer\"[tiab]) AND (CT[tiab] OR \"computed tomography\"[tiab] OR MDCT[tiab] OR MSCT[tiab])",
+   "hits": 15,
+   "screened": 15,
+   "kept": [
+    "R-P08"
+   ],
+   "notes": "Fabel 2008 (melanoma lymph nodes), Fabel 2011, Buerke 2010 (lymph-node inter-reader volumetry), Wulff 2012 and Rothe 2013 (both in 12 Oct records) found; only Li 2016 kept."
+  },
+  {
+   "id": "R-S038",
+   "date": "2026-10-13",
+   "tool": "Europe PMC REST (core, abstract)",
+   "family": "known_item",
+   "query": "DOI:\"10.1007/s00330-008-0866-4\"",
+   "hits": 1,
+   "screened": 1,
+   "kept": [],
+   "notes": "Fabel 2008 abstract: inter-observer variability of semi-automated volumetry about one third of RECIST in melanoma lymph nodes; not kept (Hering 2024 preferred). [abstract]"
+  },
+  {
+   "id": "R-S039",
+   "date": "2026-10-13",
+   "tool": "Europe PMC REST (core, abstract)",
+   "family": "known_item",
+   "query": "DOI:\"10.1118/1.4967776\"",
+   "hits": 1,
+   "screened": 1,
+   "kept": [
+    "R-P08"
+   ],
+   "notes": "Abstract read. [abstract]"
+  },
+  {
+   "id": "R-S040",
+   "date": "2026-10-13",
+   "tool": "Europe PMC REST (core, abstract)",
+   "family": "known_item",
+   "query": "DOI:\"10.2214/AJR.10.4010\"",
+   "hits": 1,
+   "screened": 1,
+   "kept": [],
+   "notes": "Buerke 2010 abstract: relative inter-observer difference of semi-automatic lymph-node volume 2.9% (95% CI -31.4% to 37.3%); optional, not kept. [abstract]"
+  },
+  {
+   "id": "R-S041",
+   "date": "2026-10-13",
+   "tool": "Europe PMC REST (core, abstract)",
+   "family": "known_item",
+   "query": "DOI:\"10.1007/s00330-010-1966-5\"",
+   "hits": 1,
+   "screened": 1,
+   "kept": [],
+   "notes": "Fabel 2011 abstract: inter-observer variability of change in effective diameter 10.6%; not kept. [abstract]"
+  },
+  {
+   "id": "R-S042",
+   "date": "2026-10-13",
+   "tool": "Crossref /works/{doi} + OpenAlex /works/doi:{doi}",
+   "family": "known_item",
+   "query": "10.1118/1.4967776",
+   "hits": 1,
+   "screened": 1,
+   "kept": [
+    "R-P08"
+   ],
+   "notes": "Metadata; green OA via PMC author manuscript. [metadata and OA status]"
+  },
+  {
+   "id": "R-S043",
+   "date": "2026-10-13",
+   "tool": "PubMed Central E-utilities (efetch db=pmc)",
+   "family": "known_item",
+   "query": "PMC5123997",
+   "hits": 1,
+   "screened": 1,
+   "kept": [
+    "R-P08"
+   ],
+   "notes": "PMC efetch returned the abstract only (no body), so evidence depth stays at abstract. [full text retrieved]"
+  },
+  {
+   "id": "R-S044",
+   "date": "2026-10-13",
+   "tool": "PubMed E-utilities (esearch, sort=relevance)",
+   "family": "boolean",
+   "query": "(pancrea*[ti]) AND (tumor*[tiab] OR tumour*[tiab] OR cancer[tiab] OR adenocarcinoma[tiab]) AND (volum*[ti]) AND (variability[tiab] OR reproducib*[tiab] OR repeatab*[tiab] OR agreement[tiab] OR interobserver[tiab] OR \"inter-observer\"[tiab] OR \"inter-reader\"[tiab]) AND (CT[tiab] OR \"computed tomography\"[tiab])",
+   "hits": 22,
+   "screened": 22,
+   "kept": [],
+   "notes": "Pancreatic: only radiotherapy GTV delineation studies; no scan-rescan tumour volumetry."
+  },
+  {
+   "id": "R-S045",
+   "date": "2026-10-13",
+   "tool": "Europe PMC REST (search, lite)",
+   "family": "boolean",
+   "query": "(TITLE_ABS:\"liver metastases\" OR TITLE_ABS:\"hepatic metastases\") AND (TITLE_ABS:\"repeatability\" OR TITLE_ABS:\"test-retest\" OR TITLE_ABS:\"same-day\") AND (TITLE_ABS:volume OR TITLE_ABS:volumetric OR TITLE_ABS:volumetry) AND (TITLE_ABS:CT OR TITLE_ABS:\"computed tomography\")",
+   "hits": 5,
+   "screened": 5,
+   "kept": [],
+   "notes": "Only PET functional-volume repeatability of liver metastases (Heijmen 2012); no CT."
+  },
+  {
+   "id": "R-S046",
+   "date": "2026-10-13",
+   "tool": "PubMed E-utilities (esearch, sort=relevance)",
+   "family": "boolean",
+   "query": "(\"deep learning\"[tiab] OR \"artificial intelligence\"[tiab] OR \"automated\"[tiab] OR \"automatic\"[tiab]) AND (liver[tiab] OR hepatic[tiab] OR melanoma[tiab] OR pancrea*[tiab] OR \"lymph node*\"[tiab]) AND (\"tumor burden\"[tiab] OR \"tumour burden\"[tiab] OR \"tumor volume\"[tiab] OR \"tumour volume\"[tiab] OR \"lesion volume*\"[tiab]) AND (repeatab*[tiab] OR \"test-retest\"[tiab] OR \"scan-rescan\"[tiab] OR \"repeat CT\"[tiab] OR \"same-day\"[tiab])",
+   "hits": 5,
+   "screened": 5,
+   "kept": [
+    "R-P08"
+   ],
+   "notes": "Confirms the gap for automated volumetry outside the lung; Li 2016 is the only CT liver-lesion repeat-scan study."
+  },
+  {
+   "id": "R-S047",
+   "date": "2026-10-13",
+   "tool": "Crossref /works/{doi} + OpenAlex /works/doi:{doi}",
+   "family": "known_item",
+   "query": "10.1016/j.ejca.2015.10.014",
+   "hits": 1,
+   "screened": 1,
+   "kept": [
+    "R-P10"
+   ],
+   "notes": "Metadata; closed access. [metadata and OA status]"
+  },
+  {
+   "id": "R-S048",
+   "date": "2026-10-13",
+   "tool": "Europe PMC REST (core, abstract)",
+   "family": "known_item",
+   "query": "DOI:\"10.1016/j.ejca.2015.10.014\"",
+   "hits": 1,
+   "screened": 1,
+   "kept": [
+    "R-P10"
+   ],
+   "notes": "Abstract read. [abstract]"
+  },
+  {
+   "id": "R-S049",
+   "date": "2026-10-13",
+   "tool": "PubMed E-utilities (esearch, sort=relevance)",
+   "family": "boolean",
+   "query": "(RECIST[tiab] OR \"tumor measurement*\"[tiab] OR \"tumour measurement*\"[tiab] OR \"response assessment\"[tiab]) AND (variability[tiab] OR discordance[tiab] OR agreement[tiab]) AND (meta-analysis[pt] OR \"systematic review\"[tiab] OR \"meta-analysis\"[tiab])",
+   "hits": 23,
+   "screened": 23,
+   "kept": [
+    "R-P10"
+   ],
+   "notes": "Smesseim 2026 (12 Oct M110) and BICR meta-analyses (Jacobs 2024, Lian 2024, Eljilany 2026) seen; not kept."
+  },
+  {
+   "id": "R-S050",
+   "date": "2026-10-13",
+   "tool": "Crossref REST (query.bibliographic)",
+   "family": "known_item",
+   "query": "Bertels Robben Vandermeulen Suetens theoretical analysis and experimental validation of volume bias of soft Dice optimized segmentation maps in the context of inherent uncertainty Medical Image Analysis",
+   "hits": 42334,
+   "screened": 5,
+   "kept": [
+    "R-P06"
+   ],
+   "notes": "Bertels 2021 and its 2020 conference version found."
+  },
+  {
+   "id": "R-S051",
+   "date": "2026-10-13",
+   "tool": "OpenAlex works API (search)",
+   "family": "boolean",
+   "query": "random seed variability deep learning medical image segmentation volume reproducibility training runs",
+   "hits": 1223,
+   "screened": 25,
+   "kept": [],
+   "notes": "Alahmari 2020 (IEEE Access, repeatability of U-Net training across frameworks) and Colliot 2023 chapter seen; not kept."
+  },
+  {
+   "id": "R-S052",
+   "date": "2026-10-13",
+   "tool": "Crossref /works/{doi} + OpenAlex /works/doi:{doi}",
+   "family": "known_item",
+   "query": "10.1016/j.media.2020.101833",
+   "hits": 1,
+   "screened": 1,
+   "kept": [
+    "R-P06"
+   ],
+   "notes": "Metadata; green OA via arXiv:2211.04161. [metadata and OA status]"
+  },
+  {
+   "id": "R-S053",
+   "date": "2026-10-13",
+   "tool": "Europe PMC REST (core, abstract)",
+   "family": "known_item",
+   "query": "DOI:\"10.1016/j.media.2020.101833\"",
+   "hits": 1,
+   "screened": 1,
+   "kept": [
+    "R-P06"
+   ],
+   "notes": "Abstract read. [abstract]"
+  },
+  {
+   "id": "R-S054",
+   "date": "2026-10-13",
+   "tool": "Crossref /works/{doi} + OpenAlex /works/doi:{doi}",
+   "family": "known_item",
+   "query": "10.1109/access.2020.3039833",
+   "hits": 1,
+   "screened": 1,
+   "kept": [],
+   "notes": "Alahmari 2020 metadata (gold OA). [metadata and OA status]"
+  },
+  {
+   "id": "R-S055",
+   "date": "2026-10-13",
+   "tool": "OpenAlex /works/doi:{doi} (abstract_inverted_index)",
+   "family": "known_item",
+   "query": "10.1109/access.2020.3039833",
+   "hits": 1,
+   "screened": 1,
+   "kept": [],
+   "notes": "Alahmari 2020 abstract: uncontrolled randomisation prevents repeatable training; not kept (Renard 2020 and Akesson 2024 cover it). [abstract]"
+  },
+  {
+   "id": "R-S056",
+   "date": "2026-10-13",
+   "tool": "arXiv API (id_list)",
+   "family": "known_item",
+   "query": "2211.04161",
+   "hits": 1,
+   "screened": 1,
+   "kept": [
+    "R-P06"
+   ],
+   "notes": "arXiv record (accepted version of the MedIA paper). [abstract/metadata]"
+  },
+  {
+   "id": "R-S057",
+   "date": "2026-10-13",
+   "tool": "Crossref REST (query.bibliographic)",
+   "family": "known_item",
+   "query": "Owen The pigeonhole bootstrap Annals of Applied Statistics 2007",
+   "hits": 8045991,
+   "screened": 5,
+   "kept": [
+    "R-P05"
+   ],
+   "notes": "Known-item lookup."
+  },
+  {
+   "id": "R-S058",
+   "date": "2026-10-13",
+   "tool": "Crossref REST (query.bibliographic)",
+   "family": "known_item",
+   "query": "McCullagh Resampling and exchangeable arrays Bernoulli 2000",
+   "hits": 2375397,
+   "screened": 5,
+   "kept": [],
+   "notes": "McCullagh 2000 (Bernoulli 6:285-301; doi 10.2307/3318577) verified: no exact bootstrap for crossed arrays; optional companion to R-P05, not kept."
+  },
+  {
+   "id": "R-S059",
+   "date": "2026-10-13",
+   "tool": "Crossref REST (query.bibliographic)",
+   "family": "known_item",
+   "query": "Bland Altman Agreement between methods of measurement with multiple observations per individual Journal of Biopharmaceutical Statistics 2007",
+   "hits": 309911,
+   "screened": 5,
+   "kept": [
+    "R-P14"
+   ],
+   "notes": "Also shows two letters to the editor reporting arithmetic and example inconsistencies in Bland and Altman 2007 (Jones 2019; Matsubayashi 2021)."
+  },
+  {
+   "id": "R-S060",
+   "date": "2026-10-13",
+   "tool": "Crossref /works/{doi} + OpenAlex /works/doi:{doi}",
+   "family": "known_item",
+   "query": "10.1214/07-aoas122",
+   "hits": 1,
+   "screened": 1,
+   "kept": [
+    "R-P05"
+   ],
+   "notes": "Metadata; bronze OA. [metadata and OA status]"
+  },
+  {
+   "id": "R-S061",
+   "date": "2026-10-13",
+   "tool": "OpenAlex /works/doi:{doi} (abstract_inverted_index)",
+   "family": "known_item",
+   "query": "10.1214/07-aoas122",
+   "hits": 1,
+   "screened": 1,
+   "kept": [
+    "R-P05"
+   ],
+   "notes": "Abstract read. [abstract]"
+  },
+  {
+   "id": "R-S062",
+   "date": "2026-10-13",
+   "tool": "Crossref /works/{doi} + OpenAlex /works/doi:{doi}",
+   "family": "known_item",
+   "query": "10.1080/10543400701329422",
+   "hits": 1,
+   "screened": 1,
+   "kept": [
+    "R-P14"
+   ],
+   "notes": "Metadata; green OA (White Rose eprint). [metadata and OA status]"
+  },
+  {
+   "id": "R-S063",
+   "date": "2026-10-13",
+   "tool": "Europe PMC REST (core, abstract)",
+   "family": "known_item",
+   "query": "DOI:\"10.1080/10543400701329422\"",
+   "hits": 1,
+   "screened": 1,
+   "kept": [
+    "R-P14"
+   ],
+   "notes": "Abstract read. [abstract]"
+  },
+  {
+   "id": "R-S064",
+   "date": "2026-10-13",
+   "tool": "PubMed E-utilities (esearch, sort=relevance)",
+   "family": "regulatory",
+   "query": "(\"510(k)\"[tiab] OR \"FDA\"[tiab] OR \"Food and Drug Administration\"[tiab]) AND (\"artificial intelligence\"[tiab] OR \"machine learning\"[tiab] OR \"deep learning\"[tiab]) AND (modification*[tiab] OR \"software update*\"[tiab] OR \"change control\"[tiab] OR predicate*[tiab] OR \"new version*\"[tiab] OR \"version*\"[tiab] OR retrain*[tiab]) AND (device*[tiab]) AND (cleared[tiab] OR clearance*[tiab] OR authori*[tiab] OR approv*[tiab])",
+   "hits": 22,
+   "screened": 22,
+   "kept": [
+    "R-P13"
+   ],
+   "notes": "Muehlematter 2023, Dogra 2026, Almarie 2025 and Feng 2021 (bio-creep of successive modifications) seen."
+  },
+  {
+   "id": "R-S065",
+   "date": "2026-10-13",
+   "tool": "Europe PMC REST (core, abstract)",
+   "family": "regulatory",
+   "query": "DOI:\"10.1016/S2589-7500(23)00126-7\"",
+   "hits": 1,
+   "screened": 1,
+   "kept": [],
+   "notes": "Muehlematter 2023 abstract: AI tasks change frequently along radiology predicate networks; no data on retraining vs architecture; not kept. [abstract]"
+  },
+  {
+   "id": "R-S066",
+   "date": "2026-10-13",
+   "tool": "Europe PMC REST (core, abstract)",
+   "family": "regulatory",
+   "query": "DOI:\"10.1016/j.acra.2026.09.016\"",
+   "hits": 1,
+   "screened": 1,
+   "kept": [],
+   "notes": "Dogra 2026 abstract: PCCP authorisation rose to 8.7% in 2025; no modification types; not kept. [abstract]"
+  },
+  {
+   "id": "R-S067",
+   "date": "2026-10-13",
+   "tool": "Europe PMC REST (core, abstract)",
+   "family": "regulatory",
+   "query": "DOI:\"10.3390/biomedicines13123005\"",
+   "hits": 1,
+   "screened": 1,
+   "kept": [],
+   "notes": "Almarie 2025 abstract: PCCPs in 16.7% of 2024 ML device summaries; not kept. [abstract]"
+  },
+  {
+   "id": "R-S068",
+   "date": "2026-10-13",
+   "tool": "PubMed E-utilities (esearch, sort=relevance)",
+   "family": "boolean",
+   "query": "(\"software version*\"[tiab] OR \"software update*\"[tiab] OR \"algorithm update*\"[tiab] OR \"version update*\"[tiab] OR \"software upgrade*\"[tiab] OR \"model update*\"[tiab] OR \"updated version\"[tiab] OR \"newer version\"[tiab]) AND (\"deep learning\"[tiab] OR \"artificial intelligence\"[tiab] OR \"neural network\"[tiab] OR \"AI-based\"[tiab]) AND (volum*[tiab] OR quantif*[tiab] OR measurement*[tiab] OR segmentation[tiab])",
+   "hits": 64,
+   "screened": 40,
+   "kept": [],
+   "notes": "Noisy; no version comparison of a tumour-volumetry product."
+  },
+  {
+   "id": "R-S069",
+   "date": "2026-10-13",
+   "tool": "PubMed E-utilities (esearch, sort=relevance)",
+   "family": "boolean",
+   "query": "(version*[ti] OR update*[ti] OR upgrade*[ti]) AND (software[tiab] OR algorithm*[tiab] OR \"deep learning\"[tiab] OR \"artificial intelligence\"[tiab]) AND (volum*[tiab] OR \"quantitative\"[tiab]) AND (MRI[tiab] OR CT[tiab] OR PET[tiab] OR \"magnetic resonance\"[tiab] OR \"computed tomography\"[tiab]) AND (longitudinal[tiab] OR \"follow-up\"[tiab] OR consisten*[tiab] OR agreement[tiab] OR reproducib*[tiab] OR comparab*[tiab])",
+   "hits": 29,
+   "screened": 29,
+   "kept": [],
+   "notes": "Mazzei 2013 (perfusion CT software upgrade), Keenan 2019 and Potvin 2019 (MRI system upgrades), Dupuis 2025 (MRF) seen; not kept."
+  },
+  {
+   "id": "R-S070",
+   "date": "2026-10-13",
+   "tool": "Europe PMC REST (core, abstract)",
+   "family": "known_item",
+   "query": "DOI:\"10.1007/s00330-024-11308-z\"",
+   "hits": 1,
+   "screened": 1,
+   "kept": [],
+   "notes": "Verpalen 2025: evaluates an updated coronary model against readers, not against its previous version; not kept. [abstract]"
+  },
+  {
+   "id": "R-S071",
+   "date": "2026-10-13",
+   "tool": "Europe PMC REST (core, abstract)",
+   "family": "known_item",
+   "query": "DOI:\"10.1002/jmri.26785\"",
+   "hits": 1,
+   "screened": 1,
+   "kept": [],
+   "notes": "Keenan 2019: routine QA passed while quantitative T1 changed after an MRI upgrade; optional analogue, not kept. [abstract]"
+  },
+  {
+   "id": "R-S072",
+   "date": "2026-10-13",
+   "tool": "Crossref REST (query.bibliographic)",
+   "family": "known_item",
+   "query": "Fornacon-Wood Reliability and prognostic value of radiomic features are highly dependent on choice of feature extraction platform European Radiology 2020",
+   "hits": 23219,
+   "screened": 3,
+   "kept": [],
+   "notes": "Fornacon-Wood 2020 (radiomics platform dependence) located; optional, not kept."
+  },
+  {
+   "id": "R-S073",
+   "date": "2026-10-13",
+   "tool": "Crossref REST (query.bibliographic)",
+   "family": "known_item",
+   "query": "Zwanenburg Image Biomarker Standardisation Initiative standardized quantitative radiomics for high-throughput image-based phenotyping Radiology 2020",
+   "hits": 296797,
+   "screened": 3,
+   "kept": [],
+   "notes": "IBSI paper not returned by this query; not pursued (optional radiomics context)."
+  },
+  {
+   "id": "R-S074",
+   "date": "2026-10-13",
+   "tool": "Crossref REST (query.bibliographic)",
+   "family": "known_item",
+   "query": "Pierce digital reference object to analyze calculation accuracy of PET standardized uptake value Radiology 2015",
+   "hits": 181536,
+   "screened": 3,
+   "kept": [],
+   "notes": "Pierce 2015 PET SUV digital reference object located; optional, not kept."
+  },
+  {
+   "id": "R-S075",
+   "date": "2026-10-13",
+   "tool": "Crossref REST (query.bibliographic)",
+   "family": "known_item",
+   "query": "deSouza Standardised lesion segmentation for imaging biomarker quantitation: a consensus recommendation from ESR and EORTC Insights into Imaging 2022",
+   "hits": 151249,
+   "screened": 3,
+   "kept": [
+    "R-P03"
+   ],
+   "notes": "Known-item lookup; also ESR 2020 statement on validation of imaging biomarkers."
+  },
+  {
+   "id": "R-S076",
+   "date": "2026-10-13",
+   "tool": "Crossref REST (query.bibliographic)",
+   "family": "known_item",
+   "query": "deSouza Validated imaging biomarkers as decision-making tools in clinical trials and routine practice: current status and recommendations from the EIBALL subcommittee of the European Society of Radiology",
+   "hits": 18996,
+   "screened": 3,
+   "kept": [],
+   "notes": "EIBALL 2019 recommendations located; not kept."
+  },
+  {
+   "id": "R-S077",
+   "date": "2026-10-13",
+   "tool": "Europe PMC REST (core, abstract)",
+   "family": "known_item",
+   "query": "DOI:\"10.1186/s13244-022-01287-4\"",
+   "hits": 1,
+   "screened": 1,
+   "kept": [
+    "R-P03"
+   ],
+   "notes": "Abstract read. [abstract]"
+  },
+  {
+   "id": "R-S078",
+   "date": "2026-10-13",
+   "tool": "Europe PMC REST (core, abstract)",
+   "family": "known_item",
+   "query": "DOI:\"10.1186/s13244-020-00872-9\"",
+   "hits": 1,
+   "screened": 1,
+   "kept": [],
+   "notes": "ESR 2020 statement abstract; not kept. [abstract]"
+  },
+  {
+   "id": "R-S079",
+   "date": "2026-10-13",
+   "tool": "Europe PMC REST (fullTextXML)",
+   "family": "known_item",
+   "query": "PMC9532485",
+   "hits": 1,
+   "screened": 1,
+   "kept": [
+    "R-P03"
+   ],
+   "notes": "Full text read: 'Segmentation should always use the same platform (both hardware and software (segmentation method)) for longitudinal measurements.' [full text retrieved]"
+  },
+  {
+   "id": "R-S080",
+   "date": "2026-10-13",
+   "tool": "Europe PMC REST (fullTextXML)",
+   "family": "known_item",
+   "query": "PMC7272524",
+   "hits": 1,
+   "screened": 1,
+   "kept": [],
+   "notes": "ESR 2020 full text: only a general call for reassessment as hardware and software advance; not kept. [full text retrieved]"
+  },
+  {
+   "id": "R-S081",
+   "date": "2026-10-13",
+   "tool": "Crossref REST (query.bibliographic)",
+   "family": "known_item",
+   "query": "Joskowicz Cohen Caplan Sosna Inter-observer variability of manual contour delineation of structures in CT European Radiology 2019",
+   "hits": 13334,
+   "screened": 3,
+   "kept": [
+    "R-P11"
+   ],
+   "notes": "Known-item lookup."
+  },
+  {
+   "id": "R-S082",
+   "date": "2026-10-13",
+   "tool": "Crossref /works/{doi} + OpenAlex /works/doi:{doi}",
+   "family": "known_item",
+   "query": "10.1007/s00330-018-5695-5",
+   "hits": 1,
+   "screened": 1,
+   "kept": [
+    "R-P11"
+   ],
+   "notes": "Metadata; closed access. [metadata and OA status]"
+  },
+  {
+   "id": "R-S083",
+   "date": "2026-10-13",
+   "tool": "Europe PMC REST (core, abstract)",
+   "family": "known_item",
+   "query": "DOI:\"10.1007/s00330-018-5695-5\"",
+   "hits": 1,
+   "screened": 1,
+   "kept": [
+    "R-P11"
+   ],
+   "notes": "Abstract read. [abstract]"
+  },
+  {
+   "id": "R-S084",
+   "date": "2026-10-13",
+   "tool": "OpenAlex works API (search)",
+   "family": "boolean",
+   "query": "longitudinal lesion tracking segmentation follow-up CT deep learning whole-body",
+   "hits": 2094,
+   "screened": 25,
+   "kept": [
+    "R-P07"
+   ],
+   "notes": "Also Cai 2021 Deep Lesion Tracker, Santoro-Fernandes 2024 (PMB), autoPET/CT-IV challenge preprint (uses Longitudinal-CT); not kept."
+  },
+  {
+   "id": "R-S085",
+   "date": "2026-10-13",
+   "tool": "Europe PMC REST (core, abstract)",
+   "family": "known_item",
+   "query": "DOI:\"10.1007/s11548-024-03181-4\"",
+   "hits": 1,
+   "screened": 1,
+   "kept": [
+    "R-P07"
+   ],
+   "notes": "Abstract read. [abstract]"
+  },
+  {
+   "id": "R-S086",
+   "date": "2026-10-13",
+   "tool": "Crossref /works/{doi} + OpenAlex /works/doi:{doi}",
+   "family": "known_item",
+   "query": "10.1007/s11548-024-03181-4",
+   "hits": 1,
+   "screened": 1,
+   "kept": [
+    "R-P07"
+   ],
+   "notes": "Metadata; hybrid OA. [metadata and OA status]"
+  },
+  {
+   "id": "R-S087",
+   "date": "2026-10-13",
+   "tool": "Europe PMC REST (core, abstract)",
+   "family": "known_item",
+   "query": "DOI:\"10.1088/1361-6560/ad31c6\"",
+   "hits": 1,
+   "screened": 1,
+   "kept": [],
+   "notes": "Santoro-Fernandes 2024 PMB lesion tracking abstract; optional, not kept. [abstract]"
+  },
+  {
+   "id": "R-S088",
+   "date": "2026-10-13",
+   "tool": "Europe PMC REST (fullTextXML)",
+   "family": "known_item",
+   "query": "PMC11365847",
+   "hits": 1,
+   "screened": 1,
+   "kept": [
+    "R-P07"
+   ],
+   "notes": "Full text read (ICC by size; Table 3 Dice). [full text retrieved]"
+  },
+  {
+   "id": "R-S089",
+   "date": "2026-10-13",
+   "tool": "OpenAlex works API (search)",
+   "family": "known_item",
+   "query": "Underspecification presents challenges for credibility in modern machine learning",
+   "hits": 802,
+   "screened": 3,
+   "kept": [
+    "R-P20"
+   ],
+   "notes": "arXiv record found; JMLR version not indexed in OpenAlex."
+  },
+  {
+   "id": "R-S090",
+   "date": "2026-10-13",
+   "tool": "Crossref REST (query.bibliographic)",
+   "family": "known_item",
+   "query": "Ronneberger Fischer Brox U-Net convolutional networks for biomedical image segmentation MICCAI 2015",
+   "hits": 294710,
+   "screened": 3,
+   "kept": [],
+   "notes": "Ronneberger 2015 U-Net verified (doi 10.1007/978-3-319-24574-4_28); conventional, not proposed."
+  },
+  {
+   "id": "R-S091",
+   "date": "2026-10-13",
+   "tool": "Crossref REST (query.bibliographic)",
+   "family": "known_item",
+   "query": "Cicek Abdulkadir Lienkamp Brox Ronneberger 3D U-Net learning dense volumetric segmentation from sparse annotation MICCAI 2016",
+   "hits": 21171,
+   "screened": 3,
+   "kept": [],
+   "notes": "Cicek 2016 3D U-Net verified; conventional, not proposed."
+  },
+  {
+   "id": "R-S092",
+   "date": "2026-10-13",
+   "tool": "Crossref REST (query.bibliographic)",
+   "family": "known_item",
+   "query": "Reinke Understanding metric-related pitfalls in image analysis validation Nature Methods 2024",
+   "hits": 1348355,
+   "screened": 3,
+   "kept": [],
+   "notes": "Query did not return Reinke 2024; checked by DOI in R-S094."
+  },
+  {
+   "id": "R-S093",
+   "date": "2026-10-13",
+   "tool": "OpenAlex works API (search)",
+   "family": "known_item",
+   "query": "Underspecification credibility modern machine learning &filter=publication_year:2022",
+   "hits": 139,
+   "screened": 10,
+   "kept": [],
+   "notes": "JMLR record not found in OpenAlex."
+  },
+  {
+   "id": "R-S094",
+   "date": "2026-10-13",
+   "tool": "Crossref /works/{doi} + OpenAlex /works/doi:{doi}",
+   "family": "known_item",
+   "query": "10.1038/s41592-023-02150-0",
+   "hits": 1,
+   "screened": 1,
+   "kept": [],
+   "notes": "Reinke 2024 (Nat Methods 21:182-194) verified; optional companion to Metrics Reloaded, not kept. [metadata and OA status]"
+  },
+  {
+   "id": "R-S095",
+   "date": "2026-10-13",
+   "tool": "arXiv API (id_list)",
+   "family": "known_item",
+   "query": "2011.03395",
+   "hits": 1,
+   "screened": 1,
+   "kept": [
+    "R-P20"
+   ],
+   "notes": "arXiv abstract read; no journal_ref. [abstract/metadata]"
+  },
+  {
+   "id": "R-S096",
+   "date": "2026-10-13",
+   "tool": "curl (official venue page)",
+   "family": "known_item",
+   "query": "https://jmlr.org/papers/v23/20-1335.html",
+   "hits": 1,
+   "screened": 1,
+   "kept": [
+    "R-P20"
+   ],
+   "notes": "Official JMLR page confirms 23(226):1-61, 2022. [Confirms D'Amour et al. JMLR 23(226):1-61, 2022 (no DOI)]"
+  },
+  {
+   "id": "R-S097",
+   "date": "2026-10-13",
+   "tool": "curl (publisher page)",
+   "family": "known_item",
+   "query": "https://academic.oup.com/jnci/article/92/3/205/2965112",
+   "hits": null,
+   "screened": 0,
+   "kept": [
+    "R-P17"
+   ],
+   "notes": "Publisher full text blocked (Cloudflare 403). [Therasse 2000 full text: Cloudflare 403; blocked]"
+  },
+  {
+   "id": "R-S098",
+   "date": "2026-10-13",
+   "tool": "curl (arXiv PDF)",
+   "family": "known_item",
+   "query": "https://arxiv.org/pdf/2211.04161",
+   "hits": 1,
+   "screened": 1,
+   "kept": [
+    "R-P06"
+   ],
+   "notes": "Full text read with pypdf (pp. 1-15). [Bertels 2021 accepted version, full text read (pypdf)]"
+  },
+  {
+   "id": "R-S099",
+   "date": "2026-10-13",
+   "tool": "PubMed E-utilities (esearch, sort=relevance)",
+   "family": "boolean",
+   "query": "(\"random seed*\"[tiab] OR \"random initiali*\"[tiab] OR \"different seeds\"[tiab] OR \"nondetermin*\"[tiab] OR \"non-determin*\"[tiab] OR \"retrained\"[tiab] OR \"retraining\"[tiab] OR \"training runs\"[tiab]) AND (segmentation[tiab]) AND (volum*[tiab]) AND (variability[tiab] OR reproducib*[tiab] OR repeatab*[tiab] OR consisten*[tiab] OR stability[tiab]) AND (\"deep learning\"[tiab] OR \"neural network*\"[tiab] OR CNN[tiab] OR U-Net[tiab] OR nnU-Net[tiab])",
+   "hits": 15,
+   "screened": 15,
+   "kept": [],
+   "notes": "No new medical seed-variability study of segmentation volumes."
+  },
+  {
+   "id": "R-S100",
+   "date": "2026-10-13",
+   "tool": "OpenAlex works API (citation_forward)",
+   "family": "citation_forward",
+   "query": "filter=cites:W4401256393",
+   "hits": 16,
+   "screened": 16,
+   "kept": [],
+   "notes": "Forward citations of Akesson 2024: none relevant."
+  },
+  {
+   "id": "R-S101",
+   "date": "2026-10-13",
+   "tool": "OpenAlex works API (citation_forward)",
+   "family": "citation_forward",
+   "query": "filter=cites:W2791703591",
+   "hits": 8,
+   "screened": 8,
+   "kept": [],
+   "notes": "Forward citations of Coric 2018: OCT papers, including the OSCAR-AI extension."
+  },
+  {
+   "id": "R-S102",
+   "date": "2026-10-13",
+   "tool": "Europe PMC REST (core, abstract)",
+   "family": "known_item",
+   "query": "DOI:\"10.1002/acn3.51320\"",
+   "hits": 1,
+   "screened": 1,
+   "kept": [],
+   "notes": "OSCAR-AI abstract. [abstract]"
+  },
+  {
+   "id": "R-S103",
+   "date": "2026-10-13",
+   "tool": "Europe PMC REST (fullTextXML)",
+   "family": "known_item",
+   "query": "PMC8283174",
+   "hits": 1,
+   "screened": 1,
+   "kept": [],
+   "notes": "OSCAR-AI full text: 'Even seemingly small updates have the potential to cause significant differences which if left unnoticed can bias results'; OCT-specific, not kept. [full text retrieved]"
+  },
+  {
+   "id": "R-S104",
+   "date": "2026-10-13",
+   "tool": "WebSearch + curl (FDA guidance PDF)",
+   "family": "regulatory",
+   "query": "FDA guidance 'Technical Performance Assessment of Quantitative Imaging in Radiological Device Premarket Submissions' https://www.fda.gov/media/123271/download",
+   "hits": 9,
+   "screened": 9,
+   "kept": [
+    "R-P18"
+   ],
+   "notes": "Official PDF read; title page, error-source list (p. 10) and docket FDA-2019-D-1470 (p. 2) checked. [Located via web search; official PDF downloaded]"
+  },
+  {
+   "id": "R-S105",
+   "date": "2026-10-13",
+   "tool": "Europe PMC REST (search, lite)",
+   "family": "exact_phrase",
+   "query": "\"same method of assessment and the same technique should be used\"",
+   "hits": 1,
+   "screened": 1,
+   "kept": [],
+   "notes": "One hit (quotes RECIST 1.1); not used."
+  },
+  {
+   "id": "R-S106",
+   "date": "2026-10-13",
+   "tool": "curl (EORTC RECIST site PDF)",
+   "family": "known_item",
+   "query": "https://recist.eortc.org/wp-content/uploads/2015/03/RECISTGuidelines.pdf",
+   "hits": null,
+   "screened": 0,
+   "kept": [],
+   "notes": "EORTC RECIST PDF returned HTTP 500. [HTTP 500; not retrieved]"
+  },
+  {
+   "id": "R-S107",
+   "date": "2026-10-13",
+   "tool": "WebSearch",
+   "family": "exact_phrase",
+   "query": "RECIST 1.1 \"same method of assessment and the same technique should be used to characterise each identified and reported lesion at baseline and during follow-up\"",
+   "hits": 10,
+   "screened": 10,
+   "kept": [],
+   "notes": "RECIST 1.1 'same method of assessment and the same technique ... at baseline and during follow-up' quoted in ClinicalTrials.gov protocols; supports using the already-cited eisenhauer2009 for the working rule (summary depth). [Sentence quoted (attributed to RECIST 1.1) in ClinicalTrials.gov protocols; original Elsevier text blocked; summary depth]"
+  },
+  {
+   "id": "R-S108",
+   "date": "2026-10-13",
+   "tool": "arXiv API (search, sortBy=submittedDate)",
+   "family": "boolean",
+   "query": "abs:\"model update\" AND abs:segmentation AND (abs:longitudinal OR abs:volume OR abs:volumetry)",
+   "hits": null,
+   "screened": 0,
+   "kept": [],
+   "notes": "Empty response from the arXiv API; retried as R-S109. [competitor check]"
+  },
+  {
+   "id": "R-S109",
+   "date": "2026-10-13",
+   "tool": "arXiv API (search, https retry, sortBy=submittedDate)",
+   "family": "boolean",
+   "query": "abs:\"model update\" AND abs:segmentation",
+   "hits": 52,
+   "screened": 30,
+   "kept": [],
+   "notes": "Competitor check: federated and continual-learning items only; no study of model updates and longitudinal volume change. [competitor check retry; 30 screened; no competitor (federated/continual-learning items only)]"
+  },
+  {
+   "id": "R-S110",
+   "date": "2026-10-13",
+   "tool": "Crossref /works/{doi} + OpenAlex /works/doi:{doi}",
+   "family": "known_item",
+   "query": "10.1158/1078-0432.CCR-14-0245",
+   "hits": 1,
+   "screened": 1,
+   "kept": [
+    "R-P09"
+   ],
+   "notes": "Metadata; green OA (PMC author manuscript). [metadata and OA status]"
+  },
+  {
+   "id": "R-S111",
+   "date": "2026-10-13",
+   "tool": "Europe PMC REST (core, abstract)",
+   "family": "known_item",
+   "query": "DOI:\"10.1158/1078-0432.CCR-14-0245\"",
+   "hits": 1,
+   "screened": 1,
+   "kept": [
+    "R-P09"
+   ],
+   "notes": "Abstract read. [abstract]"
+  },
+  {
+   "id": "R-S112",
+   "date": "2026-10-13",
+   "tool": "arXiv API (search ti:)",
+   "family": "known_item",
+   "query": "ti:\"pigeonhole bootstrap\"",
+   "hits": null,
+   "screened": 0,
+   "kept": [],
+   "notes": "Empty response; Project Euclid PDF download also failed. Retried as R-S113. [find arXiv copy of Owen 2007; Project Euclid PDF download failed (no response)]"
+  },
+  {
+   "id": "R-S113",
+   "date": "2026-10-13",
+   "tool": "arXiv API (search, https retry) + arXiv PDF",
+   "family": "known_item",
+   "query": "ti:pigeonhole AND ti:bootstrap -> arXiv:0712.1111 (journal_ref AOAS 1(2):386-411)",
+   "hits": 1,
+   "screened": 1,
+   "kept": [
+    "R-P05"
+   ],
+   "notes": "arXiv:0712.1111 (journal_ref AOAS 1(2):386-411); full text read: 'mildly conservative'. [Owen 2007 accepted version located]"
+  },
+  {
+   "id": "R-S114",
+   "date": "2026-10-13",
+   "tool": "Crossref /works/{doi} + OpenAlex /works/doi:{doi}",
+   "family": "known_item",
+   "query": "10.1186/s13244-022-01287-4",
+   "hits": 1,
+   "screened": 1,
+   "kept": [],
+   "notes": "Output lost to a local parsing error; re-run as R-S118. [metadata and OA status]"
+  },
+  {
+   "id": "R-S115",
+   "date": "2026-10-13",
+   "tool": "Crossref /works/{doi} + OpenAlex /works/doi:{doi}",
+   "family": "known_item",
+   "query": "10.1038/s41467-022-34245-1",
+   "hits": 1,
+   "screened": 1,
+   "kept": [],
+   "notes": "Output lost to a local parsing error; re-run as R-S119. [metadata and OA status]"
+  },
+  {
+   "id": "R-S116",
+   "date": "2026-10-13",
+   "tool": "Crossref /works/{doi} + OpenAlex /works/doi:{doi}",
+   "family": "known_item",
+   "query": "10.11613/BM.2021.030902",
+   "hits": 1,
+   "screened": 1,
+   "kept": [],
+   "notes": "Output lost to a local parsing error; re-run as R-S120. [metadata and OA status]"
+  },
+  {
+   "id": "R-S117",
+   "date": "2026-10-13",
+   "tool": "Crossref /works/{doi} + OpenAlex /works/doi:{doi}",
+   "family": "known_item",
+   "query": "10.1148/ryai.260385",
+   "hits": 1,
+   "screened": 1,
+   "kept": [],
+   "notes": "Output lost to a local parsing error; re-run as R-S121. [metadata and OA status]"
+  },
+  {
+   "id": "R-S118",
+   "date": "2026-10-13",
+   "tool": "Crossref /works/{doi} + OpenAlex /works/doi:{doi}",
+   "family": "known_item",
+   "query": "10.1186/s13244-022-01287-4",
+   "hits": 1,
+   "screened": 1,
+   "kept": [
+    "R-P03"
+   ],
+   "notes": "Metadata; gold OA. [metadata and OA status]"
+  },
+  {
+   "id": "R-S119",
+   "date": "2026-10-13",
+   "tool": "Crossref /works/{doi} + OpenAlex /works/doi:{doi}",
+   "family": "known_item",
+   "query": "10.1038/s41467-022-34245-1",
+   "hits": 1,
+   "screened": 1,
+   "kept": [
+    "R-P15"
+   ],
+   "notes": "Metadata; gold OA. [metadata and OA status]"
+  },
+  {
+   "id": "R-S120",
+   "date": "2026-10-13",
+   "tool": "Crossref /works/{doi} + OpenAlex /works/doi:{doi}",
+   "family": "known_item",
+   "query": "10.11613/BM.2021.030902",
+   "hits": 1,
+   "screened": 1,
+   "kept": [
+    "R-P19"
+   ],
+   "notes": "Metadata; diamond OA. [metadata and OA status]"
+  },
+  {
+   "id": "R-S121",
+   "date": "2026-10-13",
+   "tool": "Crossref /works/{doi} + OpenAlex /works/doi:{doi}",
+   "family": "known_item",
+   "query": "10.1148/ryai.260385",
+   "hits": 1,
+   "screened": 1,
+   "kept": [
+    "R-P13"
+   ],
+   "notes": "Metadata; closed access. [metadata and OA status]"
+  },
+  {
+   "id": "R-S122",
+   "date": "2026-10-13",
+   "tool": "Europe PMC REST (core, abstract)",
+   "family": "known_item",
+   "query": "DOI:\"10.1148/ryai.260385\"",
+   "hits": 1,
+   "screened": 1,
+   "kept": [
+    "R-P13"
+   ],
+   "notes": "Abstract read (wording on modification types confirmed). [abstract]"
+  },
+  {
+   "id": "R-S123",
+   "date": "2026-10-13",
+   "tool": "OpenAlex works API (search)",
+   "family": "venue_sweep",
+   "query": "model update retraining version auto-segmentation deep learning quality assurance commissioning &filter=primary_location.source.issn:0031-9155,from_publication_date:2019-01-01",
+   "hits": 2,
+   "screened": 2,
+   "kept": [],
+   "notes": "PMB sweep: Barragan-Montero 2022 review and an adaptive-RT contour QA tool; not kept."
+  },
+  {
+   "id": "R-S124",
+   "date": "2026-10-13",
+   "tool": "OpenAlex works API (search)",
+   "family": "venue_sweep",
+   "query": "longitudinal volume change segmentation reproducibility software &filter=primary_location.source.issn:0031-9155,from_publication_date:2018-01-01",
+   "hits": 41,
+   "screened": 30,
+   "kept": [],
+   "notes": "PMB sweep: Huff 2023 (lesion matching vs inter-reader variability) and Santoro-Fernandes 2024; not kept."
+  },
+  {
+   "id": "R-S125",
+   "date": "2026-10-13",
+   "tool": "OpenAlex works API (search)",
+   "family": "venue_sweep",
+   "query": "tumour volume measurement variability deep learning segmentation response &filter=primary_location.source.issn:0031-9155,from_publication_date:2018-01-01",
+   "hits": 29,
+   "screened": 29,
+   "kept": [],
+   "notes": "PMB sweep: Weisman 2020 (11 PET segmentation methods) and neighbours; not kept."
+  },
+  {
+   "id": "R-S126",
+   "date": "2026-10-13",
+   "tool": "PubMed Central E-utilities (efetch db=pmc)",
+   "family": "known_item",
+   "query": "PMC4337392",
+   "hits": 1,
+   "screened": 1,
+   "kept": [
+    "R-P09"
+   ],
+   "notes": "Full text read (Europe PMC fullTextXML unavailable; PMC efetch used): spherical relationships 'do not seem to exist'; lesion sites ~50-60% liver. [full text retrieved]"
+  },
+  {
+   "id": "R-S127",
+   "date": "2026-10-13",
+   "tool": "OpenAlex works API (search)",
+   "family": "boolean",
+   "query": "interchangeability quantitative imaging biomarker algorithms individual equivalence volume",
+   "hits": 219,
+   "screened": 20,
+   "kept": [],
+   "notes": "Noisy; no new interchangeability study of imaging algorithms or versions."
+  },
+  {
+   "id": "R-S128",
+   "date": "2026-10-13",
+   "tool": "Europe PMC REST (search, lite)",
+   "family": "boolean",
+   "query": "(\"software version\" OR \"software versions\" OR \"algorithm version\" OR \"model version\") AND (volumetry OR \"tumor volume\" OR \"tumour volume\" OR \"lesion volume\" OR \"nodule volume\") AND (longitudinal OR \"follow-up\" OR \"serial\") AND PUB_YEAR:[2018 TO 2026]",
+   "hits": 8933,
+   "screened": 30,
+   "kept": [],
+   "notes": "Too broad (8933 hits, newest first); none relevant. Saturation reached."
+  },
+  {
+   "id": "R-S129",
+   "date": "2026-10-13",
+   "tool": "arXiv API (id_list)",
+   "family": "known_item",
+   "query": "1711.05101",
+   "hits": 1,
+   "screened": 1,
+   "kept": [],
+   "notes": "AdamW (Decoupled weight decay regularization; ICLR 2019; arXiv:1711.05101) verified; conventional method citation, not carded. [abstract/metadata]"
+  },
+  {
+   "id": "R-S130",
+   "date": "2026-10-13",
+   "tool": "Crossref REST (query.bibliographic)",
+   "family": "known_item",
+   "query": "Milletari Navab Ahmadi V-Net fully convolutional neural networks for volumetric medical image segmentation 3DV 2016",
+   "hits": 723676,
+   "screened": 3,
+   "kept": [],
+   "notes": "V-Net soft Dice loss (Milletari, Navab, Ahmadi; 3DV 2016:565-571; doi 10.1109/3DV.2016.79) verified; conventional method citation, not carded."
+  },
+  {
+   "id": "R-S131",
+   "date": "2026-10-13",
+   "tool": "arXiv API (id_list, author names)",
+   "family": "known_item",
+   "query": "1711.05101",
+   "hits": 1,
+   "screened": 1,
+   "kept": [],
+   "notes": "Author check for R-S129. [Authors confirmed: Ilya Loshchilov, Frank Hutter]"
+  }
+ ]
+}

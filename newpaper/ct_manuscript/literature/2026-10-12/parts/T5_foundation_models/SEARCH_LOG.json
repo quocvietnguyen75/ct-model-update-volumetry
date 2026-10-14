@@ -1,0 +1,1091 @@
+{
+ "part": "T5",
+ "date": "2026-10-12",
+ "entries": [
+  {
+   "id": "T5-S001",
+   "date": "2026-10-12",
+   "tool": "Crossref REST API",
+   "family": "known_item",
+   "query": "https://api.crossref.org/works?query.bibliographic=TotalSegmentator%20robust%20segmentation%20of%20104%20anatomic%20structures%20in%20CT%20images&rows=10",
+   "hits": 2694275,
+   "screened": 6,
+   "kept": [
+    "T5-P01",
+    "T5-P03",
+    "T5-P04"
+   ],
+   "notes": "Known item: TotalSegmentator (Radiology: AI 2023) found; TotalSegmentator MRI (Radiology 2025) and the cardiovascular update (Eur J Radiol 2025) surfaced as neighbours. Crossref hit count is a relevance total, not a match count."
+  },
+  {
+   "id": "T5-S002",
+   "date": "2026-10-12",
+   "tool": "Crossref REST API",
+   "family": "known_item",
+   "query": "https://api.crossref.org/works?query.bibliographic=Segment%20anything%20in%20medical%20images%20Ma%20He%20Li%20Han%20You%20Wang%20Nature%20Communications&rows=10",
+   "hits": 3035227,
+   "screened": 6,
+   "kept": [
+    "T5-P05"
+   ],
+   "notes": "Known item: MedSAM, Nat Commun 2024;15:654."
+  },
+  {
+   "id": "T5-S003",
+   "date": "2026-10-12",
+   "tool": "arXiv API",
+   "family": "known_item",
+   "query": "http://export.arxiv.org/api/query?search_query=ti%3AVISTA3D&start=0&max_results=25",
+   "hits": 3,
+   "screened": 3,
+   "kept": [
+    "T5-P08"
+   ],
+   "notes": "Known item: VISTA3D preprint 2406.05285 (v3)."
+  },
+  {
+   "id": "T5-S004",
+   "date": "2026-10-12",
+   "tool": "arXiv API",
+   "family": "known_item",
+   "query": "http://export.arxiv.org/api/query?search_query=ti%3AnnInteractive&start=0&max_results=25",
+   "hits": 2,
+   "screened": 2,
+   "kept": [
+    "T5-P09"
+   ],
+   "notes": "Known item: nnInteractive preprint 2503.08373; SlicerNNInteractive not kept."
+  },
+  {
+   "id": "T5-S005",
+   "date": "2026-10-12",
+   "tool": "Crossref REST API",
+   "family": "known_item",
+   "query": "https://api.crossref.org/works?query.bibliographic=A%20foundation%20model%20for%20joint%20segmentation%2C%20detection%20and%20recognition%20of%20biomedical%20objects%20across%20nine%20modalities&rows=10",
+   "hits": 269150,
+   "screened": 5,
+   "kept": [
+    "T5-P10"
+   ],
+   "notes": "Known item: BiomedParse, Nat Methods 2025;22:166-176."
+  },
+  {
+   "id": "T5-S006",
+   "date": "2026-10-12",
+   "tool": "Crossref REST API",
+   "family": "known_item",
+   "query": "https://api.crossref.org/works?query.bibliographic=VISTA3D%3A%20A%20Unified%20Segmentation%20Foundation%20Model%20For%203D%20Medical%20Imaging&rows=10",
+   "hits": 8082607,
+   "screened": 5,
+   "kept": [
+    "T5-P08"
+   ],
+   "notes": "Published CVPR 2025 version of VISTA3D found (10.1109/CVPR52734.2025.01943)."
+  },
+  {
+   "id": "T5-S007",
+   "date": "2026-10-12",
+   "tool": "Crossref REST API",
+   "family": "known_item",
+   "query": "https://api.crossref.org/works?query.bibliographic=nnInteractive%3A%20Redefining%203D%20Promptable%20Segmentation&rows=10",
+   "hits": 741610,
+   "screened": 5,
+   "kept": [],
+   "notes": "No published version of nnInteractive in Crossref (preprint only on 2026-10-12)."
+  },
+  {
+   "id": "T5-S008",
+   "date": "2026-10-12",
+   "tool": "Semantic Scholar Graph API",
+   "family": "known_item",
+   "query": "https://api.semanticscholar.org/graph/v1/paper/arXiv:2503.08373?fields=title,year,venue,externalIds,citationCount",
+   "hits": 1,
+   "screened": 1,
+   "kept": [
+    "T5-P09"
+   ],
+   "notes": "Semantic Scholar record: venue arXiv only; confirms preprint status."
+  },
+  {
+   "id": "T5-S009",
+   "date": "2026-10-12",
+   "tool": "arXiv API",
+   "family": "known_item",
+   "query": "http://export.arxiv.org/api/query?search_query=ti%3AULS23%20OR%20%28ti%3Auniversal%20AND%20ti%3Alesion%20AND%20ti%3Asegmentation%20AND%20ti%3Achallenge%29&start=0&max_results=25",
+   "hits": 2,
+   "screened": 2,
+   "kept": [
+    "T5-P12"
+   ],
+   "notes": "Known item: ULS23 preprint 2406.05231; Shi et al. 2025 ULS23 algorithm comparison read at abstract level and not kept (Dice-only student comparison)."
+  },
+  {
+   "id": "T5-S010",
+   "date": "2026-10-12",
+   "tool": "Crossref REST API",
+   "family": "known_item",
+   "query": "https://api.crossref.org/works?query.bibliographic=The%20ULS23%20challenge%3A%20a%20baseline%20model%20and%20benchmark%20dataset%20for%203D%20universal%20lesion%20segmentation%20in%20computed%20tomography&rows=10",
+   "hits": 218750,
+   "screened": 5,
+   "kept": [
+    "T5-P12"
+   ],
+   "notes": "Published ULS23 version: Med Image Anal 2025;102:103525."
+  },
+  {
+   "id": "T5-S011",
+   "date": "2026-10-12",
+   "tool": "arXiv API",
+   "family": "known_item",
+   "query": "http://export.arxiv.org/api/query?search_query=ti%3A%22SAM-Med3D%22%20OR%20ti%3AMedSAM2%20OR%20%28ti%3A%22segment%20anything%22%20AND%20ti%3A%223D%20medical%20images%20and%20videos%22%29&start=0&max_results=25",
+   "hits": 6,
+   "screened": 6,
+   "kept": [
+    "T5-P06",
+    "T5-P07"
+   ],
+   "notes": "Known items: MedSAM2 (2504.03600) and SAM-Med3D (2310.15161)."
+  },
+  {
+   "id": "T5-S012",
+   "date": "2026-10-12",
+   "tool": "Semantic Scholar Graph API",
+   "family": "known_item",
+   "query": "https://api.semanticscholar.org/graph/v1/paper/arXiv:2310.15161?fields=title,year,venue,externalIds,citationCount",
+   "hits": 1,
+   "screened": 1,
+   "kept": [
+    "T5-P07"
+   ],
+   "notes": "SAM-Med3D also published as ECCV 2024 workshop chapter (10.1007/978-3-031-91721-9_4)."
+  },
+  {
+   "id": "T5-S013",
+   "date": "2026-10-12",
+   "tool": "Semantic Scholar Graph API",
+   "family": "known_item",
+   "query": "https://api.semanticscholar.org/graph/v1/paper/arXiv:2504.03600?fields=title,year,venue,externalIds,citationCount",
+   "hits": 1,
+   "screened": 1,
+   "kept": [
+    "T5-P06"
+   ],
+   "notes": "MedSAM2: venue arXiv only (no published version found)."
+  },
+  {
+   "id": "T5-S014",
+   "date": "2026-10-12",
+   "tool": "Crossref REST API",
+   "family": "known_item",
+   "query": "https://api.crossref.org/works?query.bibliographic=SAM-Med3D%20towards%20general-purpose%20segmentation%20models%20for%20volumetric%20medical%20images&rows=10",
+   "hits": 180108,
+   "screened": 5,
+   "kept": [
+    "T5-P07"
+   ],
+   "notes": "Found the journal version of SAM-Med3D in IEEE TNNLS 2025 (10.1109/TNNLS.2025.3586694)."
+  },
+  {
+   "id": "T5-S015",
+   "date": "2026-10-12",
+   "tool": "Crossref REST API",
+   "family": "known_item",
+   "query": "https://api.crossref.org/works?query.bibliographic=MedSAM2%20segment%20anything%20in%203D%20medical%20images%20and%20videos&rows=10",
+   "hits": 4165881,
+   "screened": 5,
+   "kept": [],
+   "notes": "No published MedSAM2 version found in Crossref."
+  },
+  {
+   "id": "T5-S016",
+   "date": "2026-10-12",
+   "tool": "WebSearch (standard)",
+   "family": "exact_phrase",
+   "query": "TotalSegmentator version 1 vs version 2 organ volume differences agreement",
+   "hits": 9,
+   "screened": 9,
+   "kept": [
+    "T5-P14",
+    "T5-P15",
+    "T5-P16"
+   ],
+   "notes": "Discovery: no TotalSegmentator v1-versus-v2 volume study; surfaced Auriac 2025 (MOOSE vs TotalSegmentator), Abel 2025 (contrast-phase reproducibility) and Giebeler 2026 (six-model concordance incl. TotalSegmentator 1.5 and 2.6). Record of what was found, not of the engine's summary."
+  },
+  {
+   "id": "T5-S017",
+   "date": "2026-10-12",
+   "tool": "OpenAlex API",
+   "family": "known_item",
+   "query": "https://api.openalex.org/works/https://doi.org/10.1148/ryai.230024",
+   "hits": 1,
+   "screened": 1,
+   "kept": [
+    "T5-P01"
+   ],
+   "notes": "OpenAlex ID W4383218413 for forward chasing."
+  },
+  {
+   "id": "T5-S018",
+   "date": "2026-10-12",
+   "tool": "OpenAlex API",
+   "family": "known_item",
+   "query": "https://api.openalex.org/works/https://doi.org/10.1038/s41467-024-44824-z",
+   "hits": 1,
+   "screened": 1,
+   "kept": [
+    "T5-P05"
+   ],
+   "notes": "OpenAlex ID W4391109864 for forward chasing."
+  },
+  {
+   "id": "T5-S019",
+   "date": "2026-10-12",
+   "tool": "OpenAlex API",
+   "family": "citation_forward",
+   "query": "https://api.openalex.org/works?filter=cites:W4383218413,title_and_abstract.search:%28volume%20OR%20volumes%20OR%20volumetric%20OR%20volumetry%29%20AND%20%28reproducibility%20OR%20repeatability%20OR%20agreement%20OR%20consistency%20OR%20variability%20OR%20concordance%29&per-page=100&sort=cited_by_count:desc",
+   "hits": 134,
+   "screened": 100,
+   "kept": [
+    "T5-P13",
+    "T5-P14",
+    "T5-P15",
+    "T5-P17"
+   ],
+   "notes": "Forward chase from TotalSegmentator restricted to volume agreement/reproducibility; top 100 of 134 by citations screened. CURVAS challenge, body-composition comparisons and NLST kernel studies screened and not kept."
+  },
+  {
+   "id": "T5-S020",
+   "date": "2026-10-12",
+   "tool": "OpenAlex API",
+   "family": "citation_forward",
+   "query": "https://api.openalex.org/works?filter=cites:W4383218413,title_and_abstract.search:%28%22version%22%20OR%20%22versions%22%20OR%20%22update%22%20OR%20%22updated%20model%22%20OR%20%22v2%22%20OR%20%22release%22%29%20AND%20%28volume%20OR%20volumes%20OR%20volumetric%20OR%20agreement%20OR%20comparison%29&per-page=100&sort=cited_by_count:desc",
+   "hits": 40,
+   "screened": 40,
+   "kept": [],
+   "notes": "Forward chase from TotalSegmentator restricted to version/update terms: no study comparing measurements between TotalSegmentator versions."
+  },
+  {
+   "id": "T5-S021",
+   "date": "2026-10-12",
+   "tool": "OpenAlex API",
+   "family": "citation_forward",
+   "query": "https://api.openalex.org/works?filter=cites:W4391109864,title_and_abstract.search:%28prompt%20OR%20prompts%20OR%20%22bounding%20box%22%20OR%20click%20OR%20clicks%29%20AND%20%28robustness%20OR%20sensitivity%20OR%20variability%20OR%20perturbation%20OR%20reproducibility%20OR%20consistency%20OR%20stability%29&per-page=100&sort=cited_by_count:desc",
+   "hits": 319,
+   "screened": 100,
+   "kept": [
+    "T5-P13"
+   ],
+   "notes": "Forward chase from MedSAM restricted to prompt robustness; top 100 of 319 screened by title; mostly method papers reporting Dice; ISBI 2024 test-time variability paper noted (abstract read under T5-S068, not kept)."
+  },
+  {
+   "id": "T5-S022",
+   "date": "2026-10-12",
+   "tool": "OpenAlex API",
+   "family": "citation_forward",
+   "query": "https://api.openalex.org/works?filter=cites:W4391109864,title_and_abstract.search:%28volume%20OR%20volumes%20OR%20volumetric%20OR%20volumetry%29%20AND%20%28tumor%20OR%20tumour%20OR%20lesion%20OR%20nodule%20OR%20metastasis%29%20AND%20%28agreement%20OR%20reproducibility%20OR%20repeatability%20OR%20variability%20OR%20consistency%20OR%20longitudinal%20OR%20%22follow-up%22%29&per-page=100&sort=cited_by_count:desc",
+   "hits": 28,
+   "screened": 28,
+   "kept": [
+    "T5-P13"
+   ],
+   "notes": "Forward chase from MedSAM restricted to tumour volume agreement: only ONCOPILOT relevant."
+  },
+  {
+   "id": "T5-S023",
+   "date": "2026-10-12",
+   "tool": "Europe PMC REST API",
+   "family": "known_item",
+   "query": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1038%2Fs41698-025-00903-y%22%20OR%20DOI%3A%2210.1007%2Fs10278-024-01265-w%22%20OR%20DOI%3A%2210.1002%2Fmp.70025%22%20OR%20DOI%3A%2210.1117%2F1.jmi.13.6.062204%22%20OR%20DOI%3A%2210.1016%2Fj.compbiomed.2025.111024%22&format=json&pageSize=50&resultType=core",
+   "hits": 5,
+   "screened": 5,
+   "kept": [
+    "T5-P13",
+    "T5-P14",
+    "T5-P15",
+    "T5-P16"
+   ],
+   "notes": "Abstracts and open-access status; full texts then read from Europe PMC/arXiv."
+  },
+  {
+   "id": "T5-S024",
+   "date": "2026-10-12",
+   "tool": "PubMed E-utilities",
+   "family": "boolean",
+   "query": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&retmode=json&retmax=100&term=TotalSegmentator%5Btiab%5D%20AND%20volum%2A%5Btiab%5D%20AND%20%28reproducib%2A%5Btiab%5D%20OR%20repeatab%2A%5Btiab%5D%20OR%20agreement%5Btiab%5D%20OR%20version%2A%5Btiab%5D%20OR%20consisten%2A%5Btiab%5D%20OR%20interchangeab%2A%5Btiab%5D%29",
+   "hits": 32,
+   "screened": 32,
+   "kept": [
+    "T5-P14",
+    "T5-P15",
+    "T5-P17",
+    "T5-P18"
+   ],
+   "notes": "All 32 titles screened, 9 abstracts read. Kept the reproducibility, tool-comparison, longitudinal-volumetry and multi-algorithm biomarker studies; single-organ tool validations (liver, lung, pancreas MRI) not kept."
+  },
+  {
+   "id": "T5-S025",
+   "date": "2026-10-12",
+   "tool": "arXiv API",
+   "family": "boolean",
+   "query": "http://export.arxiv.org/api/query?search_query=%28abs%3A%22segment%20anything%22%20OR%20abs%3Apromptable%20OR%20abs%3A%22interactive%20segmentation%22%29%20AND%20abs%3Amedical%20AND%20%28abs%3A%22prompt%20variability%22%20OR%20abs%3A%22prompt%20sensitivity%22%20OR%20abs%3A%22prompt%20robustness%22%20OR%20abs%3A%22prompt%20perturbation%22%20OR%20abs%3A%22prompt%20quality%22%20OR%20abs%3A%22prompt%20uncertainty%22%29&start=0&max_results=25",
+   "hits": 7,
+   "screened": 7,
+   "kept": [
+    "T5-P19"
+   ],
+   "notes": "Prompt-sensitivity sweep on arXiv; kept the ISBI 2026 robustness study; Ludwig 2025 (BraTS prompt quality, Dice) and SafeClick not kept."
+  },
+  {
+   "id": "T5-S026",
+   "date": "2026-10-12",
+   "tool": "arXiv API",
+   "family": "boolean",
+   "query": "http://export.arxiv.org/api/query?search_query=%28abs%3A%22segment%20anything%22%20OR%20abs%3Apromptable%20OR%20abs%3A%22foundation%20model%22%20OR%20abs%3AMedSAM%20OR%20abs%3AnnInteractive%20OR%20abs%3AVISTA3D%29%20AND%20%28abs%3Avolumetry%20OR%20abs%3A%22volume%20measurement%22%20OR%20abs%3A%22volumetric%20measurement%22%20OR%20abs%3A%22tumor%20volume%22%20OR%20abs%3A%22tumour%20volume%22%20OR%20abs%3A%22lesion%20volume%22%29%20AND%20%28abs%3Areproducibility%20OR%20abs%3Arepeatability%20OR%20abs%3Avariability%20OR%20abs%3Aagreement%20OR%20abs%3Aconsistency%29&start=0&max_results=25",
+   "hits": 3,
+   "screened": 3,
+   "kept": [],
+   "notes": "No arXiv study of foundation-model volumetric reproducibility."
+  },
+  {
+   "id": "T5-S027",
+   "date": "2026-10-12",
+   "tool": "PubMed E-utilities",
+   "family": "boolean",
+   "query": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&retmode=json&retmax=100&term=%28%22segment%20anything%22%5Btiab%5D%20OR%20MedSAM%2A%5Btiab%5D%20OR%20SAM-Med3D%5Btiab%5D%20OR%20nnInteractive%5Btiab%5D%20OR%20VISTA3D%5Btiab%5D%20OR%20promptable%5Btiab%5D%20OR%20%22foundation%20model%22%5Btiab%5D%20OR%20%22foundation%20models%22%5Btiab%5D%20OR%20%22universal%20lesion%22%5Btiab%5D%29%20AND%20%28volum%2A%5Btiab%5D%29%20AND%20%28reproducib%2A%5Btiab%5D%20OR%20repeatab%2A%5Btiab%5D%20OR%20variability%5Btiab%5D%20OR%20agreement%5Btiab%5D%20OR%20%22Bland-Altman%22%5Btiab%5D%20OR%20consisten%2A%5Btiab%5D%29%20AND%20%28CT%5Btiab%5D%20OR%20%22computed%20tomography%22%5Btiab%5D%20OR%20tumor%2A%5Btiab%5D%20OR%20tumour%2A%5Btiab%5D%20OR%20lesion%2A%5Btiab%5D%29",
+   "hits": 35,
+   "screened": 35,
+   "kept": [
+    "T5-P13",
+    "T5-P25"
+   ],
+   "notes": "All titles screened, 4 abstracts read; kept the vestibular schwannoma architecture comparison; SAM-Med3D click study (Radiol Phys Technol 2026) read and not kept (CTV, abstract only)."
+  },
+  {
+   "id": "T5-S028",
+   "date": "2026-10-12",
+   "tool": "GitHub REST API",
+   "family": "code",
+   "query": "https://api.github.com/repos/wasserth/TotalSegmentator/releases?per_page=100",
+   "hits": 8,
+   "screened": 8,
+   "kept": [
+    "T5-P02"
+   ],
+   "notes": "TotalSegmentator weights releases: v1.5.6 (1139 subjects), v2.0.0 (1559), v3.0.0 (asset names 1830 for organs, cardiac, muscles)."
+  },
+  {
+   "id": "T5-S029",
+   "date": "2026-10-12",
+   "tool": "GitHub REST API",
+   "family": "code",
+   "query": "https://api.github.com/repos/wasserth/TotalSegmentator/contents/resources ; https://api.github.com/repos/wasserth/TotalSegmentator/tags?per_page=100 ; raw README.md and resources/improvements_in_v2.md",
+   "hits": null,
+   "screened": null,
+   "kept": [
+    "T5-P02"
+   ],
+   "notes": "README and resources/improvements_in_v2.md read; 47 tags (39 software, 8 weights)."
+  },
+  {
+   "id": "T5-S030",
+   "date": "2026-10-12",
+   "tool": "PyPI JSON API; GitHub REST API",
+   "family": "code",
+   "query": "https://pypi.org/pypi/TotalSegmentator/json ; https://api.github.com/repos/wasserth/TotalSegmentator/contents/",
+   "hits": 36,
+   "screened": 36,
+   "kept": [
+    "T5-P02"
+   ],
+   "notes": "PyPI release history read."
+  },
+  {
+   "id": "T5-S031",
+   "date": "2026-10-12",
+   "tool": "raw.githubusercontent.com (WebFetch-equivalent via urllib)",
+   "family": "dataset_docs",
+   "query": "https://raw.githubusercontent.com/wasserth/TotalSegmentator/master/CHANGELOG.md",
+   "hits": null,
+   "screened": null,
+   "kept": [
+    "T5-P02"
+   ],
+   "notes": "Full CHANGELOG read; measurement-affecting changes listed in CLAIM_CHECKS."
+  },
+  {
+   "id": "T5-S032",
+   "date": "2026-10-12",
+   "tool": "GitHub REST API",
+   "family": "code",
+   "query": "https://api.github.com/repos/MIC-DKFZ/nnInteractive/releases?per_page=100",
+   "hits": 0,
+   "screened": 0,
+   "kept": [],
+   "notes": "nnInteractive does not use GitHub releases; README used instead (T5-S035)."
+  },
+  {
+   "id": "T5-S033",
+   "date": "2026-10-12",
+   "tool": "GitHub REST API",
+   "family": "code",
+   "query": "https://api.github.com/repos/bowang-lab/MedSAM2/releases?per_page=100",
+   "hits": 0,
+   "screened": 0,
+   "kept": [],
+   "notes": "MedSAM2 does not use GitHub releases."
+  },
+  {
+   "id": "T5-S034",
+   "date": "2026-10-12",
+   "tool": "GitHub REST API",
+   "family": "code",
+   "query": "https://api.github.com/repos/bowang-lab/MedSAM/releases?per_page=100",
+   "hits": 1,
+   "screened": 1,
+   "kept": [
+    "T5-P05"
+   ],
+   "notes": "MedSAM release v1.0.0 (2024-01-02)."
+  },
+  {
+   "id": "T5-S035",
+   "date": "2026-10-12",
+   "tool": "GitHub REST API (readme endpoint)",
+   "family": "code",
+   "query": "https://api.github.com/repos/MIC-DKFZ/nnInteractive/readme ; https://api.github.com/repos/bowang-lab/MedSAM2/readme ; https://api.github.com/repos/bowang-lab/MedSAM/readme",
+   "hits": null,
+   "screened": null,
+   "kept": [
+    "T5-P05",
+    "T5-P06",
+    "T5-P09"
+   ],
+   "notes": "Version histories from READMEs (accessed 2026-10-12)."
+  },
+  {
+   "id": "T5-S036",
+   "date": "2026-10-12",
+   "tool": "raw.githubusercontent.com (urllib)",
+   "family": "code",
+   "query": "https://raw.githubusercontent.com/Project-MONAI/model-zoo/dev/models/vista3d/configs/metadata.json",
+   "hits": null,
+   "screened": null,
+   "kept": [
+    "T5-P08"
+   ],
+   "notes": "VISTA3D bundle changelog read."
+  },
+  {
+   "id": "T5-S037",
+   "date": "2026-10-12",
+   "tool": "PubMed E-utilities",
+   "family": "boolean",
+   "query": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&retmode=json&retmax=100&term=%28%22random%20seed%2A%22%5Btiab%5D%20OR%20%22random%20initiali%2A%22%5Btiab%5D%20OR%20%22training%20run%2A%22%5Btiab%5D%20OR%20retrain%2A%5Btiab%5D%20OR%20%22model%20update%2A%22%5Btiab%5D%20OR%20%22model%20version%2A%22%5Btiab%5D%29%20AND%20segmentation%5Btiab%5D%20AND%20volum%2A%5Btiab%5D%20AND%20%28variability%5Btiab%5D%20OR%20reproducib%2A%5Btiab%5D%20OR%20repeatab%2A%5Btiab%5D%20OR%20agreement%5Btiab%5D%20OR%20consisten%2A%5Btiab%5D%29%20AND%20%28%22deep%20learning%22%5Btiab%5D%20OR%20%22neural%20network%2A%22%5Btiab%5D%20OR%20%22convolutional%22%5Btiab%5D%29",
+   "hits": 17,
+   "screened": 17,
+   "kept": [
+    "T5-P24"
+   ],
+   "notes": "Retraining/seed/version terms: kept the WMH tool with two architectures trained on the same data; DeepBleed retraining study read (Pearson/ICC only) and not kept."
+  },
+  {
+   "id": "T5-S038",
+   "date": "2026-10-12",
+   "tool": "Europe PMC REST API",
+   "family": "known_item",
+   "query": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1016%2Fj.cccb.2025.100393%22&format=json&pageSize=50&resultType=core",
+   "hits": 1,
+   "screened": 1,
+   "kept": [
+    "T5-P24"
+   ],
+   "notes": "Open-access full text located (PMC12448020) and read."
+  },
+  {
+   "id": "T5-S039",
+   "date": "2026-10-12",
+   "tool": "Europe PMC REST API",
+   "family": "boolean",
+   "query": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=%28TITLE_ABS%3A%22challenge%22%20OR%20TITLE_ABS%3A%22benchmark%22%29%20AND%20%28TITLE_ABS%3A%22tumor%20volume%22%20OR%20TITLE_ABS%3A%22tumour%20volume%22%20OR%20TITLE_ABS%3A%22lesion%20volume%22%20OR%20TITLE_ABS%3A%22metabolic%20tumor%20volume%22%20OR%20TITLE_ABS%3A%22volume%20difference%22%20OR%20TITLE_ABS%3A%22volumetric%20agreement%22%29%20AND%20%28TITLE_ABS%3A%22algorithms%22%20OR%20TITLE_ABS%3A%22participating%20teams%22%20OR%20TITLE_ABS%3A%22architectures%22%29%20AND%20%28TITLE_ABS%3A%22segmentation%22%29%20AND%20%28TITLE_ABS%3A%22CT%22%20OR%20TITLE_ABS%3A%22computed%20tomography%22%20OR%20TITLE_ABS%3A%22PET%2FCT%22%29%20AND%20PUB_YEAR%3A%5B2018%20TO%202026%5D&format=json&pageSize=50&resultType=lite&sort=CITED%20desc",
+   "hits": 6,
+   "screened": 6,
+   "kept": [],
+   "notes": "Challenge/benchmark tumour-volume query returned no multi-algorithm volume analysis."
+  },
+  {
+   "id": "T5-S040",
+   "date": "2026-10-12",
+   "tool": "arXiv API",
+   "family": "venue_sweep",
+   "query": "http://export.arxiv.org/api/query?search_query=%28ti%3A%22interactive%22%20AND%20ti%3A%223D%22%20AND%20%28ti%3A%22challenge%22%20OR%20ti%3A%22benchmark%22%29%20AND%20%28ti%3Abiomedical%20OR%20ti%3Amedical%29%29%20OR%20%28abs%3A%22Foundation%20Models%20for%20Interactive%203D%20Biomedical%20Image%20Segmentation%22%29&start=0&max_results=25",
+   "hits": 2,
+   "screened": 2,
+   "kept": [],
+   "notes": "No CVPR 2025 interactive 3D challenge report found on arXiv; participant papers not kept."
+  },
+  {
+   "id": "T5-S041",
+   "date": "2026-10-12",
+   "tool": "Europe PMC REST API",
+   "family": "known_item",
+   "query": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1038%2Fs41467-024-44824-z%22%20OR%20DOI%3A%2210.1148%2Fryai.230024%22%20OR%20DOI%3A%2210.1038%2Fs41592-024-02499-w%22%20OR%20DOI%3A%2210.1016%2Fj.media.2025.103525%22%20OR%20DOI%3A%2210.1148%2Fradiol.241613%22%20OR%20DOI%3A%2210.1016%2Fj.ejrad.2025.112006%22&format=json&pageSize=50&resultType=core",
+   "hits": 6,
+   "screened": 6,
+   "kept": [
+    "T5-P01",
+    "T5-P03",
+    "T5-P04",
+    "T5-P05",
+    "T5-P10",
+    "T5-P12"
+   ],
+   "notes": "Bibliographic and open-access status for anchors."
+  },
+  {
+   "id": "T5-S042",
+   "date": "2026-10-12",
+   "tool": "Crossref REST API",
+   "family": "known_item",
+   "query": "https://api.crossref.org/works/10.1109/tnnls.2025.3586694",
+   "hits": 1,
+   "screened": 1,
+   "kept": [
+    "T5-P07"
+   ],
+   "notes": "TNNLS 2025;36(10):17599-17612 confirmed."
+  },
+  {
+   "id": "T5-S043",
+   "date": "2026-10-12",
+   "tool": "arXiv API",
+   "family": "known_item",
+   "query": "http://export.arxiv.org/api/query?search_query=ti%3A%22Vision%20Foundation%20Models%20for%20Computed%20Tomography%22&start=0&max_results=25",
+   "hits": 1,
+   "screened": 1,
+   "kept": [
+    "T5-P11"
+   ],
+   "notes": "Known item: CT-FM preprint 2501.09001 (v2)."
+  },
+  {
+   "id": "T5-S044",
+   "date": "2026-10-12",
+   "tool": "arXiv API",
+   "family": "known_item",
+   "query": "http://export.arxiv.org/api/query?search_query=%28abs%3AAuto3DSeg%20AND%20%28ti%3Akidney%20OR%20ti%3AKiTS%20OR%20ti%3Aautomated%29%29%20OR%20ti%3AAuto3DSeg&start=0&max_results=25",
+   "hits": 5,
+   "screened": 5,
+   "kept": [],
+   "notes": "Auto3DSeg known-item check: only challenge entries (KiTS23, BraTS 2023) on arXiv; MONAI (already cited) is the citable framework; not kept."
+  },
+  {
+   "id": "T5-S045",
+   "date": "2026-10-12",
+   "tool": "arXiv API",
+   "family": "boolean",
+   "query": "http://export.arxiv.org/api/query?search_query=%28abs%3A%22random%20seed%22%20OR%20abs%3A%22random%20seeds%22%20OR%20abs%3A%22training%20runs%22%20OR%20abs%3A%22run-to-run%22%20OR%20abs%3Aunderspecification%20OR%20abs%3A%22model%20multiplicity%22%29%20AND%20abs%3Asegmentation%20AND%20%28abs%3Amedical%20OR%20abs%3AMRI%20OR%20abs%3ACT%20OR%20abs%3Aclinical%29%20AND%20%28abs%3Avariability%20OR%20abs%3Areproducibility%20OR%20abs%3Avolume%20OR%20abs%3Aarchitecture%29&start=0&max_results=25",
+   "hits": 6,
+   "screened": 6,
+   "kept": [
+    "T5-P28"
+   ],
+   "notes": "Seed/underspecification sweep: kept FastSurfer training-variability preprint."
+  },
+  {
+   "id": "T5-S046",
+   "date": "2026-10-12",
+   "tool": "PubMed E-utilities",
+   "family": "boolean",
+   "query": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&retmode=json&retmax=100&term=%28compar%2A%5Bti%5D%20OR%20versus%5Bti%5D%20OR%20benchmark%2A%5Bti%5D%20OR%20agreement%5Bti%5D%29%20AND%20%28%22deep%20learning%22%5Btiab%5D%20OR%20%22neural%20network%2A%22%5Btiab%5D%20OR%20%22artificial%20intelligence%22%5Btiab%5D%29%20AND%20%28%22tumor%20volume%2A%22%5Btiab%5D%20OR%20%22tumour%20volume%2A%22%5Btiab%5D%20OR%20%22lesion%20volume%2A%22%5Btiab%5D%20OR%20volumetry%5Btiab%5D%20OR%20%22volumetric%20measurement%2A%22%5Btiab%5D%29%20AND%20%28CT%5Btiab%5D%20OR%20%22computed%20tomography%22%5Btiab%5D%29%20AND%20%28models%5Btiab%5D%20OR%20architectures%5Btiab%5D%20OR%20algorithms%5Btiab%5D%20OR%20%22software%22%5Btiab%5D%29%20AND%20%28agreement%5Btiab%5D%20OR%20%22Bland-Altman%22%5Btiab%5D%20OR%20%22intraclass%22%5Btiab%5D%20OR%20%22limits%20of%20agreement%22%5Btiab%5D%29",
+   "hits": 7,
+   "screened": 7,
+   "kept": [],
+   "notes": "Model-comparison CT tumour volumetry: no between-architecture volume agreement study."
+  },
+  {
+   "id": "T5-S047",
+   "date": "2026-10-12",
+   "tool": "Europe PMC REST API",
+   "family": "boolean",
+   "query": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=%28ABSTRACT%3A%22nnU-Net%22%20OR%20ABSTRACT%3A%22nnUNet%22%29%20AND%20%28ABSTRACT%3A%22Swin%20UNETR%22%20OR%20ABSTRACT%3A%22UNETR%22%20OR%20ABSTRACT%3A%22SegResNet%22%20OR%20ABSTRACT%3A%22MedNeXt%22%20OR%20ABSTRACT%3A%22TransUNet%22%20OR%20ABSTRACT%3A%22U-Mamba%22%20OR%20ABSTRACT%3A%22MedSAM%22%29%20AND%20%28ABSTRACT%3A%22volume%22%29%20AND%20%28ABSTRACT%3A%22agreement%22%20OR%20ABSTRACT%3A%22Bland-Altman%22%20OR%20ABSTRACT%3A%22intraclass%22%20OR%20ABSTRACT%3A%22volume%20difference%22%20OR%20ABSTRACT%3A%22volumetric%22%29%20AND%20%28ABSTRACT%3A%22tumor%22%20OR%20ABSTRACT%3A%22tumour%22%20OR%20ABSTRACT%3A%22lesion%22%20OR%20ABSTRACT%3A%22metastas%2A%22%29%20AND%20PUB_YEAR%3A%5B2021%20TO%202026%5D&format=json&pageSize=50&resultType=lite&sort=CITED%20desc",
+   "hits": 3,
+   "screened": 3,
+   "kept": [],
+   "notes": "nnU-Net versus other architectures with volume agreement: nothing relevant for CT tumours."
+  },
+  {
+   "id": "T5-S048",
+   "date": "2026-10-12",
+   "tool": "Europe PMC REST API",
+   "family": "known_item",
+   "query": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1016%2Fj.acra.2025.02.047%22%20OR%20DOI%3A%2210.1007%2Fs11604-026-02079-2%22%20OR%20DOI%3A%2210.3390%2Fdiagnostics16050817%22%20OR%20DOI%3A%2210.3174%2Fajnr.A9112%22%20OR%20DOI%3A%2210.1117%2F1.JMI.13.3.034001%22&format=json&pageSize=50&resultType=core",
+   "hits": 5,
+   "screened": 5,
+   "kept": [
+    "T5-P17",
+    "T5-P18",
+    "T5-P25"
+   ],
+   "notes": "Open-access status; only Suri 2025 available as full text."
+  },
+  {
+   "id": "T5-S049",
+   "date": "2026-10-12",
+   "tool": "OpenAlex API",
+   "family": "citation_forward",
+   "query": "https://api.openalex.org/works?filter=cites:W4414523389&per-page=50",
+   "hits": 3,
+   "screened": 3,
+   "kept": [
+    "T5-P17"
+   ],
+   "notes": "Forward chase from Auriac 2025: only Kobayashi 2026 relevant."
+  },
+  {
+   "id": "T5-S050",
+   "date": "2026-10-12",
+   "tool": "OpenAlex API",
+   "family": "known_item",
+   "query": "https://api.openalex.org/works?search=In%20search%20of%20truth%20evaluating%20concordance%20of%20AI-based%20anatomy%20segmentation%20models&per-page=25",
+   "hits": 275,
+   "screened": 5,
+   "kept": [
+    "T5-P16"
+   ],
+   "notes": "OpenAlex ID W4417534161 for the published Giebeler article."
+  },
+  {
+   "id": "T5-S051",
+   "date": "2026-10-12",
+   "tool": "OpenAlex API",
+   "family": "known_item",
+   "query": "https://api.openalex.org/works?search=Unstable%20prompts%2C%20unreliable%20segmentations%3A%20a%20challenge%20for%20longitudinal%20lesion%20analysis&per-page=25",
+   "hits": 94,
+   "screened": 5,
+   "kept": [
+    "T5-P29"
+   ],
+   "notes": "Searching Rocholl 2026 (already cited) surfaced the RECIST-flip preprint by Adhikary et al."
+  },
+  {
+   "id": "T5-S052",
+   "date": "2026-10-12",
+   "tool": "OpenAlex API",
+   "family": "citation_forward",
+   "query": "https://api.openalex.org/works?filter=cites:W7143446398|W4417264455&per-page=50",
+   "hits": 2,
+   "screened": 2,
+   "kept": [
+    "T5-P29"
+   ],
+   "notes": "Forward chase from Rocholl 2026: Kirchhoff 2026 (already cited) and Adhikary 2026."
+  },
+  {
+   "id": "T5-S053",
+   "date": "2026-10-12",
+   "tool": "OpenAlex API",
+   "family": "citation_forward",
+   "query": "https://api.openalex.org/works?filter=cites:W4417534161&per-page=50",
+   "hits": 1,
+   "screened": 1,
+   "kept": [],
+   "notes": "Forward chase from Giebeler 2026: one vascular follow-up study, not relevant."
+  },
+  {
+   "id": "T5-S054",
+   "date": "2026-10-12",
+   "tool": "Crossref REST API",
+   "family": "known_item",
+   "query": "https://api.crossref.org/works/10.21203/rs.3.rs-10551828/v1",
+   "hits": 1,
+   "screened": 1,
+   "kept": [
+    "T5-P29"
+   ],
+   "notes": "Crossref record with full abstract of the Research Square preprint."
+  },
+  {
+   "id": "T5-S055",
+   "date": "2026-10-12",
+   "tool": "arXiv API",
+   "family": "known_item",
+   "query": "http://export.arxiv.org/api/query?search_query=all%3ALongiSeg%20OR%20%28abs%3Alongitudinal%20AND%20abs%3Alesion%20AND%20abs%3Asegmentation%20AND%20abs%3Aprompt%20AND%20abs%3A%22follow-up%22%29&start=0&max_results=25",
+   "hits": 2,
+   "screened": 2,
+   "kept": [],
+   "notes": "LongiSeg known item: Kirchhoff et al. 2025 autoPET IV preprint and the MICCAI 2026 PanTrack paper (already cited); not kept."
+  },
+  {
+   "id": "T5-S056",
+   "date": "2026-10-12",
+   "tool": "arXiv full text (reference list)",
+   "family": "citation_backward",
+   "query": "Reference list of Giebeler et al. arXiv 2512.15921v2 (63 references) read in full",
+   "hits": 63,
+   "screened": 63,
+   "kept": [
+    "T5-P15"
+   ],
+   "notes": "Backward chase from the closest multi-model concordance study; no version-to-version volume study among its references."
+  },
+  {
+   "id": "T5-S057",
+   "date": "2026-10-12",
+   "tool": "Semantic Scholar Graph API",
+   "family": "known_item",
+   "query": "https://api.semanticscholar.org/graph/v1/paper/arXiv:2501.09001?fields=title,year,venue,externalIds,citationCount",
+   "hits": 1,
+   "screened": 1,
+   "kept": [
+    "T5-P11"
+   ],
+   "notes": "CT-FM: venue arXiv only."
+  },
+  {
+   "id": "T5-S058",
+   "date": "2026-10-12",
+   "tool": "Crossref REST API",
+   "family": "known_item",
+   "query": "https://api.crossref.org/works/10.1109/cvpr52734.2025.01943",
+   "hits": 1,
+   "screened": 1,
+   "kept": [
+    "T5-P08"
+   ],
+   "notes": "CVPR 2025 pages 20863-20873 confirmed."
+  },
+  {
+   "id": "T5-S059",
+   "date": "2026-10-12",
+   "tool": "Crossref REST API",
+   "family": "known_item",
+   "query": "https://api.crossref.org/works/10.1038/s41746-025-01964-w",
+   "hits": 1,
+   "screened": 1,
+   "kept": [],
+   "notes": "SAT (Zhao Z et al., npj Digit Med 2025;8:566) verified as a further text-promptable universal model; not kept to keep the landscape focused."
+  },
+  {
+   "id": "T5-S060",
+   "date": "2026-10-12",
+   "tool": "Europe PMC REST API",
+   "family": "exact_phrase",
+   "query": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=%22TotalSegmentator%22%20AND%20%28%22TotalSegmentator%20v1%22%20OR%20%22TotalSegmentator%20version%201%22%20OR%20%22version%201.5%22%29%20AND%20%28%22TotalSegmentator%20v2%22%20OR%20%22version%202%22%20OR%20%22v2.0%22%29%20AND%20%28volume%20OR%20volumes%29%20AND%20%28difference%20OR%20differences%20OR%20agreement%29&format=json&pageSize=50&resultType=lite&sort=CITED%20desc",
+   "hits": 2,
+   "screened": 2,
+   "kept": [],
+   "notes": "Full-text search for TotalSegmentator version comparisons: ECR 2026 book of abstracts (full text not retrievable) and SALT label trees; nothing kept."
+  },
+  {
+   "id": "T5-S061",
+   "date": "2026-10-12",
+   "tool": "Semantic Scholar Graph API",
+   "family": "boolean",
+   "query": "https://api.semanticscholar.org/graph/v1/paper/search?query=segmentation%20model%20version%20update%20longitudinal%20volume%20measurement%20consistency&limit=25&fields=title,year,venue,externalIds,citationCount",
+   "hits": null,
+   "screened": null,
+   "kept": [],
+   "notes": "FAILED: Semantic Scholar HTTP 429 after six retries; replaced by OpenAlex query T5-S062."
+  },
+  {
+   "id": "T5-S062",
+   "date": "2026-10-12",
+   "tool": "OpenAlex API",
+   "family": "boolean",
+   "query": "https://api.openalex.org/works?filter=title_and_abstract.search:%28%22model%20update%22%20OR%20%22model%20version%22%20OR%20%22software%20version%22%20OR%20%22new%20version%22%20OR%20%22updated%20model%22%20OR%20%22version%20change%22%29%20AND%20segmentation%20AND%20%28volume%20OR%20volumetry%20OR%20volumetric%29%20AND%20%28longitudinal%20OR%20%22follow-up%22%20OR%20serial%20OR%20change%29&per-page=100&sort=relevance_score:desc",
+   "hits": 29,
+   "screened": 29,
+   "kept": [
+    "T5-P27"
+   ],
+   "notes": "Found the AccuBrain version-update abstract recommending against mixed use of versions."
+  },
+  {
+   "id": "T5-S063",
+   "date": "2026-10-12",
+   "tool": "WebSearch (standard)",
+   "family": "exact_phrase",
+   "query": "nnInteractive tumor volume reproducibility inter-observer variability CT volumetry study",
+   "hits": 10,
+   "screened": 10,
+   "kept": [],
+   "notes": "No nnInteractive volumetry study; surfaced QIBA multi-algorithm volumetry challenges (Buckler 2015 already cited; Athelogou 2016 belongs to T3)."
+  },
+  {
+   "id": "T5-S064",
+   "date": "2026-10-12",
+   "tool": "Europe PMC REST API",
+   "family": "known_item",
+   "query": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=PMCID%3APMC4609285%20OR%20%28TITLE%3A%22QIBA%22%20AND%20TITLE%3A%22challenge%22%20AND%20%28TITLE%3A%22volume%22%20OR%20TITLE%3A%22volumetry%22%29%29&format=json&pageSize=50&resultType=core",
+   "hits": 2,
+   "screened": 2,
+   "kept": [],
+   "notes": "QIBA multi-algorithm studies: Buckler 2015 (already cited by the manuscript) abstract read for claim C27; Athelogou 2016 left to T3."
+  },
+  {
+   "id": "T5-S065",
+   "date": "2026-10-12",
+   "tool": "PubMed E-utilities",
+   "family": "exact_phrase",
+   "query": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&retmode=json&retmax=100&term=%28version%5Bti%5D%20OR%20versions%5Bti%5D%20OR%20update%5Bti%5D%20OR%20updated%5Bti%5D%20OR%20upgrade%5Bti%5D%29%20AND%20%28volumetry%5Btiab%5D%20OR%20volumetric%5Btiab%5D%20OR%20%22volume%20measurement%2A%22%5Btiab%5D%20OR%20volumes%5Btiab%5D%29%20AND%20%28segmentation%5Btiab%5D%20OR%20software%5Btiab%5D%29%20AND%20%28%22deep%20learning%22%5Btiab%5D%20OR%20%22artificial%20intelligence%22%5Btiab%5D%20OR%20%22neural%20network%22%5Btiab%5D%20OR%20automated%5Btiab%5D%29%20AND%202018%3A2026%5Bdp%5D",
+   "hits": 7,
+   "screened": 7,
+   "kept": [
+    "T5-P26"
+   ],
+   "notes": "Version-update volumetry: found the peer-reviewed AccuBrain version comparison."
+  },
+  {
+   "id": "T5-S066",
+   "date": "2026-10-12",
+   "tool": "Europe PMC REST API",
+   "family": "known_item",
+   "query": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1186%2Fs12880-022-00841-2%22&format=json&pageSize=50&resultType=core",
+   "hits": 1,
+   "screened": 1,
+   "kept": [
+    "T5-P26"
+   ],
+   "notes": "Full text located (PMC9252062) and read."
+  },
+  {
+   "id": "T5-S067",
+   "date": "2026-10-12",
+   "tool": "Semantic Scholar Graph API",
+   "family": "boolean",
+   "query": "https://api.semanticscholar.org/graph/v1/paper/search?query=promptable%20segmentation%20prompt%20variability%20tumor%20volume%20measurement%20reproducibility&limit=25&fields=title,year,venue,externalIds,citationCount",
+   "hits": 63,
+   "screened": 25,
+   "kept": [
+    "T5-P13",
+    "T5-P23"
+   ],
+   "notes": "Semantic Scholar retry succeeded; top 25 of 63 screened; kept nnInteractive WB-MRI response study."
+  },
+  {
+   "id": "T5-S068",
+   "date": "2026-10-12",
+   "tool": "OpenAlex API (works by DOI, abstracts)",
+   "family": "known_item",
+   "query": "https://api.openalex.org/works/https://doi.org/10.1109/ISBI61048.2026.11515970 ; .../10.1109/ISBI56570.2024.10635343 ; .../10.1007/s10278-017-9978-1",
+   "hits": 3,
+   "screened": 3,
+   "kept": [
+    "T5-P23"
+   ],
+   "notes": "Abstract retrieval for T5-S067 hits (Semantic Scholar batch endpoint returned HTTP 429)."
+  },
+  {
+   "id": "T5-S069",
+   "date": "2026-10-12",
+   "tool": "arXiv API",
+   "family": "boolean",
+   "query": "http://export.arxiv.org/api/query?search_query=%28abs%3Aseed%20OR%20abs%3Aseeds%20OR%20abs%3A%22training%20variability%22%20OR%20abs%3A%22nondeterminism%22%20OR%20abs%3A%22non-determinism%22%29%20AND%20%28abs%3AnnU-Net%20OR%20abs%3A%22U-Net%22%29%20AND%20abs%3Asegmentation%20AND%20%28abs%3Avariance%20OR%20abs%3Avariability%20OR%20abs%3Areproducibility%29&start=0&max_results=25",
+   "hits": 2,
+   "screened": 2,
+   "kept": [],
+   "notes": "No further seed-variability segmentation study; search saturated."
+  },
+  {
+   "id": "T5-S070",
+   "date": "2026-10-12",
+   "tool": "OpenAlex API",
+   "family": "known_item",
+   "query": "https://api.openalex.org/works?search=nnInteractive%3A%20Redefining%203D%20Promptable%20Segmentation&per-page=25",
+   "hits": 69,
+   "screened": 5,
+   "kept": [
+    "T5-P09",
+    "T5-P20"
+   ],
+   "notes": "OpenAlex ID for nnInteractive; surfaced the PMB promptable-GTV study."
+  },
+  {
+   "id": "T5-S071",
+   "date": "2026-10-12",
+   "tool": "OpenAlex API",
+   "family": "known_item",
+   "query": "https://api.openalex.org/works/https://doi.org/10.1016/j.media.2025.103525",
+   "hits": 1,
+   "screened": 1,
+   "kept": [
+    "T5-P12"
+   ],
+   "notes": "OpenAlex ID W4408108565 for ULS23."
+  },
+  {
+   "id": "T5-S072",
+   "date": "2026-10-12",
+   "tool": "OpenAlex API",
+   "family": "citation_forward",
+   "query": "https://api.openalex.org/works?filter=cites:W4414578049&per-page=50",
+   "hits": 12,
+   "screened": 12,
+   "kept": [],
+   "notes": "Forward chase from nnInteractive (OpenAlex undercounts citations of arXiv-only works): no volumetric reproducibility study."
+  },
+  {
+   "id": "T5-S073",
+   "date": "2026-10-12",
+   "tool": "OpenAlex API",
+   "family": "citation_forward",
+   "query": "https://api.openalex.org/works?filter=cites:W4408108565&per-page=50",
+   "hits": 26,
+   "screened": 26,
+   "kept": [
+    "T5-P13"
+   ],
+   "notes": "Forward chase from ULS23; 5 abstracts read (AI-assisted RECIST reader study, volumetric iRECIST feasibility, SAM2CT, AI4HI position paper, PMB GTV) - response-assessment items left to T4."
+  },
+  {
+   "id": "T5-S074",
+   "date": "2026-10-12",
+   "tool": "Europe PMC REST API",
+   "family": "known_item",
+   "query": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1088%2F1361-6560%2Fae2db9%22%20OR%20DOI%3A%2210.1093%2Fradadv%2Fumag028%22%20OR%20DOI%3A%2210.1007%2Fs10278-026-02097-6%22&format=json&pageSize=50&resultType=core",
+   "hits": 4,
+   "screened": 4,
+   "kept": [
+    "T5-P20"
+   ],
+   "notes": "Open-access status for PMB, Radiology Advances and JIIM items."
+  },
+  {
+   "id": "T5-S075",
+   "date": "2026-10-12",
+   "tool": "arXiv API",
+   "family": "known_item",
+   "query": "http://export.arxiv.org/api/query?search_query=ti%3A%22promptable%20foundation%20models%22%20AND%20ti%3AGTV&start=0&max_results=25",
+   "hits": 0,
+   "screened": 0,
+   "kept": [],
+   "notes": "No arXiv version of the PMB promptable-GTV study."
+  },
+  {
+   "id": "T5-S076",
+   "date": "2026-10-12",
+   "tool": "Crossref REST API",
+   "family": "known_item",
+   "query": "https://api.crossref.org/works/10.1088/1361-6560/ae2db9",
+   "hits": 1,
+   "screened": 1,
+   "kept": [
+    "T5-P20"
+   ],
+   "notes": "PMB 2026;71(1):015006, CC BY 4.0; IOP full text blocked by a captcha."
+  },
+  {
+   "id": "T5-S077",
+   "date": "2026-10-12",
+   "tool": "arXiv API",
+   "family": "known_item",
+   "query": "http://export.arxiv.org/api/query?search_query=ti%3ABiomedParse&start=0&max_results=25",
+   "hits": 2,
+   "screened": 2,
+   "kept": [
+    "T5-P10"
+   ],
+   "notes": "BiomedParse preprint 2405.12971 (journal_ref Nat Methods)."
+  },
+  {
+   "id": "T5-S078",
+   "date": "2026-10-12",
+   "tool": "GitHub REST API (readme endpoint)",
+   "family": "code",
+   "query": "https://api.github.com/repos/uni-medical/SAM-Med3D/readme ; https://api.github.com/repos/microsoft/BiomedParse/readme ; https://api.github.com/repos/Project-MONAI/VISTA/readme",
+   "hits": null,
+   "screened": null,
+   "kept": [
+    "T5-P07",
+    "T5-P08",
+    "T5-P10"
+   ],
+   "notes": "SAM-Med3D-turbo and BiomedParse v2 version facts read."
+  },
+  {
+   "id": "T5-S079",
+   "date": "2026-10-12",
+   "tool": "Crossref REST API",
+   "family": "known_item",
+   "query": "https://api.crossref.org/works/{doi} for 16 DOIs in doi_list.txt (bibliographic verification batch)",
+   "hits": 16,
+   "screened": 16,
+   "kept": [
+    "T5-P01",
+    "T5-P03",
+    "T5-P04",
+    "T5-P05",
+    "T5-P10",
+    "T5-P12",
+    "T5-P13",
+    "T5-P14",
+    "T5-P15",
+    "T5-P16",
+    "T5-P17",
+    "T5-P18",
+    "T5-P24",
+    "T5-P25",
+    "T5-P26",
+    "T5-P27"
+   ],
+   "notes": "Bibliographic verification batch for cards and refs.bib."
+  },
+  {
+   "id": "T5-S080",
+   "date": "2026-10-12",
+   "tool": "PubMed E-utilities",
+   "family": "venue_sweep",
+   "query": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&retmode=json&retmax=100&term=%22Phys%20Med%20Biol%22%5Bta%5D%20AND%20%28%22foundation%20model%2A%22%5Btiab%5D%20OR%20promptable%5Btiab%5D%20OR%20%22segment%20anything%22%5Btiab%5D%20OR%20MedSAM%2A%5Btiab%5D%20OR%20nnInteractive%5Btiab%5D%20OR%20TotalSegmentator%5Btiab%5D%20OR%20%22interactive%20segmentation%22%5Btiab%5D%29",
+   "hits": 20,
+   "screened": 20,
+   "kept": [
+    "T5-P20",
+    "T5-P21",
+    "T5-P22"
+   ],
+   "notes": "PMB venue sweep: three promptable-model evaluations kept (all Dice-based)."
+  },
+  {
+   "id": "T5-S081",
+   "date": "2026-10-12",
+   "tool": "PubMed E-utilities",
+   "family": "venue_sweep",
+   "query": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&retmode=json&retmax=100&term=%28%22Radiol%20Artif%20Intell%22%5Bta%5D%20OR%20%22Radiology%22%5Bta%5D%20OR%20%22Eur%20Radiol%22%5Bta%5D%20OR%20%22Med%20Phys%22%5Bta%5D%29%20AND%20%28%22foundation%20model%2A%22%5Btiab%5D%20OR%20promptable%5Btiab%5D%20OR%20%22segment%20anything%22%5Btiab%5D%20OR%20TotalSegmentator%5Btiab%5D%20OR%20%22universal%20lesion%22%5Btiab%5D%29%20AND%20%28volum%2A%5Btiab%5D%29%20AND%20%28reproducib%2A%5Btiab%5D%20OR%20repeatab%2A%5Btiab%5D%20OR%20agreement%5Btiab%5D%20OR%20variability%5Btiab%5D%20OR%20consisten%2A%5Btiab%5D%20OR%20version%2A%5Btiab%5D%29",
+   "hits": 3,
+   "screened": 3,
+   "kept": [
+    "T5-P15"
+   ],
+   "notes": "Radiology/Med Phys venue sweep returned only an already-recorded neighbour (Auriac 2025): saturation signal."
+  },
+  {
+   "id": "T5-S082",
+   "date": "2026-10-12",
+   "tool": "GitHub REST API (search/issues)",
+   "family": "code",
+   "query": "repo:wasserth/TotalSegmentator is:issue volume different version ; repo:wasserth/TotalSegmentator is:issue (v1 OR \"version 1\") (v2 OR \"version 2\") different results",
+   "hits": 22,
+   "screened": 22,
+   "kept": [
+    "T5-P02"
+   ],
+   "notes": "TotalSegmentator issues: #179 (developer: v2 methods identical to v1, more data and classes) and #445 (run-to-run non-determinism) read; no user-reported v1-v2 volume comparison."
+  },
+  {
+   "id": "T5-S083",
+   "date": "2026-10-12",
+   "tool": "Crossref REST API",
+   "family": "known_item",
+   "query": "https://api.crossref.org/works/{doi} for 5 DOIs in doi_list2.txt (second verification batch)",
+   "hits": 5,
+   "screened": 5,
+   "kept": [
+    "T5-P07",
+    "T5-P21",
+    "T5-P22",
+    "T5-P23"
+   ],
+   "notes": "Second bibliographic verification batch."
+  }
+ ]
+}

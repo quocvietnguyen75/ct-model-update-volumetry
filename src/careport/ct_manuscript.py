@@ -8,8 +8,11 @@ import re
 from careport.ct_replication_report import COHORT_NAMES, COHORTS, LABELS, PRIMARY
 from careport.ct_update_gate import GateError
 
-# One contrast order for every manuscript table and figure: the replicated retention cost first.
+# One contrast order for every manuscript table and figure: the replicated compatibility cost first.
 MANUSCRIPT_CONTRASTS = PRIMARY
+# The manuscript calls the prespecified retention cost (protocol key retaining_baseline_cost) the compatibility
+# cost (authors' decision D3, 12 October 2026); the frozen records keep their original labels.
+MANUSCRIPT_LABELS = {**LABELS, 'retaining_baseline_cost': 'Compatibility cost (mL)'}
 # A table cell with no value, such as the interval of a stratum too small for one.
 NO_VALUE = '---'
 # An unsigned decimal that is not part of a version string such as 1.5.1.
@@ -82,7 +85,7 @@ def posthoc_sensitivity_rows(published: dict, recomputed: dict) -> list[list[str
             digits = contrast_digits(name)
             same = old['family_interval_excludes_zero'] == new['family_interval_excludes_zero']
             probability = new['sign_probability']
-            rows.append([COHORT_NAMES[cohort], LABELS[name], latex_interval(*old['two_way_family_interval'], digits, True),
+            rows.append([COHORT_NAMES[cohort], MANUSCRIPT_LABELS[name], latex_interval(*old['two_way_family_interval'], digits, True),
                          latex_interval(*new['two_way_family_interval'], digits, True),
                          ('Yes' if new['family_interval_excludes_zero'] else 'No') if same else 'Changed',
                          f"{new['runs_positive']} / {new['runs_negative']}",
@@ -97,7 +100,7 @@ def primary_contrast_rows(results: dict) -> list[list[str]]:
     for cohort in COHORTS:
         for name in MANUSCRIPT_CONTRASTS:
             summary, digits = results['cohorts'][cohort]['primary_contrasts'][name], contrast_digits(name)
-            rows.append([COHORT_NAMES[cohort], LABELS[name], latex_number(summary['mean'], digits, True),
+            rows.append([COHORT_NAMES[cohort], MANUSCRIPT_LABELS[name], latex_number(summary['mean'], digits, True),
                          latex_interval(*summary['two_way_percentile_95'], digits, True),
                          latex_interval(*summary['two_way_family_interval'], digits, True),
                          'Yes' if summary['family_interval_excludes_zero'] else 'No',
@@ -105,9 +108,102 @@ def primary_contrast_rows(results: dict) -> list[list[str]]:
     return rows
 
 
+def interval_component_rows(unet: dict, nnunet: dict) -> list[list[str]]:
+    """Each primary contrast of both replications with its two-way, patient-only and run-only percentile 95%
+    intervals, the components the replication methods report descriptively (ARS R5, 12 October 2026)."""
+    rows = []
+    for model, results in (('U-Net', unet), ('nnU-Net', nnunet)):
+        for cohort in COHORTS:
+            for name in MANUSCRIPT_CONTRASTS:
+                summary, digits = results['cohorts'][cohort]['primary_contrasts'][name], contrast_digits(name)
+                rows.append([model, COHORT_NAMES[cohort], MANUSCRIPT_LABELS[name],
+                             latex_number(summary['mean'], digits, True),
+                             *(latex_interval(*summary[key], digits, True) for key in
+                               ('two_way_percentile_95', 'patient_only_percentile_95', 'run_only_percentile_95'))])
+    return rows
+
+
+# CT-UPDATE-019 columns: each segmenter and cohort, never pooled.
+COMPAT_COLUMNS = (('unet', 'internal'), ('unet', 'pantrack'), ('nnunet', 'internal'), ('nnunet', 'pantrack'))
+
+
+def _with_interval(value, bounds, digits: int, sign: bool = False, scale: float = 1.0) -> str:
+    return (f'{latex_number(scale * value, digits, sign)} '
+            f'{latex_interval(scale * bounds[0], scale * bounds[1], digits, sign)}')
+
+
+def _compat_cells(result: dict, render) -> list[str]:
+    return [render(result['segmenters'][model]['cohorts'][cohort]) for model, cohort in COMPAT_COLUMNS]
+
+
+def _share(name: str):
+    return lambda c: _with_interval(c['patient_response'][name]['mean'],
+                                    c['patient_response'][name]['two_way_percentile_95'], 1, scale=100)
+
+
+def _share_range(name: str):
+    def render(c):
+        entry = c['patient_response'][name]
+        return (f"{latex_number(100 * entry['mean'], 1)} ({latex_number(100 * entry['run_min'], 1)} to "
+                f"{latex_number(100 * entry['run_max'], 1)})")
+    return render
+
+
+_SUMMARY = (
+    (r'Relative compatibility cost (\%)', lambda c: _with_interval(
+        c['relative_compatibility_cost']['mean_percent'],
+        c['relative_compatibility_cost']['two_way_percentile_95'], 1, True)),
+    (r'Version difference, bias (\%)', lambda c: _with_interval(
+        c['version_agreement']['bias_percent'], c['version_agreement']['bias_percent_two_way_95'], 1, True)),
+    (r'Version difference, 95\% limits of agreement (\%)', lambda c: (
+        f"{latex_number(c['version_agreement']['limits_percent'][0], 1, True)} to "
+        f"{latex_number(c['version_agreement']['limits_percent'][1], 1, True)}")),
+    (r'Compatibility index $\kappa$', lambda c: _with_interval(
+        c['decomposition']['kappa'], c['decomposition']['kappa_two_way_95'], 2)),
+    (r'Increase in RMS log change error (\%)', lambda c: _with_interval(
+        c['decomposition']['observed_inflation_percent'],
+        c['decomposition']['observed_inflation_percent_two_way_95'], 1, True)),
+    (r'Predicted without the cross term (\%)', lambda c: _with_interval(
+        c['decomposition']['predicted_inflation_percent'],
+        c['decomposition']['predicted_inflation_percent_two_way_95'], 1, True)),
+    ('Patient-level assessments', lambda c: str(c['patient_response']['assessments'])),
+    (r'Category changed by mixing (\%)', _share('differs')),
+    (r'Increase versus no increase changed (\%)', _share('progression_split_differs')),
+    (r'Agreement with reference, new/new (\%)', _share('agrees:new_new')),
+    (r'Agreement with reference, old/new (\%)', _share('agrees:old_new')),
+)
+_FULL_EXTRA = (
+    (r'Agreement with reference, old/old (\%)', _share('agrees:old_old')),
+    (r'Mixing loses the reference category (\%)', _share('mixing_loses_reference')),
+    (r'Mixing gains the reference category (\%)', _share('mixing_gains_reference')),
+    (r'Mixing-only increase (\%)', _share_range('spurious_increase')),
+    (r'Reprocessing-only increase (\%)', _share_range('masked_increase')),
+    (r'Mixing-only decrease (\%)', _share_range('spurious_decrease')),
+    (r'Reprocessing-only decrease (\%)', _share_range('masked_decrease')),
+    ('Reference categories: decrease / stable / increase', lambda c: ' / '.join(
+        str(c['patient_response']['reference_category_counts'][k]) for k in ('decrease', 'stable', 'increase'))),
+    ('Cross-term ratio', lambda c: _with_interval(c['decomposition']['cross_ratio'],
+                                                  c['decomposition']['cross_ratio_two_way_95'], 3, True)),
+    ('Valid pair-runs (log scale)', lambda c: str(c['version_agreement']['valid_pair_runs'])),
+    ('Excluded pair-runs (log scale)', lambda c: str(c['version_agreement']['excluded_pair_runs'])),
+)
+
+
+def compat_summary_rows(result: dict) -> list[list[str]]:
+    """The main-text summary of CT-UPDATE-019: one row per quantity, one column per segmenter and cohort; each
+    estimate is followed by its two-way 95% interval where one exists. Shares are percentages of assessments."""
+    return [[label, *_compat_cells(result, render)] for label, render in _SUMMARY]
+
+
+def compat_full_rows(result: dict) -> list[list[str]]:
+    """Every CT-UPDATE-019 output for the supplement: the summary rows, then the remaining shares (direction shares as
+    the mean and range over runs), the reference categories, the cross-term ratio and the log-scale exclusions."""
+    return compat_summary_rows(result) + [[label, *_compat_cells(result, render)] for label, render in _FULL_EXTRA]
+
+
 # Rows of the U-Net/nnU-Net comparison: (kind, name, label).
 COMPARISON_ROWS = (('dice', 'old', 'Follow-up Dice, old model'), ('dice', 'new', 'Follow-up Dice, updated model'),
-                   *(('primary', name, LABELS[name]) for name in MANUSCRIPT_CONTRASTS),
+                   *(('primary', name, MANUSCRIPT_LABELS[name]) for name in MANUSCRIPT_CONTRASTS),
                    ('secondary', 'baseline_version_shift_ml', 'Baseline version shift (mL)'))
 
 
@@ -167,7 +263,8 @@ def source_values(json_objects: list, csv_texts: list[str]) -> list[float]:
 
 
 def percent_values(json_objects: list) -> list[float]:
-    """Numbers stored in percent units: every number under a key named 'percent' or ending in '_percent'."""
+    """Numbers stored in percent units: every number under a key named 'percent', ending in '_percent' or containing
+    '_percent_', and the 'two_way_percentile_95' interval of an estimate stored as 'mean_percent'."""
     values: list[float] = []
 
     def walk(item, in_percent: bool) -> None:
@@ -177,8 +274,11 @@ def percent_values(json_objects: list) -> list[float]:
             if in_percent:
                 values.append(float(item))
         elif isinstance(item, dict):
+            interval_in_percent = 'mean_percent' in item
             for key, child in item.items():
-                walk(child, in_percent or key == 'percent' or str(key).endswith('_percent'))
+                name = str(key)
+                walk(child, in_percent or name == 'percent' or name.endswith('_percent') or '_percent_' in name
+                     or (interval_in_percent and name == 'two_way_percentile_95'))
         elif isinstance(item, (list, tuple)):
             for child in item:
                 walk(child, in_percent)

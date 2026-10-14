@@ -1,0 +1,1091 @@
+{
+ "part": "T2",
+ "date": "2026-10-12",
+ "entries": [
+  {
+   "id": "T2-S001",
+   "date": "2026-10-12",
+   "tool": "Crossref REST",
+   "family": "known_item",
+   "query": "GET https://api.crossref.org/works/10.1371/journal.pone.0038234",
+   "hits": 1,
+   "screened": 1,
+   "kept": [],
+   "notes": "Anchor Gronenschild 2012 (already cited) verified: PLoS ONE 7(6):e38234."
+  },
+  {
+   "id": "T2-S002",
+   "date": "2026-10-12",
+   "tool": "Crossref REST",
+   "family": "known_item",
+   "query": "GET https://api.crossref.org/works/10.3233/JHD-231512",
+   "hits": 1,
+   "screened": 1,
+   "kept": [],
+   "notes": "Anchor Knights 2024 (already cited) verified: J Huntingtons Dis 13(1):77-90; Crossref now lists SAGE as publisher."
+  },
+  {
+   "id": "T2-S003",
+   "date": "2026-10-12",
+   "tool": "Crossref REST",
+   "family": "known_item",
+   "query": "GET https://api.crossref.org/works/10.1002/acm2.70768",
+   "hits": 1,
+   "screened": 1,
+   "kept": [],
+   "notes": "Anchor Wang 2026 (already cited) verified: JACMP 27(9):e70768, issued 2026-08-28."
+  },
+  {
+   "id": "T2-S004",
+   "date": "2026-10-12",
+   "tool": "Crossref REST",
+   "family": "known_item",
+   "query": "GET https://api.crossref.org/works/10.1007/s00330-010-1749-z",
+   "hits": 1,
+   "screened": 1,
+   "kept": [],
+   "notes": "Anchor Ashraf 2010 (already cited) verified: Eur Radiol 20(8):1878-1885."
+  },
+  {
+   "id": "T2-S005",
+   "date": "2026-10-12",
+   "tool": "PubMed E-utilities",
+   "family": "known_item",
+   "query": "esearch db=pubmed term=Haddad[au] AND FreeSurfer[tiab] AND (version*[tiab])",
+   "hits": 1,
+   "screened": 1,
+   "kept": [
+    "T2-P01"
+   ],
+   "notes": "Found PMID 36437735, Hum Brain Mapp, doi 10.1002/hbm.26147."
+  },
+  {
+   "id": "T2-S006",
+   "date": "2026-10-12",
+   "tool": "PubMed E-utilities",
+   "family": "known_item",
+   "query": "esearch db=pubmed term=Tomita[au] AND (AI-Rad Companion[tiab] OR \"Organs RT\"[tiab] OR auto-contouring[tiab] OR autocontouring[tiab] OR auto-segmentation[tiab])",
+   "hits": 1,
+   "screened": 1,
+   "kept": [
+    "T2-P02"
+   ],
+   "notes": "Found PMID 40291313, Cureus 17(3):e81307; abstract read. Abstract has a typo (VA30, VA50 and VA50); full text needed for VA60."
+  },
+  {
+   "id": "T2-S007",
+   "date": "2026-10-12",
+   "tool": "Crossref REST",
+   "family": "known_item",
+   "query": "GET https://api.crossref.org/works/10.1002/hbm.26147",
+   "hits": 1,
+   "screened": 1,
+   "kept": [
+    "T2-P01"
+   ],
+   "notes": "Haddad 2023 verified: Hum Brain Mapp 44(4):1515-1532 (online 2022-11-27)."
+  },
+  {
+   "id": "T2-S008",
+   "date": "2026-10-12",
+   "tool": "Crossref REST",
+   "family": "known_item",
+   "query": "GET https://api.crossref.org/works/10.7759/cureus.81307",
+   "hits": 1,
+   "screened": 1,
+   "kept": [
+    "T2-P02"
+   ],
+   "notes": "Tomita 2025 verified: Cureus, issued 2025-03-27, article e81307."
+  },
+  {
+   "id": "T2-S009",
+   "date": "2026-10-12",
+   "tool": "Europe PMC REST",
+   "family": "known_item",
+   "query": "search?query=DOI:\"10.1002/hbm.26147\" OR DOI:\"10.3233/JHD-231512\" OR DOI:\"10.1002/acm2.70768\" OR DOI:\"10.1371/journal.pone.0038234\"&resultType=lite",
+   "hits": 4,
+   "screened": 4,
+   "kept": [],
+   "notes": "PMC IDs for full-text reading: Haddad PMC9921222, Wang 2026 PMC13525157, Gronenschild PMC3365894; Knights 2024 not in PMC (paywalled). Full texts of Tomita (PMC12034332), Haddad, Wang 2026 and Gronenschild read via Europe PMC fullTextXML."
+  },
+  {
+   "id": "T2-S010",
+   "date": "2026-10-12",
+   "tool": "OpenAlex",
+   "family": "known_item",
+   "query": "GET /works/https://doi.org/{doi} for 10.1371/journal.pone.0038234, 10.3233/JHD-231512, 10.1002/acm2.70768, 10.7759/cureus.81307, 10.1002/hbm.26147, 10.1007/s00330-010-1749-z",
+   "hits": 6,
+   "screened": 6,
+   "kept": [],
+   "notes": "OpenAlex IDs: Gronenschild W1992288515 (372 citing), Knights W4392845670 (6), Wang 2026 W7204667795 (0), Tomita W4408899713 (1), Haddad W4310030124 (45), Ashraf W2165991930 (52)."
+  },
+  {
+   "id": "T2-S011",
+   "date": "2026-10-12",
+   "tool": "OpenAlex",
+   "family": "citation_forward",
+   "query": "works?filter=cites:W4392845670 (Knights 2024)",
+   "hits": 6,
+   "screened": 6,
+   "kept": [
+    "T2-P23"
+   ],
+   "notes": "Citers include the HD-YAS follow-up on FreeSurfer cross-sectional vs longitudinal stream bias in HD-ISS staging (J Huntingtons Dis 2025) and the EHDN Imaging Working Group opinion (2024). Screened in but not carried to PAPERS.csv (peripheral or superseded): Knights2025stream."
+  },
+  {
+   "id": "T2-S012",
+   "date": "2026-10-12",
+   "tool": "OpenAlex",
+   "family": "citation_forward",
+   "query": "works?filter=cites:W4408899713 (Tomita 2025)",
+   "hits": 1,
+   "screened": 1,
+   "kept": [],
+   "notes": "Only citer: OncoStudio prostate auto-contouring accuracy (Cureus 2025); to check whether it compares versions."
+  },
+  {
+   "id": "T2-S013",
+   "date": "2026-10-12",
+   "tool": "OpenAlex",
+   "family": "citation_forward",
+   "query": "works?filter=cites:W7204667795 (Wang 2026)",
+   "hits": 0,
+   "screened": 0,
+   "kept": [],
+   "notes": "No citing works indexed yet (published 28 Aug 2026)."
+  },
+  {
+   "id": "T2-S014",
+   "date": "2026-10-12",
+   "tool": "OpenAlex",
+   "family": "citation_forward",
+   "query": "works?filter=cites:W4310030124 (Haddad 2023)",
+   "hits": 45,
+   "screened": 45,
+   "kept": [
+    "T2-P10"
+   ],
+   "notes": "Mostly applied neuroimaging studies citing version choice. Version-specific: FreeSurfer versions in Parkinson's disease (bioRxiv 2024), version-shuffling for brain age (2024), test-retest of FreeSurfer neurodegeneration measures (NeuroImage 2026). Screened in but not carried to PAPERS.csv (peripheral or superseded): PDversions2024, FSshuffle2024."
+  },
+  {
+   "id": "T2-S015",
+   "date": "2026-10-12",
+   "tool": "OpenAlex",
+   "family": "citation_forward",
+   "query": "works?filter=cites:W1992288515 (Gronenschild 2012), all 372 titles screened (keyword filter plus full list from 2016)",
+   "hits": 372,
+   "screened": 372,
+   "kept": [
+    "T2-P10"
+   ],
+   "notes": "Version-change studies in neuroimaging: Chepkoech 2016 (AD classification), Bigler 2018/2020 (FS 5.3 vs 6.0 volumes), Filip 2022 (case-control outcomes), Hedges 2022 (reliability incl. FS version and processing stream), PD versions 2024. Also OS/numerical-variability work (Glatard 2015, Monte-Carlo arithmetic) and reproducibility reviews; none outside neuroimaging. Screened in but not carried to PAPERS.csv (peripheral or superseded): Chepkoech2016, Bigler2018, Hedges2022, Knights2025stream, PDversions2024."
+  },
+  {
+   "id": "T2-S016",
+   "date": "2026-10-12",
+   "tool": "PubMed E-utilities",
+   "family": "exact_phrase",
+   "query": "\"software version\"[tiab] AND (volumetry[tiab] OR volumetric[tiab] OR \"volume measurement\"[tiab] OR \"volume measurements\"[tiab])",
+   "hits": 67,
+   "screened": 60,
+   "kept": [
+    "T2-P10"
+   ],
+   "notes": "Mostly studies that merely report the software version used (dental CBCT, RT planning). Only Filip 2022 and a DBT breast-density 'new software version' feasibility study (Machida 2016) address version effects."
+  },
+  {
+   "id": "T2-S017",
+   "date": "2026-10-12",
+   "tool": "PubMed E-utilities",
+   "family": "boolean",
+   "query": "(\"software update\"[tiab] OR \"software updates\"[tiab] OR \"software upgrade\"[tiab] OR \"software upgrades\"[tiab]) AND (volume[tiab] OR volumes[tiab] OR volumetr*[tiab] OR quantitative[tiab] OR measurement*[tiab]) AND (MRI[tiab] OR CT[tiab] OR \"computed tomography\"[tiab] OR imaging[tiab] OR densitometry[tiab] OR tomography[tiab])",
+   "hits": 46,
+   "screened": 46,
+   "kept": [
+    "T2-P04",
+    "T2-P06",
+    "T2-P07"
+   ],
+   "notes": "Key outside-neuroimaging finds: commercial perfusion-CT software upgrades altered parameters in colorectal cancer (Goh 2011) and a follow-up (Mazzei 2013); OCT segmentation software updates influenced longitudinal retinal atrophy assessment (Coric 2018); OCT/OCTA upgrade studies; shoulder-planning CT software update; Limbus AI versions (Fontaine 2025); scanner upgrades in clinical studies (Keenan 2019); DXA software upgrade (Wong 2002). Screened in but not carried to PAPERS.csv (peripheral or superseded): Mazzei2013, Seibold2012, Sampson2020, Garofalo2023, Keenan2019."
+  },
+  {
+   "id": "T2-S018",
+   "date": "2026-10-12",
+   "tool": "PubMed E-utilities",
+   "family": "boolean",
+   "query": "(\"software version\"[tiab] OR \"software versions\"[tiab] OR \"algorithm version\"[tiab] OR \"algorithm versions\"[tiab] OR \"new version\"[tiab] OR \"version update\"[tiab] OR \"version change\"[tiab]) AND (longitudinal[tiab] OR follow-up[tiab] OR serial[tiab] OR \"change over time\"[tiab] OR progression[tiab]) AND (imaging[tiab] OR MRI[tiab] OR CT[tiab] OR tomography[tiab] OR segmentation[tiab])",
+   "hits": 159,
+   "screened": 100,
+   "kept": [],
+   "notes": "Noisy ('new version' of classification systems). Found longitudinal consistency of PET/MR attenuation correction amid software and hardware upgrades (Ying 2025, AJNR) and an imaging-software update degrading ML breast models (Cai 2025, input shift, peripheral). Screened in but not carried to PAPERS.csv (peripheral or superseded): Ying2025."
+  },
+  {
+   "id": "T2-S019",
+   "date": "2026-10-12",
+   "tool": "PubMed E-utilities",
+   "family": "boolean",
+   "query": "(\"auto-segmentation\"[tiab] OR autosegmentation[tiab] OR \"auto-contouring\"[tiab] OR autocontouring[tiab] OR \"automatic contouring\"[tiab] OR \"automatic segmentation\"[tiab] OR \"auto-delineation\"[tiab] OR \"deep learning segmentation\"[tiab]) AND (update[tiab] OR updates[tiab] OR updated[tiab] OR upgrade*[tiab] OR \"new version\"[tiab] OR \"software version\"[tiab] OR \"software versions\"[tiab] OR \"model version\"[tiab] OR \"model versions\"[tiab] OR retrain*[tiab]) AND (radiotherapy[tiab] OR \"radiation therapy\"[tiab] OR contour*[tiab])",
+   "hits": 45,
+   "screened": 45,
+   "kept": [
+    "T2-P02",
+    "T2-P03",
+    "T2-P04"
+   ],
+   "notes": "New since 27 Sep: Barati et al. 2026 (JACMP, Oct 2026) regression test of RayStation DLS 11B to 2024A, with 8 retrained OAR models; full text read. Fontaine 2025 compared six Limbus AI versions. In-house incremental retraining (Duan 2023), custom-retrained commercial models (Hobbis 2023), training-set size effects on rectal contours (Olsson 2022), SPC monitoring (van Acht 2025). None measures longitudinal change. Screened in but not carried to PAPERS.csv (peripheral or superseded): Duan2023, Hobbis2023, Olsson2022, vanAcht2025."
+  },
+  {
+   "id": "T2-S020",
+   "date": "2026-10-12",
+   "tool": "Europe PMC REST",
+   "family": "known_item",
+   "query": "search?query=DOI:\"10.1016/j.ejmp.2025.105065\" OR DOI:\"10.1016/j.jns.2018.01.020\" OR DOI:\"10.1007/s00330-010-1967-4\" OR DOI:\"10.1177/0284185113484643\" OR DOI:\"10.3174/ajnr.A8490\" OR DOI:\"10.1002/jmri.26785\" OR DOI:\"10.3390/jcm12072620\" OR DOI:\"10.1007/s00234-021-02862-0\"",
+   "hits": 8,
+   "screened": 8,
+   "kept": [],
+   "notes": "Open-access check: only Garofalo 2023 is OA; Filip 2022 and Ying 2025 have PMC author manuscripts; Coric 2018, Goh 2011, Mazzei 2013, Keenan 2019, Fontaine 2025 are paywalled (abstract level)."
+  },
+  {
+   "id": "T2-S021",
+   "date": "2026-10-12",
+   "tool": "PubMed E-utilities",
+   "family": "boolean",
+   "query": "(\"optical coherence tomography\"[tiab] OR OCT[tiab]) AND (\"software version\"[tiab] OR \"software versions\"[tiab] OR \"software upgrade\"[tiab] OR \"software update\"[tiab] OR \"software updates\"[tiab] OR \"segmentation software\"[tiab] AND (version*[tiab] OR update*[tiab])) AND (thickness[tiab] OR segmentation[tiab])",
+   "hits": 70,
+   "screened": 70,
+   "kept": [
+    "T2-P07",
+    "T2-P08"
+   ],
+   "notes": "Neighbouring field (ophthalmic OCT) has many version-change studies: Coric 2018 (re-segmentation of 838 longitudinal pRNFL scans with HRA 6.0.7 vs 5.6.4), Hollo 2015 (RTVue 6.3 vs 6.12 changed progression slopes over 5-year follow-up), Sampson 2020 (AngioVue upgrade shifted thickness and vessel density), plus Seibold 2012, Wang 2021 and several Hollo version papers. Screened in but not carried to PAPERS.csv (peripheral or superseded): Sampson2020."
+  },
+  {
+   "id": "T2-S022",
+   "date": "2026-10-12",
+   "tool": "PubMed E-utilities",
+   "family": "boolean",
+   "query": "(densitometry[tiab] OR DXA[tiab] OR DEXA[tiab] OR \"bone mineral density\"[tiab]) AND (\"software version\"[tiab] OR \"software versions\"[tiab] OR \"software upgrade\"[tiab] OR \"software upgrades\"[tiab] OR \"software update\"[tiab] OR \"analysis software\"[tiab] AND (version*[tiab] OR upgrade*[tiab]))",
+   "hits": 126,
+   "screened": 80,
+   "kept": [],
+   "notes": "Neighbouring quantitative field (DXA). Mostly studies naming their software version. Version-effect items: Lundstam 2022 (hardware, software and reference-population effects on T-scores), Starck 2026 (TBS 3.0 vs 4.0), Wong 2002 (Lunar DPX software upgrade). Not kept as citations: peripheral to CT volumetry."
+  },
+  {
+   "id": "T2-S023",
+   "date": "2026-10-12",
+   "tool": "PubMed E-utilities",
+   "family": "boolean",
+   "query": "radiomic*[tiab] AND (\"software version\"[tiab] OR \"software versions\"[tiab] OR \"version of the software\"[tiab] OR \"software update\"[tiab] OR \"software upgrade\"[tiab] OR \"pyradiomics version\"[tiab] OR (version*[ti] AND software[ti]))",
+   "hits": 25,
+   "screened": 25,
+   "kept": [],
+   "notes": "No radiomics study of a version change of the same software found; Fornacon-Wood 2020 compares extraction platforms (different software), not versions."
+  },
+  {
+   "id": "T2-S024",
+   "date": "2026-10-12",
+   "tool": "PubMed E-utilities",
+   "family": "boolean",
+   "query": "TotalSegmentator[tiab] AND (version[tiab] OR versions[tiab] OR v1[tiab] OR v2[tiab] OR \"version 2\"[tiab] OR \"version 1\"[tiab])",
+   "hits": 14,
+   "screened": 14,
+   "kept": [],
+   "notes": "Applied studies that state the TotalSegmentator version used; none compares v1 and v2 outputs."
+  },
+  {
+   "id": "T2-S025",
+   "date": "2026-10-12",
+   "tool": "Europe PMC REST",
+   "family": "exact_phrase",
+   "query": "(\"TotalSegmentator v1\" OR \"TotalSegmentator version 1\" OR \"TotalSegmentator 1.5\") AND (\"TotalSegmentator v2\" OR \"TotalSegmentator version 2\" OR \"TotalSegmentator 2.0\")",
+   "hits": 0,
+   "screened": 0,
+   "kept": [],
+   "notes": "Full-text search: no paper mentions both versions by these names."
+  },
+  {
+   "id": "T2-S026",
+   "date": "2026-10-12",
+   "tool": "Europe PMC REST",
+   "family": "boolean",
+   "query": "TITLE_ABS:(\"TotalSegmentator\") AND (TITLE_ABS:\"versions\" OR TITLE_ABS:\"version 2\" OR TITLE_ABS:\"v2\" OR TITLE_ABS:\"updated version\" OR TITLE_ABS:\"new version\")",
+   "hits": 9,
+   "screened": 9,
+   "kept": [],
+   "notes": "No version-comparison study; confirms PubMed result."
+  },
+  {
+   "id": "T2-S027",
+   "date": "2026-10-12",
+   "tool": "Semantic Scholar Graph API",
+   "family": "boolean",
+   "query": "paper/search?query=TotalSegmentator version comparison v1 v2 volume differences&limit=30",
+   "hits": 97,
+   "screened": 30,
+   "kept": [
+    "T2-P12"
+   ],
+   "notes": "No TotalSegmentator version comparison; serendipitous find of Taib 2025 (Eur J Radiol), two consecutive releases of a commercial mammography AI benchmarked on PERFORMS test sets."
+  },
+  {
+   "id": "T2-S028",
+   "date": "2026-10-12",
+   "tool": "Crossref REST + PubMed E-utilities",
+   "family": "known_item",
+   "query": "GET /works/10.1016/j.ejrad.2025.112100; esearch term=Taib AG[au] AND mammography[tiab]",
+   "hits": 5,
+   "screened": 5,
+   "kept": [
+    "T2-P12"
+   ],
+   "notes": "Verified Taib 2025 Eur J Radiol 187:112100 (PMID 40252280); a corrigendum exists (doi 10.1016/j.ejrad.2025.112443, PMID 41039674), content not inspected."
+  },
+  {
+   "id": "T2-S029",
+   "date": "2026-10-12",
+   "tool": "PubMed E-utilities",
+   "family": "boolean",
+   "query": "(\"artificial intelligence\"[tiab] OR \"deep learning\"[tiab] OR \"computer-aided detection\"[tiab] OR CAD[tiab] OR algorithm[tiab]) AND (\"software version\"[tiab] OR \"software versions\"[tiab] OR \"two versions\"[tiab] OR \"different versions\"[tiab] OR \"consecutive versions\"[tiab] OR \"new version\"[ti] OR \"updated version\"[tiab] OR \"algorithm update\"[tiab] OR \"algorithmic updates\"[tiab] OR \"software release\"[tiab] OR \"software releases\"[tiab]) AND (radiograph*[tiab] OR mammogra*[tiab] OR \"computed tomography\"[tiab] OR CT[tiab] OR MRI[tiab] OR tuberculosis[tiab] OR nodule*[tiab] OR calcium[tiab])",
+   "hits": 114,
+   "screened": 114,
+   "kept": [
+    "T2-P05",
+    "T2-P11",
+    "T2-P12",
+    "T2-P13",
+    "T2-P15",
+    "T2-P16"
+   ],
+   "notes": "Major strand: version-to-version comparisons of commercial AI/CAD. Rinaldi 2010 (LungCARE 2006G vs 2007S nodule volumetry; recommends one software version for growth assessment) is the key CT-volumetry item. Larsen 2026 (Transpara 1.7 vs 2.1 score distributions), Boitsios 2026 (BoneXpert v2 vs v3 shifted bone-age SDS at equal accuracy), Codlin 2025 (Lunit CXR 3.1 vs 3.9: old-version threshold made the new version less accurate until re-calibrated), Qin 2022 (CAD4TB v6/v7, qXR v2/v3), Angulo 2025 (Gleamer ChestView 1.5.0 vs 1.5.4), Toilybayeva 2026 (VSBONE BSI 2.1 vs 3.0), older CAD version comparisons (Kim 2010, Meziane 2012, Celik 2023). Abstracts read. Screened in but not carried to PAPERS.csv (peripheral or superseded): Angulo2025, Toilybayeva2026."
+  },
+  {
+   "id": "T2-S030",
+   "date": "2026-10-12",
+   "tool": "PubMed E-utilities",
+   "family": "boolean",
+   "query": "(NeuroQuant[tiab] OR icobrain[tiab] OR \"icometrix\"[tiab] OR Neuroreader[tiab] OR \"AccuBrain\"[tiab] OR \"mdbrain\"[tiab] OR \"Quantib\"[tiab] OR \"QyScore\"[tiab] OR \"volBrain\"[tiab] OR \"SIENA\"[tiab] OR \"brain volumetry\"[tiab]) AND (version[tiab] OR versions[tiab] OR update*[tiab] OR upgrade*[tiab])",
+   "hits": 52,
+   "screened": 52,
+   "kept": [
+    "T2-P09",
+    "T2-P25"
+   ],
+   "notes": "Commercial brain volumetry versions: NeuroQuant NQ1 vs NQ2 region-dependent bias, caution when comparing volumes across versions (Stelmokas 2017); AccuBrain IV1.2 vs IV2.0, vendor-affiliated, small differences (Zhao 2022). Neighbour: mid-study scanner changes offset longitudinal brain-volume change, corrected by fixed-effect terms (Lee 2019). Screened in but not carried to PAPERS.csv (peripheral or superseded): Zhao2022."
+  },
+  {
+   "id": "T2-S031",
+   "date": "2026-10-12",
+   "tool": "PubMed E-utilities",
+   "family": "boolean",
+   "query": "(\"coronary artery calcium\"[tiab] OR \"calcium score\"[tiab] OR \"calcium scoring\"[tiab] OR Agatston[tiab]) AND (\"software version\"[tiab] OR \"software versions\"[tiab] OR \"software upgrade\"[tiab] OR \"software update\"[tiab] OR \"different software\"[tiab] OR \"scoring software\"[tiab])",
+   "hits": 26,
+   "screened": 26,
+   "kept": [],
+   "notes": "Only inter-platform (different vendor) calcium-score reproducibility (Weininger 2012, Ajlan 2015); no version-change study found. Not kept: different software is already covered by the manuscript's citations."
+  },
+  {
+   "id": "T2-S032",
+   "date": "2026-10-12",
+   "tool": "PubMed E-utilities",
+   "family": "boolean",
+   "query": "(SUV[tiab] OR \"standardized uptake value\"[tiab] OR PERCIST[tiab] OR \"metabolic tumor volume\"[tiab] OR \"metabolic tumour volume\"[tiab]) AND (\"software version\"[tiab] OR \"software versions\"[tiab] OR \"software upgrade\"[tiab] OR \"software update\"[tiab] OR \"same software\"[tiab] OR \"software packages\"[tiab] OR \"different software\"[tiab])",
+   "hits": 40,
+   "screened": 40,
+   "kept": [],
+   "notes": "Nuclear medicine: between-package differences (Bos-Liedke 2021, Hartrampf 2020) and SUV digital reference object (Pierce 2015); no version-change study of SUV software found. Ying 2025 (PET/MR attenuation-correction upgrades) already recorded."
+  },
+  {
+   "id": "T2-S033",
+   "date": "2026-10-12",
+   "tool": "WebSearch",
+   "family": "regulatory",
+   "query": "QIBA CT tumor volume change profile \"same software\" version baseline follow-up requirement",
+   "hits": null,
+   "screened": 9,
+   "kept": [
+    "T2-P19"
+   ],
+   "notes": "Located the QIBA CT Tumor Volume Change for Advanced Disease profile PDF (2022-07-21) on the QIBA wiki."
+  },
+  {
+   "id": "T2-S034",
+   "date": "2026-10-12",
+   "tool": "WebFetch + pdftotext",
+   "family": "regulatory",
+   "query": "https://qibawiki.rsna.org/images/3/3c/QIBACTVol_TumorVolumeChange_2022Jul21.pdf (full text extracted, searched for version/same tool/re-process)",
+   "hits": 1,
+   "screened": 1,
+   "kept": [
+    "T2-P19"
+   ],
+   "notes": "Read: Section 3.2 and A.9: same Image Analysis Tool and same Radiologist must measure both timepoints; shall re-process the first timepoint if processed by a different tool; Table B-1 gives minimum detectable change for same vs different analysis tool. 'Version' is recorded (Make/Model/Version) but the same-tool rule does not say 'version' explicitly."
+  },
+  {
+   "id": "T2-S035",
+   "date": "2026-10-12",
+   "tool": "WebSearch",
+   "family": "regulatory",
+   "query": "QIBA Profile Small Lung Nodule Volume Assessment and Monitoring in Low Dose CT Screening pdf \"same\" software version timepoints",
+   "hits": null,
+   "screened": 9,
+   "kept": [
+    "T2-P20"
+   ],
+   "notes": "Located the 2023 small lung nodule profile PDF."
+  },
+  {
+   "id": "T2-S036",
+   "date": "2026-10-12",
+   "tool": "curl + pdftotext",
+   "family": "regulatory",
+   "query": "https://qibawiki.rsna.org/images/c/c2/QIBA_CT_Vol_SmallLungNoduleAssessmentInCTScreening_2023Dec19.pdf (full text searched)",
+   "hits": 1,
+   "screened": 1,
+   "kept": [
+    "T2-P20"
+   ],
+   "notes": "Decisive: Section 3.10: 'different versions of the same program or its components may change its performance, a nodule being evaluated for change must be analyzed at both time points with the same software program (manufacturer, model, and version)'; specification 'Shall use the same Image Analysis Tool (manufacturer, model, version) for measurements at all time points'; repeat the comparison-timepoint segmentation if the previous one is unavailable or not comparable. Cites Ashraf 2010."
+  },
+  {
+   "id": "T2-S037",
+   "date": "2026-10-12",
+   "tool": "Crossref REST",
+   "family": "regulatory",
+   "query": "GET /works/10.1148/qiba/20220721; works?query.bibliographic=Small Lung Nodule Volume Assessment ... QIBA profile; works?filter=prefix:10.1148&query.bibliographic=QIBA profile",
+   "hits": 14,
+   "screened": 14,
+   "kept": [
+    "T2-P19",
+    "T2-P20",
+    "T2-P21"
+   ],
+   "notes": "QIBA profiles have Crossref report DOIs: CTV-AD 10.1148/qiba/20220721; Small Lung Nodule 10.1148/qiba/20231219; FDG-PET/CT SUV 10.1148/qiba/20230615; CT Lung Densitometry 10.1148/qiba/20200904."
+  },
+  {
+   "id": "T2-S038",
+   "date": "2026-10-12",
+   "tool": "curl (QIBA wiki) + pdftotext",
+   "family": "regulatory",
+   "query": "https://doi.org/10.1148/qiba/20230615 -> qibawiki page -> /images/c/c7/QIBA_FDG-PET_Profile_v114.pdf (full text searched)",
+   "hits": 1,
+   "screened": 1,
+   "kept": [
+    "T2-P21"
+   ],
+   "notes": "FDG-PET/CT profile v1.14 (2016, updated 2023-06-15): analysis tools 'including software version' shall be used consistently across all sequential lesion measurements (3.4.3); workstation shall support analysis with updated and prior versions of analysis software (4.5, back-testing compatibility); same scanner with same software version strongly recommended in longitudinal studies."
+  },
+  {
+   "id": "T2-S039",
+   "date": "2026-10-12",
+   "tool": "WebSearch",
+   "family": "regulatory",
+   "query": "FDA guidance \"Clinical Trial Imaging Endpoint Process Standards\" imaging charter software version image analysis",
+   "hits": null,
+   "screened": 9,
+   "kept": [
+    "T2-P22"
+   ],
+   "notes": "Located the April 2018 final guidance (docket FDA-2011-D-0586); HHS copy returned HTML, FDA media copy (fda.gov/media/81172/download) downloaded."
+  },
+  {
+   "id": "T2-S040",
+   "date": "2026-10-12",
+   "tool": "curl + pdftotext",
+   "family": "regulatory",
+   "query": "https://www.fda.gov/media/81172/download (full text searched for software/version/upgrade)",
+   "hits": 1,
+   "screened": 1,
+   "kept": [
+    "T2-P22"
+   ],
+   "notes": "Read: 'Software upgrades within the trial period may affect how images are generated. Changes in an image may be caused by these software changes and be incorrectly attributed to actual clinical changes. The charter should specify minimum requirements for important software'; ongoing site qualification to control hardware/software changes in quantitative imaging trials; the same computer-assisted interpretation tool should be available to all readers. Mainly acquisition/reconstruction software; no explicit same-analysis-version-at-both-timepoints rule."
+  },
+  {
+   "id": "T2-S041",
+   "date": "2026-10-12",
+   "tool": "PubMed E-utilities",
+   "family": "boolean",
+   "query": "(\"independent central review\"[tiab] OR \"blinded independent central review\"[tiab] OR \"imaging charter\"[tiab] OR \"imaging core lab\"[tiab] OR \"core laboratory\"[tiab] OR \"imaging endpoint\"[tiab] OR \"imaging endpoints\"[tiab]) AND (software[tiab] OR version*[tiab] OR upgrade*[tiab] OR \"measurement tool\"[tiab] OR volumetr*[tiab])",
+   "hits": 228,
+   "screened": 80,
+   "kept": [],
+   "notes": "Dominated by trial reports that mention central review; no paper on analysis-software version control in trial imaging found in the screened set. Site-central discordance benchmarks (Goldmacher 2026) left to T4."
+  },
+  {
+   "id": "T2-S042",
+   "date": "2026-10-12",
+   "tool": "Europe PMC REST",
+   "family": "boolean",
+   "query": "(TITLE_ABS:\"model update\" OR TITLE_ABS:\"model updates\" OR TITLE_ABS:\"updated model\" OR TITLE_ABS:\"model version\" OR TITLE_ABS:\"model versions\" OR TITLE_ABS:\"software update\" OR TITLE_ABS:\"software version\" OR TITLE_ABS:\"retrained\" OR TITLE_ABS:\"retraining\") AND TITLE_ABS:segmentation AND (TITLE_ABS:longitudinal OR TITLE_ABS:\"follow-up\" OR TITLE_ABS:serial) AND (TITLE_ABS:volume OR TITLE_ABS:volumetry OR TITLE_ABS:volumetric) AND (FIRST_PDATE:[2025-01-01 TO 2026-12-31])",
+   "hits": 0,
+   "screened": 0,
+   "kept": [],
+   "notes": "Direct-competitor check (title/abstract, 2025-2026): no hit."
+  },
+  {
+   "id": "T2-S043",
+   "date": "2026-10-12",
+   "tool": "Europe PMC REST",
+   "family": "boolean",
+   "query": "(\"model update\" OR \"model updates\" OR \"updated model\" OR \"model version\" OR \"model versions\" OR \"software update\" OR \"software version\" OR retrained OR retraining OR \"new version\") AND segmentation AND (longitudinal OR \"follow-up\") AND (volume OR volumetry OR volumetric) AND (baseline) AND FIRST_PDATE:[2025-01-01 TO 2026-12-31]",
+   "hits": 2853,
+   "screened": 100,
+   "kept": [],
+   "notes": "Full-text variant, ranked by relevance; first 100 screened by title: applied longitudinal volumetry studies, the four-tool brain volumetry comparison (Saltarelli 2026) and the glioma volumetry review (Slachta 2026), both screened on 27 Sep. No competitor."
+  },
+  {
+   "id": "T2-S044",
+   "date": "2026-10-12",
+   "tool": "PubMed E-utilities",
+   "family": "boolean",
+   "query": "(update*[tiab] OR upgrade*[tiab] OR retrain*[tiab] OR \"new version\"[tiab] OR \"model version*\"[tiab] OR \"software version*\"[tiab]) AND (segmentation[tiab] OR volumetry[tiab] OR \"auto-contouring\"[tiab]) AND (longitudinal[tiab] OR follow-up[tiab] OR \"change over time\"[tiab] OR \"volume change\"[tiab] OR \"volume changes\"[tiab] OR \"treatment response\"[tiab] OR growth[tiab]) AND (compatib*[tiab] OR consisten*[tiab] OR comparab*[tiab] OR interchangeab*[tiab] OR reprocess*[tiab] OR re-process*[tiab] OR re-analy*[tiab] OR reanaly*[tiab]) AND 2024:2026[dp]",
+   "hits": 6,
+   "screened": 6,
+   "kept": [],
+   "notes": "Direct-competitor check: none relevant (open-source vs commercial MR-guided RT models, Langner 2025, compares products, not versions over follow-up)."
+  },
+  {
+   "id": "T2-S045",
+   "date": "2026-10-12",
+   "tool": "arXiv API",
+   "family": "venue_sweep",
+   "query": "search_query=abs:segmentation AND (abs:\"model update\" OR abs:\"model updates\" OR abs:\"backward compatib\" OR abs:\"backward-compatib\" OR abs:\"model version\" OR abs:\"update regression\") AND (abs:longitudinal OR abs:volume OR abs:medical), sortBy=submittedDate",
+   "hits": 14,
+   "screened": 14,
+   "kept": [],
+   "notes": "Federated/incremental-learning papers and AEGIS governance (seen 27 Sep); no longitudinal-measurement study."
+  },
+  {
+   "id": "T2-S046",
+   "date": "2026-10-12",
+   "tool": "arXiv API",
+   "family": "venue_sweep",
+   "query": "search_query=(abs:longitudinal OR abs:\"follow-up\") AND (abs:volumetry OR abs:\"volume change\" OR abs:\"tumor volume\" OR abs:\"tumour volume\" OR abs:\"lesion volume\") AND (abs:update OR abs:retrain OR abs:retraining OR abs:version OR abs:versions OR abs:reprocess OR abs:reprocessing OR abs:compatibility)",
+   "hits": 3,
+   "screened": 3,
+   "kept": [],
+   "notes": "No competitor; scanner-drift normalisation for knee MRI segmentation (2017) is an instrument-drift neighbour."
+  },
+  {
+   "id": "T2-S047",
+   "date": "2026-10-12",
+   "tool": "arXiv API",
+   "family": "venue_sweep",
+   "query": "search_query=(abs:\"model update\" OR abs:\"model updating\" OR abs:\"updated model\" OR abs:\"model upgrade\") AND (abs:radiology OR abs:\"medical imaging\" OR abs:CT OR abs:MRI), sortBy=submittedDate (items through 2026-10-05 screened)",
+   "hits": 48,
+   "screened": 48,
+   "kept": [],
+   "notes": "Dominated by federated learning; includes the arXiv regulation paper 2412.20498 (seen 27 Sep). No new competitor since 27 Sep."
+  },
+  {
+   "id": "T2-S048",
+   "date": "2026-10-12",
+   "tool": "Semantic Scholar Graph API",
+   "family": "boolean",
+   "query": "paper/search?query=segmentation model update longitudinal volume change baseline reprocessing&limit=40",
+   "hits": 112,
+   "screened": 40,
+   "kept": [],
+   "notes": "Applied longitudinal volumetry studies only; no update-compatibility study."
+  },
+  {
+   "id": "T2-S049",
+   "date": "2026-10-12",
+   "tool": "OpenAlex",
+   "family": "boolean",
+   "query": "works?search=software version change longitudinal measurement baseline follow-up reprocessing volumetry&filter=from_publication_date:2024-01-01",
+   "hits": 9,
+   "screened": 9,
+   "kept": [],
+   "notes": "No competitor; a scanner-relocation reliability preprint (medRxiv Sep 2026) and a volumetric radiology MLLM review (arXiv 2608.20549, abstract read; not about versions)."
+  },
+  {
+   "id": "T2-S050",
+   "date": "2026-10-12",
+   "tool": "OpenAlex",
+   "family": "boolean",
+   "query": "works?search=deep learning model update retraining longitudinal tumor volume change comparability&filter=from_publication_date:2024-01-01",
+   "hits": 317,
+   "screened": 40,
+   "kept": [],
+   "notes": "Generic DL reviews; no competitor in the top 40 by relevance."
+  },
+  {
+   "id": "T2-S051",
+   "date": "2026-10-12",
+   "tool": "WebSearch (extended)",
+   "family": "exact_phrase",
+   "query": "segmentation model update longitudinal tumor volume baseline reprocessed with new model version 2026",
+   "hits": null,
+   "screened": 9,
+   "kept": [],
+   "notes": "Only temporally consistent longitudinal segmentation methods (same model across timepoints) and datasets; no version-change study."
+  },
+  {
+   "id": "T2-S052",
+   "date": "2026-10-12",
+   "tool": "WebSearch (extended)",
+   "family": "exact_phrase",
+   "query": "AI software update changes follow-up measurements prior exam comparison radiology volumetry \"software update\" longitudinal 2025 OR 2026",
+   "hits": null,
+   "screened": 10,
+   "kept": [],
+   "notes": "No study quantifying update effects on follow-up measurement. Surfaced a radiology-reporting safety review (PMC13539828) noting inconsistent documentation of AI measurements, and USPTO patents on monitoring autonomous AI (patent family checked next)."
+  },
+  {
+   "id": "T2-S053",
+   "date": "2026-10-12",
+   "tool": "WebSearch",
+   "family": "patent",
+   "query": "patent reprocessing prior imaging study when machine learning model version updated longitudinal measurement comparison \"model version\"",
+   "hits": null,
+   "screened": 9,
+   "kept": [],
+   "notes": "No patent on re-inference of prior studies after a model update found by web search (Google Patents not queried directly; coverage limit). Surfaced a FreeSurfer mailing-list thread on mixing versions in longitudinal processing."
+  },
+  {
+   "id": "T2-S054",
+   "date": "2026-10-12",
+   "tool": "curl (FreeSurfer wiki)",
+   "family": "dataset_docs",
+   "query": "https://surfer.nmr.mgh.harvard.edu/fswiki/LongitudinalProcessing (text searched for version/re-run statements)",
+   "hits": 1,
+   "screened": 1,
+   "kept": [],
+   "notes": "Page (last edited 2021-05-03) has no explicit same-version statement in extracted text; the developers' advice is documented via Gronenschild 2012 (already cited). WebFetch timed out; curl succeeded."
+  },
+  {
+   "id": "T2-S055",
+   "date": "2026-10-12",
+   "tool": "GitHub REST API + raw files",
+   "family": "code",
+   "query": "GET api.github.com/repos/wasserth/TotalSegmentator/releases; raw CHANGELOG.md; raw resources/improvements_in_v2.md",
+   "hits": 8,
+   "screened": 8,
+   "kept": [
+    "T2-P24"
+   ],
+   "notes": "Documentation evidence for public-model updates: v2 notes say segmentations 'will also be slightly different from v1, because all models have been retrained' (with label corrections for liver, spleen, kidney etc.); Release 2.5.0 doubled MR training subjects ('results can be different from previous versions'); 2.15.0 added a run manifest recording software/model versions; v3.0.0 weights posted 2026-09-07 without notes."
+  },
+  {
+   "id": "T2-S056",
+   "date": "2026-10-12",
+   "tool": "Semantic Scholar Graph API",
+   "family": "boolean",
+   "query": "paper/search?query=TotalSegmentator version 2 organ volume differences compared with version 1&limit=30",
+   "hits": null,
+   "screened": 0,
+   "kept": [],
+   "notes": "HTTP 429 (rate limit); replaced by web search T2-S057."
+  },
+  {
+   "id": "T2-S057",
+   "date": "2026-10-12",
+   "tool": "WebSearch",
+   "family": "boolean",
+   "query": "TotalSegmentator v1 versus v2 comparison organ volumes differ between versions study",
+   "hits": null,
+   "screened": 9,
+   "kept": [],
+   "notes": "No published v1-vs-v2 volume comparison; only cross-tool comparisons (MOOSE vs TotalSegmentator v2.0.5, Auriac 2025) and phase-reproducibility studies. Version differences are documented only in developer notes (T2-S055)."
+  },
+  {
+   "id": "T2-S058",
+   "date": "2026-10-12",
+   "tool": "OpenAlex",
+   "family": "known_item",
+   "query": "GET /works/https://doi.org/{doi} for 13 key new finds (Rinaldi 2010, Coric 2018, Goh 2011, Stelmokas 2017, Qin 2022, Codlin 2025, Larsen 2026, Boitsios 2026, Barati 2026, Fontaine 2025, Taib 2025, Hollo 2015, Filip 2022)",
+   "hits": 13,
+   "screened": 13,
+   "kept": [],
+   "notes": "OpenAlex IDs for citation chasing."
+  },
+  {
+   "id": "T2-S059",
+   "date": "2026-10-12",
+   "tool": "OpenAlex",
+   "family": "citation_forward",
+   "query": "works?filter=cites:W2171740305 (Rinaldi 2010)",
+   "hits": 9,
+   "screened": 9,
+   "kept": [
+    "T2-P18"
+   ],
+   "notes": "Citers include the 2023 systematic review of factors influencing nodule volumetry (Guedes Pinto 2023, OA, full text read) and the 2026 three-system Eur Radiol study (screened 27 Sep)."
+  },
+  {
+   "id": "T2-S060",
+   "date": "2026-10-12",
+   "tool": "OpenAlex",
+   "family": "citation_forward",
+   "query": "works?filter=cites:W2791703591 (Coric 2018)",
+   "hits": 8,
+   "screened": 8,
+   "kept": [],
+   "notes": "OCT/MS reviews and normative-data papers; no further version-change study."
+  },
+  {
+   "id": "T2-S061",
+   "date": "2026-10-12",
+   "tool": "OpenAlex",
+   "family": "citation_forward",
+   "query": "works?filter=cites:W2079290106 (Goh 2011)",
+   "hits": 36,
+   "screened": 36,
+   "kept": [],
+   "notes": "Perfusion-CT literature; Mazzei 2013 (already kept) and the DCE-CT consensus guidelines (Miles 2012, Eur Radiol; abstract read, version wording not verified). Screened in but not carried to PAPERS.csv (peripheral or superseded): Miles2012."
+  },
+  {
+   "id": "T2-S062",
+   "date": "2026-10-12",
+   "tool": "OpenAlex",
+   "family": "citation_forward",
+   "query": "works?filter=cites:W2767152357 (Stelmokas 2017)",
+   "hits": 27,
+   "screened": 27,
+   "kept": [],
+   "notes": "Brain-volumetry tool comparisons (NeuroQuant vs volBrain, vendor vs NeuroQuant) and FreeSurfer 5.3 vs 6.0 (Bigler 2018/2020). Screened in but not carried to PAPERS.csv (peripheral or superseded): Bigler2018."
+  },
+  {
+   "id": "T2-S063",
+   "date": "2026-10-12",
+   "tool": "PubMed E-utilities + Europe PMC fullTextXML",
+   "family": "known_item",
+   "query": "esearch term=volumetry tools pulmonary nodule systematic review meta-analysis factors influencing; PMC10517915 full text",
+   "hits": 1,
+   "screened": 1,
+   "kept": [
+    "T2-P18"
+   ],
+   "notes": "Guedes Pinto 2023 (137 studies): 'The same software package and version should be consistently used through the follow-up of any pulmonary nodule'; attributes a society recommendation to Fleischner 2017 (MacMahon) - to verify against the primary source."
+  },
+  {
+   "id": "T2-S064",
+   "date": "2026-10-12",
+   "tool": "PubMed E-utilities + Europe PMC + WebFetch",
+   "family": "known_item",
+   "query": "esearch Bankier AA[au] AND Fleischner[tiab] AND measuring[ti]; Devaraj A[au] AND volumetry[ti] AND nodule*[ti]; Europe PMC DOI lookup; WebFetch pubs.rsna.org/doi/full/10.1148/radiol.2017162894",
+   "hits": 6,
+   "screened": 6,
+   "kept": [],
+   "notes": "Fleischner measurement statement (Bankier 2017) and Devaraj 2017 located but paywalled (HTTP 403); their software-version wording could not be verified. Bartlett 2022 (OA) and Soo 2019 (software choice and recall rates) noted."
+  },
+  {
+   "id": "T2-S065",
+   "date": "2026-10-12",
+   "tool": "WebSearch",
+   "family": "regulatory",
+   "query": "Fleischner Society 2017 recommendations measuring pulmonary nodules volumetry \"same software\" follow-up version",
+   "hits": null,
+   "screened": 9,
+   "kept": [],
+   "notes": "Exact Fleischner wording not retrievable; secondary sources only."
+  },
+  {
+   "id": "T2-S066",
+   "date": "2026-10-12",
+   "tool": "WebSearch + WebFetch",
+   "family": "regulatory",
+   "query": "BTS pulmonary nodule guideline 2015 volumetry recommendation \"same software\" baseline follow-up volume doubling time; WebFetch thorax.bmj.com/content/70/Suppl_2/ii1",
+   "hits": null,
+   "screened": 9,
+   "kept": [],
+   "notes": "BTS guideline full text blocked (403); same-software wording not verified. Secondary summaries only."
+  },
+  {
+   "id": "T2-S067",
+   "date": "2026-10-12",
+   "tool": "PubMed E-utilities",
+   "family": "boolean",
+   "query": "FreeSurfer[tiab] AND (version[tiab] OR versions[tiab] OR \"software update\"[tiab] OR upgrade*[tiab]) AND (longitudinal[tiab] OR atrophy rate*[tiab] OR \"rate of change\"[tiab] OR \"rates of change\"[tiab]) AND (compar*[tiab] OR differ*[tiab] OR effect*[tiab])",
+   "hits": 26,
+   "screened": 26,
+   "kept": [],
+   "notes": "Hedges 2022 (NeuroImage): reliability with FreeSurfer 5.3/6.0/7.1 and cross-sectional vs longitudinal streams; Medawar 2021 (scanner upgrade, longitudinal grey matter). No study of mixing versions within one subject's series. Screened in but not carried to PAPERS.csv (peripheral or superseded): Hedges2022, Medawar2021."
+  },
+  {
+   "id": "T2-S068",
+   "date": "2026-10-12",
+   "tool": "Crossref REST + Europe PMC (core)",
+   "family": "known_item",
+   "query": "GET /works/10.1101/2024.11.11.623071 and /works/10.1038/s41598-026-64679-2; Europe PMC DOI lookups (abstracts)",
+   "hits": 2,
+   "screened": 2,
+   "kept": [],
+   "notes": "FreeSurfer 5.3/6.0.1/7.3.2 in Parkinson's disease incl. longitudinal data from 125 patients (bioRxiv 2024, no journal version registered); the 2026 Sci Rep paper concerns numerical variability, not versions. Screened in but not carried to PAPERS.csv (peripheral or superseded): Sokolowski2024."
+  },
+  {
+   "id": "T2-S069",
+   "date": "2026-10-12",
+   "tool": "OpenAlex",
+   "family": "citation_backward",
+   "query": "referenced_works of W7214243344 (Barati 2026), W4409478873 (Codlin 2025), W7123342198 (Larsen 2026), W4413038300 (Fontaine 2025)",
+   "hits": 101,
+   "screened": 101,
+   "kept": [
+    "T2-P14"
+   ],
+   "notes": "Backward chase surfaced Fehr 2023 (IJTLD letter, OA, full text read): CAD4TB v5/v6/v7 similar AUC but very different score scales; old thresholds give different sensitivity/specificity; calls for regulation requiring vendors to communicate version changes. Other references are RT auto-contouring QA (ESTRO/AAPM 2024 guideline, left to T6) and screening-AI evaluations."
+  },
+  {
+   "id": "T2-S070",
+   "date": "2026-10-12",
+   "tool": "Crossref REST + PubMed + Europe PMC fullTextXML",
+   "family": "known_item",
+   "query": "GET /works/10.5588/ijtld.22.0437; esearch Fehr J[au] AND CAD4TB[tiab]; PMC9904401",
+   "hits": 1,
+   "screened": 1,
+   "kept": [
+    "T2-P14"
+   ],
+   "notes": "Verified: Int J Tuberc Lung Dis 27(2):157-160, 2023 (PMID 36853104)."
+  },
+  {
+   "id": "T2-S071",
+   "date": "2026-10-12",
+   "tool": "OpenAlex",
+   "family": "citation_forward",
+   "query": "works?filter=cites:W4282842066 (Qin 2022)",
+   "hits": 43,
+   "screened": 43,
+   "kept": [],
+   "notes": "TB CAD evaluations; version-specific items already recorded (Codlin 2025, Fehr 2023)."
+  },
+  {
+   "id": "T2-S072",
+   "date": "2026-10-12",
+   "tool": "OpenAlex",
+   "family": "citation_forward",
+   "query": "works?filter=cites: W4317888682 (Fehr 2023), W7123342198 (Larsen 2026), W4409291517 (Taib 2025), W4409478873 (Codlin 2025), W4413038300 (Fontaine 2025)",
+   "hits": 30,
+   "screened": 30,
+   "kept": [],
+   "notes": "Threshold-calibration studies and AI Act surveillance commentary (Eur J Radiol 2026, left to T6); no new version-change measurement study."
+  },
+  {
+   "id": "T2-S073",
+   "date": "2026-10-12",
+   "tool": "PubMed E-utilities",
+   "family": "boolean",
+   "query": "(\"breast density\"[tiab] OR \"volumetric density\"[tiab] OR Volpara[tiab] OR Quantra[tiab]) AND (\"software version\"[tiab] OR \"software versions\"[tiab] OR \"version\"[ti] OR \"versions\"[ti] OR \"software update\"[tiab] OR \"software upgrade\"[tiab] OR \"algorithm version\"[tiab])",
+   "hits": 13,
+   "screened": 13,
+   "kept": [],
+   "notes": "No breast-density version-change study beyond a 2016 DBT feasibility study of a new software version (Machida 2016, not kept)."
+  },
+  {
+   "id": "T2-S074",
+   "date": "2026-10-12",
+   "tool": "PubMed E-utilities",
+   "family": "boolean",
+   "query": "(FastSurfer[tiab] OR SynthSeg[tiab] OR \"nnU-Net\"[tiab] OR nnUNet[tiab] OR MONAI[tiab] OR \"SAMSEG\"[tiab]) AND (version[tiab] OR versions[tiab] OR \"v2\"[tiab] OR update*[tiab] OR release*[tiab]) AND (volume*[tiab] OR volumetr*[tiab]) AND (compar*[tiab] OR differ*[tiab] OR agreement[tiab] OR consisten*[tiab])",
+   "hits": 32,
+   "screened": 32,
+   "kept": [],
+   "notes": "No version-to-version comparison of public DL segmentation tools (FastSurfer, SynthSeg, nnU-Net, MONAI); applied segmentation studies only."
+  },
+  {
+   "id": "T2-S075",
+   "date": "2026-10-12",
+   "tool": "PubMed E-utilities",
+   "family": "boolean",
+   "query": "(\"sequential locked\"[tiab] OR \"locked read\"[tiab] OR \"locked reading\"[tiab] OR \"locked sequential\"[tiab]) AND (imaging[tiab] OR RECIST[tiab] OR tumor[tiab] OR tumour[tiab] OR review[tiab]); Ford R[au] AND \"independent central review\"[ti]",
+   "hits": 5,
+   "screened": 5,
+   "kept": [],
+   "notes": "Checked whether central-review literature addresses analysis-software versions; Ford 2009 (RECIST working group, central review lessons) abstract does not; locked-read hits are trial reports. Not kept."
+  },
+  {
+   "id": "T2-S076",
+   "date": "2026-10-12",
+   "tool": "PubMed E-utilities",
+   "family": "boolean",
+   "query": "(nodule*[tiab] OR tumor*[tiab] OR tumour*[tiab] OR lesion*[tiab] OR liver[tiab] OR organ*[tiab]) AND (volumetr*[tiab] OR \"volume measurement*\"[tiab]) AND (\"software version*\"[tiab] OR \"different versions\"[tiab] OR \"two versions\"[tiab] OR \"new version\"[tiab] OR \"software upgrade*\"[tiab] OR \"software update*\"[tiab] OR \"version of the software\"[tiab]) AND (\"computed tomography\"[tiab] OR CT[tiab])",
+   "hits": 9,
+   "screened": 9,
+   "kept": [
+    "T2-P05"
+   ],
+   "notes": "Confirms that Rinaldi 2010 is the only CT tumour/nodule volumetry version-change study indexed with these terms."
+  },
+  {
+   "id": "T2-S077",
+   "date": "2026-10-12",
+   "tool": "Europe PMC REST",
+   "family": "exact_phrase",
+   "query": "(\"same software version\" OR \"same version of the software\" OR \"same software and version\" OR \"same software package and version\") AND (baseline OR \"follow-up\" OR longitudinal) AND (volumetry OR volume OR \"tumor size\" OR \"tumour size\")",
+   "hits": 97,
+   "screened": 80,
+   "kept": [],
+   "notes": "Full-text phrase hits are mostly methods statements in applied studies; recommendation-type items (Guedes Pinto 2023, neuroimaging best-practice reviews) already covered or out of scope. No oncology CT guideline beyond QIBA found."
+  },
+  {
+   "id": "T2-S078",
+   "date": "2026-10-12",
+   "tool": "Europe PMC REST (core)",
+   "family": "known_item",
+   "query": "DOI:\"10.1007/s00330-026-12702-5\"; DOI:\"10.3390/diagnostics16152383\"; DOI:\"10.3389/fneur.2026.1797487\"",
+   "hits": 3,
+   "screened": 3,
+   "kept": [
+    "T2-P17"
+   ],
+   "notes": "Re-decision on the three items screened as optional on 27 Sep (abstracts now read): Jobstl 2026 (three commercial nodule tools; no significant mean differences but small variations changed BTS-based management) kept as useful for a clinical-relevance sentence; Saltarelli 2026 (four brain-volumetry products, 20-40% offsets) and Slachta 2026 (glioma narrative review) not recommended - different products or no update experiment."
+  },
+  {
+   "id": "T2-S079",
+   "date": "2026-10-12",
+   "tool": "Europe PMC REST (core) + fullTextXML",
+   "family": "known_item",
+   "query": "DOI:\"10.1177/18796397251366900\"; DOI:\"10.3233/JHD-240016\"; PMC11307036 full text searched for version",
+   "hits": 2,
+   "screened": 2,
+   "kept": [
+    "T2-P23"
+   ],
+   "notes": "EHDN Imaging Working Group opinion (Hobbs 2024): 'Choice of image-analysis software type, version and any non-default parameters should be defined prior to the start of the trial'; HD-ISS staging requires FreeSurfer 6. Knights 2025 concerns cross-sectional vs longitudinal stream (not version); not recommended."
+  },
+  {
+   "id": "T2-S080",
+   "date": "2026-10-12",
+   "tool": "Europe PMC fullTextXML",
+   "family": "known_item",
+   "query": "PMC13212409 (Larsen 2026), PMC11999130 (Codlin 2025), PMC5858697 (Stelmokas 2017) full texts",
+   "hits": 3,
+   "screened": 3,
+   "kept": [
+    "T2-P11",
+    "T2-P15"
+   ],
+   "notes": "Larsen 2026 read: Transpara 2.1 changed architecture and training data; AUC rose but 1.5% of screen-detected and 12.0% of interval cancers had lower scores (case-level downgrades). Codlin 2025 read: old-version 90%-sensitivity threshold (0.217) gave the new version 96.4% sensitivity but 23.1% vs 45.8% specificity (+36.4% testing). Stelmokas full text unavailable (HTTP 500), abstract only."
+  },
+  {
+   "id": "T2-S081",
+   "date": "2026-10-12",
+   "tool": "PubMed E-utilities + Europe PMC fullTextXML",
+   "family": "regulatory",
+   "query": "EANM FDG PET/CT procedure guidelines v2.0 (Boellaard 2015), DOI:\"10.1007/s00259-014-2961-x\", PMC4315529 full text searched for software version",
+   "hits": 1,
+   "screened": 1,
+   "kept": [],
+   "notes": "EANM 2015 requires QC/cross-calibration after scanner software upgrades but has no statement on analysis-software version across baseline and follow-up. Not kept."
+  },
+  {
+   "id": "T2-S082",
+   "date": "2026-10-12",
+   "tool": "Crossref REST",
+   "family": "known_item",
+   "query": "GET /works/{doi} for 24 candidate DOIs (batch; see PAPERS.csv)",
+   "hits": 24,
+   "screened": 24,
+   "kept": [],
+   "notes": "All bibliographic details for recommended papers taken from Crossref; Barati 2026 issued online 2026-09-23 (JACMP 27(10):e70824) and was not found by the 27 Sep refresh; Angulo 2025 online ahead of print without volume."
+  },
+  {
+   "id": "T2-S083",
+   "date": "2026-10-12",
+   "tool": "Crossref REST",
+   "family": "venue_sweep",
+   "query": "works?query.bibliographic={longitudinal segmentation model update version consistency volume | model update backward compatibility medical image segmentation longitudinal | segmentation model versions longitudinal tumour volume change}&filter=from-pub-date:2026-08-01&rows=25",
+   "hits": null,
+   "screened": 75,
+   "kept": [
+    "T2-P27"
+   ],
+   "notes": "Recency sweep (Aug-Oct 2026, incl. LNCS/MICCAI 2026 chapters). No update-compatibility study. Found Adhikary, Chabi, Mastmeyer (Research Square preprint, 10 Aug 2026): expert baseline mask + model follow-up mask on the public longitudinal whole-body CT cohort changed RECIST target-lesion response in 43/258 patients (16.7%); a mixed-source design, not a model-version study. Abstract via Crossref."
+  },
+  {
+   "id": "T2-S084",
+   "date": "2026-10-12",
+   "tool": "PubMed E-utilities",
+   "family": "boolean",
+   "query": "(densitometry[tiab] OR DXA[tiab] OR \"bone mineral density\"[tiab]) AND (\"cross-calibration\"[tiab] OR \"cross calibration\"[tiab]) AND (\"official position*\"[tiab] OR ISCD[tiab] OR guideline*[tiab] OR recommendation*[tiab]) AND (software[tiab] OR upgrade*[tiab] OR replacement[tiab] OR \"new scanner\"[tiab] OR monitoring[tiab])",
+   "hits": 2,
+   "screened": 2,
+   "kept": [],
+   "notes": "Neighbouring field (DXA monitoring): ISCD 2019 position summary on cross-calibration (Shuhart 2019) concerns scanner replacement; paywalled, software wording not verified; not kept."
+  },
+  {
+   "id": "T2-S085",
+   "date": "2026-10-12",
+   "tool": "WebSearch + curl (UCL Discovery) + pdftotext",
+   "family": "known_item",
+   "query": "Coric Petzold Uitdehaag Balk \"Software updates of OCT segmentation algorithms influence longitudinal assessment of retinal atrophy\" pdf; https://discovery.ucl.ac.uk/id/eprint/10043994/1/Petzold%20Manuscript_rev_changes_in%20red_LB.pdf",
+   "hits": 1,
+   "screened": 1,
+   "kept": [
+    "T2-P07"
+   ],
+   "notes": "Decisive: accepted manuscript read at methods/results level. 178 MS patients with 2-year follow-up: atrophy -0.95 um (all old version), -0.71 um (all new), -0.63 um when baseline segmented with old and follow-up with new; mixed vs all-old differed (0.32 um, p<0.001), mixed vs all-new did not (0.08 um, p=0.136). Authors: stored baseline 'retains its previous segmentation' after a device update, so baselines should be re-segmented with the same version. Closest prior work to the manuscript's question (OCT, single vendor update, no reference change, group means). The AAM contains an unresolved drafting note; published version not read (paywalled)."
+  },
+  {
+   "id": "T2-S086",
+   "date": "2026-10-12",
+   "tool": "PubMed E-utilities",
+   "family": "boolean",
+   "query": "(re-segment*[tiab] OR resegment*[tiab] OR re-analy*[tiab] OR reanaly*[tiab] OR re-process*[tiab] OR reprocess*[tiab] OR \"segmented again\"[tiab]) AND (\"software version*\"[tiab] OR \"software update*\"[tiab] OR \"software upgrade*\"[tiab] OR \"new version\"[tiab] OR \"updated version\"[tiab] OR \"algorithm update*\"[tiab]) AND (longitudinal[tiab] OR follow-up[tiab] OR baseline[tiab] OR serial[tiab])",
+   "hits": 10,
+   "screened": 10,
+   "kept": [],
+   "notes": "Returns Coric 2018 (recorded) plus DXA software-upgrade reanalysis (Wong 2002, Shypailo 2005) and a lung-function (multiple-breath washout) reanalysis after a software update (Meissner 2024, non-imaging). Saturation signal: no new imaging study."
+  },
+  {
+   "id": "T2-S087",
+   "date": "2026-10-12",
+   "tool": "Semantic Scholar Graph API",
+   "family": "boolean",
+   "query": "paper/search?query=mixed software versions baseline follow-up longitudinal measurement error reprocessing&limit=40",
+   "hits": 7,
+   "screened": 7,
+   "kept": [],
+   "notes": "No competitor; surfaced the echocardiography strain standardization task force 10-year follow-up (2025), prompting a cardiology check (T2-S088)."
+  },
+  {
+   "id": "T2-S088",
+   "date": "2026-10-12",
+   "tool": "PubMed E-utilities",
+   "family": "boolean",
+   "query": "(\"global longitudinal strain\"[tiab] OR \"speckle tracking\"[tiab] OR \"strain imaging\"[tiab]) AND (\"software version*\"[tiab] OR \"same vendor\"[tiab] OR \"same software\"[tiab] OR \"vendor and software\"[tiab] OR \"software upgrade*\"[tiab] OR \"software update*\"[tiab] OR \"inter-vendor\"[tiab] OR \"intervendor\"[tiab]) AND (serial[tiab] OR follow-up[tiab] OR longitudinal[tiab] OR monitoring[tiab] OR surveillance[tiab] OR cardiotoxicity[tiab])",
+   "hits": 68,
+   "screened": 68,
+   "kept": [
+    "T2-P26"
+   ],
+   "notes": "Cardiology neighbour: Castel 2016 (Arch Cardiovasc Dis): QLAB 9.0 vs 10.2 and EchoPAC 12.1 vs 13.1.1 upgrades changed GLS (bias 2.2% strain units; ICC 0.88) with stated implications for longitudinal follow-up. Most other hits are inter-vendor comparisons (EACVI-ASE task force) - different products."
+  },
+  {
+   "id": "T2-S089",
+   "date": "2026-10-12",
+   "tool": "Europe PMC REST",
+   "family": "boolean",
+   "query": "(\"same vendor\" OR \"same software\" OR \"same machine\") AND (\"global longitudinal strain\" OR GLS) AND (cardiotoxicity OR \"cancer therapy\") AND (consensus OR guideline OR recommendation) AND (serial OR \"follow-up\" OR baseline)",
+   "hits": 47,
+   "screened": 30,
+   "kept": [],
+   "notes": "Looked for a cardio-oncology rule on one vendor/software for serial GLS. OA texts checked (BSE/BCOS 2021 guideline PMC8052569; Liu 2020 JACC CardioOncol review PMC8352045) mention vendor software differences but no explicit same-version rule; Plana 2014 consensus not accessed. Not kept."
+  },
+  {
+   "id": "T2-S090",
+   "date": "2026-10-12",
+   "tool": "OpenAlex",
+   "family": "citation_backward",
+   "query": "referenced_works of W4310030124 (Haddad 2023, 89 refs), W2791703591 (Coric 2018, 30), W2171740305 (Rinaldi 2010, 21), W2079290106 (Goh 2011, 20); titles filtered for version/update/upgrade/software/reproducibility/longitudinal",
+   "hits": 160,
+   "screened": 160,
+   "kept": [],
+   "notes": "Only already-recorded version studies (Gronenschild 2012, Filip 2022) or different-package and scanner-upgrade comparisons (Han 2006; de Hoop 2008 six nodule packages; Kudo 2009 and Goh 2007 perfusion packages). Saturation signal."
+  },
+  {
+   "id": "T2-S091",
+   "date": "2026-10-12",
+   "tool": "Europe PMC REST",
+   "family": "boolean",
+   "query": "(pyradiomics OR \"radiomics software\" OR \"feature extraction software\") AND (\"software version\" OR \"different versions\" OR \"version change\" OR \"version update\") AND (reproducibility OR repeatability OR agreement OR \"feature values\")",
+   "hits": 2871,
+   "screened": 40,
+   "kept": [],
+   "notes": "Full-text variant of the radiomics check: only multi-software comparisons (Paquier 2022 IBSI compliance; Bettinelli 2026 dosiomics), no same-software version study. Search stopped: recent queries return recorded neighbours."
+  }
+ ]
+}

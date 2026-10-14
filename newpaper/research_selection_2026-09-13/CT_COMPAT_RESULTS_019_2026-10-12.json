@@ -1,0 +1,843 @@
+{
+  "status": "COMPAT_ANALYSIS_COMPLETE",
+  "protocol_id": "CT-UPDATE-019",
+  "descriptive_only": true,
+  "primary_family_changed": false,
+  "segmenters_pooled": false,
+  "cohorts_pooled": false,
+  "patient_level_values_included": false,
+  "bootstrap_draws": 10000,
+  "weighting": "pairs_within_patient_then_patients_within_run_then_runs_equal",
+  "log_scale_valid_pair_run": "old and new baseline and new follow-up volumes positive",
+  "limits_of_agreement_multiplier": 1.96,
+  "response_volume_thresholds_percent": {
+    "decrease": -65.7,
+    "increase": 72.79999999999998
+  },
+  "assessment_unit": {
+    "internal": "patient",
+    "pantrack": "patient_and_consecutive_scan_pair"
+  },
+  "segmenters": {
+    "unet": {
+      "runs": 20,
+      "seeds": [
+        20261001,
+        20261002,
+        20261003,
+        20261004,
+        20261005,
+        20261006,
+        20261007,
+        20261008,
+        20261009,
+        20261010,
+        20261011,
+        20261012,
+        20261013,
+        20261014,
+        20261015,
+        20261016,
+        20261017,
+        20261018,
+        20261019,
+        20261020
+      ],
+      "bootstrap_seed": 20261301,
+      "cohorts": {
+        "internal": {
+          "patients": 29,
+          "pairs": 277,
+          "relative_compatibility_cost": {
+            "mean_percent": 14.139856193315259,
+            "two_way_percentile_95": [
+              4.446842783172032,
+              41.90629577120711
+            ],
+            "per_run_percent": [
+              24.544035045661737,
+              11.092649258870901,
+              7.665799367989812,
+              11.095812448902942,
+              27.860965724267594,
+              8.390693749613941,
+              47.66090991273892,
+              26.119210935455705,
+              13.28114277748902,
+              13.405077554764278,
+              24.756549109916005,
+              14.278255372994453,
+              0.21889510009522883,
+              9.098981896931413,
+              -9.607543468200996,
+              8.95624983541461,
+              19.9203036434092,
+              7.72197979863829,
+              20.48202190227837,
+              11.859637880170148
+            ],
+            "runs_positive": 19,
+            "runs_negative": 1
+          },
+          "version_agreement": {
+            "bias_log": -0.05168437604684865,
+            "sd_log": 0.8236223129529044,
+            "bias_percent": -5.037145493699235,
+            "limits_percent": [
+              -81.09954347466413,
+              377.1283552805399
+            ],
+            "bias_percent_two_way_95": [
+              -16.4817514550109,
+              6.1348120273007485
+            ],
+            "sd_log_two_way_95": [
+              0.6863927266795072,
+              0.9704390291243291
+            ],
+            "lower_limit_percent_two_way_95": [
+              -87.16712270308416,
+              -73.73523317932198
+            ],
+            "upper_limit_percent_two_way_95": [
+              273.5222797448446,
+              502.06054283377273
+            ],
+            "valid_pair_runs": 5513,
+            "excluded_pair_runs": 27
+          },
+          "decomposition": {
+            "m_same": 0.9234733155110935,
+            "m_mix": 1.2368093406062575,
+            "d2": 0.6810249891212441,
+            "cross": -0.36768896402608026,
+            "identity_residual": 2.220446049250313e-16,
+            "kappa": 0.8587551382786938,
+            "predicted_inflation_percent": 31.81276066906642,
+            "observed_inflation_percent": 15.728201224235017,
+            "cross_ratio": -0.3981587316603555,
+            "kappa_two_way_95": [
+              0.7404998852620909,
+              0.9854644497200962
+            ],
+            "predicted_inflation_percent_two_way_95": [
+              24.43231413797788,
+              40.39729989210917
+            ],
+            "observed_inflation_percent_two_way_95": [
+              4.52251447582217,
+              28.160346325839814
+            ],
+            "cross_ratio_two_way_95": [
+              -0.6741783281706941,
+              -0.13469309184136175
+            ]
+          },
+          "patient_response": {
+            "assessments": 29,
+            "reference_category_counts": {
+              "decrease": 10,
+              "stable": 12,
+              "increase": 7,
+              "undefined": 0
+            },
+            "undefined_assessment_runs": {
+              "old_old": 0,
+              "old_new": 0,
+              "new_new": 0
+            },
+            "differs": {
+              "mean": 0.20344827586206896,
+              "run_min": 0.10344827586206896,
+              "run_max": 0.3793103448275862,
+              "two_way_percentile_95": [
+                0.1396551724137931,
+                0.2724137931034483
+              ]
+            },
+            "progression_split_differs": {
+              "mean": 0.10517241379310345,
+              "run_min": 0.034482758620689655,
+              "run_max": 0.2413793103448276,
+              "two_way_percentile_95": [
+                0.05000000000000001,
+                0.16896551724137931
+              ]
+            },
+            "mixing_loses_reference": {
+              "mean": 0.14310344827586205,
+              "run_min": 0.0,
+              "run_max": 0.2413793103448276,
+              "two_way_percentile_95": [
+                0.08793103448275863,
+                0.20344827586206898
+              ]
+            },
+            "mixing_gains_reference": {
+              "mean": 0.056896551724137934,
+              "run_min": 0.0,
+              "run_max": 0.13793103448275862,
+              "two_way_percentile_95": [
+                0.022413793103448276,
+                0.10000000000000002
+              ]
+            },
+            "spurious_increase": {
+              "mean": 0.06551724137931034,
+              "run_min": 0.0,
+              "run_max": 0.2413793103448276
+            },
+            "masked_increase": {
+              "mean": 0.0396551724137931,
+              "run_min": 0.0,
+              "run_max": 0.10344827586206896
+            },
+            "spurious_decrease": {
+              "mean": 0.04827586206896552,
+              "run_min": 0.0,
+              "run_max": 0.13793103448275862
+            },
+            "masked_decrease": {
+              "mean": 0.049999999999999996,
+              "run_min": 0.0,
+              "run_max": 0.13793103448275862
+            },
+            "agrees:old_old": {
+              "mean": 0.7396551724137931,
+              "run_min": 0.5862068965517241,
+              "run_max": 0.8275862068965517,
+              "two_way_percentile_95": [
+                0.6293103448275862,
+                0.8396551724137931
+              ]
+            },
+            "agrees:old_new": {
+              "mean": 0.703448275862069,
+              "run_min": 0.5862068965517241,
+              "run_max": 0.8620689655172413,
+              "two_way_percentile_95": [
+                0.6,
+                0.7999999999999999
+              ]
+            },
+            "agrees:new_new": {
+              "mean": 0.789655172413793,
+              "run_min": 0.6896551724137931,
+              "run_max": 0.896551724137931,
+              "two_way_percentile_95": [
+                0.6724137931034484,
+                0.8896551724137931
+              ]
+            }
+          }
+        },
+        "pantrack": {
+          "patients": 45,
+          "pairs": 181,
+          "relative_compatibility_cost": {
+            "mean_percent": 24.833721349535963,
+            "two_way_percentile_95": [
+              11.738531717201859,
+              41.097355173487124
+            ],
+            "per_run_percent": [
+              34.19099827161296,
+              18.869198475871297,
+              28.63469607259821,
+              34.33527968722987,
+              44.90253414645622,
+              8.515537181268185,
+              32.42156990900498,
+              49.358542643217284,
+              55.51734584365069,
+              6.1628560827804435,
+              9.729677375362655,
+              28.173815021785487,
+              35.36849411364058,
+              -2.2021410916105877,
+              15.010043975639498,
+              27.05318614087282,
+              27.441845690892098,
+              32.93011660638538,
+              8.129812020070549,
+              12.955837028592931
+            ],
+            "runs_positive": 19,
+            "runs_negative": 1
+          },
+          "version_agreement": {
+            "bias_log": 0.321866208409885,
+            "sd_log": 1.0191745513859316,
+            "bias_percent": 37.97001713284445,
+            "limits_percent": [
+              -81.28258687597317,
+              917.0062231090017
+            ],
+            "bias_percent_two_way_95": [
+              14.44385387187647,
+              68.55470433278781
+            ],
+            "sd_log_two_way_95": [
+              0.8855514193423035,
+              1.150630493742445
+            ],
+            "lower_limit_percent_two_way_95": [
+              -85.29794676623997,
+              -75.65877604999199
+            ],
+            "upper_limit_percent_two_way_95": [
+              601.0237815355019,
+              1405.770043881362
+            ],
+            "valid_pair_runs": 3617,
+            "excluded_pair_runs": 3
+          },
+          "decomposition": {
+            "m_same": 1.3508904784584497,
+            "m_mix": 2.0200380588018905,
+            "d2": 1.1423146223088705,
+            "cross": -0.4731670419654296,
+            "identity_residual": -4.440892098500626e-16,
+            "kappa": 0.9195657721819088,
+            "predicted_inflation_percent": 35.85290609215947,
+            "observed_inflation_percent": 22.2840195003807,
+            "cross_ratio": -0.3502630668515613,
+            "kappa_two_way_95": [
+              0.762367493925007,
+              1.132758971099549
+            ],
+            "predicted_inflation_percent_two_way_95": [
+              25.745942118039775,
+              51.10072431693892
+            ],
+            "observed_inflation_percent_two_way_95": [
+              9.827287036737104,
+              40.82639008176752
+            ],
+            "cross_ratio_two_way_95": [
+              -0.5392579931881116,
+              -0.16208668906070056
+            ]
+          },
+          "patient_response": {
+            "assessments": 116,
+            "reference_category_counts": {
+              "decrease": 3,
+              "stable": 97,
+              "increase": 16,
+              "undefined": 0
+            },
+            "undefined_assessment_runs": {
+              "old_old": 1,
+              "old_new": 1,
+              "new_new": 0
+            },
+            "differs": {
+              "mean": 0.2950573192239859,
+              "run_min": 0.16996472663139328,
+              "run_max": 0.45363315696649026,
+              "two_way_percentile_95": [
+                0.24274792768959436,
+                0.3475710978835978
+              ]
+            },
+            "progression_split_differs": {
+              "mean": 0.20761463844797173,
+              "run_min": 0.1260493827160494,
+              "run_max": 0.3780776014109347,
+              "two_way_percentile_95": [
+                0.15808392857142858,
+                0.25913716931216924
+              ]
+            },
+            "mixing_loses_reference": {
+              "mean": 0.18538712522045855,
+              "run_min": 0.08342151675485009,
+              "run_max": 0.28426807760141093,
+              "two_way_percentile_95": [
+                0.14313551587301587,
+                0.2313100308641975
+              ]
+            },
+            "mixing_gains_reference": {
+              "mean": 0.09622574955908289,
+              "run_min": 0.06074074074074074,
+              "run_max": 0.1554320987654321,
+              "two_way_percentile_95": [
+                0.06773472222222222,
+                0.12690291005291007
+              ]
+            },
+            "spurious_increase": {
+              "mean": 0.16069400352733687,
+              "run_min": 0.05444444444444445,
+              "run_max": 0.3536331569664903
+            },
+            "masked_increase": {
+              "mean": 0.04692063492063492,
+              "run_min": 0.0,
+              "run_max": 0.11790123456790123
+            },
+            "spurious_decrease": {
+              "mean": 0.03971164021164021,
+              "run_min": 0.0,
+              "run_max": 0.12638447971781305
+            },
+            "masked_decrease": {
+              "mean": 0.056101410934744265,
+              "run_min": 0.007407407407407407,
+              "run_max": 0.1285185185185185
+            },
+            "agrees:old_old": {
+              "mean": 0.6044559082892416,
+              "run_min": 0.5263492063492063,
+              "run_max": 0.7080952380952381,
+              "two_way_percentile_95": [
+                0.5262660934744268,
+                0.6799560185185185
+              ]
+            },
+            "agrees:old_new": {
+              "mean": 0.5654488536155202,
+              "run_min": 0.3874603174603175,
+              "run_max": 0.6449382716049382,
+              "two_way_percentile_95": [
+                0.49506977513227524,
+                0.6357992724867725
+              ]
+            },
+            "agrees:new_new": {
+              "mean": 0.6546102292768958,
+              "run_min": 0.5406172839506173,
+              "run_max": 0.7491358024691357,
+              "two_way_percentile_95": [
+                0.5761844576719577,
+                0.7296235890652557
+              ]
+            }
+          }
+        }
+      }
+    },
+    "nnunet": {
+      "runs": 10,
+      "seeds": [
+        20261201,
+        20261202,
+        20261203,
+        20261204,
+        20261205,
+        20261206,
+        20261207,
+        20261208,
+        20261209,
+        20261210
+      ],
+      "bootstrap_seed": 20261302,
+      "cohorts": {
+        "internal": {
+          "patients": 29,
+          "pairs": 277,
+          "relative_compatibility_cost": {
+            "mean_percent": 5.354358890141797,
+            "two_way_percentile_95": [
+              0.3073965850961975,
+              28.285668342566073
+            ],
+            "per_run_percent": [
+              6.5575165613225295,
+              4.5884810949765376,
+              6.003077579990013,
+              11.473466030446676,
+              2.3563009435439763,
+              8.598119467882203,
+              3.716783773481813,
+              1.744497226074282,
+              8.621217102622335,
+              1.784736688047417
+            ],
+            "runs_positive": 10,
+            "runs_negative": 0
+          },
+          "version_agreement": {
+            "bias_log": 0.06284367509501106,
+            "sd_log": 0.2688465500358344,
+            "bias_percent": 6.486036202445766,
+            "limits_percent": [
+              -37.12965291779475,
+              80.35968357677554
+            ],
+            "bias_percent_two_way_95": [
+              3.0886061435397583,
+              10.06314902479141
+            ],
+            "sd_log_two_way_95": [
+              0.19138418349847475,
+              0.3457961791785864
+            ],
+            "lower_limit_percent_two_way_95": [
+              -46.02001037697406,
+              -27.031833284903357
+            ],
+            "upper_limit_percent_two_way_95": [
+              53.35351873415387,
+              111.24469923025961
+            ],
+            "valid_pair_runs": 2769,
+            "excluded_pair_runs": 1
+          },
+          "decomposition": {
+            "m_same": 0.3591585501818227,
+            "m_mix": 0.418451378322127,
+            "d2": 0.07622779496561773,
+            "cross": -0.01693496682531342,
+            "identity_residual": 0.0,
+            "kappa": 0.4606950794366976,
+            "predicted_inflation_percent": 10.101769114632543,
+            "observed_inflation_percent": 7.939250088978311,
+            "cross_ratio": -0.047151785240084516,
+            "kappa_two_way_95": [
+              0.324554628080784,
+              0.614278605707312
+            ],
+            "predicted_inflation_percent_two_way_95": [
+              5.134947106252728,
+              17.360053077912724
+            ],
+            "observed_inflation_percent_two_way_95": [
+              1.1268299475184347,
+              16.59805002733941
+            ],
+            "cross_ratio_two_way_95": [
+              -0.17458774902484525,
+              0.04959042833183765
+            ]
+          },
+          "patient_response": {
+            "assessments": 29,
+            "reference_category_counts": {
+              "decrease": 10,
+              "stable": 12,
+              "increase": 7,
+              "undefined": 0
+            },
+            "undefined_assessment_runs": {
+              "old_old": 0,
+              "old_new": 0,
+              "new_new": 0
+            },
+            "differs": {
+              "mean": 0.06896551724137931,
+              "run_min": 0.034482758620689655,
+              "run_max": 0.13793103448275862,
+              "two_way_percentile_95": [
+                0.006896551724137931,
+                0.1517241379310345
+              ]
+            },
+            "progression_split_differs": {
+              "mean": 0.034482758620689655,
+              "run_min": 0.0,
+              "run_max": 0.10344827586206896,
+              "two_way_percentile_95": [
+                0.0,
+                0.10344827586206898
+              ]
+            },
+            "mixing_loses_reference": {
+              "mean": 0.06206896551724138,
+              "run_min": 0.034482758620689655,
+              "run_max": 0.13793103448275862,
+              "two_way_percentile_95": [
+                0.0,
+                0.14482758620689656
+              ]
+            },
+            "mixing_gains_reference": {
+              "mean": 0.006896551724137931,
+              "run_min": 0.0,
+              "run_max": 0.034482758620689655,
+              "two_way_percentile_95": [
+                0.0,
+                0.03103448275862069
+              ]
+            },
+            "spurious_increase": {
+              "mean": 0.034482758620689655,
+              "run_min": 0.0,
+              "run_max": 0.10344827586206896
+            },
+            "masked_increase": {
+              "mean": 0.0,
+              "run_min": 0.0,
+              "run_max": 0.0
+            },
+            "spurious_decrease": {
+              "mean": 0.0034482758620689655,
+              "run_min": 0.0,
+              "run_max": 0.034482758620689655
+            },
+            "masked_decrease": {
+              "mean": 0.03103448275862069,
+              "run_min": 0.0,
+              "run_max": 0.034482758620689655
+            },
+            "agrees:old_old": {
+              "mean": 0.9172413793103449,
+              "run_min": 0.8620689655172413,
+              "run_max": 1.0,
+              "two_way_percentile_95": [
+                0.8206896551724139,
+                0.9862068965517242
+              ]
+            },
+            "agrees:old_new": {
+              "mean": 0.9,
+              "run_min": 0.8620689655172413,
+              "run_max": 0.9655172413793104,
+              "two_way_percentile_95": [
+                0.7931034482758621,
+                0.9896551724137931
+              ]
+            },
+            "agrees:new_new": {
+              "mean": 0.9551724137931034,
+              "run_min": 0.896551724137931,
+              "run_max": 1.0,
+              "two_way_percentile_95": [
+                0.8793103448275861,
+                1.0
+              ]
+            }
+          }
+        },
+        "pantrack": {
+          "patients": 45,
+          "pairs": 181,
+          "relative_compatibility_cost": {
+            "mean_percent": 14.164945161607289,
+            "two_way_percentile_95": [
+              -0.22861407889569696,
+              30.948554761056613
+            ],
+            "per_run_percent": [
+              10.003324766598798,
+              3.551452838511593,
+              14.706038683044586,
+              12.489071108940685,
+              5.193753251035416,
+              6.6284900147866255,
+              35.0666305417598,
+              14.891203298762434,
+              17.508063937588858,
+              24.838772486528438
+            ],
+            "runs_positive": 10,
+            "runs_negative": 0
+          },
+          "version_agreement": {
+            "bias_log": 0.34031833782056864,
+            "sd_log": 0.6623456133200386,
+            "bias_percent": 40.53949097131109,
+            "limits_percent": [
+              -61.629416102287685,
+              414.75235756453577
+            ],
+            "bias_percent_two_way_95": [
+              23.470955880784267,
+              63.16113718786721
+            ],
+            "sd_log_two_way_95": [
+              0.4507031951031583,
+              0.8769213830094092
+            ],
+            "lower_limit_percent_two_way_95": [
+              -71.9744662092437,
+              -46.561192700416676
+            ],
+            "upper_limit_percent_two_way_95": [
+              205.87065557937723,
+              787.2156154218868
+            ],
+            "valid_pair_runs": 1810,
+            "excluded_pair_runs": 0
+          },
+          "decomposition": {
+            "m_same": 0.5395004505843863,
+            "m_mix": 0.9961484932755553,
+            "d2": 0.5545182825412528,
+            "cross": -0.09787023985008383,
+            "identity_residual": 1.1102230246251565e-16,
+            "kappa": 1.01382274154676,
+            "predicted_inflation_percent": 42.40212608235132,
+            "observed_inflation_percent": 35.88331562187983,
+            "cross_ratio": -0.18140900483784747,
+            "kappa_two_way_95": [
+              0.7156667878051464,
+              1.3891885740648093
+            ],
+            "predicted_inflation_percent_two_way_95": [
+              22.97068562490074,
+              71.1678969410057
+            ],
+            "observed_inflation_percent_two_way_95": [
+              15.39301640947494,
+              66.51747554255616
+            ],
+            "cross_ratio_two_way_95": [
+              -0.5829612677726161,
+              0.14143228903911623
+            ]
+          },
+          "patient_response": {
+            "assessments": 116,
+            "reference_category_counts": {
+              "decrease": 3,
+              "stable": 97,
+              "increase": 16,
+              "undefined": 0
+            },
+            "undefined_assessment_runs": {
+              "old_old": 0,
+              "old_new": 0,
+              "new_new": 0
+            },
+            "differs": {
+              "mean": 0.1755485008818342,
+              "run_min": 0.0705820105820106,
+              "run_max": 0.2987301587301587,
+              "two_way_percentile_95": [
+                0.10996772486772488,
+                0.2493867724867725
+              ]
+            },
+            "progression_split_differs": {
+              "mean": 0.13265961199294535,
+              "run_min": 0.05835978835978836,
+              "run_max": 0.21095238095238097,
+              "two_way_percentile_95": [
+                0.0768888888888889,
+                0.19628941798941796
+              ]
+            },
+            "mixing_loses_reference": {
+              "mean": 0.11540035273368607,
+              "run_min": 0.0465079365079365,
+              "run_max": 0.17761904761904762,
+              "two_way_percentile_95": [
+                0.06486164021164022,
+                0.17511296296296297
+              ]
+            },
+            "mixing_gains_reference": {
+              "mean": 0.05748148148148148,
+              "run_min": 0.00962962962962963,
+              "run_max": 0.1137037037037037,
+              "two_way_percentile_95": [
+                0.026739814814814817,
+                0.09800092592592592
+              ]
+            },
+            "spurious_increase": {
+              "mean": 0.1281410934744268,
+              "run_min": 0.05317460317460317,
+              "run_max": 0.21095238095238097
+            },
+            "masked_increase": {
+              "mean": 0.004518518518518519,
+              "run_min": 0.0,
+              "run_max": 0.015555555555555555
+            },
+            "spurious_decrease": {
+              "mean": 0.005481481481481481,
+              "run_min": 0.0,
+              "run_max": 0.02
+            },
+            "masked_decrease": {
+              "mean": 0.03859259259259259,
+              "run_min": 0.0022222222222222222,
+              "run_max": 0.07666666666666667
+            },
+            "agrees:old_old": {
+              "mean": 0.6743985890652557,
+              "run_min": 0.6469488536155203,
+              "run_max": 0.7125925925925926,
+              "two_way_percentile_95": [
+                0.5787443562610229,
+                0.7683212962962962
+              ]
+            },
+            "agrees:old_new": {
+              "mean": 0.7017848324514991,
+              "run_min": 0.6702821869488537,
+              "run_max": 0.7512698412698413,
+              "two_way_percentile_95": [
+                0.6024399470899471,
+                0.7968635802469135
+              ]
+            },
+            "agrees:new_new": {
+              "mean": 0.7597037037037037,
+              "run_min": 0.6862962962962962,
+              "run_max": 0.8,
+              "two_way_percentile_95": [
+                0.6601966049382716,
+                0.8520907407407406
+              ]
+            }
+          }
+        }
+      }
+    }
+  },
+  "completed_at_utc": "2026-10-12T14:02:15.476586+00:00",
+  "policy_sha256": "e51e23cf43627f4b67169fa432a20ea7a0de586448271becd5fe9d1190354f34",
+  "source_manifest_sha256": "ab11bd927d13a58bfc99c55f6a02c3509295ba3b87599822ed71f0aac908b7ba",
+  "amendment_sha256": "aa8d10edd2311999893b259fc87950722d7fa0291d90b47a59697a72d47972dd",
+  "replication_results_sha256": "2c53cd697997c19948e458eccfc94cdd3fb344e219118507163e3d3d2d7f21bf",
+  "strong_results_sha256": "e8bddf9cc36e76f101d7ae5d5b63909e368ac6c3876917e021a53782f1c96bc7",
+  "seed_receipt_sha256": {
+    "unet": {
+      "20261001": "124f5a502a0fcfbb7092d633b3d36d24537e6f323ea80ec0fbba34e2e4afb4da",
+      "20261002": "bbe38ab5438c7f9272798dcf94b0b947a523278b5d23e412c1ad855d44938594",
+      "20261003": "910384ed57fb304579c51ca0293643e875732cb6a9648227b8e40661d8063ce1",
+      "20261004": "97e2342fe1192c9d5edbb2d2e7e50a18844dd9dc560b991fe9dd5b2f82b7a9a9",
+      "20261005": "6b51ba5b24bb440ba475b7b4ad94067f29297ae3a9f1f02a24bd51b45cd8116e",
+      "20261006": "b93bce3a4762716fa836ec7ccdadb1feadcbad9c6457671587f833858d4783cc",
+      "20261007": "60adfaae97f3d5549ffd95757d1ad322b3015bab4f7d40938c8ae37fe62bc44f",
+      "20261008": "08fb719eadd27a1b9603259131a73ed3cccf8f21c643b1e069ffd0a1584deb15",
+      "20261009": "689325839b959ad8a206edb9ba4578696d4a294cb9363999ff1a996ea6102eb5",
+      "20261010": "e8c4cc3281f65ec2db3b80ab446db057c06fe98ef44abdd961c17d39880467bb",
+      "20261011": "51473e33b31a549fdceeb168b67cacb4be3d8bf5b9a38718c33a40634b35c684",
+      "20261012": "3eb3927537f787b100da286bec04b3d22a7e8c0f7d44c66d00e5bef7cc9af293",
+      "20261013": "0719276f2f15f0202be9a1e59ff63b991468cec36d2f3660f19a4bfa36ed3eb7",
+      "20261014": "de09817cf960a564c33e5c7220ebf9cf849554120d188278cff39308b177986b",
+      "20261015": "c616529e89da4cf7850725773db4c35a15264c227272bd6cd727ea50b99840de",
+      "20261016": "7022376117629149a40ca4434f339e718c378107047533d712920debc03adbda",
+      "20261017": "6467f1af7711dbaeb6c7622920d2b876363581f7c1238cde54640789454ba87c",
+      "20261018": "2039ccee22c690aa80c364e576ba46837a269161228cbe5580b96df5042fb1ba",
+      "20261019": "63c919f7f5c09aff572eae660d4b43707db9a335d195f179c0b9c477e8f83530",
+      "20261020": "8d705523f2bc9d91a644ec214621c7ac2588130fe99df9ebde5e4ad0878c0a67"
+    },
+    "nnunet": {
+      "20261201": "2c0684d303bbd1cfd12657ed5da77b9a3715f724ae40f8118ad34dc7b512b5f9",
+      "20261202": "94b6126e31705d451338be18ef6989aea1d4980fdfff5b506d91f5f030796e38",
+      "20261203": "c77a021b00ed7d96bbc5ea280df5b0244252a15d9bec5fa0f5763ca7afdef97d",
+      "20261204": "114ec16762a7222ab436179a009985f00e39a51ae080b3a8d15710fc12de8295",
+      "20261205": "29060ab3ddc67d3441457c5bfe38f1c8a833acdf8f58ebc90c59b07cbebde864",
+      "20261206": "37d07117a563976173bc74c22411c2e84d474693964d087e9545658639fc0dfc",
+      "20261207": "baf216656ad97b5aedf0ed2bb1c28c32568fad184c7563f0ec7739a65f6c49e6",
+      "20261208": "19852ae3b2cb443e835bd3ec29b2d2a35221616f98c83e18daabeca969b39934",
+      "20261209": "023c8983cf7666515302ee4b97cdeee03b452a3b0a41f53d09f230f5bae67898",
+      "20261210": "62f40ca3070633fe3a356eae014b0a6bf4284af97443be77529ca1adcd336dd1"
+    }
+  },
+  "storage": {
+    "current_study_bytes": 176655994963,
+    "planned_additional_bytes": 10485760,
+    "projected_study_bytes": 176666480723,
+    "shared_free_bytes": 20115866255360,
+    "personal_quota_verified": false
+  },
+  "verification_pending": true
+}

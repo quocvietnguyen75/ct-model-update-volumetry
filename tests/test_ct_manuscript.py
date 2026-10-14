@@ -9,7 +9,7 @@ from careport.ct_update_gate import GateError
 
 
 class ContrastOrderTests(unittest.TestCase):
-    def test_manuscript_tables_list_the_retention_cost_first(self):
+    def test_manuscript_tables_list_the_compatibility_cost_first(self):
         self.assertEqual(MANUSCRIPT_CONTRASTS, ('retaining_baseline_cost', 'ordinary_update_benefit', 'contour_benefit'))
 
 
@@ -68,6 +68,14 @@ class PercentageCheckTests(unittest.TestCase):
         objects = [{'share': 0.7689, 'relative_percent': {'median': 8.86, 'q25': -32.23},
                     'two_way_percentile_95': [57.07, 60.0], 'thresholds_percent': {'decrease': -65.7}}]
         self.assertEqual(sorted(percent_values(objects)), [-65.7, -32.23, 8.86])
+
+    def test_intervals_of_estimates_stored_in_percent_are_percent_values(self):
+        # CT-UPDATE-019 stores the relative cost as mean_percent with a generic interval key, and percent intervals
+        # under names such as bias_percent_two_way_95; shares stay fractions.
+        objects = [{'cost': {'mean_percent': 14.14, 'two_way_percentile_95': [4.45, 41.9]},
+                    'agreement': {'bias_percent_two_way_95': [-16.48, 6.14]},
+                    'other': {'mean': 0.2, 'two_way_percentile_95': [0.14, 0.27]}}]
+        self.assertEqual(sorted(percent_values(objects)), [-16.48, 4.45, 6.14, 14.14, 41.9])
 
     def test_decimal_percentages_round_from_a_fraction_or_a_value_stored_in_percent(self):
         text = r'shares 76.9\% and 8.9\%, quartile $-32.2\%$, threshold $-65.7\%$; not 57.1\% or 12.0\%'
@@ -136,7 +144,7 @@ class PosthocTableTests(unittest.TestCase):
     def test_sensitivity_rows_pair_published_and_recomputed_family_intervals(self):
         rows = posthoc_sensitivity_rows(*self._sensitivity_inputs())
         self.assertEqual(len(rows), 6)
-        self.assertEqual(rows[0], ['Internal', 'Retention cost (mL)', '[+0.092, +1.060]', '[+0.087, +1.057]', 'Yes',
+        self.assertEqual(rows[0], ['Internal', 'Compatibility cost (mL)', '[+0.092, +1.060]', '[+0.087, +1.057]', 'Yes',
                                    '19 / 1', '$<$0.001'])
         self.assertEqual(rows[2][2:4], ['[+0.0916, +1.0601]', '[+0.0875, +1.0573]'])
         self.assertEqual(rows[4][5:], ['11 / 9', '0.412'])
@@ -171,7 +179,7 @@ class StrongModelTableTests(unittest.TestCase):
     def test_primary_rows_give_mean_both_intervals_the_decision_and_run_signs(self):
         rows = primary_contrast_rows(self.UNET)
         self.assertEqual(len(rows), 6)
-        self.assertEqual(rows[0], ['Internal', 'Retention cost (mL)', '+0.524', '[+0.210, +0.902]', '[+0.092, +1.060]',
+        self.assertEqual(rows[0], ['Internal', 'Compatibility cost (mL)', '+0.524', '[+0.210, +0.902]', '[+0.092, +1.060]',
                                    'Yes', '19 / 1'])
         self.assertEqual(rows[1][3:6], ['[$-$0.390, +1.070]', '[$-$0.529, +1.601]', 'No'])
         self.assertEqual(rows[2][2:5], ['+0.0442', '[+0.0309, +0.0592]', '[+0.0264, +0.0650]'])
@@ -181,7 +189,7 @@ class StrongModelTableTests(unittest.TestCase):
         rows = model_comparison_rows(self.UNET, self.NNUNET)
         self.assertEqual(len(rows), 12)
         self.assertEqual([row[1] for row in rows[:6]],
-                         ['Follow-up Dice, old model', 'Follow-up Dice, updated model', 'Retention cost (mL)',
+                         ['Follow-up Dice, old model', 'Follow-up Dice, updated model', 'Compatibility cost (mL)',
                           'Update benefit (mL)', 'Contour benefit (Dice)', 'Baseline version shift (mL)'])
         self.assertEqual(rows[0][2:], ['0.5802', '---', '0.7052', '---'])
         self.assertEqual(rows[2][2:], ['+0.524 [+0.092, +1.060]', '19 / 1', '+1.048 [+0.183, +2.120]', '9 / 1'])
@@ -189,6 +197,94 @@ class StrongModelTableTests(unittest.TestCase):
         self.assertEqual(rows[5][2:4], ['+0.483 [$-$0.019, +1.209]', '15 / 5'])
         self.assertEqual(rows[6][0], 'PanTrack')
 
+
+
+def _compat_result():
+    """Synthetic CT-UPDATE-019 summary (aggregates only), shaped like careport.ct_compat.summarize_compat."""
+    def share(mean, low, high):
+        return dict(mean=mean, run_min=low, run_max=high, two_way_percentile_95=[low, high])
+    segmenters = {}
+    for model, scale in (('unet', 1.0), ('nnunet', 0.5)):
+        cohorts = {}
+        for j, cohort in enumerate(('internal', 'pantrack')):
+            response = dict(assessments=29 if cohort == 'internal' else 93,
+                            reference_category_counts=dict(decrease=5, stable=20, increase=4, undefined=0),
+                            undefined_assessment_runs=dict(old_old=0, old_new=0, new_new=0))
+            for name in ('differs', 'progression_split_differs', 'mixing_loses_reference', 'mixing_gains_reference',
+                         'agrees:old_old', 'agrees:old_new', 'agrees:new_new'):
+                response[name] = share(0.2 * scale + 0.01 * j, 0.1 * scale, 0.3 * scale)
+            for name in ('spurious_increase', 'masked_increase', 'spurious_decrease', 'masked_decrease'):
+                response[name] = dict(mean=0.05 * scale, run_min=0.0, run_max=0.1)
+            cohorts[cohort] = dict(
+                patients=29 if cohort == 'internal' else 45, pairs=277 if cohort == 'internal' else 181,
+                relative_compatibility_cost=dict(mean_percent=14.13 * scale + j, two_way_percentile_95=[5.21, 22.04],
+                                                 per_run_percent=[], runs_positive=19, runs_negative=1),
+                version_agreement=dict(bias_log=0.01, sd_log=0.3, bias_percent=1.23 * scale,
+                                       limits_percent=[-44.47 * scale, 81.97 * scale],
+                                       bias_percent_two_way_95=[-2.0, 4.5], sd_log_two_way_95=[0.25, 0.35],
+                                       lower_limit_percent_two_way_95=[-50.0, -40.0],
+                                       upper_limit_percent_two_way_95=[70.0, 95.0],
+                                       valid_pair_runs=5500, excluded_pair_runs=40),
+                decomposition=dict(m_same=0.5, m_mix=0.6, d2=0.09, cross=0.01, identity_residual=0.0,
+                                   kappa=0.4243 * scale, predicted_inflation_percent=8.63, observed_inflation_percent=9.54,
+                                   cross_ratio=0.02, kappa_two_way_95=[0.35, 0.5],
+                                   predicted_inflation_percent_two_way_95=[6.0, 11.0],
+                                   observed_inflation_percent_two_way_95=[7.0, 12.0],
+                                   cross_ratio_two_way_95=[-0.01, 0.05]),
+                patient_response=response)
+        segmenters[model] = dict(runs=20 if model == 'unet' else 10, cohorts=cohorts)
+    return dict(protocol_id='CT-UPDATE-019', segmenters=segmenters)
+
+
+class CompatibilityTableTests(unittest.TestCase):
+    def test_summary_rows_give_each_quantity_for_both_models_and_cohorts(self):
+        from careport.ct_manuscript import compat_summary_rows
+        rows = compat_summary_rows(_compat_result())
+        labels = [row[0] for row in rows]
+        # LaTeX table labels: the percent sign is escaped.
+        self.assertEqual(labels[0], r'Relative compatibility cost (\%)')
+        self.assertIn(r'Compatibility index $\kappa$', labels)
+        self.assertIn(r'Category changed by mixing (\%)', labels)
+        self.assertTrue(all(len(row) == 5 for row in rows))
+        self.assertEqual(rows[0][1], '+14.1 [+5.2, +22.0]')
+        self.assertEqual(rows[0][3], '+7.1 [+5.2, +22.0]')
+        limits = rows[labels.index(r'Version difference, 95\% limits of agreement (\%)')]
+        self.assertEqual(limits[1], '$-$44.5 to +82.0')
+        kappa = rows[labels.index(r'Compatibility index $\kappa$')]
+        self.assertEqual(kappa[1], '0.42 [0.35, 0.50]')
+        changed = rows[labels.index(r'Category changed by mixing (\%)')]
+        self.assertEqual(changed[1], '20.0 [10.0, 30.0]')
+        self.assertEqual(rows[labels.index('Patient-level assessments')][2], '93')
+
+    def test_full_rows_add_every_reported_output(self):
+        from careport.ct_manuscript import compat_full_rows
+        labels = [row[0] for row in compat_full_rows(_compat_result())]
+        for label in (r'Mixing loses the reference category (\%)', r'Mixing-only increase (\%)',
+                      r'Reprocessing-only decrease (\%)',
+                      r'Agreement with reference, old/old (\%)', 'Cross-term ratio', 'Excluded pair-runs (log scale)'):
+            self.assertIn(label, labels)
+
+
+class IntervalComponentTests(unittest.TestCase):
+    """ARS R5 (12 October): the replication methods report run-only and patient-only intervals descriptively."""
+
+    def study(self, scale):
+        result = _study(scale, 20, 0.58021, 0.62445)
+        for cohort in result['cohorts'].values():
+            for summary in cohort['primary_contrasts'].values():
+                summary['patient_only_percentile_95'] = [0.01 * scale, 0.9 * scale]
+                summary['run_only_percentile_95'] = [0.2 * scale, 0.8 * scale]
+        return result
+
+    def test_component_rows_give_every_interval_for_both_models_without_pooling(self):
+        from careport.ct_manuscript import interval_component_rows
+        rows = interval_component_rows(self.study(1.0), self.study(2.0))
+        self.assertEqual(len(rows), 12)
+        self.assertEqual(rows[0][:3], ['U-Net', 'Internal', 'Compatibility cost (mL)'])
+        self.assertEqual(rows[0][3:], ['+0.524', '[+0.210, +0.902]', '[+0.010, +0.900]', '[+0.200, +0.800]'])
+        self.assertEqual(rows[6][:2], ['nnU-Net', 'Internal'])
+        self.assertEqual(rows[8][2], 'Contour benefit (Dice)')
+        self.assertEqual(rows[8][5], '[+0.0200, +1.8000]')
 
 if __name__ == '__main__':
     unittest.main()

@@ -1,0 +1,905 @@
+{
+ "part": "T6",
+ "date": "2026-10-12",
+ "entries": [
+  {
+   "id": "T6-S001",
+   "date": "2026-10-12",
+   "tool": "Crossref REST",
+   "family": "known_item",
+   "query": "GET /works?query.bibliographic=\"Fraass 1998 American Association of Physicists in Medicine Radiation Therapy Committee Task Group 53 quality assurance for clinical radiotherapy treatment planning\"&rows=5",
+   "hits": 303130,
+   "screened": 5,
+   "kept": [
+    "T6-P01"
+   ],
+   "notes": "Hit count is Crossref's unranked total. Top hit DOI 10.1118/1.598373. English full text not retrievable: aapm.org RPT_62 redirects to Wiley (HTTP 403, Cloudflare); Deep Blue handle 403. Read the JASTRO Japanese translation instead (see S017)."
+  },
+  {
+   "id": "T6-S002",
+   "date": "2026-10-12",
+   "tool": "Crossref REST",
+   "family": "known_item",
+   "query": "GET /works?query.bibliographic=\"Vandewinckele 2020 Overview of artificial intelligence-based applications in radiotherapy: recommendations for implementation and quality assurance\"&rows=5",
+   "hits": 1974553,
+   "screened": 5,
+   "kept": [
+    "T6-P02"
+   ],
+   "notes": "Top hit DOI 10.1016/j.radonc.2020.09.008. Full text (CC BY) read from the KU Leuven Lirias copy."
+  },
+  {
+   "id": "T6-S003",
+   "date": "2026-10-12",
+   "tool": "Crossref REST",
+   "family": "known_item",
+   "query": "GET /works?query.bibliographic=\"Hurkmans 2024 joint ESTRO and AAPM guideline for development, clinical validation and reporting of artificial intelligence models in radiation therapy\"&rows=5",
+   "hits": 236905,
+   "screened": 5,
+   "kept": [
+    "T6-P03"
+   ],
+   "notes": "Top hit DOI 10.1016/j.radonc.2024.110345. Publisher PDF (CC BY) read from the Aarhus University Pure copy (ws/portalfiles); TU/e, TMC and ScienceDirect copies were blocked (403). Also surfaced De Biase 2024 BJR|AI (screened, not kept)."
+  },
+  {
+   "id": "T6-S004",
+   "date": "2026-10-12",
+   "tool": "Crossref REST",
+   "family": "known_item",
+   "query": "GET /works/{doi} for 10.1118/1.598373; 10.1016/j.radonc.2020.09.008; 10.1016/j.radonc.2024.110345",
+   "hits": 3,
+   "screened": 3,
+   "kept": [
+    "T6-P01",
+    "T6-P02",
+    "T6-P03"
+   ],
+   "notes": "Bibliographic details verified (authors, volume, pages, dates)."
+  },
+  {
+   "id": "T6-S005",
+   "date": "2026-10-12",
+   "tool": "Crossref REST",
+   "family": "known_item",
+   "query": "GET /works?query.bibliographic=\"Brady 2024 Developing, purchasing, implementing and monitoring AI tools in radiology: practical considerations. A multi-society statement from the ACR, CAR, ESR, RANZCR and RSNA\"&rows=10",
+   "hits": 2204,
+   "screened": 10,
+   "kept": [
+    "T6-P04"
+   ],
+   "notes": "Statement co-published in five journals (Insights Imaging 15:16; Radiol Artif Intell 6:e230513; J Am Coll Radiol; J Med Imaging Radiat Oncol; Can Assoc Radiol J). Insights Imaging version (PMC10800328) read in full. First run failed on a console-encoding error and was repeated unchanged."
+  },
+  {
+   "id": "T6-S006",
+   "date": "2026-10-12",
+   "tool": "Crossref REST",
+   "family": "known_item",
+   "query": "GET /works?query.bibliographic=\"Claessens 2022 Quality assurance for AI-based applications in radiation therapy Seminars in Radiation Oncology\"&rows=5",
+   "hits": 2277807,
+   "screened": 5,
+   "kept": [
+    "T6-P08"
+   ],
+   "notes": "DOI 10.1016/j.semradonc.2022.06.011. Full text blocked (ScienceDirect, RUG and Maastricht copies 403/404); abstract only."
+  },
+  {
+   "id": "T6-S007",
+   "date": "2026-10-12",
+   "tool": "Crossref REST",
+   "family": "known_item",
+   "query": "GET /works?query.bibliographic=\"Brock 2017 Use of image registration and fusion algorithms and techniques in radiotherapy: Report of the AAPM Radiation Therapy Committee Task Group No. 132\"&rows=5",
+   "hits": 47267,
+   "screened": 5,
+   "kept": [
+    "T6-P06"
+   ],
+   "notes": "DOI 10.1002/mp.12256. Wiley pdfdirect 403; abstract only."
+  },
+  {
+   "id": "T6-S008",
+   "date": "2026-10-12",
+   "tool": "Crossref REST",
+   "family": "known_item",
+   "query": "GET /works/{doi} for 10.1186/s13244-023-01541-3; 10.1148/ryai.230513; 10.1016/j.semradonc.2022.06.011; 10.1002/mp.12256; 10.1093/bjrai/ubae015",
+   "hits": 5,
+   "screened": 5,
+   "kept": [
+    "T6-P04",
+    "T6-P06",
+    "T6-P08"
+   ],
+   "notes": "Metadata verified; De Biase 2024 screened (vendor handles regulatory compliance for commercial tools, hospital for in-house tools) but not kept."
+  },
+  {
+   "id": "T6-S009",
+   "date": "2026-10-12",
+   "tool": "Crossref REST",
+   "family": "known_item",
+   "query": "GET /works?query.bibliographic=\"AAPM Medical Physics Practice Guideline 5.a commissioning and QA of treatment planning dose calculations megavoltage photon and electron beams Smilowitz\"&rows=5",
+   "hits": 40831,
+   "screened": 5,
+   "kept": [
+    "T6-P05"
+   ],
+   "notes": "Found MPPG 5.a (JACMP 2015) and its successor MPPG 5.b (2022). 10.1120/jacmp.v17i1.6166 is a 2016 one-page item without authors (not used)."
+  },
+  {
+   "id": "T6-S010",
+   "date": "2026-10-12",
+   "tool": "Crossref REST",
+   "family": "known_item",
+   "query": "GET /works?query.bibliographic=\"AAPM Medical Physics Practice Guideline 5.b commissioning and QA of treatment planning dose calculations Geurts 2022\"&rows=5",
+   "hits": 952596,
+   "screened": 5,
+   "kept": [
+    "T6-P05"
+   ],
+   "notes": "MPPG 5.b confirmed, DOI 10.1002/acm2.13641."
+  },
+  {
+   "id": "T6-S011",
+   "date": "2026-10-12",
+   "tool": "Crossref REST",
+   "family": "known_item",
+   "query": "GET /works?query.bibliographic=\"Hadjiiski 2023 AAPM task group report 273 recommendations on best practices for AI and machine learning for computer-aided diagnosis in medical imaging\"&rows=5",
+   "hits": 294252,
+   "screened": 5,
+   "kept": [
+    "T6-P07"
+   ],
+   "notes": "DOI 10.1002/mp.16188. Full text blocked (Wiley 403; Deep Blue accepted manuscript 403; Radboud repository 403); abstract only. Vergara 2024 JACR summary screened."
+  },
+  {
+   "id": "T6-S012",
+   "date": "2026-10-12",
+   "tool": "Crossref REST",
+   "family": "known_item",
+   "query": "GET /works/{doi} for 10.1120/jacmp.v16i5.5768; 10.1120/jacmp.v17i1.6166; 10.1002/acm2.13641; 10.1002/mp.16188",
+   "hits": 4,
+   "screened": 4,
+   "kept": [
+    "T6-P05",
+    "T6-P07"
+   ],
+   "notes": "Metadata verified."
+  },
+  {
+   "id": "T6-S013",
+   "date": "2026-10-12",
+   "tool": "Europe PMC REST",
+   "family": "known_item",
+   "query": "search?query=DOI:\"<doi>\"&resultType=core for 11 anchor DOIs (Vandewinckele 2020, Hurkmans 2024, Brady 2024, MPPG 5.a, MPPG 5.b, TG-132, TG-273, Claessens 2022, TG-53, De Biase 2024, Feng 2022)",
+   "hits": 11,
+   "screened": 11,
+   "kept": [
+    "T6-P02",
+    "T6-P03",
+    "T6-P04",
+    "T6-P05",
+    "T6-P06",
+    "T6-P07",
+    "T6-P08",
+    "T6-P32"
+   ],
+   "notes": "PMIDs, PMCIDs and open-access status. MPPG 5.a/5.b, Brady 2024, De Biase 2024 and Feng 2022 have PMC full texts (read via fullTextXML)."
+  },
+  {
+   "id": "T6-S014",
+   "date": "2026-10-12",
+   "tool": "OpenAlex",
+   "family": "known_item",
+   "query": "GET /works/https://doi.org/<doi> (locations) for TG-53, Vandewinckele 2020, Hurkmans 2024, TG-132, TG-273, Claessens 2022",
+   "hits": 6,
+   "screened": 6,
+   "kept": [
+    "T6-P02",
+    "T6-P03"
+   ],
+   "notes": "Listed repository copies; only the Lirias (Vandewinckele) and Aarhus Pure (Hurkmans) copies could be downloaded."
+  },
+  {
+   "id": "T6-S015",
+   "date": "2026-10-12",
+   "tool": "WebSearch",
+   "family": "known_item",
+   "query": "\"joint ESTRO and AAPM guideline for development, clinical validation and reporting of artificial intelligence models in radiation therapy\" pdf",
+   "hits": null,
+   "screened": 10,
+   "kept": [
+    "T6-P03"
+   ],
+   "notes": "Repository records only (UKE, Christie, TMC); Christie DSpace API had no bitstream."
+  },
+  {
+   "id": "T6-S016",
+   "date": "2026-10-12",
+   "tool": "WebSearch",
+   "family": "known_item",
+   "query": "Hurkmans 2024 ESTRO AAPM AI guideline statements \"continuous learning\" OR \"model updates\" OR \"retrained\" radiation therapy Delphi 19 statements",
+   "hits": null,
+   "screened": 9,
+   "kept": [
+    "T6-P03"
+   ],
+   "notes": "Confirmed the topic 'model QA/updates and upgrades'; no new sources."
+  },
+  {
+   "id": "T6-S017",
+   "date": "2026-10-12",
+   "tool": "WebSearch",
+   "family": "known_item",
+   "query": "AAPM TG-53 Fraass 1998 quality assurance treatment planning \"new version\" OR \"software upgrade\" OR \"new release\" repeat tests pdf",
+   "hits": null,
+   "screened": 9,
+   "kept": [
+    "T6-P01"
+   ],
+   "notes": "Found the JASTRO Japanese translation of TG-53 (https://www.jastro.or.jp/customer/guideline/2016/10/tg-53.pdf), which keeps the English section headings; text read with PyMuPDF (Ch. 5, Table 5-1, Appendix 1, Table A1-2). AAPM report page is login-only."
+  },
+  {
+   "id": "T6-S018",
+   "date": "2026-10-12",
+   "tool": "WebSearch",
+   "family": "known_item",
+   "query": "\"Task Group 53\" \"Quality assurance for clinical radiotherapy treatment planning\" Fraass Doppke Hunt Kutcher Starkschall Stern Van Dyke filetype:pdf",
+   "hits": null,
+   "screened": 10,
+   "kept": [],
+   "notes": "No openly accessible English full text found."
+  },
+  {
+   "id": "T6-S019",
+   "date": "2026-10-12",
+   "tool": "WebSearch",
+   "family": "exact_phrase",
+   "query": "\"Vendor and user responsibilities\" \"Version updates\" \"Release of data formats\" treatment planning quality assurance",
+   "hits": null,
+   "screened": 9,
+   "kept": [],
+   "notes": "Aimed at the English text of TG-53 Appendix 1; no relevant result."
+  },
+  {
+   "id": "T6-S020",
+   "date": "2026-10-12",
+   "tool": "Wayback Machine CDX API",
+   "family": "known_item",
+   "query": "https://web.archive.org/cdx/search/cdx?url=aapm.org/pubs/reports/RPT_62.pdf&output=json&limit=20",
+   "hits": 20,
+   "screened": 20,
+   "kept": [],
+   "notes": "AAPM Report 62 PDF archived 2006-2016, but snapshot retrieval was blocked (HTTP 429) and WebFetch cannot reach web.archive.org."
+  },
+  {
+   "id": "T6-S021",
+   "date": "2026-10-12",
+   "tool": "PubMed E-utilities",
+   "family": "known_item",
+   "query": "efetch.fcgi?db=pubmed&id=9800687,28376237,36565447,36202444&rettype=abstract&retmode=text",
+   "hits": 4,
+   "screened": 4,
+   "kept": [
+    "T6-P01",
+    "T6-P06",
+    "T6-P07",
+    "T6-P08"
+   ],
+   "notes": "Abstracts of TG-53, TG-132, TG-273 and Claessens 2022 read; none states update-specific recommendations in the abstract."
+  },
+  {
+   "id": "T6-S022",
+   "date": "2026-10-12",
+   "tool": "Crossref REST",
+   "family": "known_item",
+   "query": "GET /works?query.bibliographic=\"Huo 2013 Quality assurance and training procedures for computer-aided detection and diagnosis systems in clinical use Medical Physics\"&rows=5",
+   "hits": 199733,
+   "screened": 5,
+   "kept": [
+    "T6-P09"
+   ],
+   "notes": "AAPM CAD subcommittee paper (diagnostic-imaging analogue). PMC author manuscript PMC5438240 read in full from the PMC web page (API full text not permitted by publisher). Petrick 2013 companion screened."
+  },
+  {
+   "id": "T6-S023",
+   "date": "2026-10-12",
+   "tool": "FDA and GOV.UK web pages",
+   "family": "regulatory",
+   "query": "https://www.fda.gov/medical-devices/artificial-intelligence-enabled-medical-devices/predetermined-change-control-plans-machine-learning-enabled-medical-devices-guiding-principles ; https://www.fda.gov/media/173206/download ; https://www.gov.uk/government/publications/predetermined-change-control-plans-for-machine-learning-enabled-medical-devices-guiding-principles",
+   "hits": 3,
+   "screened": 3,
+   "kept": [
+    "T6-P15"
+   ],
+   "notes": "Full text of the five guiding principles; PDF dated October 2023; GOV.UK first published 24 October 2023."
+  },
+  {
+   "id": "T6-S024",
+   "date": "2026-10-12",
+   "tool": "Publications Office cellar (EUR-Lex)",
+   "family": "regulatory",
+   "query": "GET http://publications.europa.eu/resource/celex/32024R1689 (Accept: application/xhtml+xml, Accept-Language: eng)",
+   "hits": 1,
+   "screened": 1,
+   "kept": [
+    "T6-P17"
+   ],
+   "notes": "EUR-Lex HTML returned HTTP 202 with an empty body (bot challenge); the cellar returned the OJ XHTML. Read Art. 3(23), 6(1), 13(3)(c),(e), 25(1)-(2), 26, 43(4), 72, 111(2), 113, Annex IV points 1(a),(c) and 2(f), Recitals 84, 128 and 177."
+  },
+  {
+   "id": "T6-S025",
+   "date": "2026-10-12",
+   "tool": "WebSearch",
+   "family": "regulatory",
+   "query": "Digital Omnibus on AI amending Regulation (EU) 2024/1689 adopted Official Journal 2026 high-risk Annex I application date postponed",
+   "hits": null,
+   "screened": 9,
+   "kept": [
+    "T6-P18"
+   ],
+   "notes": "Secondary sources reported Regulation (EU) 2026/1744 and a shift of Annex I obligations to 2 August 2028; verified in S026."
+  },
+  {
+   "id": "T6-S026",
+   "date": "2026-10-12",
+   "tool": "Publications Office cellar (EUR-Lex)",
+   "family": "regulatory",
+   "query": "GET http://publications.europa.eu/resource/celex/32026R1744 (Accept: application/xhtml+xml)",
+   "hits": 1,
+   "screened": 1,
+   "kept": [
+    "T6-P18"
+   ],
+   "notes": "OJ L 2026/1744 of 24.7.2026 (Regulation of 8 July 2026; in force on the third day after publication). Art. 113 amended: Chapter III Sections 1-3 apply from 2 December 2027 (Annex III) and 2 August 2028 (Art. 6(1)/Annex I). Art. 43(3) replaced; Art. 3(23) and 43(4) not amended (searched the amending text). Art. 111(2) and 25(2) amended."
+  },
+  {
+   "id": "T6-S027",
+   "date": "2026-10-12",
+   "tool": "Publications Office cellar (EUR-Lex)",
+   "family": "regulatory",
+   "query": "GET http://publications.europa.eu/resource/celex/32017R0745 (Accept: application/xhtml+xml)",
+   "hits": 1,
+   "screened": 1,
+   "kept": [
+    "T6-P19"
+   ],
+   "notes": "MDR original OJ text (L 117, 5.5.2017). Read Annex IX Chapter I 2.4 and Chapter II 4.10, Annex VI Part C 6.5, Annex I 17.2. Consolidated amendments not checked."
+  },
+  {
+   "id": "T6-S028",
+   "date": "2026-10-12",
+   "tool": "WebSearch",
+   "family": "regulatory",
+   "query": "MDCG 2025-6 interplay Medical Devices Regulation AI Act FAQ pdf health.ec.europa.eu substantial modification pre-determined changes",
+   "hits": null,
+   "screened": 9,
+   "kept": [
+    "T6-P20"
+   ],
+   "notes": "Secondary commentary only; official PDF obtained in S029."
+  },
+  {
+   "id": "T6-S029",
+   "date": "2026-10-12",
+   "tool": "European Commission web page (health.ec.europa.eu)",
+   "family": "regulatory",
+   "query": "https://health.ec.europa.eu/medical-devices-sector/new-regulations/guidance-mdcg-endorsed-documents-and-other-guidance_en (link scan for MDCG 2020-3, 2025-6, 2019-11, 2023-4, AI)",
+   "hits": 5,
+   "screened": 5,
+   "kept": [
+    "T6-P20",
+    "T6-P21"
+   ],
+   "notes": "Downloaded and read MDCG 2025-6 (AIB 2025-1, June 2025) Q29-Q31 and MDCG 2020-3 Rev.1 (May 2023) introduction and scope."
+  },
+  {
+   "id": "T6-S030",
+   "date": "2026-10-12",
+   "tool": "IMDRF website",
+   "family": "regulatory",
+   "query": "https://www.imdrf.org/working-groups/artificial-intelligence-medical-devices ; https://imdrf.org/sites/default/files/2025-02/IMDRF_AIML%20WG_GMLP_N88%20Final.pdf ; https://www.imdrf.org/documents/good-machine-learning-practice-medical-device-development-guiding-principles",
+   "hits": 0,
+   "screened": 0,
+   "kept": [],
+   "notes": "Failed: connection reset (curl) and timeouts (curl 90 s, WebFetch 60 s). IMDRF N67 (key terms, 2022) and N88 (GMLP, 2025) not read."
+  },
+  {
+   "id": "T6-S031",
+   "date": "2026-10-12",
+   "tool": "WebSearch",
+   "family": "regulatory",
+   "query": "IMDRF AIML WG N88 FINAL 2025 \"Good machine learning practice for medical device development: Guiding principles\"",
+   "hits": null,
+   "screened": 9,
+   "kept": [
+    "T6-P16"
+   ],
+   "notes": "Located the N88 PDF URL (uploaded 2025-02); FDA page (S032) states IMDRF released the final document in January 2025."
+  },
+  {
+   "id": "T6-S032",
+   "date": "2026-10-12",
+   "tool": "FDA and GOV.UK web pages; GOV.UK content API",
+   "family": "regulatory",
+   "query": "https://www.fda.gov/medical-devices/artificial-intelligence-enabled-medical-devices/good-machine-learning-practice-medical-device-development-guiding-principles ; https://www.gov.uk/government/publications/good-machine-learning-practice-for-medical-device-development-guiding-principles/good-machine-learning-practice-for-medical-device-development-guiding-principles ; https://www.gov.uk/api/content/government/publications/good-machine-learning-practice-for-medical-device-development-guiding-principles ; https://www.gov.uk/api/content/government/publications/predetermined-change-control-plans-for-machine-learning-enabled-medical-devices-guiding-principles",
+   "hits": 4,
+   "screened": 4,
+   "kept": [
+    "T6-P15",
+    "T6-P16"
+   ],
+   "notes": "GMLP principles 9 and 10 text; GMLP first published 27 October 2021; PCCP principles first published 24 October 2023."
+  },
+  {
+   "id": "T6-S033",
+   "date": "2026-10-12",
+   "tool": "FDA guidance page and PDF",
+   "family": "regulatory",
+   "query": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/marketing-submission-recommendations-predetermined-change-control-plan-artificial-intelligence ; https://www.fda.gov/media/166704/download",
+   "hits": 2,
+   "screened": 2,
+   "kept": [],
+   "notes": "Already cited by the paper (not re-proposed). Read to check the current sentence: document issued 18 August 2025, originally issued 4 December 2024, docket FDA-2022-D-2628; Sections V.C, VII.B(3)-(4) and Appendix A items 3.c, 4.b, 4.c, 4.d."
+  },
+  {
+   "id": "T6-S034",
+   "date": "2026-10-12",
+   "tool": "WebSearch; FDA guidance page",
+   "family": "regulatory",
+   "query": "FDA guidance \"Artificial Intelligence-Enabled Device Software Functions: Lifecycle Management and Marketing Submission Recommendations\" final 2026 ; https://www.fda.gov/regulatory-information/search-fda-guidance-documents/artificial-intelligence-enabled-device-software-functions-lifecycle-management-and-marketing",
+   "hits": null,
+   "screened": 10,
+   "kept": [],
+   "notes": "Still a draft (January 2025, docket FDA-2024-D-4488) on the FDA page; not proposed."
+  },
+  {
+   "id": "T6-S035",
+   "date": "2026-10-12",
+   "tool": "WebSearch",
+   "family": "regulatory",
+   "query": "Health Canada \"Pre-market guidance for machine learning-enabled medical devices\" predetermined change control plan canada.ca",
+   "hits": null,
+   "screened": 10,
+   "kept": [
+    "T6-P22"
+   ],
+   "notes": "Located the official canada.ca page."
+  },
+  {
+   "id": "T6-S036",
+   "date": "2026-10-12",
+   "tool": "canada.ca (curl; WebFetch)",
+   "family": "regulatory",
+   "query": "https://www.canada.ca/en/health-canada/services/drugs-health-products/medical-devices/application-information/guidance-documents/pre-market-guidance-machine-learning-enabled-medical-devices.html",
+   "hits": 1,
+   "screened": 1,
+   "kept": [
+    "T6-P22"
+   ],
+   "notes": "curl: connection reset (3 attempts). WebFetch returned short fragments only (date published April 1, 2026; PCCP has 3 components; notification of software updates under Transparency > Labelling). Full text not read."
+  },
+  {
+   "id": "T6-S037",
+   "date": "2026-10-12",
+   "tool": "GOV.UK search API",
+   "family": "regulatory",
+   "query": "https://www.gov.uk/api/search.json?q=predetermined%20change%20control%20plan&count=20",
+   "hits": 222704,
+   "screened": 20,
+   "kept": [
+    "T6-P15"
+   ],
+   "notes": "Unranked total. Among the top 20, the only MHRA PCCP item was the 2023 joint guiding principles; no separate MHRA PCCP guidance identified."
+  },
+  {
+   "id": "T6-S038",
+   "date": "2026-10-12",
+   "tool": "OpenAlex",
+   "family": "citation_forward",
+   "query": "GET /works?filter=cites:W3085467444 (count) ; GET /works?filter=cites:W3085467444&search=update OR upgrade OR version OR regression&per-page=50",
+   "hits": 179,
+   "screened": 50,
+   "kept": [
+    "T6-P03",
+    "T6-P11",
+    "T6-P28",
+    "T6-P30",
+    "T6-P34"
+   ],
+   "notes": "320 citing works in total. Found NCS Report 35, van Acht 2025 (SPC monitoring), Rusanov 2025, Fontaine 2025; screened Jin 2023, Isaksson 2022, Robert 2021, Yoo 2025, AID-RT 2026."
+  },
+  {
+   "id": "T6-S039",
+   "date": "2026-10-12",
+   "tool": "OpenAlex",
+   "family": "citation_forward",
+   "query": "GET /works?filter=cites:W3085467444&search=commissioning OR \"quality assurance\" OR monitoring&per-page=50",
+   "hits": 235,
+   "screened": 50,
+   "kept": [
+    "T6-P08",
+    "T6-P11",
+    "T6-P13",
+    "T6-P30"
+   ],
+   "notes": "Found RCR guidance statements (Mackay 2026) and Zanca 2022 (regulatory review, screened); Brouwer 2020 and Schipaanboord 2025 screened."
+  },
+  {
+   "id": "T6-S040",
+   "date": "2026-10-12",
+   "tool": "OpenAlex",
+   "family": "citation_forward",
+   "query": "GET /works?filter=cites:W4399327635&per-page=100",
+   "hits": 106,
+   "screened": 106,
+   "kept": [
+    "T6-P12",
+    "T6-P13",
+    "T6-P28",
+    "T6-P34"
+   ],
+   "notes": "All citing works screened by title. Found IAEA Human Health Series No. 50 (2026); also Poel 2025, Mason 2025, Galapon 2025 (synthetic CT after reconstruction upgrade), Wang 2026 (already cited)."
+  },
+  {
+   "id": "T6-S041",
+   "date": "2026-10-12",
+   "tool": "Crossref REST; DataCite REST",
+   "family": "known_item",
+   "query": "GET /works/10.61092/iaea.9olq-aqa9 ; GET https://api.datacite.org/dois/10.61092/iaea.9olq-aqa9",
+   "hits": 1,
+   "screened": 1,
+   "kept": [
+    "T6-P12"
+   ],
+   "notes": "Crossref: IAEA Human Health Series, May 2026, ISBN 9789201300263, subtitle 'Guidelines for Medical Physicists'. DataCite returned no record."
+  },
+  {
+   "id": "T6-S042",
+   "date": "2026-10-12",
+   "tool": "WebSearch",
+   "family": "known_item",
+   "query": "IAEA \"Clinical Implementation of Artificial Intelligence Systems in Medical Imaging and Radiotherapy\" Guidelines for Medical Physicists Human Health Series pdf",
+   "hits": null,
+   "screened": 10,
+   "kept": [
+    "T6-P12"
+   ],
+   "notes": "iaea.org publication page returned 403/402. PDF read from a third-party copy (certifico.com) whose colophon matches the IAEA record (STI/PUB/2135, DOI 10.61092/iaea.9olq-aqa9, May 2026). Authors should cite from the official IAEA PDF."
+  },
+  {
+   "id": "T6-S043",
+   "date": "2026-10-12",
+   "tool": "PubMed E-utilities",
+   "family": "boolean",
+   "query": "(\"auto-segmentation\"[tiab] OR autosegmentation[tiab] OR \"auto-contouring\"[tiab] OR autocontouring[tiab] OR \"automatic segmentation\"[tiab] OR \"automatic contouring\"[tiab]) AND (\"software update\"[tiab] OR \"software upgrade\"[tiab] OR \"software version\"[tiab] OR \"model update\"[tiab] OR \"version update\"[tiab] OR \"new version\"[tiab] OR upgrade[tiab] OR \"model updates\"[tiab])",
+   "hits": 17,
+   "screened": 17,
+   "kept": [
+    "T6-P14"
+   ],
+   "notes": "Found Barati 2026 (regression test after a RayStation upgrade); full text read from Europe PMC (PMC13601754). Lizzi 2023 LungQuant upgrade screened."
+  },
+  {
+   "id": "T6-S044",
+   "date": "2026-10-12",
+   "tool": "Europe PMC REST; OpenAlex",
+   "family": "known_item",
+   "query": "DOI lookups for 10.1016/j.clon.2025.104004, 10.1016/j.phro.2025.100873, 10.1002/mp.16846, 10.1007/s13246-024-01513-x, 10.1038/s43856-025-01048-6, 10.25030/ncs-035, 10.1016/j.semradonc.2022.06.012, 10.1016/j.phro.2026.100940, 10.1016/j.phro.2025.100716 ; OpenAlex locations for the RCR statements and NCS 35",
+   "hits": 9,
+   "screened": 9,
+   "kept": [
+    "T6-P11",
+    "T6-P13",
+    "T6-P28",
+    "T6-P30"
+   ],
+   "notes": "RCR journal version full text restricted (White Rose record: full_text_status restricted). van Acht 2025 and Rusanov 2025 read in targeted passages from PMC."
+  },
+  {
+   "id": "T6-S045",
+   "date": "2026-10-12",
+   "tool": "WebSearch",
+   "family": "known_item",
+   "query": "Royal College of Radiologists auto-contouring guidance statements radiotherapy \"software update\" OR \"new version\" OR \"upgrade\" recommissioning",
+   "hits": null,
+   "screened": 10,
+   "kept": [
+    "T6-P13"
+   ],
+   "notes": "Found the RCR 'Guidance on auto-contouring in radiotherapy' PDF (November 2024); read in full."
+  },
+  {
+   "id": "T6-S046",
+   "date": "2026-10-12",
+   "tool": "WebSearch",
+   "family": "dataset_docs",
+   "query": "QIBA profile CT tumor volume change \"software version\" same both time points image analysis tool requirement",
+   "hits": null,
+   "screened": 9,
+   "kept": [
+    "T6-P23"
+   ],
+   "notes": "Found the CTV-AD self-attestation checklist with the requirement to re-process the first timepoint."
+  },
+  {
+   "id": "T6-S047",
+   "date": "2026-10-12",
+   "tool": "WebSearch; QIBA wiki",
+   "family": "dataset_docs",
+   "query": "QIBA Profile \"CT Tumor Volume Change for Advanced Disease\" CTV-AD profile pdf qibawiki consensus 2018",
+   "hits": null,
+   "screened": 10,
+   "kept": [
+    "T6-P23"
+   ],
+   "notes": "Downloaded and read the 2022 Clinically Feasible profile (DOI 10.1148/qiba/20220721) and the CTV-AD self-attestation document. Coordinate with part T3, which covers QIBA profiles."
+  },
+  {
+   "id": "T6-S048",
+   "date": "2026-10-12",
+   "tool": "DICOM standard (dicom.nema.org)",
+   "family": "dataset_docs",
+   "query": "PS3.3 sect_10.16.html (Algorithm Identification Macro) ; PS3.3 sect_C.8.20.2.html (Segmentation Image Module) ; PS3.16 sect_TID_4019.html (Algorithm Identification) ; attempted PS3.3 sect_10.25.html (wrong section) and PS3.16 sect_TID_1419.html (HTTP 404)",
+   "hits": 3,
+   "screened": 3,
+   "kept": [
+    "T6-P24"
+   ],
+   "notes": "Edition 2026d. Algorithm Version (0066,0031) is Type 1 inside the macro, but the Segmentation Algorithm Identification Sequence (0062,0007) is Type 3 (optional)."
+  },
+  {
+   "id": "T6-S049",
+   "date": "2026-10-12",
+   "tool": "WebSearch; dart.acr.org",
+   "family": "regulatory",
+   "query": "ACR Assess-AI registry real-world AI performance monitoring radiology data registry algorithm version ; https://dart.acr.org/Home/AssessAI",
+   "hits": null,
+   "screened": 10,
+   "kept": [
+    "T6-P31"
+   ],
+   "notes": "ACR page is rendered by JavaScript and returned no text (curl and WebFetch); press reports only. Peer-reviewed description found in S050."
+  },
+  {
+   "id": "T6-S050",
+   "date": "2026-10-12",
+   "tool": "PubMed E-utilities",
+   "family": "boolean",
+   "query": "(\"Assess-AI\"[tiab] OR \"AI registry\"[tiab] OR \"artificial intelligence registry\"[tiab] OR (\"post-deployment\"[tiab] AND monitoring[tiab])) AND (radiology[tiab] OR imaging[tiab]) AND (\"artificial intelligence\"[tiab] OR \"machine learning\"[tiab] OR \"deep learning\"[tiab])",
+   "hits": 35,
+   "screened": 30,
+   "kept": [
+    "T6-P31"
+   ],
+   "notes": "Coombs 2026 JACR (Assess-AI); Sahiner 2023 (data drift), Cook 2026 and Schmidt 2026 screened."
+  },
+  {
+   "id": "T6-S051",
+   "date": "2026-10-12",
+   "tool": "PubMed E-utilities",
+   "family": "exact_phrase",
+   "query": "\"predetermined change control plan\"[tiab] OR \"predetermined change control plans\"[tiab] OR \"pre-determined change control plan\"[tiab]",
+   "hits": 18,
+   "screened": 18,
+   "kept": [
+    "T6-P25",
+    "T6-P26"
+   ],
+   "notes": "Dayma 2026 (abstract) and Dabek 2026 (full text, PMC13197871). Alshreef 2026 (deployer-side readiness instrument), DuPreez 2025 and Carvalho 2025 screened."
+  },
+  {
+   "id": "T6-S052",
+   "date": "2026-10-12",
+   "tool": "PubMed E-utilities",
+   "family": "boolean",
+   "query": "(\"software upgrade\"[tiab] OR \"software upgrades\"[tiab] OR \"software update\"[tiab] OR \"software updates\"[tiab] OR \"version update\"[tiab] OR \"new software version\"[tiab]) AND (\"treatment planning system\"[tiab] OR radiotherapy[tiab] OR \"radiation therapy\"[tiab]) AND (\"quality assurance\"[tiab] OR commissioning[tiab] OR \"acceptance test\"[tiab] OR \"acceptance testing\"[tiab] OR \"regression test\"[tiab] OR \"regression testing\"[tiab])",
+   "hits": 12,
+   "screened": 12,
+   "kept": [
+    "T6-P33"
+   ],
+   "notes": "Bassiri 2024 (post-upgrade segmentation consistency by absolute volume); Garcia-Romero 2026 SEFM TPS guide, Krishna 2016 and Able 2005 screened."
+  },
+  {
+   "id": "T6-S053",
+   "date": "2026-10-12",
+   "tool": "PubMed E-utilities",
+   "family": "boolean",
+   "query": "(\"artificial intelligence\"[tiab] OR \"deep learning\"[tiab] OR \"machine learning\"[tiab]) AND (\"acceptance testing\"[tiab] OR \"acceptance test\"[tiab] OR commissioning[tiab] OR \"quality control\"[tiab] OR \"quality assurance\"[tiab]) AND (\"new version\"[tiab] OR \"software update\"[tiab] OR \"software updates\"[tiab] OR \"model update\"[tiab] OR \"model updates\"[tiab] OR upgrade[tiab] OR upgrades[tiab] OR \"version change\"[tiab]) AND (radiology[tiab] OR \"medical imaging\"[tiab] OR CT[tiab] OR \"computed tomography\"[tiab] OR radiotherapy[tiab])",
+   "hits": 4,
+   "screened": 4,
+   "kept": [
+    "T6-P14",
+    "T6-P34"
+   ],
+   "notes": "Fontaine 2025 (six Limbus AI versions); Zhang 2026 (attribution shifts in updated CT classifiers, a T1 topic) screened."
+  },
+  {
+   "id": "T6-S054",
+   "date": "2026-10-12",
+   "tool": "Europe PMC REST",
+   "family": "boolean",
+   "query": "(\"substantial modification\" OR \"significant change\") AND (\"AI Act\" OR \"Artificial Intelligence Act\" OR \"Medical Device Regulation\" OR MDR) AND (\"machine learning\" OR \"artificial intelligence\") AND (\"medical device\" OR \"medical devices\")",
+   "hits": 175,
+   "screened": 30,
+   "kept": [],
+   "notes": "Secondary legal analyses (Busch 2024, Dennstadt 2026, Ampovska 2026, Rotalinti 2026, Gilbert 2021) screened; primary texts preferred."
+  },
+  {
+   "id": "T6-S055",
+   "date": "2026-10-12",
+   "tool": "Europe PMC REST",
+   "family": "boolean",
+   "query": "(\"software version\" OR \"model version\" OR \"algorithm version\" OR \"software update\" OR \"model update\") AND (longitudinal OR \"follow-up\" OR \"serial\") AND (reprocess* OR \"re-process*\" OR \"re-analy*\" OR reanaly* OR \"same version\") AND (volum* OR quantitative OR measurement) AND (CT OR MRI OR imaging)",
+   "hits": 2688,
+   "screened": 40,
+   "kept": [],
+   "notes": "Full-text matching too noisy; no governance statement found. Version dependence of measurements is covered by part T2."
+  },
+  {
+   "id": "T6-S056",
+   "date": "2026-10-12",
+   "tool": "Semantic Scholar Graph API",
+   "family": "boolean",
+   "query": "GET /graph/v1/paper/search?query=regression testing deep learning auto-segmentation software upgrade commissioning&limit=30",
+   "hits": null,
+   "screened": 0,
+   "kept": [],
+   "notes": "Failed: HTTP 429 on two attempts about 20 s apart (anonymous rate limit). Replaced by the OpenAlex search S057."
+  },
+  {
+   "id": "T6-S057",
+   "date": "2026-10-12",
+   "tool": "OpenAlex",
+   "family": "boolean",
+   "query": "GET /works?search=auto-segmentation software upgrade regression test commissioning radiotherapy&filter=from_publication_date:2019-01-01&per-page=30",
+   "hits": 27,
+   "screened": 27,
+   "kept": [
+    "T6-P14"
+   ],
+   "notes": "Mahadevaiah 2020 Med Phys (AI decision-support acceptance and commissioning; update management protocol), Young 2025 BJR and De Biase 2024 screened in targeted passages, not kept."
+  },
+  {
+   "id": "T6-S058",
+   "date": "2026-10-12",
+   "tool": "PubMed E-utilities",
+   "family": "known_item",
+   "query": "\"Artificial intelligence-based clinical decision support in modern medical physics\"[ti] OR \"Real-world performance evaluation of commercial autocontouring software\"[ti]",
+   "hits": 0,
+   "screened": 0,
+   "kept": [],
+   "notes": "Zero hits (hyphenation in the phrase index); records resolved through Europe PMC DOI lookups (PMC7318221, PMC12515040)."
+  },
+  {
+   "id": "T6-S059",
+   "date": "2026-10-12",
+   "tool": "OpenAlex",
+   "family": "citation_backward",
+   "query": "GET /works/W4399327635 referenced_works (89; 83 resolved)",
+   "hits": 83,
+   "screened": 83,
+   "kept": [
+    "T6-P02",
+    "T6-P04"
+   ],
+   "notes": "No update-specific guidance beyond Vandewinckele 2020 and Brady 2024."
+  },
+  {
+   "id": "T6-S060",
+   "date": "2026-10-12",
+   "tool": "OpenAlex",
+   "family": "citation_backward",
+   "query": "GET /works/W3085467444 referenced_works (173)",
+   "hits": 173,
+   "screened": 173,
+   "kept": [
+    "T6-P05",
+    "T6-P06"
+   ],
+   "notes": "AAPM TG-40, TG-100, TG-132 and MPPG 5.a; no AI-update guidance missed."
+  },
+  {
+   "id": "T6-S061",
+   "date": "2026-10-12",
+   "tool": "OpenAlex",
+   "family": "citation_forward",
+   "query": "GET /works?filter=cites:W2089020430&per-page=30",
+   "hits": 25,
+   "screened": 25,
+   "kept": [
+    "T6-P07",
+    "T6-P27"
+   ],
+   "notes": "Mahmood 2024 BJR|AI (AAPM CAD subcommittee follow-up on QA, QC and acceptance testing) and TG-273."
+  },
+  {
+   "id": "T6-S062",
+   "date": "2026-10-12",
+   "tool": "OpenAlex",
+   "family": "citation_forward",
+   "query": "GET /works?filter=cites:W4391073970&search=update OR version OR upgrade OR monitoring&per-page=40",
+   "hits": 49,
+   "screened": 40,
+   "kept": [
+    "T6-P29"
+   ],
+   "notes": "Kotter 2025 (ESR recommendations on the AI Act); Feng 2025 NEJM AI monitoring review and Stogiannos 2025 vendor survey screened."
+  },
+  {
+   "id": "T6-S063",
+   "date": "2026-10-12",
+   "tool": "WebSearch",
+   "family": "regulatory",
+   "query": "European Commission guidelines \"substantial modification\" AI Act Article 96 published 2026 high-risk AI systems guidelines",
+   "hits": null,
+   "screened": 9,
+   "kept": [],
+   "notes": "No published Commission guideline on substantial modification found; a Council note expected it in Q2-Q3 2026. Coverage limit."
+  },
+  {
+   "id": "T6-S064",
+   "date": "2026-10-12",
+   "tool": "PubMed E-utilities",
+   "family": "venue_sweep",
+   "query": "(\"J Appl Clin Med Phys\"[ta] OR \"Med Phys\"[ta] OR \"Phys Imaging Radiat Oncol\"[ta] OR \"Radiother Oncol\"[ta] OR \"Phys Med\"[ta] OR \"Phys Med Biol\"[ta]) AND (\"auto-segmentation\"[tiab] OR \"auto-contouring\"[tiab] OR autocontouring[tiab] OR autosegmentation[tiab] OR \"deep learning segmentation\"[tiab] OR \"automatic segmentation\"[tiab]) AND (upgrade[tiab] OR upgrades[tiab] OR \"new version\"[tiab] OR \"software version\"[tiab] OR \"software versions\"[tiab] OR versions[tiab] OR \"model update\"[tiab] OR \"routine quality assurance\"[tiab] OR \"performance monitoring\"[tiab]) AND 2021:2026[dp]",
+   "hits": 6,
+   "screened": 6,
+   "kept": [
+    "T6-P14",
+    "T6-P30",
+    "T6-P34"
+   ],
+   "notes": "Saturation: three of six already recorded. De Kerf 2023, Zhu 2025 and Olsson 2022 screened."
+  },
+  {
+   "id": "T6-S065",
+   "date": "2026-10-12",
+   "tool": "PubMed E-utilities",
+   "family": "venue_sweep",
+   "query": "(\"AAPM\"[tiab] OR \"American Association of Physicists in Medicine\"[tiab] OR ESTRO[tiab] OR IPEM[tiab] OR \"Institute of Physics and Engineering in Medicine\"[tiab] OR CPQR[tiab] OR EFOMP[tiab]) AND (\"task group\"[tiab] OR \"practice guideline\"[tiab] OR guideline[tiab] OR \"topical report\"[tiab] OR recommendations[tiab] OR \"report\"[ti]) AND (\"artificial intelligence\"[tiab] OR \"machine learning\"[tiab] OR \"deep learning\"[tiab]) AND (\"quality assurance\"[tiab] OR commissioning[tiab] OR \"acceptance testing\"[tiab] OR implementation[tiab]) AND 2022:2026[dp]",
+   "hits": 14,
+   "screened": 14,
+   "kept": [
+    "T6-P03",
+    "T6-P07"
+   ],
+   "notes": "No 2025-2026 AAPM, IPEM or CPQR task-group report on AI auto-segmentation QA after updates in PubMed; Mercolli 2024 (shared vendor-user responsibility) and Kagadis 2026 (EFOMP framework) screened."
+  },
+  {
+   "id": "T6-S066",
+   "date": "2026-10-12",
+   "tool": "WebSearch",
+   "family": "exact_phrase",
+   "query": "\"acceptance testing and commissioning of a new version\" OR \"commissioning of a new version of the software\" treatment planning TG 53 periodic quality assurance",
+   "hits": null,
+   "screened": 10,
+   "kept": [],
+   "notes": "English TG-53 wording not found; IAEA TECDOC on TPS acceptance testing screened."
+  },
+  {
+   "id": "T6-S067",
+   "date": "2026-10-12",
+   "tool": "IAEA publications server",
+   "family": "known_item",
+   "query": "GET https://www-pub.iaea.org/MTCD/Publications/PDF/TRS430_web.pdf",
+   "hits": 1,
+   "screened": 1,
+   "kept": [
+    "T6-P10"
+   ],
+   "notes": "IAEA TRS-430 (2004) full text read: Sections 6.8, 7.7.1, 7.7.2, 10.3."
+  },
+  {
+   "id": "T6-S068",
+   "date": "2026-10-12",
+   "tool": "NCS website (via OpenAlex OA link)",
+   "family": "known_item",
+   "query": "GET https://radiationdosimetry.org/ncs/documents/quality-assurance-of-treatment-planning-systems (NCS Report 35 PDF)",
+   "hits": 1,
+   "screened": 1,
+   "kept": [
+    "T6-P11"
+   ],
+   "notes": "NCS Report 35 (July 2022) full text read: Chapter 6 and Table 6.1."
+  }
+ ]
+}

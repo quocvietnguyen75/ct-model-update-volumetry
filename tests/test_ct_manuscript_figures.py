@@ -40,6 +40,33 @@ def batches():
 
 
 STRATA_LAYOUT = ((0, 1, 25, 205), (1, 10, 19, 51), (10, None, 13, 21))
+COMPAT_LABELS = {('unet', 'internal'): 'U-Net, internal', ('unet', 'pantrack'): 'U-Net, PanTrack',
+                 ('nnunet', 'internal'): 'nnU-Net, internal', ('nnunet', 'pantrack'): 'nnU-Net, PanTrack'}
+
+
+def compat_result():
+    """Synthetic CT-UPDATE-019 summary with the fields Figure 5 reads (aggregates only)."""
+    segmenters = {}
+    for model, scale in (('unet', 1.0), ('nnunet', 0.4)):
+        cohorts = {}
+        for j, cohort in enumerate(('internal', 'pantrack')):
+            kappa = scale * (0.5 + 0.3 * j)
+            predicted = 100 * ((1 + kappa * kappa) ** 0.5 - 1)
+            cohorts[cohort] = dict(
+                relative_compatibility_cost=dict(mean_percent=20 * scale + 5 * j,
+                                                 two_way_percentile_95=[5 * scale, 30 * scale + 5 * j]),
+                version_agreement=dict(bias_percent=4.0 * scale + j, limits_percent=[-30 * scale, 45 * scale + 10 * j]),
+                decomposition=dict(kappa=kappa, kappa_two_way_95=[0.8 * kappa, 1.2 * kappa],
+                                   observed_inflation_percent=predicted + 1,
+                                   observed_inflation_percent_two_way_95=[0.0, predicted + 4],
+                                   predicted_inflation_percent=predicted),
+                patient_response=dict(assessments=29 if cohort == 'internal' else 90,
+                                      differs=dict(mean=0.2 * scale + 0.05 * j,
+                                                   two_way_percentile_95=[0.1 * scale, 0.3 * scale + 0.05 * j]),
+                                      progression_split_differs=dict(mean=0.1 * scale,
+                                                                     two_way_percentile_95=[0.0, 0.2 * scale])))
+        segmenters[model] = dict(runs=20 if model == 'unet' else 10, cohorts=cohorts)
+    return dict(protocol_id='CT-UPDATE-019', segmenters=segmenters)
 
 
 def replication(runs, scale):
@@ -121,10 +148,10 @@ class PrintFigureTests(unittest.TestCase):
             self.check_print_size(self.f.contrast_figure(panels(with_runs), COHORTS, self.f.REPLICATION_LEGEND
                                                          if with_runs else self.f.THREE_RUN_LEGEND))
 
-    def test_contrast_panels_follow_the_retention_first_order(self):
+    def test_contrast_panels_follow_the_compatibility_first_order(self):
         fig = self.f.contrast_figure(panels(True), COHORTS, self.f.REPLICATION_LEGEND)
         self.assertEqual([ax.get_title(loc='left') for ax in fig.axes],
-                         ['Retention cost', 'Update benefit', 'Contour benefit'])
+                         ['Compatibility cost', 'Update benefit', 'Contour benefit'])
         self.assertEqual(self.f.CONTRASTS, CONTRASTS)
 
     def test_estimates_original_runs_and_replication_runs_use_distinct_markers(self):
@@ -148,7 +175,7 @@ class PrintFigureTests(unittest.TestCase):
         self.check_print_size(fig)
         texts = ' '.join(self.f.figure_texts(fig))
         for word in ('Baseline scan', 'Follow-up scan', 'Reference', 'Old model', 'Updated model', 'old/old', 'old/new',
-                     'new/new', 'Retention cost', 'Update benefit', 'Contour benefit', 'BL(new) − BL(old)'):
+                     'new/new', 'Compatibility cost', 'Update benefit', 'Contour benefit', 'BL(new) − BL(old)'):
             self.assertIn(word, texts)
         # Two labelled parts: the mechanism and the strategies.
         self.assertIn('a', self.f.figure_texts(fig))
@@ -264,12 +291,12 @@ class PrintFigureTests(unittest.TestCase):
                     self.assertAlmostEqual(drawn[f'{key}:estimate'].get_offsets()[0][0], row[model]['estimate'])
                     self.assertEqual(tuple(drawn[f'{key}:interval'].get_xdata()), tuple(row[model]['interval']))
 
-    def test_model_comparison_keeps_the_retention_first_order_and_distinct_models(self):
+    def test_model_comparison_keeps_the_compatibility_first_order_and_distinct_models(self):
         unet, nnunet = replication(20, 1.0), replication(10, 0.5)
         fig = self.f.model_comparison_figure(self.f.model_comparison_panels(unet, unet, nnunet, nnunet), COHORTS,
                                              MODEL_LEGEND)
         titles = [ax.get_title(loc='left') for ax in fig.axes if ax.get_title(loc='left')]
-        self.assertEqual(titles[:3], ['Retention cost', 'Update benefit', 'Contour benefit'])
+        self.assertEqual(titles[:3], ['Compatibility cost', 'Update benefit', 'Contour benefit'])
         self.assertEqual(titles[3:], ['Internal', 'PanTrack'])
         # The strata are post hoc for the U-Net but were specified before nnU-Net training, so (b) says descriptive.
         heading = [t for t in self.f.figure_texts(fig) if t.startswith('b ')]
@@ -278,6 +305,10 @@ class PrintFigureTests(unittest.TestCase):
         self.assertNotIn('post hoc', heading[0])
         handles = fig.legends[0].legend_handles
         self.assertEqual(len(handles), 4)
+        # Single training runs appear in panel (a) only; the legend says so in words (ARS S6, 12 October).
+        runs = [h.get_label() for h in handles if 'training run' in h.get_label()]
+        self.assertEqual(len(runs), 2)
+        self.assertTrue(all(label.endswith('one training run (panel a only)') for label in runs))
         estimates = [h for h in handles if 'interval' in h.get_label()]
         self.assertEqual(len(estimates), 2)
         self.assertNotEqual(estimates[0].get_marker(), estimates[1].get_marker())
@@ -298,7 +329,9 @@ class PrintFigureTests(unittest.TestCase):
         self.assertEqual(texts['example:change:old_new'], '+8.25')
         self.assertEqual(texts['example:error:old_old'], '−1.00')
         self.assertEqual(texts['example:reference_change'], '+5.75')
-        self.assertIn('+2.25 mL', texts['example:retention_cost'])
+        self.assertIn('+2.25 mL', texts['example:compatibility_cost'])
+        self.assertIn('Compatibility cost', texts['example:compatibility_cost'])
+        self.assertIn('of this pair', texts['example:compatibility_cost'])
         strategies = [t.get_text() for t in sorted((t for t in fig.findobj(Text)
                                                     if str(t.get_gid()).startswith('example:strategy:')),
                                                    key=lambda t: -t.get_position()[1])]
@@ -340,6 +373,45 @@ class PrintFigureTests(unittest.TestCase):
                                        {'lt1': 6, '1to10': 24, 'ge10': 36})
         self.check_print_size(fig)
         self.assertEqual(len(fig.axes), 2)
+
+    def test_compatibility_figure_fits_the_text_width_with_legible_labels(self):
+        panels_ = self.f.compatibility_panels(compat_result())
+        fig = self.f.compatibility_figure(panels_, COMPAT_LABELS)
+        self.check_print_size(fig)
+
+    def test_compatibility_figure_draws_exactly_the_given_values(self):
+        result = compat_result()
+        fig = self.f.compatibility_figure(self.f.compatibility_panels(result), COMPAT_LABELS)
+        drawn = {a.get_gid(): a for a in fig.findobj(lambda a: str(a.get_gid()).startswith(('agreement:', 'inflation:',
+                                                                                             'response:')))}
+        for model in ('unet', 'nnunet'):
+            for cohort in ('internal', 'pantrack'):
+                entry = result['segmenters'][model]['cohorts'][cohort]
+                agreement, decomposition = entry['version_agreement'], entry['decomposition']
+                bias = drawn[f'agreement:{model}:{cohort}:bias'].get_offsets()[0]
+                self.assertAlmostEqual(bias[0], 1 + agreement['bias_percent'] / 100)
+                limits = tuple(drawn[f'agreement:{model}:{cohort}:limits'].get_xdata())
+                self.assertEqual(limits, tuple(1 + v / 100 for v in agreement['limits_percent']))
+                point = drawn[f'inflation:{model}:{cohort}'].get_offsets()[0]
+                self.assertAlmostEqual(point[0], decomposition['kappa'])
+                self.assertAlmostEqual(point[1], decomposition['observed_inflation_percent'])
+                share = drawn[f'response:{model}:{cohort}:differs'].get_offsets()[0]
+                self.assertAlmostEqual(share[0], 100 * entry['patient_response']['differs']['mean'])
+                split = drawn[f'response:{model}:{cohort}:progression'].get_offsets()[0]
+                self.assertAlmostEqual(split[0], 100 * entry['patient_response']['progression_split_differs']['mean'])
+        curve = drawn['inflation:curve']
+        x, y = np.asarray(curve.get_xdata()), np.asarray(curve.get_ydata())
+        np.testing.assert_allclose(y, 100 * (np.sqrt(1 + x ** 2) - 1))
+        band = drawn['agreement:repeat_ct']
+        self.assertAlmostEqual(band.get_x(), 1 - 0.121)
+        self.assertAlmostEqual(band.get_x() + band.get_width(), 1 + 0.134)
+        self.assertTrue(any('repeat CT' in t for t in self.f.figure_texts(fig)))
+
+    def test_compatibility_panels_reject_missing_values(self):
+        result = compat_result()
+        del result['segmenters']['nnunet']['cohorts']['pantrack']['decomposition']['kappa']
+        with self.assertRaises(ValueError):
+            self.f.compatibility_panels(result)
 
     def test_saved_pdf_page_is_the_text_width_and_reproducible(self):
         # Two independent builds of the same figure must give identical bytes (no dates, stable layout).

@@ -1,0 +1,1226 @@
+{
+ "part": "T1",
+ "date": "2026-10-12",
+ "entries": [
+  {
+   "id": "T1-S001",
+   "date": "2026-10-12",
+   "tool": "Crossref REST API",
+   "family": "known_item",
+   "query": "GET https://api.crossref.org/works?query.bibliographic=Updates in human-AI teams: understanding and addressing the performance/compatibility tradeoff Bansal&rows=5; then GET /works/10.1609/aaai.v33i01.33012429",
+   "hits": 5,
+   "screened": 5,
+   "kept": [
+    "T1-P01"
+   ],
+   "notes": "Anchor confirmed: Bansal, Nushi, Kamar, Weld, Lasecki, Horvitz. Proc. AAAI 33(01):2429-2437, published online 17 July 2019, DOI 10.1609/aaai.v33i01.33012429. Remaining hits unrelated."
+  },
+  {
+   "id": "T1-S002",
+   "date": "2026-10-12",
+   "tool": "Crossref REST API",
+   "family": "known_item",
+   "query": "GET https://api.crossref.org/works?query.bibliographic=An empirical analysis of backward compatibility in machine learning systems Srivastava Nushi Kamar Shah Horvitz&rows=3",
+   "hits": 3,
+   "screened": 3,
+   "kept": [
+    "T1-P02"
+   ],
+   "notes": "Anchor confirmed: Srivastava, Nushi, Kamar, Shah, Horvitz. KDD 2020 (Proc. 26th ACM SIGKDD), pp. 3272-3280, DOI 10.1145/3394486.3403379."
+  },
+  {
+   "id": "T1-S003",
+   "date": "2026-10-12",
+   "tool": "Crossref REST API",
+   "family": "known_item",
+   "query": "GET https://api.crossref.org/works?query.bibliographic=Towards backward-compatible representation learning Shen Xiong Xia Soatto&rows=3",
+   "hits": 3,
+   "screened": 3,
+   "kept": [
+    "T1-P03"
+   ],
+   "notes": "Anchor confirmed: Shen, Xiong, Xia, Soatto, CVPR 2020, pp. 6367-6376, DOI 10.1109/cvpr42600.2020.00640. Also surfaced follow-ups (Zhang et al. IJCAI 2022 universal BCT; Jang & Lim ICCV 2025 cross-modal BCT), noted as embedding-compatibility neighbours."
+  },
+  {
+   "id": "T1-S004",
+   "date": "2026-10-12",
+   "tool": "Crossref REST API",
+   "family": "known_item",
+   "query": "GET https://api.crossref.org/works?query.bibliographic=Launch and iterate: reducing prediction churn Milani Fard Cormier Canini Gupta&rows=3",
+   "hits": 3,
+   "screened": 3,
+   "kept": [],
+   "notes": "No Crossref record for the NIPS 2016 paper (NIPS 2016 has no DOIs); top hits unrelated. Resolved via the official proceedings page (T1-S011)."
+  },
+  {
+   "id": "T1-S005",
+   "date": "2026-10-12",
+   "tool": "Crossref REST API",
+   "family": "known_item",
+   "query": "GET https://api.crossref.org/works?query.bibliographic=Backward-compatible prediction updates: a probabilistic approach Trauble&rows=3",
+   "hits": 3,
+   "screened": 3,
+   "kept": [],
+   "notes": "No Crossref record (NeurIPS 2021 has no DOI); hits unrelated. Resolved via arXiv and the official proceedings page."
+  },
+  {
+   "id": "T1-S006",
+   "date": "2026-10-12",
+   "tool": "arXiv API",
+   "family": "known_item",
+   "query": "http://export.arxiv.org/api/query?search_query=ti:\"reducing prediction churn\"&max_results=10 ; and search_query=ti:churn AND ti:launch",
+   "hits": 0,
+   "screened": 0,
+   "kept": [],
+   "notes": "The Milani Fard et al. churn paper has no arXiv version under this title."
+  },
+  {
+   "id": "T1-S007",
+   "date": "2026-10-12",
+   "tool": "arXiv API",
+   "family": "known_item",
+   "query": "http://export.arxiv.org/api/query?search_query=ti:\"backward-compatible prediction updates\"&max_results=10",
+   "hits": 1,
+   "screened": 1,
+   "kept": [
+    "T1-P04"
+   ],
+   "notes": "Found arXiv:2107.01057 (Traeuble et al.)."
+  },
+  {
+   "id": "T1-S008",
+   "date": "2026-10-12",
+   "tool": "DBLP search API",
+   "family": "known_item",
+   "query": "https://dblp.org/search/publ/api?q=Launch and Iterate: Reducing Prediction Churn&format=json ; and q=Backward-Compatible Prediction Updates: A Probabilistic Approach",
+   "hits": null,
+   "screened": 0,
+   "kept": [],
+   "notes": "DBLP returned a bot-challenge page (\"Making sure you are not a bot\") for both requests; DBLP unusable in this session (coverage limit)."
+  },
+  {
+   "id": "T1-S009",
+   "date": "2026-10-12",
+   "tool": "Semantic Scholar Graph API",
+   "family": "known_item",
+   "query": "GET /graph/v1/paper/search/match?query=Launch and Iterate: Reducing Prediction Churn ; and query=Backward-Compatible Prediction Updates: A Probabilistic Approach",
+   "hits": 2,
+   "screened": 2,
+   "kept": [
+    "T1-P05",
+    "T1-P04"
+   ],
+   "notes": "S2 ids f0d5bbd972efb71789e0145386421e7aebe89da5 (Milani Fard 2016, NeurIPS, 39 citations) and 86306923f1a696ec657e196dbfbf66aad24f69d8 (Traeuble 2021, NeurIPS, arXiv 2107.01057)."
+  },
+  {
+   "id": "T1-S010",
+   "date": "2026-10-12",
+   "tool": "WebSearch",
+   "family": "known_item",
+   "query": "\"Launch and Iterate: Reducing Prediction Churn\" proceedings.neurips.cc",
+   "hits": 9,
+   "screened": 9,
+   "kept": [
+    "T1-P05"
+   ],
+   "notes": "Found the official proceedings hash dc5c768b5dc76a084531934b34601977 and a citing paper (Maintaining Stability and Plasticity for Predictive Churn Reduction, arXiv 2305.04135) to screen later."
+  },
+  {
+   "id": "T1-S011",
+   "date": "2026-10-12",
+   "tool": "NeurIPS proceedings (papers.nips.cc)",
+   "family": "known_item",
+   "query": "GET https://papers.nips.cc/paper_files/paper/2016/hash/dc5c768b5dc76a084531934b34601977-Abstract.html ; -Bibtex.bib ; -Paper.pdf",
+   "hits": 1,
+   "screened": 1,
+   "kept": [
+    "T1-P05"
+   ],
+   "notes": "Official metadata: Milani Fard M, Cormier Q, Canini K, Gupta M. Advances in Neural Information Processing Systems 29 (NIPS 2016); no pages in official BibTeX. Full text read: churn C(f1,f2)=E[1{f1(X)f2(X)<0}] for binary classifiers, i.e. expected fraction of test examples whose predicted class differs (Eq. 1); smooth churn (Eq. 4) is a relaxation for classifier discriminants."
+  },
+  {
+   "id": "T1-S012",
+   "date": "2026-10-12",
+   "tool": "WebSearch",
+   "family": "known_item",
+   "query": "\"Backward-Compatible Prediction Updates: A Probabilistic Approach\" proceedings.neurips.cc 2021",
+   "hits": 9,
+   "screened": 9,
+   "kept": [
+    "T1-P04"
+   ],
+   "notes": "Official proceedings hash 012d9fe15b2493f21902cd55603382ec found."
+  },
+  {
+   "id": "T1-S013",
+   "date": "2026-10-12",
+   "tool": "NeurIPS proceedings (proceedings.neurips.cc)",
+   "family": "known_item",
+   "query": "GET https://proceedings.neurips.cc/paper_files/paper/2021/file/012d9fe15b2493f21902cd55603382ec-Bibtex.bib ; -Paper.pdf ; arXiv id_list=2107.01057",
+   "hits": 1,
+   "screened": 1,
+   "kept": [
+    "T1-P04"
+   ],
+   "notes": "Official metadata: Traeuble F, von Kuegelgen J, Kleindessner M, Locatello F, Schoelkopf B, Gehler P. NeurIPS 34 (2021), pp. 116-128. Full text (main paper, no appendix) read: defines the Prediction Update Problem for STORED predictions on an unlabelled dataset; baseline Replace = backfilling (re-evaluate all stored predictions with newest model); metrics NF, NFR = sum NF/(N*T), PF/NF, and BTC/BEC from Srivastava et al.; attributes the term backward compatibility to Bansal et al. Classification only. Closest ML analogue of the paper retained-vs-reprocessed question."
+  },
+  {
+   "id": "T1-S014",
+   "date": "2026-10-12",
+   "tool": "arXiv API",
+   "family": "known_item",
+   "query": "http://export.arxiv.org/api/query?search_query=ti:\"performance/compatibility\" OR ti:\"Updates in Human-AI Teams\"&max_results=10",
+   "hits": 0,
+   "screened": 0,
+   "kept": [],
+   "notes": "Bansal et al. 2019 has no arXiv version under this title; full text taken from AAAI OJS (T1-S018)."
+  },
+  {
+   "id": "T1-S015",
+   "date": "2026-10-12",
+   "tool": "arXiv API",
+   "family": "known_item",
+   "query": "http://export.arxiv.org/api/query?search_query=ti:\"backward compatibility\" AND ti:\"machine learning systems\"&max_results=10",
+   "hits": 1,
+   "screened": 1,
+   "kept": [
+    "T1-P02"
+   ],
+   "notes": "arXiv:2008.04572v1 (11 Aug 2020) = Srivastava et al. KDD 2020. Full text read: BTC (Eq. 1) and BEC (Eq. 2) defined exactly; BTC stated to match the compatibility score of Bansal et al.; same-data retraining baseline (25 trials, logistic regression, FICO) gave BTC 94.5 +/- 1.31% and BEC 78.3 +/- 2.15%."
+  },
+  {
+   "id": "T1-S016",
+   "date": "2026-10-12",
+   "tool": "arXiv API",
+   "family": "known_item",
+   "query": "http://export.arxiv.org/api/query?search_query=ti:\"backward-compatible representation learning\"&max_results=20",
+   "hits": 4,
+   "screened": 4,
+   "kept": [
+    "T1-P03"
+   ],
+   "notes": "arXiv:2003.11942 (Shen et al. BCT) plus three follow-ups: universal BCT (2203.01583), cross-modal BCT for VLMs (2405.14715), hyperbolic BCT (2506.05826); follow-ups noted as neighbours, not kept (same embedding-retrieval setting)."
+  },
+  {
+   "id": "T1-S017",
+   "date": "2026-10-12",
+   "tool": "Semantic Scholar Graph API",
+   "family": "known_item",
+   "query": "GET /graph/v1/paper/DOI:10.1609/aaai.v33i01.33012429?fields=title,year,venue,externalIds,citationCount,authors,abstract,publicationVenue,openAccessPdf",
+   "hits": null,
+   "screened": 0,
+   "kept": [],
+   "notes": "Failed: HTTP 429 after six back-offs (anonymous rate limit). Semantic Scholar used sparingly afterwards; OpenAlex used for citation chasing."
+  },
+  {
+   "id": "T1-S018",
+   "date": "2026-10-12",
+   "tool": "WebFetch + curl (AAAI OJS)",
+   "family": "known_item",
+   "query": "https://ojs.aaai.org/index.php/AAAI/article/view/4087 ; PDF https://ojs.aaai.org/index.php/AAAI/article/download/4087/3965",
+   "hits": 1,
+   "screened": 1,
+   "kept": [
+    "T1-P01"
+   ],
+   "notes": "Full text read. Defines locally and globally compatible updates and the compatibility score C(h1,h2)=sum_x A(x,h1(x))A(x,h2(x))/sum_x A(x,h1(x)) (Eq. 1); dissonance loss; Q3: h1 on 200 examples vs h2 on 5000 examples, compatibility as low as 40% (logistic regression, in-hospital mortality). Classification/actions only."
+  },
+  {
+   "id": "T1-S019",
+   "date": "2026-10-12",
+   "tool": "arXiv API",
+   "family": "known_item",
+   "query": "http://export.arxiv.org/api/query?search_query=ti:\"positive-congruent training\"&max_results=10",
+   "hits": 2,
+   "screened": 2,
+   "kept": [],
+   "notes": "Cited anchor Yan et al. (arXiv 2011.09161) and follow-up ELODI (Zhao et al., arXiv 2205.06265; TPAMI 2024), an ensemble-distillation method for positive-congruent training in classification; screened, not kept (classification remedy only)."
+  },
+  {
+   "id": "T1-S020",
+   "date": "2026-10-12",
+   "tool": "CVF open access + Crossref REST API",
+   "family": "known_item",
+   "query": "https://openaccess.thecvf.com/content/CVPR2021/papers/Yan_Positive-Congruent_Training_Towards_Regression-Free_Model_Updates_CVPR_2021_paper.pdf ; GET https://api.crossref.org/works/10.1109/CVPR46437.2021.01407",
+   "hits": 1,
+   "screened": 1,
+   "kept": [],
+   "notes": "Cited anchor re-read at methods level (not a new paper): NFR = (1/N) sum 1(yhat_new != y, yhat_old = y) (Eq. 2); relative NFR = NFR/((1-ER_old)*ER_new) (Eq. 11). Two ResNet-152 runs with different initialisations: same 78.3% accuracy, differ on 10.4% of validation samples. Pagination: CVF copy 14299-14308, IEEE/Crossref 14294-14303 (manuscript bib uses the Crossref pages, consistent with its DOI)."
+  },
+  {
+   "id": "T1-S021",
+   "date": "2026-10-12",
+   "tool": "Crossref REST API",
+   "family": "known_item",
+   "query": "GET https://api.crossref.org/works?query.bibliographic=Regression bugs are in your model! Measuring, reducing and analyzing regressions in NLP model updates&rows=3",
+   "hits": 3,
+   "screened": 3,
+   "kept": [
+    "T1-P09"
+   ],
+   "notes": "Xie, Lai, Xiong, Zhang, Soatto. ACL-IJCNLP 2021 (Vol. 1 Long Papers), pp. 6589-6602, DOI 10.18653/v1/2021.acl-long.515. Also returned the cited Cai et al. 2022 (DOI 10.52202/068431-1409, pp. 19384-19397)."
+  },
+  {
+   "id": "T1-S022",
+   "date": "2026-10-12",
+   "tool": "arXiv API",
+   "family": "exact_phrase",
+   "query": "http://export.arxiv.org/api/query?search_query=abs:\"negative flip rate\"&max_results=100&sortBy=submittedDate",
+   "hits": 5,
+   "screened": 5,
+   "kept": [
+    "T1-P09"
+   ],
+   "notes": "Five hits: RAGFlip (arXiv 2610.07266, Oct 2026, retriever upgrades), margin-preserving training (AAAI 2026), negative flips in active learning (2024), ELODI (2022), Xie et al. (2021). All classification or retrieval; none for continuous outputs or longitudinal measurement."
+  },
+  {
+   "id": "T1-S023",
+   "date": "2026-10-12",
+   "tool": "ACL Anthology",
+   "family": "known_item",
+   "query": "https://aclanthology.org/2021.acl-long.515.pdf",
+   "hits": 1,
+   "screened": 1,
+   "kept": [
+    "T1-P09"
+   ],
+   "notes": "Full text read: R_NF(D_reg,f_old,f_new)=|{x: f_old=y, f_new!=y}|/|D_reg| following Yan et al.; frames measurement as software regression testing on a regression set D_reg; random-seed-only change gave up to 3.56% negative flips (BERT-base); proposes two continuous-space proxies for regression (KL divergence of predicted probabilities, l2 distance of representations) used as training penalties, not as compatibility metrics for continuous targets. No NFI defined here."
+  },
+  {
+   "id": "T1-S024",
+   "date": "2026-10-12",
+   "tool": "arXiv API",
+   "family": "exact_phrase",
+   "query": "http://export.arxiv.org/api/query?search_query=ti:\"model update regression\"&max_results=20",
+   "hits": 1,
+   "screened": 1,
+   "kept": [],
+   "notes": "Only the cited Cai et al. (arXiv 2202.02976). Re-read at methods level (T1-S025)."
+  },
+  {
+   "id": "T1-S025",
+   "date": "2026-10-12",
+   "tool": "arXiv (full text)",
+   "family": "known_item",
+   "query": "https://arxiv.org/pdf/2202.02976 (Cai et al., cited anchor)",
+   "hits": 1,
+   "screened": 1,
+   "kept": [],
+   "notes": "Cited anchor read at methods level: for structured outputs (graphs), negative flips are counted over graphs or sub-graphs under each accuracy metric (word-level UAS, tree-level UCM, span EM); NFR follows Yan et al.; Cai et al. INTRODUCE negative flip impact NFI = NFR/ER_new (proportion of new-model errors that are negative flips). Random-seed changes alone gave NFR >= 1.55%. Attributes first study of update regression to Shen et al. 2020 (Bansal 2019 and Milani Fard 2016 predate it)."
+  },
+  {
+   "id": "T1-S026",
+   "date": "2026-10-12",
+   "tool": "CVF open access",
+   "family": "known_item",
+   "query": "https://openaccess.thecvf.com/content/CVPR2024/papers/Wang_Incremental_Nuclei_Segmentation_from_Histopathological_Images_via_Future-class_Awareness_and_CVPR_2024_paper.pdf (cited anchor)",
+   "hits": 1,
+   "screened": 1,
+   "kept": [],
+   "notes": "Cited anchor read at methods level: compatibility-inspired distillation is a training loss (pixel-wise forward/backward compatibility terms) for class-incremental segmentation; evaluation uses per-class segmentation accuracy on old and new classes. No compatibility METRIC is defined for segmentation outputs."
+  },
+  {
+   "id": "T1-S027",
+   "date": "2026-10-12",
+   "tool": "Crossref REST API",
+   "family": "known_item",
+   "query": "GET https://api.crossref.org/works?query.bibliographic=Continuous learning AI in radiology: implementation principles and early applications Pianykh&rows=3 ; then /works/10.1148/radiol.2020200038",
+   "hits": 3,
+   "screened": 3,
+   "kept": [
+    "T1-P06"
+   ],
+   "notes": "Anchor confirmed: Pianykh OS, Langs G, Dewey M, Enzmann DR, Herold CJ, Schoenberg SO, Brink JA. Radiology 297(1):6-14, October 2020, DOI 10.1148/radiol.2020200038."
+  },
+  {
+   "id": "T1-S028",
+   "date": "2026-10-12",
+   "tool": "Crossref REST API",
+   "family": "known_item",
+   "query": "GET https://api.crossref.org/works?query.bibliographic=Clinical artificial intelligence quality improvement: towards continual monitoring and updating of AI algorithms in healthcare Feng&rows=3 ; then /works/10.1038/s41746-022-00611-y",
+   "hits": 3,
+   "screened": 3,
+   "kept": [
+    "T1-P07"
+   ],
+   "notes": "Anchor confirmed: Feng J, Phillips RV, Malenica I, Bishara A, Hubbard AE, Celi LA, Pirracchio R. npj Digital Medicine 5:66, published 31 May 2022, DOI 10.1038/s41746-022-00611-y."
+  },
+  {
+   "id": "T1-S029",
+   "date": "2026-10-12",
+   "tool": "Crossref REST API",
+   "family": "known_item",
+   "query": "GET https://api.crossref.org/works?query.bibliographic=Continual learning in medical devices: FDA action plan and beyond Vokinger Feuerriegel Kesselheim&rows=3 ; then /works/10.1016/S2589-7500(21)00076-5",
+   "hits": 3,
+   "screened": 3,
+   "kept": [
+    "T1-P08"
+   ],
+   "notes": "Anchor confirmed: Vokinger KN, Feuerriegel S, Kesselheim AS. Lancet Digital Health 3(6):e337-e338, June 2021 (comment), DOI 10.1016/S2589-7500(21)00076-5."
+  },
+  {
+   "id": "T1-S030",
+   "date": "2026-10-12",
+   "tool": "Europe PMC REST API",
+   "family": "known_item",
+   "query": "search?query=DOI:\"10.1148/radiol.2020200038\" | DOI:\"10.1038/s41746-022-00611-y\" | DOI:\"10.1016/S2589-7500(21)00076-5\" &resultType=core",
+   "hits": 3,
+   "screened": 3,
+   "kept": [
+    "T1-P06",
+    "T1-P07",
+    "T1-P08"
+   ],
+   "notes": "Abstracts read for Pianykh (PMID 32840473, not open access) and Feng (PMID 35641814, PMC9156743, open access); Vokinger comment has no abstract in Europe PMC (PMID 33933404)."
+  },
+  {
+   "id": "T1-S031",
+   "date": "2026-10-12",
+   "tool": "Europe PMC REST API (full text)",
+   "family": "known_item",
+   "query": "GET https://www.ebi.ac.uk/europepmc/webservices/rest/PMC9156743/fullTextXML",
+   "hits": 1,
+   "screened": 1,
+   "kept": [
+    "T1-P07"
+   ],
+   "notes": "Feng et al. read in full: AI-QI units; monitoring with statistical process control; model updates ranked by complexity (recalibration of continuous scores, revision, full retraining); catastrophic forgetting; meta-procedures/online hypothesis testing to approve modifications. Does not address consistency of outputs across versions or longitudinal measurements."
+  },
+  {
+   "id": "T1-S032",
+   "date": "2026-10-12",
+   "tool": "WebFetch",
+   "family": "known_item",
+   "query": "https://www.thelancet.com/journals/landig/article/PIIS2589-7500(21)00076-5/fulltext",
+   "hits": null,
+   "screened": 0,
+   "kept": [],
+   "notes": "HTTP 403 (publisher blocks automated access). Vokinger comment read only through the OpenAlex abstract field (first paragraph); evidence depth summary."
+  },
+  {
+   "id": "T1-S033",
+   "date": "2026-10-12",
+   "tool": "OpenAlex API",
+   "family": "known_item",
+   "query": "GET https://api.openalex.org/works/https://doi.org/<DOI> for 11 anchors (Bansal 2019, Srivastava 2020, Shen 2020, Yan 2021, Pianykh 2020, Feng 2022, Vokinger 2021, Xie 2021, Cai 2022, Schumann 2024, Eyuboglu 2024)",
+   "hits": 11,
+   "screened": 11,
+   "kept": [],
+   "notes": "OpenAlex ids for citation chasing: Bansal W2905034244 (283 citing), Srivastava W3044741787 (33), Shen W3034594226 (75), Yan W3178138002 (32), Pianykh W3081038317 (234), Feng W4281681378 (410), Vokinger W3159068118 (94), Xie W3177007952 (8). OpenAlex undercounts ML conference citations (Cai 2022 record has 0 refs/citations); Semantic Scholar used as a cross-check where the rate limit allowed."
+  },
+  {
+   "id": "T1-S034",
+   "date": "2026-10-12",
+   "tool": "OpenAlex API",
+   "family": "citation_forward",
+   "query": "GET https://api.openalex.org/works?filter=cites:W3044741787&per-page=100&sort=publication_year:desc (works citing Srivastava et al. 2020)",
+   "hits": 33,
+   "screened": 33,
+   "kept": [
+    "T1-P11",
+    "T1-P12"
+   ],
+   "notes": "Found Sakai 2022 KDD A Generalized Backward Compatibility Metric (T1-P11), Wu et al. Fixes that fail (T1-P12, pipeline view: upstream improvement degrading downstream) and the robustness-congruent update paper (TPAMI 2025; classification and adversarial robustness, screened out); plus neighbours: ELODI (TPAMI 2024), backward-compatible explanations for trees (KDD 2026; LNCS 2025), behavioural regression testing (AITest 2026), regression-free repair (SANER 2022/2023), regression-free networks for diverse platforms (ECCV 2022), BCT variants (CVPR 2023, TPAMI 2023). None concerns continuous outputs or longitudinal measurements."
+  },
+  {
+   "id": "T1-S035",
+   "date": "2026-10-12",
+   "tool": "Crossref REST API + OpenAlex",
+   "family": "known_item",
+   "query": "GET https://api.crossref.org/works/10.1145/3534678.3539465 ; GET https://api.openalex.org/works/W4290875291",
+   "hits": 1,
+   "screened": 1,
+   "kept": [
+    "T1-P11"
+   ],
+   "notes": "Sakai T. A Generalized Backward Compatibility Metric. KDD 2022, pp. 1525-1535, DOI 10.1145/3534678.3539465. Abstract: existing backward compatibility metrics essentially assess the same quantity between old and new models; proposes a generalized backward compatibility (GBC) metric representing existing metrics; designs a variant for imbalanced classification. Classification only (abstract level)."
+  },
+  {
+   "id": "T1-S036",
+   "date": "2026-10-12",
+   "tool": "arXiv API",
+   "family": "exact_phrase",
+   "query": "search_query=all:\"backward compatibility metric\" ; and search_query=abs:\"backward compatibility\" AND abs:regression AND abs:update",
+   "hits": 5,
+   "screened": 5,
+   "kept": [],
+   "notes": "First query 0 hits (Sakai 2022 not on arXiv). Second: Cai 2022, Schumann 2023 preprint, backward-compatible tree explanations (2608.08674), MixBCT (2308.06948), multimodal embedding compatibility adapter (2609.16875). The word regression here mostly means update regression; no continuous-output metric."
+  },
+  {
+   "id": "T1-S037",
+   "date": "2026-10-12",
+   "tool": "curl (ACM DL) + WebSearch",
+   "family": "known_item",
+   "query": "https://dl.acm.org/doi/pdf/10.1145/3534678.3539465 ; WebSearch \"A Generalized Backward Compatibility Metric\" Sakai KDD 2022 pdf",
+   "hits": 9,
+   "screened": 9,
+   "kept": [],
+   "notes": "ACM DL returned HTTP 403 (bot challenge); no open copy of Sakai 2022 found, so it stays at abstract depth. Web search surfaced MUSCLE (arXiv 2407.09435), Hu et al. Learning Backward Compatible Embeddings (KDD 2022, arXiv 2206.03040) and the Microsoft BackwardCompatibilityML library docs."
+  },
+  {
+   "id": "T1-S038",
+   "date": "2026-10-12",
+   "tool": "arXiv API + WebSearch + NeurIPS proceedings",
+   "family": "known_item",
+   "query": "arXiv id_list=2103.11766 ; WebSearch \"Fixes That Fail: Self-Defeating Improvements in Machine-Learning Systems\" NeurIPS 2021 proceedings ; https://proceedings.neurips.cc/paper_files/paper/2021/file/619427579e7b067421f6aa89d4a8990c-Bibtex.bib",
+   "hits": 10,
+   "screened": 10,
+   "kept": [
+    "T1-P12"
+   ],
+   "notes": "Wu R, Guo C, Hannun A, van der Maaten L. Fixes That Fail: Self-Defeating Improvements in Machine-Learning Systems. NeurIPS 34 (2021), pp. 11745-11756 (official BibTeX). Abstract: improving one model can deteriorate downstream models in a multi-model system, even after retraining; error decomposition; stereo-based detection experiment."
+  },
+  {
+   "id": "T1-S039",
+   "date": "2026-10-12",
+   "tool": "NeurIPS proceedings index pages",
+   "family": "venue_sweep",
+   "query": "Title regex (compatib|churn|regression[- ]free|negative flip|model update|update regression|backfill|model upgrade|prediction update|congruent|predictive multiplicity|model multiplicity|stable retrain|retraining stab|consistent predictions across) over https://proceedings.neurips.cc/paper_files/paper/<year> for 2016-2025",
+   "hits": 14,
+   "screened": 14,
+   "kept": [
+    "T1-P05",
+    "T1-P04"
+   ],
+   "notes": "18,848 titles scanned (2025 index held only 64 titles at access time: coverage limit). Relevant matches: Milani Fard 2016 (churn), Traeuble 2021, cited Cai 2022, and predictive-multiplicity metrics (Rashomon Capacity 2022; RashomonGB 2024); the rest are unrelated uses of compatible/churn (RL policy churn, VAE compatibility). No NeurIPS title on compatibility of continuous outputs or longitudinal measurements across model versions."
+  },
+  {
+   "id": "T1-S040",
+   "date": "2026-10-12",
+   "tool": "OpenAlex API",
+   "family": "citation_forward",
+   "query": "GET https://api.openalex.org/works?filter=cites:W3178138002|W3103972686&per-page=100&sort=publication_year:desc (works citing Yan et al. 2021, CVPR and arXiv records)",
+   "hits": 33,
+   "screened": 33,
+   "kept": [
+    "T1-P11",
+    "T1-P12"
+   ],
+   "notes": "Mostly classification/NLP/software-engineering regression work: regression-free SLU updates (ACL industry 2023), gated fusion (EACL Findings 2023, previously screened), Darwinian model upgrades (AAAI 2023), regression testing for DL updates (KBS 2025; TOSEM 2025; ICBASE 2024), non-regressive industrial models (Oneto et al. ESANN 2022, classification negative flips), BCT variants. The only dense continuous-output item, Monitored Distillation for Positive Congruent Depth Completion (ECCV 2022), uses positive congruence for distillation from teachers, not for model updates (abstract checked, T1-S041). No metric for continuous outputs or longitudinal measurements."
+  },
+  {
+   "id": "T1-S041",
+   "date": "2026-10-12",
+   "tool": "OpenAlex API + arXiv API",
+   "family": "citation_forward",
+   "query": "OpenAlex abstracts for W4313151263, W4296070925, W4294536889, W4396695501, W4386815559, W4221155470, W4408445823, W4404739771 ; arXiv search_query=ti:\"Monitored Distillation\" AND ti:\"Depth Completion\"",
+   "hits": 10,
+   "screened": 10,
+   "kept": [],
+   "notes": "Abstract screening of the Yan forward set: non-regressive railway models (classification negative flips); trust-metric theory (Oneto et al.); OCT classification (no update analysis); regression in DL model evolution (classification). Depth-completion paper (arXiv 2203.16034) confirmed not an update-compatibility study. None kept."
+  },
+  {
+   "id": "T1-S042",
+   "date": "2026-10-12",
+   "tool": "OpenAlex API",
+   "family": "citation_forward",
+   "query": "OpenAlex search=Backward-Compatible Prediction Updates: A Probabilistic Approach (id W3213622222); then GET /works?filter=cites:W3213622222&per-page=100",
+   "hits": 10,
+   "screened": 10,
+   "kept": [],
+   "notes": "Ten citing works: robustness-congruent updates (TPAMI 2025), stationary/compatible representations (CVPR 2024; TPAMI 2023), BT2 (ICCV 2023), ELODI, regression-free SLU, gated fusion, uncertainty-alignment regression reduction (ICSE 2023), expert-advice combination, trust theory. None on continuous outputs, stored measurements or longitudinal change. OpenAlex coverage is partial (S2 lists 20 citations)."
+  },
+  {
+   "id": "T1-S043",
+   "date": "2026-10-12",
+   "tool": "OpenAlex API",
+   "family": "citation_forward",
+   "query": "OpenAlex search=Launch and Iterate: Reducing Prediction Churn (id W2551857043); then GET /works?filter=cites:W2551857043&per-page=100",
+   "hits": 23,
+   "screened": 23,
+   "kept": [
+    "T1-P14",
+    "T1-P15",
+    "T1-P16"
+   ],
+   "notes": "Kept: Rahman, Berger, Levman 2022 regression error consistency (T1-P14; sample-wise error consistency for REGRESSION models across repeated trainings; abstract only), Jiang et al. Churn reduction via distillation (T1-P15), Bhojanapalli et al. reproducibility/churn across independent runs (T1-P16). Screened out: SIGDIAL 2022 and EMNLP 2023 churn for conversational agents, instability of fine-tuning (ACL 2023), stability metrics for automatic DL updates on MedMNIST (ICECCME 2023, classification, abstract only). Search also surfaced arXiv 2605.13826 cross-sample prediction churn (2026), which is classification on chemistry benchmarks."
+  },
+  {
+   "id": "T1-S044",
+   "date": "2026-10-12",
+   "tool": "arXiv API + Crossref + Europe PMC + WebSearch + WebFetch",
+   "family": "exact_phrase",
+   "query": "arXiv search_query=abs:\"error consistency\" AND (abs:regression OR abs:validation) ; Crossref query.bibliographic=Error consistency for machine learning evaluation and validation Levman ; Europe PMC EXT_ID:37046533 ; WebSearch regression \"error consistency\" Rahman Berger Levman github ; fetch https://www.stfx.ca/media/28371/download",
+   "hits": 31,
+   "screened": 31,
+   "kept": [
+    "T1-P14"
+   ],
+   "notes": "Confirmed Rahman MM, Berger D, Levman J. Novel Metrics for Evaluation and Validation of Regression-based Supervised Learning. IEEE CSDE 2022, pp. 1-6, DOI 10.1109/csde56538.2022.10089291, and the classification predecessor (Levman et al. Diagnostics 2023, DOI 10.3390/diagnostics13071315). The regression EC formula could not be read: IEEE paywall and the StFX thesis proposal returned HTTP 403. Classification error consistency in the Geirhos sense also surfaced (arXiv 2507.06645)."
+  },
+  {
+   "id": "T1-S045",
+   "date": "2026-10-12",
+   "tool": "arXiv API + OpenReview API",
+   "family": "known_item",
+   "query": "arXiv id_list=2106.02654,2102.03349 ; https://arxiv.org/pdf/2106.02654 ; OpenReview api2 notes/search?term=Churn Reduction via Distillation ; api.openreview.net notes?id=cQoAgPBARc",
+   "hits": 12,
+   "screened": 12,
+   "kept": [
+    "T1-P15",
+    "T1-P16"
+   ],
+   "notes": "Jiang, Narasimhan, Bahri, Cotter, Rostamizadeh. Churn Reduction via Distillation: arXiv 2106.02654v2, journal_ref ICLR 2022 and camera-ready header Published as a conference paper at ICLR 2022 (OpenReview v1 API returned a challenge, 403). Definition read: predictive churn = difference in prediction of a model relative to a base model on the same datapoints; ideal = fraction of disagreements; tractable soft churn = E_x[d(g(x),h(x))] for a divergence d between output distributions; evaluation uses hard churn. Bhojanapalli et al. 2021: arXiv 2102.03349v1 only (no venue in arXiv metadata); churn = disagreement between two independently trained models (abstract). OpenReview also listed SIGDIAL 2022 and EMNLP-Industry 2023 churn papers (screened, not kept)."
+  },
+  {
+   "id": "T1-S046",
+   "date": "2026-10-12",
+   "tool": "OpenAlex API",
+   "family": "boolean",
+   "query": "GET https://api.openalex.org/works?filter=title_and_abstract.search:\"negative flip\" AND (segmentation OR detection OR regression OR \"dense prediction\")&per-page=50&sort=cited_by_count:desc",
+   "hits": 15,
+   "screened": 15,
+   "kept": [
+    "T1-P17"
+   ],
+   "notes": "No segmentation or detection negative-flip study; hits are PCT, robustness-congruent updates, non-regressive industrial models, MUSCLE (EMNLP Findings 2024, kept as T1-P17), hot-refresh retrieval upgrades (arXiv 2201.09724), Schumann preprint, RAGFlip (2026), an SSRN 2026 preprint on certified probability floors for updates (not peer reviewed; not kept)."
+  },
+  {
+   "id": "T1-S047",
+   "date": "2026-10-12",
+   "tool": "arXiv (full text) + Crossref REST API",
+   "family": "known_item",
+   "query": "https://arxiv.org/pdf/2407.09435 ; GET https://api.crossref.org/works/10.18653/v1/2024.findings-emnlp.430",
+   "hits": 1,
+   "screened": 1,
+   "kept": [
+    "T1-P17"
+   ],
+   "notes": "Echterhoff JM, Faghri F, Vemulapalli R, Hu T-Y, Li C-L, Tuzel O, Pouransari H. MUSCLE. Findings of EMNLP 2024, pp. 7320-7332. Full text (arXiv) read: extends compatibility metrics to CONTINUOUS evaluation scores: D(x_i)=S(M_v2(x_i),y_i)-S(M_v1(x_i),y_i) for a similarity metric S; PFR~=(1/N)sum 1[D>0], NFR~=(1/N)sum 1[D<0]; mean gain m_g and mean regression magnitude m_r=(1/(N NFR~)) sum |D| 1[D<0]; also NFR_mc counting flips when both models are wrong. Single-timepoint, per-instance quality scores; not a measurement-change or cross-version difference metric. Cites Matsuno and Sakuma 2023 (robust backward compatibility metric)."
+  },
+  {
+   "id": "T1-S048",
+   "date": "2026-10-12",
+   "tool": "Crossref REST API + OpenAlex",
+   "family": "citation_backward",
+   "query": "Crossref query.bibliographic=A robust backward compatibility metric for model retraining Matsuno Sakuma ; OpenAlex search=same title (abstracts)",
+   "hits": 3,
+   "screened": 3,
+   "kept": [
+    "T1-P18",
+    "T1-P19"
+   ],
+   "notes": "Backward chase from MUSCLE. Matsuno R, Sakuma K. A Robust Backward Compatibility Metric for Model Retraining. CIKM 2023, pp. 4190-4194, DOI 10.1145/3583780.3615213 (classification; conditional-distribution accuracy; abstract only). Also surfaced Matsuno R. Backward Compatibility in Attributive Explanation and Enhanced Model Training Method (ECAI 2024, FAIA, DOI 10.3233/faia240591): BCX = average agreement between pre- and post-update explanations (continuous attribution vectors, e.g. L2 distance) among samples both models predict correctly; abstract only."
+  },
+  {
+   "id": "T1-S049",
+   "date": "2026-10-12",
+   "tool": "OpenAlex API",
+   "family": "boolean",
+   "query": "GET https://api.openalex.org/works?filter=title_and_abstract.search:(\"backward compatibility\" OR \"backward compatible\" OR \"prediction churn\" OR \"predictive churn\" OR \"negative flips\") AND (\"regression task\" OR \"regression model\" OR \"regression problem\" OR \"continuous output\" OR \"continuous prediction\" OR \"real-valued\")&per-page=50",
+   "hits": 21,
+   "screened": 21,
+   "kept": [],
+   "notes": "Mostly customer-churn and ordinal-regression noise. One relevant neighbour: Suzuki 2026 KDD Backward Compatibility in Tree-Based Explanations (BCLTX loss metric for changes in decision-tree explanations; experiments include regression tasks) - a compatibility metric for explanation structure, not for predicted values; screened, not kept. No compatibility metric for continuous predictions or measurements found by this query."
+  },
+  {
+   "id": "T1-S050",
+   "date": "2026-10-12",
+   "tool": "OpenAlex API",
+   "family": "citation_forward",
+   "query": "OpenAlex abstracts for W7196964244 (Suzuki KDD 2026), W4411376331 (Yamakura et al. LNCS 2025), W4410640053 (Angioni et al. TPAMI 2025)",
+   "hits": 3,
+   "screened": 3,
+   "kept": [],
+   "notes": "Robustness-congruent adversarial training: negative flips in adversarial robustness (classification). Tree-explanation compatibility: loss metric on explanation changes, classification and regression datasets. GBDT explanation compatibility: no abstract. None kept."
+  },
+  {
+   "id": "T1-S051",
+   "date": "2026-10-12",
+   "tool": "arXiv API",
+   "family": "boolean",
+   "query": "search_query=(abs:\"backward compatible\" OR abs:\"backward compatibility\" OR abs:\"negative flip\" OR abs:\"regression-free\") AND (abs:segmentation OR abs:\"object detection\" OR abs:\"dense prediction\")&max_results=50",
+   "hits": 9,
+   "screened": 9,
+   "kept": [],
+   "notes": "No update-compatibility work on segmentation or detection; hits are physics-informed networks (backward-compatible PINNs), networking and benchmark papers."
+  },
+  {
+   "id": "T1-S052",
+   "date": "2026-10-12",
+   "tool": "arXiv API",
+   "family": "boolean",
+   "query": "search_query=(abs:\"model update\" OR abs:\"model updates\" OR abs:\"model upgrade\" OR abs:\"updated model\") AND abs:segmentation AND (abs:consistency OR abs:compatibility OR abs:compatible OR abs:volume OR abs:longitudinal)&max_results=50",
+   "hits": 22,
+   "screened": 22,
+   "kept": [],
+   "notes": "Test-time adaptation, federated learning and continual segmentation papers where model update means parameter updates; none compares measurements across model versions or longitudinal change."
+  },
+  {
+   "id": "T1-S053",
+   "date": "2026-10-12",
+   "tool": "arXiv API",
+   "family": "exact_phrase",
+   "query": "search_query=(abs:\"prediction churn\" OR abs:\"predictive churn\" OR abs:\"model churn\")&max_results=100&sortBy=submittedDate",
+   "hits": 24,
+   "screened": 24,
+   "kept": [
+    "T1-P15"
+   ],
+   "notes": "ML churn papers (all classification or GNN node classification): set of good models (2402.07745), GNN churn (2310.00946), stability-plasticity churn reduction (2305.04135), local label smoothing (2102.05140), Jiang et al. ICLR 2022, cross-sample churn in scientific ML (2605.13826, class labels). The rest is customer-churn noise. No churn definition for regression outputs found."
+  },
+  {
+   "id": "T1-S054",
+   "date": "2026-10-12",
+   "tool": "Europe PMC REST API",
+   "family": "boolean",
+   "query": "(\"backward compatibility\" OR \"backward compatible\" OR \"negative flip\" OR \"negative flips\" OR \"prediction churn\" OR \"update regression\" OR \"regression-free\") AND (\"deep learning\" OR \"machine learning\" OR \"artificial intelligence\") AND PUB_YEAR:[2019 TO 2026] (full-text search, pageSize 50)",
+   "hits": 462,
+   "screened": 50,
+   "kept": [],
+   "notes": "Unrestricted Europe PMC search matches full texts and is dominated by networking/security uses of backward compatible; first 50 screened, none relevant except the robustness-congruent update paper (already screened) and a Sleep 2025 commentary on customised algorithms in research-grade devices (passed to T2 theme: device algorithm versions). Re-run restricted to title/abstract (T1-S055)."
+  },
+  {
+   "id": "T1-S055",
+   "date": "2026-10-12",
+   "tool": "Europe PMC REST API",
+   "family": "boolean",
+   "query": "(ABSTRACT:\"backward compatibility\" OR ABSTRACT:\"backward compatible\" OR ABSTRACT:\"negative flip\" OR ABSTRACT:\"negative flips\" OR ABSTRACT:\"prediction churn\" OR ABSTRACT:\"model update regression\" OR ABSTRACT:\"regression-free\" OR TITLE:\"backward compatible\" OR TITLE:\"backward compatibility\") AND (ABSTRACT:\"deep learning\" OR ABSTRACT:\"machine learning\" OR ABSTRACT:\"neural network\" OR ABSTRACT:\"artificial intelligence\") AND PUB_YEAR:[2016 TO 2026]",
+   "hits": 18,
+   "screened": 18,
+   "kept": [],
+   "notes": "All 18 screened: class-incremental pill recognition (forward/backward compatible), backward-compatible PINNs, robustness-congruent updates and unrelated engineering uses. No biomedical paper applies ML update-compatibility metrics (negative flips, BTC/BEC, churn) to a clinical model update."
+  },
+  {
+   "id": "T1-S056",
+   "date": "2026-10-12",
+   "tool": "Europe PMC REST API",
+   "family": "boolean",
+   "query": "(ABSTRACT:\"model update\" OR ABSTRACT:\"model updates\" OR ABSTRACT:\"model updating\" OR ABSTRACT:\"algorithm update\" OR ABSTRACT:\"software update\" OR ABSTRACT:\"retrained model\" OR ABSTRACT:\"updated model\" OR ABSTRACT:\"model version\" OR ABSTRACT:\"model versions\" OR ABSTRACT:\"new version\") AND ABSTRACT:segmentation AND (ABSTRACT:volume OR ABSTRACT:volumetric OR ABSTRACT:volumetry) AND (ABSTRACT:longitudinal OR ABSTRACT:\"follow-up\" OR ABSTRACT:serial OR ABSTRACT:\"time points\")",
+   "hits": 1,
+   "screened": 1,
+   "kept": [],
+   "notes": "Single hit: COVID-19 lung infection quantification with human-in-the-loop model updates (arXiv 2020 preprint); not a version-compatibility study. Re-run with PubMed field tags (T1-S057)."
+  },
+  {
+   "id": "T1-S057",
+   "date": "2026-10-12",
+   "tool": "PubMed E-utilities",
+   "family": "boolean",
+   "query": "(\"model update\"[tiab] OR \"model updates\"[tiab] OR \"updated model\"[tiab] OR \"model version\"[tiab] OR \"model versions\"[tiab] OR \"software version\"[tiab] OR \"software versions\"[tiab] OR \"algorithm version\"[tiab] OR \"algorithm versions\"[tiab] OR \"software update\"[tiab] OR \"version update\"[tiab] OR retrained[tiab] OR retraining[tiab]) AND segmentation[tiab] AND (volume[tiab] OR volumes[tiab] OR volumetric[tiab] OR volumetry[tiab]) AND (\"deep learning\"[tiab] OR \"artificial intelligence\"[tiab] OR \"neural network\"[tiab] OR convolutional[tiab] OR nnU-Net[tiab])",
+   "hits": 58,
+   "screened": 58,
+   "kept": [
+    "T1-P10",
+    "T1-P13"
+   ],
+   "notes": "Titles screened; six abstracts read. Kept: Fontaine et al. 2025 Physica Medica (six Limbus AI versions; contour Dice/HD95 across versions, single timepoint; overlaps T2) and Cao et al. 2023 J Clin Med (DeepBleed original vs retrained model: volumetric agreement by Pearson r > 0.90 and ICC; single timepoint). Read but not kept: De Kerf 2023 (monitoring AI segmentation to pick retraining candidates), Hobbis 2023 (vendor vs custom-retrained models, Dice), Robert 2021 (implementation; no continuous-improvement workflows), Gesierich 2025 (WMH tools compared on two-year volume change; different tools, not versions; T2/T3). No study measured longitudinal change error across model versions."
+  },
+  {
+   "id": "T1-S058",
+   "date": "2026-10-12",
+   "tool": "PubMed E-utilities + Europe PMC REST API",
+   "family": "boolean",
+   "query": "PubMed: (\"continual learning\"[tiab] OR \"continuous learning\"[tiab] OR \"lifelong learning\"[tiab] OR \"incremental learning\"[tiab]) AND (\"medical imaging\"[tiab] OR \"medical image\"[tiab] OR radiology[tiab] OR segmentation[tiab]) AND (review[pt] OR survey[ti] OR review[ti]); abstracts via Europe PMC EXT_ID:40752376, 39332115",
+   "hits": 35,
+   "screened": 35,
+   "kept": [
+    "T1-P21",
+    "T1-P06"
+   ],
+   "notes": "Two current surveys of continual learning in medical image analysis: Kumari et al. 2025 Medical Image Analysis 106:103730 (kept T1-P21; covers evaluation schemes and metrics, forgetting, temporal drift) and Wu, Xu, Tong 2024 Comput Biol Med 182:109206 (screened). Neither abstract mentions agreement of measurements across model versions. Pianykh 2020 re-found. Remaining hits are education/lifelong-learning noise."
+  },
+  {
+   "id": "T1-S059",
+   "date": "2026-10-12",
+   "tool": "NeurIPS proceedings + arXiv API",
+   "family": "known_item",
+   "query": "NeurIPS 2017 index title Gradient Episodic Memory for Continual Learning -> https://proceedings.neurips.cc/paper_files/paper/2017/file/f87522788a2be2d171666752f97ddebb-Bibtex.bib and -Paper.pdf ; arXiv ti:\"continual learning in medical image analysis\"",
+   "hits": 2,
+   "screened": 2,
+   "kept": [
+    "T1-P20",
+    "T1-P21"
+   ],
+   "notes": "Lopez-Paz D, Ranzato M. Gradient Episodic Memory for Continual Learning. NIPS 30 (2017). Full text: BWT=(1/(T-1)) sum_{i<T} (R_{T,i}-R_{i,i}), R_{i,j}=test classification accuracy on task j after learning task i; a performance-retention metric, not an agreement metric. Kumari et al. survey also on arXiv 2312.17004v4."
+  },
+  {
+   "id": "T1-S060",
+   "date": "2026-10-12",
+   "tool": "PubMed E-utilities + Europe PMC REST API",
+   "family": "boolean",
+   "query": "PubMed: (\"diachronic\"[tiab] OR \"model updating\"[tiab] OR \"model update\"[tiab] OR \"model updates\"[tiab] OR \"algorithm updates\"[tiab] OR \"adaptive algorithm\"[tiab] OR \"adaptive machine learning\"[tiab]) AND (\"artificial intelligence\"[tiab] OR \"machine learning\"[tiab]) AND (consistency[tiab] OR inconsistent[tiab] OR inconsistency[tiab] OR \"different outputs\"[tiab] OR \"same patient\"[tiab] OR ethic*[tiab]); abstracts via Europe PMC for PMIDs 42773337, 36377970, 40873499",
+   "hits": 27,
+   "screened": 27,
+   "kept": [
+    "T1-P22",
+    "T1-P23"
+   ],
+   "notes": "Kept: Zhang et al. 2026 J Imaging Inform Med (auditing Grad-CAM attribution shifts after updating CT classifiers by decision distillation; heatmap coverage metric; 3 seeds; measures internal consistency across versions, not measurements) and Hatherley and Sparrow 2023 JAMIA (diachronic evolution vs synchronic variation of adaptive ML systems). Screened: Ansari et al. 2025 NEJM AI postmarket surveillance of prediction models (T6 theme), adaptive-ML research-ethics debate (AJOB 2024)."
+  },
+  {
+   "id": "T1-S061",
+   "date": "2026-10-12",
+   "tool": "Europe PMC REST API (full text)",
+   "family": "known_item",
+   "query": "GET https://www.ebi.ac.uk/europepmc/webservices/rest/PMC9846684/fullTextXML",
+   "hits": 1,
+   "screened": 1,
+   "kept": [
+    "T1-P23"
+   ],
+   "notes": "Hatherley J, Sparrow R. JAMIA 30(2):361-366 (2023), DOI 10.1093/jamia/ocac218, open access, read in full: tutorial; quotable claim that if each encounter is with a subtly different system, different to previous iterations, clinicians may find it exceedingly difficult to know how it functions and how much to trust it. No discussion of longitudinal measurement or stored outputs."
+  },
+  {
+   "id": "T1-S062",
+   "date": "2026-10-12",
+   "tool": "OpenAlex API",
+   "family": "citation_backward",
+   "query": "GET https://api.openalex.org/works/W3213622222 | W3044741787 | W3034594226 (referenced_works), titles via /works?filter=openalex:<ids>",
+   "hits": 98,
+   "screened": 98,
+   "kept": [
+    "T1-P01"
+   ],
+   "notes": "Traeuble 2021 has no reference list in OpenAlex (0; the PDF reference list was read instead). Srivastava 2020 (39 refs): Bansal 2019, Sculley et al. 2015 Hidden technical debt (CACE, undeclared consumers), Amershi et al. 2019 SE for ML, catastrophic forgetting, noisy labels. Shen 2020 (59 refs): face recognition, continual learning, distillation, and Bansal et al. A Case for Backward Compatibility for Human-AI Teams (2019 workshop version). No new compatibility-metric source beyond those recorded."
+  },
+  {
+   "id": "T1-S063",
+   "date": "2026-10-12",
+   "tool": "NeurIPS proceedings",
+   "family": "known_item",
+   "query": "NeurIPS 2015 index title Hidden Technical Debt in Machine Learning Systems -> https://proceedings.neurips.cc/paper_files/paper/2015/file/86df7dcfd896fcaf2674f757a2463eba-Bibtex.bib and -Paper.pdf",
+   "hits": 1,
+   "screened": 1,
+   "kept": [
+    "T1-P24"
+   ],
+   "notes": "Backward chase from Srivastava. Sculley D et al. Hidden Technical Debt in Machine Learning Systems. NIPS 28 (2015). Full text read: CACE principle (Changing Anything Changes Everything); undeclared consumers of model outputs written to files or logs; a silent update that corrects a previously mis-calibrated signal has sudden ramifications for consuming systems. Direct analogue of stored old-version measurements consumed by a later comparison."
+  },
+  {
+   "id": "T1-S064",
+   "date": "2026-10-12",
+   "tool": "arXiv API + Crossref REST API (full text arXiv v1)",
+   "family": "known_item",
+   "query": "arXiv id_list=2206.03040 ; Crossref query.bibliographic=Learning Backward Compatible Embeddings Hu Bansal Cao Rao Subbian Leskovec ; https://arxiv.org/pdf/2206.03040v1",
+   "hits": 3,
+   "screened": 3,
+   "kept": [
+    "T1-P25"
+   ],
+   "notes": "Hu W, Bansal R, Cao K, Rao N, Subbian K, Leskovec J. Learning Backward Compatible Embeddings. KDD 2022, pp. 3018-3028, DOI 10.1145/3534678.3539194. Read at methods level: stored embedding versions consumed by downstream consumer models; strategies Keep-All (keep every model version), Fix-0 (never update), fine-tuning, and learned backward transformations aligning new to previous versions (BC-Aligner); compatibility judged by consumer-task degradation relative to Keep-All. Structural analogue of the paper strategies (keep one version per patient, no update, reprocess, cross-calibration map), for embeddings rather than measurements."
+  },
+  {
+   "id": "T1-S065",
+   "date": "2026-10-12",
+   "tool": "Semantic Scholar Graph API",
+   "family": "citation_forward",
+   "query": "GET /graph/v1/paper/86306923f1a696ec657e196dbfbf66aad24f69d8/citations?fields=title,year,venue,externalIds,citationCount&limit=100 (works citing Traeuble et al. 2021)",
+   "hits": 20,
+   "screened": 20,
+   "kept": [
+    "T1-P17",
+    "T1-P18",
+    "T1-P11"
+   ],
+   "notes": "S2 lists 20 citing works (OpenAlex 10). Additional to OpenAlex: FastFill efficient compatible model update (ICLR 2023; backfilling order for retrieval galleries), RegTrieve (2025), predictive churn with the set of good models (2024), repeat-aware audit of answer churn in RAG QA (arXiv 2026), certified probability floors for updates (arXiv 2026), statistical acceptance gate for self-evolving agents (arXiv 2026). All classification, retrieval or agents; none on continuous measurements or longitudinal change."
+  },
+  {
+   "id": "T1-S066",
+   "date": "2026-10-12",
+   "tool": "Semantic Scholar Graph API + arXiv API",
+   "family": "citation_forward",
+   "query": "GET /graph/v1/paper/ARXIV:2011.09161/citations (all, limit 1000) with title flags (regression task|continuous|real-valued|segment|detect|depth|pose|medical|clinic|radiol|health|measure|longitud|volum|biomarker|quantitat|forecast|time series|calibrat|score|survey|metric); arXiv abstracts for 5 flagged or unflagged-but-relevant titles",
+   "hits": 77,
+   "screened": 77,
+   "kept": [
+    "T1-P26"
+   ],
+   "notes": "77 works cite Yan et al. in S2 (OpenAlex 33). Kept: Pay Only for Disagreement (arXiv 2609.17560, 2026 preprint): certified no-regression verdicts for model updates via paired risk differences, support identity that risk difference lives on disagreement inputs, evidence records for post-market monitoring (classification). Screened: UnCLe continual depth completion (forgetting metrics, not version compatibility), Beyond the Mean (arXiv 2604.27405: adapts the Reliable Change Index to item-level LLM version comparison; preprint, noted in NOTES), group backward compatibility (2021), sample-level LLM regression signals (2026), malware-detector regression, RAGFlip, UpgradeBench, compatible-representation papers. No flagged title concerns measurements, segmentation volumes or longitudinal change across model versions."
+  },
+  {
+   "id": "T1-S067",
+   "date": "2026-10-12",
+   "tool": "Semantic Scholar Graph API",
+   "family": "citation_forward",
+   "query": "GET /graph/v1/paper/ARXIV:2008.04572/citations (all) with title flags as in T1-S066",
+   "hits": 58,
+   "screened": 58,
+   "kept": [
+    "T1-P27",
+    "T1-P18",
+    "T1-P11"
+   ],
+   "notes": "58 citing works in S2 (OpenAlex 33). Key new find: Otles, Denton, Wiens 2023 (MLHC, PMLR 219:529-547), rank-based compatibility C^R for continuous clinical risk scores without thresholds, with a general form for real-valued labels (T1-P27). Also: behavioural regression testing (AITest 2026), MUSE multi-tenant serving with seamless model updates (2026), hierarchical diagnosis of heterogeneous performance drift (2025), backward-compatible tree explanations (KDD 2026). Others classification, retrieval or software engineering."
+  },
+  {
+   "id": "T1-S068",
+   "date": "2026-10-12",
+   "tool": "arXiv API + PMLR proceedings",
+   "family": "known_item",
+   "query": "arXiv id_list=2308.05619 and https://arxiv.org/pdf/2308.05619 ; https://proceedings.mlr.press/v219/ (index) and https://proceedings.mlr.press/v219/otles23a/otles23a.pdf",
+   "hits": 1,
+   "screened": 1,
+   "kept": [
+    "T1-P27"
+   ],
+   "notes": "Otles E, Denton BT, Wiens J. Updating Clinical Risk Stratification Models Using Rank-Based Compatibility. Proc. 8th Machine Learning for Healthcare Conference, PMLR 219:529-547 (2023). Full text read (arXiv and PMLR versions agree on the checked passages): C^R(f^o,f^u)=sum_{i in I0} sum_{j in I1} 1(p_i^o<p_j^o)1(p_i^u<p_j^u) / sum 1(p_i^o<p_j^o) (Eq. 3), the probability that the updated model ranks a discordant patient pair correctly given the original did; general form (Appendix Eq. 6) for any ordered labels, e.g. integer or real values; authors state rank concordance may be more robust to calibration shifts. Threshold-free compatibility for continuous outputs, but rank-based and single-timepoint: invariant to the monotone calibration shift that produces the paper retention cost."
+  },
+  {
+   "id": "T1-S069",
+   "date": "2026-10-12",
+   "tool": "Semantic Scholar Graph API",
+   "family": "citation_forward",
+   "query": "GET /graph/v1/paper/ARXIV:2308.05619/citations (works citing Otles et al. 2023)",
+   "hits": 1,
+   "screened": 1,
+   "kept": [],
+   "notes": "Only one citing work (ML4H 2023 research-roundtable report, arXiv 2403.01628). The rank-based compatibility measure has had little uptake; no follow-up extends it to measurements or longitudinal change."
+  },
+  {
+   "id": "T1-S070",
+   "date": "2026-10-12",
+   "tool": "Semantic Scholar Graph API",
+   "family": "citation_forward",
+   "query": "GET /graph/v1/paper/ARXIV:2407.09435/citations (works citing MUSCLE, Echterhoff et al. 2024)",
+   "hits": 20,
+   "screened": 20,
+   "kept": [],
+   "notes": "All LLM or representation-update work: item-level regressions in LLM API migrations (arXiv 2608.17719), Reliable Change Index for LLM versions (arXiv 2604.27405), certified slice-wise non-regression with incumbent fallback (2026), governing updates in the LLM supply chain (2026), negative-flip margin training (AAAI 2026). No extension of smooth compatibility to physical measurements or longitudinal change."
+  },
+  {
+   "id": "T1-S071",
+   "date": "2026-10-12",
+   "tool": "PubMed E-utilities + Europe PMC REST API",
+   "family": "exact_phrase",
+   "query": "PubMed: (\"prediction instability\"[tiab] OR \"instability plot\"[tiab] OR \"stability of clinical prediction models\"[ti] OR (\"individual\"[tiab] AND \"prediction stability\"[tiab])) AND model[tiab]; abstracts EXT_ID 37466257, 41508150",
+   "hits": 15,
+   "screened": 15,
+   "kept": [
+    "T1-P28",
+    "T1-P29"
+   ],
+   "notes": "Neighbouring-field equivalent of churn for CONTINUOUS predictions in clinical prediction modelling. Kept: Riley and Collins 2023 Biometrical Journal 65(8):e2200302 (prediction instability plots; individual-level mean absolute prediction error between bootstrap re-developed models and the original model) and Yusufujiang et al. 2026 Diagn Progn Res 10:1 (models with similar AUC give highly varying individual DVT risk estimates). Both concern re-development or technique choice, not deployed version updates or longitudinal change."
+  },
+  {
+   "id": "T1-S072",
+   "date": "2026-10-12",
+   "tool": "Europe PMC REST API (full text)",
+   "family": "known_item",
+   "query": "GET https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10952221/fullTextXML",
+   "hits": 1,
+   "screened": 1,
+   "kept": [
+    "T1-P28"
+   ],
+   "notes": "Riley RD, Collins GS 2023 read at methods level. Section 3.2.3: MAPE for individual i = sum_b |p_bi - p_i| / B (mean absolute difference between bootstrap-model and original-model predictions); average MAPE = sum_b sum_i |p_bi - p_i| /(B N); four levels of stability from overall mean to individual; warns that the average masks individual-level differences. Case study: average MAPE 0.038 (all 27 predictors forced) vs 0.029 (LASSO). Precedent for an individual-level, model-to-model absolute-difference summary of continuous outputs."
+  },
+  {
+   "id": "T1-S073",
+   "date": "2026-10-12",
+   "tool": "arXiv API (failed) + Semantic Scholar Graph API",
+   "family": "citation_forward",
+   "query": "arXiv ti:\"MUSE\" AND ti:\"Seamless Model Updates\" (HTTP 429/503, gave up) ; S2 /paper/search/match for MUSE: Multi-Tenant Model Serving With Seamless Model Updates and for Who experiences large model decay and why?",
+   "hits": 2,
+   "screened": 2,
+   "kept": [
+    "T1-P30"
+   ],
+   "notes": "Kept MUSE (arXiv 2602.11776, 2026, Feedzai): retraining shifts score distributions and invalidates client thresholds; a two-level score transformation maps new-model outputs to a stable reference distribution (industrial cross-calibration of continuous scores across versions; abstract only, preprint). SHIFT (ICML 2025, performance-drift subgroups) screened out. arXiv API rate-limited at this point."
+  },
+  {
+   "id": "T1-S074",
+   "date": "2026-10-12",
+   "tool": "WebFetch (library documentation)",
+   "family": "code",
+   "query": "https://backwardcompatibilityml.readthedocs.io/en/latest/backwardcompatibilityml/overview.html (Microsoft BackwardCompatibilityML)",
+   "hits": 1,
+   "screened": 1,
+   "kept": [
+    "T1-P01",
+    "T1-P02"
+   ],
+   "notes": "Microsoft open-source library implementing BTC and BEC with dissonance-weighted losses; documentation describes classifiers only and cites Bansal 2019, Srivastava 2020 and Nushi 2018. Confirms the metric lineage; no regression or measurement support documented (summary-level reading through WebFetch)."
+  },
+  {
+   "id": "T1-S075",
+   "date": "2026-10-12",
+   "tool": "JMLR website",
+   "family": "known_item",
+   "query": "https://jmlr.org/papers/v23/20-1335.html",
+   "hits": 1,
+   "screened": 1,
+   "kept": [
+    "T1-P31"
+   ],
+   "notes": "D Amour A, Heller K, Moldovan D, et al. (incl. Sculley D). Underspecification Presents Challenges for Credibility in Modern Machine Learning. JMLR 23(226):1-61, 2022 (official page). Abstract: an underspecified pipeline returns many predictors with equivalent held-out performance but different behaviour in deployment; includes medical-imaging and EHR case studies. Neighbour for the run-to-run spread of the between-version shift."
+  },
+  {
+   "id": "T1-S076",
+   "date": "2026-10-12",
+   "tool": "OpenAlex API",
+   "family": "boolean",
+   "query": "GET https://api.openalex.org/works?filter=title_and_abstract.search:(\"forecast stability\" OR \"forecast instability\" OR \"prediction stability\" OR \"prediction consistency\") AND (\"model update\" OR \"model updates\" OR retraining OR \"re-training\" OR \"new version\" OR \"model version\")&per-page=40 ; abstracts W4386424284, W7167082687, W4401975675, W4411183996",
+   "hits": 51,
+   "screened": 40,
+   "kept": [
+    "T1-P32"
+   ],
+   "notes": "Neighbouring field (time-series forecasting) treats changes in continuous forecasts caused by model re-estimation as forecast instability. Kept Spiliotis and Petropoulos 2023 EJOR (updating scenarios from full re-specification to no updating; frequent updating can add forecast instability and cost without accuracy gain). Screened: multi-step forecasting metrics incl. delta-horizon stability (Applied Intelligence 2024), two SSRN preprints on retraining frequency and stability of global forecasting models (no abstracts), prediction consistency under fine-tuning multiplicity in tabular LLMs (arXiv 2407.04173). None concerns paired measurements across versions."
+  },
+  {
+   "id": "T1-S077",
+   "date": "2026-10-12",
+   "tool": "Crossref REST API",
+   "family": "known_item",
+   "query": "GET https://api.crossref.org/works/<DOI> for 10.1016/j.ejmp.2025.105065, 10.3390/jcm12124005, 10.1007/s10278-026-02310-6, 10.1093/jamia/ocac218, 10.1002/bimj.202200302, 10.1186/s41512-025-00216-5, 10.1016/j.media.2025.103730, 10.1016/j.ejor.2023.08.056, 10.3233/faia240591, 10.1109/csde56538.2022.10089291, 10.1145/3583780.3615213",
+   "hits": 11,
+   "screened": 11,
+   "kept": [
+    "T1-P10",
+    "T1-P13",
+    "T1-P22",
+    "T1-P23",
+    "T1-P28",
+    "T1-P29",
+    "T1-P21",
+    "T1-P32",
+    "T1-P19",
+    "T1-P14",
+    "T1-P18"
+   ],
+   "notes": "Bibliographic verification batch. Notable: Spiliotis and Petropoulos is EJOR 314(1):111-121 (issue April 2024; online 2023); Hatherley and Sparrow JAMIA 30(2):361-366 (issue 2023; online 15 Nov 2022); Zhang et al. JIIM online 22 Sep 2026 without volume (online ahead of print); Riley and Collins Biom J 65(8):2200302; Yusufujiang et al. Diagn Progn Res 10:1 (8 Jan 2026); Fontaine et al. Phys Med 137:105065 (Sep 2025)."
+  },
+  {
+   "id": "T1-S078",
+   "date": "2026-10-12",
+   "tool": "PubMed E-utilities",
+   "family": "boolean",
+   "query": "(version[tiab] OR versions[tiab] OR \"model update\"[tiab] OR \"software update\"[tiab] OR upgrade[tiab] OR upgraded[tiab]) AND (longitudinal[tiab] OR \"follow-up\"[tiab] OR serial[tiab] OR \"change over time\"[tiab] OR atrophy[tiab] OR growth[tiab]) AND (\"deep learning\"[tiab] OR \"artificial intelligence\"[tiab] OR \"neural network\"[tiab] OR \"AI-based\"[tiab]) AND (volume[tiab] OR volumes[tiab] OR volumetry[tiab] OR volumetric[tiab] OR measurement[tiab] OR measurements[tiab]) AND (consistency[tiab] OR agreement[tiab] OR reproducibility[tiab] OR comparability[tiab] OR bias[tiab])",
+   "hits": 17,
+   "screened": 17,
+   "kept": [],
+   "notes": "Competitor check (c). No study of AI model version changes and longitudinal measurement agreement; hits are radiomics, questionnaires (version = translated instrument), AI response-assessment reproducibility across readers (Neuro-Oncology 2023, T4 theme) and a governance framework for AI cardiovascular biomarkers (JMIR Cardio 2026, T6 theme)."
+  },
+  {
+   "id": "T1-S079",
+   "date": "2026-10-12",
+   "tool": "WebSearch",
+   "family": "boolean",
+   "query": "(1) deep learning segmentation model update longitudinal tumor volume change reprocess baseline old model version new model version measurement error ; (2) \"backward compatibility\" OR \"backward compatible\" AI model update quantitative imaging biomarker longitudinal measurements radiology",
+   "hits": 18,
+   "screened": 18,
+   "kept": [],
+   "notes": "Competitor check (c). Found only already-cited Rocholl et al. (arXiv 2507.19230), longitudinal segmentation/growth-monitoring papers without version changes (arXiv 2412.00663, 2404.07952), a regulatory paper on radiology AI that evolves over its lifecycle (arXiv 2412.20498; passed to T6), and vendor news on model updates. No source evaluates whether a new model version keeps prior measurements comparable."
+  },
+  {
+   "id": "T1-S080",
+   "date": "2026-10-12",
+   "tool": "arXiv API (failed) + OpenAlex API",
+   "family": "venue_sweep",
+   "query": "arXiv: (ti:compatible OR ti:compatibility OR ti:regression-free OR ti:\"negative flips\" OR ti:churn) AND (ti:update OR ti:updates OR ti:upgrade OR ti:upgrades OR ti:version OR ti:versions OR ti:retraining), sorted by date (HTTP 429 three times); replaced by OpenAlex filter=title.search:(compatible OR compatibility OR \"regression-free\" OR \"negative flips\" OR churn) AND (update OR updates OR upgrade OR upgrades OR version OR versions OR retraining),from_publication_date:2024-01-01",
+   "hits": 79,
+   "screened": 79,
+   "kept": [
+    "T1-P17"
+   ],
+   "notes": "Recent-literature sweep (2024 to Oct 2026), all sources incl. arXiv. ML-relevant titles: RAGFlip (2026), perception-update policy compatibility in end-to-end driving (arXiv 2606.21509, 2026), compatible fine-tuning for VLM updates (2024), regression-free update for DL systems (KBS 2025), GBDT explanation compatibility (2025), MUSCLE, Schumann 2024. The rest are software-engineering, physics or clinical-compatibility noise. No 2024-2026 title on compatibility of continuous measurements across model versions."
+  },
+  {
+   "id": "T1-S081",
+   "date": "2026-10-12",
+   "tool": "Crossref REST API + Europe PMC REST API (abstract and full text PMC10256748)",
+   "family": "known_item",
+   "query": "Crossref query.bibliographic=Lifelong nnU-Net: a framework for standardized medical continual learning ; Europe PMC DOI:\"10.1038/s41598-023-34484-2\" ; GET /PMC10256748/fullTextXML",
+   "hits": 3,
+   "screened": 3,
+   "kept": [
+    "T1-P33"
+   ],
+   "notes": "Gonzalez C, Ranem A, Pinto dos Santos D, Othman A, Mukhopadhyay A. Lifelong nnU-Net. Sci Rep 13:9381 (2023). Read in part: sequential segmentation updates on prostate, hippocampus and cardiac data evaluated with Dice, backward transfer (forgetting) and forward transfer; none of five continual-learning methods consistently achieved positive backward transfer; no volume or measurement-agreement analysis. Example of how medical segmentation updates are evaluated (overlap retention)."
+  },
+  {
+   "id": "T1-S082",
+   "date": "2026-10-12",
+   "tool": "Crossref REST API + Europe PMC REST API",
+   "family": "known_item",
+   "query": "Crossref query.bibliographic=A review of statistical updating methods for clinical prediction models Su Jaki Hickey Buchan Sperrin ; Europe PMC DOI:\"10.1177/0962280215626466\"",
+   "hits": 3,
+   "screened": 3,
+   "kept": [
+    "T1-P34"
+   ],
+   "notes": "Su T-L, Jaki T, Hickey GL, Buchan I, Sperrin M. A review of statistical updating methods for clinical prediction models. Stat Methods Med Res 27(1):185-197 (2018; online 2016). Abstract: models become miscalibrated over time; updating approaches range from simple coefficient updating (recalibration) to meta-models and dynamic updating. Statistical lineage of model updating by recalibration, the analogue of the paper scalar cross-calibration maps."
+  },
+  {
+   "id": "T1-S083",
+   "date": "2026-10-12",
+   "tool": "OpenAlex API + Crossref REST API",
+   "family": "boolean",
+   "query": "OpenAlex filter=title_and_abstract.search:(\"predictive multiplicity\" OR \"Rashomon effect\" OR \"model multiplicity\") AND (regression OR continuous OR probabilistic OR \"risk estimates\" OR \"risk scores\")&per-page=30 ; Crossref /works/10.1609/aaai.v37i9.26227",
+   "hits": 53,
+   "screened": 30,
+   "kept": [
+    "T1-P35"
+   ],
+   "notes": "Predictive multiplicity (disagreement among near-optimal models) for continuous risk estimates: kept Watson-Daniels, Parkes, Ustun 2023 AAAI 37(9):10306-10314 (measures of variation in risk estimates over competing models; abstract). Screened: Rashomon Capacity (NeurIPS 2022, classification), recidivism multiplicity (AIES 2026), clinical subgroup vulnerability to multiplicity (arXiv 2609.37064, 2026). Multiplicity concerns equally good models, not a deployed version replacing its predecessor."
+  },
+  {
+   "id": "T1-S084",
+   "date": "2026-10-12",
+   "tool": "Semantic Scholar Graph API (failed) + OpenAlex API",
+   "family": "exact_phrase",
+   "query": "S2 /paper/search?query=backward compatibility model update regression continuous predictions (HTTP 429 x6) ; OpenAlex search=compatibility metric model update continuous output regression backward compatibility (relevance, per-page 30)",
+   "hits": 4046,
+   "screened": 30,
+   "kept": [
+    "T1-P18",
+    "T1-P17",
+    "T1-P26",
+    "T1-P30"
+   ],
+   "notes": "Top 30 by relevance were almost all already-recorded neighbours (Matsuno and Sakuma, Schumann, Suzuki trees, Cai, gated fusion, regression-free SLU, MUSCLE, cross-modal BCT, Pay Only for Disagreement, MUSE, robustness-congruent). New but not kept: explanation stability under bounded updates of an ICU model (arXiv 2607.19020, 2026), provably safe model updates (SaTML 2026). Saturation signal for question (a)."
+  },
+  {
+   "id": "T1-S085",
+   "date": "2026-10-12",
+   "tool": "OpenAlex API",
+   "family": "exact_phrase",
+   "query": "GET https://api.openalex.org/works?search=model update new version deep learning longitudinal measurement consistency follow-up comparison prior measurement reprocessing&per-page=30",
+   "hits": 621,
+   "screened": 30,
+   "kept": [],
+   "notes": "Long natural-language relevance query returned only noise (radiation-measurement abstracts, physics theses). Competitor check (c) relies on the structured PubMed/Europe PMC/OpenAlex queries instead."
+  },
+  {
+   "id": "T1-S086",
+   "date": "2026-10-12",
+   "tool": "PubMed E-utilities + Europe PMC REST API",
+   "family": "boolean",
+   "query": "(\"two versions\"[tiab] OR \"different versions\"[tiab] OR \"new version\"[tiab] OR \"updated version\"[tiab] OR \"previous version\"[tiab] OR \"software versions\"[tiab] OR \"algorithm versions\"[tiab] OR \"model versions\"[tiab]) AND (\"deep learning\"[tiab] OR \"artificial intelligence\"[tiab] OR \"AI-based\"[tiab] OR \"AI algorithm\"[tiab]) AND (agreement[tiab] OR \"limits of agreement\"[tiab] OR \"Bland-Altman\"[tiab] OR \"intraclass\"[tiab] OR interchangeab*[tiab]) AND (measurement*[tiab] OR volume*[tiab] OR quantif*[tiab] OR score*[tiab]); abstracts PMIDs 39251256, 39951220, 36600126",
+   "hits": 15,
+   "screened": 15,
+   "kept": [
+    "T1-P36",
+    "T1-P37"
+   ],
+   "notes": "Competitor check (c), cross-sectional and longitudinal agreement across AI software versions. Kept: Ying et al. 2025 AJNR 46(3):635-642 (deep-learning attenuation correction fine-tuned for two scanner software versions and two head coils; longitudinal consistency of amyloid PET SUVR by wCV/ICC in 38 participants scanned twice; the update is to scanner software, with the DL model re-tuned per configuration) and Oya et al. 2025 Ann Nucl Med 39(5):466-475 (VSBONE BSI versions 1-3: AUC rose with upgrades while BSI values in metastasis-negative patients fell with each version). Both overlap T2. Remaining hits are LLM-version comparisons (ChatGPT 3.5 vs 4) and single-version AI validations."
+  },
+  {
+   "id": "T1-S087",
+   "date": "2026-10-12",
+   "tool": "NeurIPS proceedings (full text)",
+   "family": "known_item",
+   "query": "https://proceedings.neurips.cc/paper_files/paper/2021/file/619427579e7b067421f6aa89d4a8990c-Paper.pdf",
+   "hits": 1,
+   "screened": 1,
+   "kept": [
+    "T1-P12"
+   ],
+   "notes": "Wu et al. 2021 read at definition level: Definition 2.1 self-defeating improvement = replacing upstream model v by v reduces its own test loss but increases the test loss of at least one downstream model even after all downstream models are retrained; error decomposition; stereo detection example."
+  },
+  {
+   "id": "T1-S088",
+   "date": "2026-10-12",
+   "tool": "arXiv abs pages + Crossref REST API + Semantic Scholar (failed)",
+   "family": "known_item",
+   "query": "https://arxiv.org/abs/2602.11776 ; https://arxiv.org/abs/2609.17560 ; Crossref query.bibliographic for both titles ; S2 /paper/ARXIV:2602.11776 (HTTP 429)",
+   "hits": 4,
+   "screened": 4,
+   "kept": [
+    "T1-P30",
+    "T1-P26"
+   ],
+   "notes": "MUSE: Correia C, Ferreira AEA, Martins L, Bento MP, Guerreiro S, Pereira RR, Gomes AS, Bono J, Ferreira H, Bizarro P; arXiv 2602.11776 (12 Feb 2026), comment: under review for KDD 2026 ADS; no Crossref record found, so preprint status. Pay Only for Disagreement: single author Balachandran VB, arXiv 2609.17560 (22 Jul 2026), preprint, no Crossref record."
+  },
+  {
+   "id": "T1-S089",
+   "date": "2026-10-12",
+   "tool": "ACL Anthology (full text)",
+   "family": "known_item",
+   "query": "https://aclanthology.org/2024.eacl-long.174.pdf (cited anchor Schumann et al. 2024)",
+   "hits": 1,
+   "screened": 1,
+   "kept": [],
+   "notes": "Cited anchor re-read at methods level: regression measured with NFR as introduced by Yan et al. (2021) on a regression set; problem stated as minimising R(theta, theta_old) subject to M(theta) >= M(theta_new_target) (Eq. 4); new model fine-tuned from the old one (Eq. 5); BCWI theta = alpha*theta_old + (1-alpha)*theta_new (Eq. 6), larger alpha closer to the old model. Consistent with the manuscript formula and its use of alpha as the old-model weight."
+  },
+  {
+   "id": "T1-S090",
+   "date": "2026-10-12",
+   "tool": "OpenAlex API",
+   "family": "known_item",
+   "query": "GET https://api.openalex.org/works/W4399362646 (cited anchor Eyuboglu et al. 2024, abstract)",
+   "hits": 1,
+   "screened": 1,
+   "kept": [],
+   "notes": "Cited anchor checked at abstract level: ChangeLists of slices where MLaaS API updates improved or degraded performance; six real API updates (incl. GPT-3, Google Cloud Vision); 63 instances where an update improves performance globally but hurts a coherent slice. Supports the manuscript sentence on audits of deployed-model updates; classification/generation outputs, no measurements."
+  },
+  {
+   "id": "T1-S091",
+   "date": "2026-10-12",
+   "tool": "arXiv API",
+   "family": "boolean",
+   "query": "search_query=abs:\"backward compatible\" AND (abs:regression OR abs:continuous) AND (abs:update OR abs:retraining)&max_results=50",
+   "hits": 9,
+   "screened": 9,
+   "kept": [],
+   "notes": "All hits already recorded or irrelevant (Schumann preprint, Cai, MixBCT, tree-explanation compatibility, multimodal embedding adapter, pill recognition, lifelong retrieval, Python version compatibility). Saturation for continuous-output compatibility on arXiv."
+  },
+  {
+   "id": "T1-S092",
+   "date": "2026-10-12",
+   "tool": "arXiv API",
+   "family": "venue_sweep",
+   "query": "search_query=(ti:compatible OR ti:compatibility OR ti:regression-free OR ti:\"negative flips\" OR ti:churn) AND (ti:update OR ti:updates OR ti:upgrade OR ti:upgrades OR ti:version OR ti:versions OR ti:retraining) AND (cat:cs.LG OR cat:cs.CV OR cat:cs.AI OR cat:stat.ML OR cat:cs.CL OR cat:eess.IV)&max_results=100&sortBy=submittedDate",
+   "hits": 13,
+   "screened": 13,
+   "kept": [
+    "T1-P27",
+    "T1-P17",
+    "T1-P04"
+   ],
+   "notes": "arXiv category sweep (deferred earlier by HTTP 429) returned 13 titles, all already recorded except retrieval-upgrade papers (hot-refresh upgrades, arXiv 2201.09724; privacy-preserving bidirectional compatible training, 2204.13919; TaCA adapter, 2306.12642; X-Adapter, 2312.02238). Hot-refresh checked further (T1-S093). Saturation confirmed."
+  },
+  {
+   "id": "T1-S093",
+   "date": "2026-10-12",
+   "tool": "arXiv API + OpenAlex + OpenReview api2 + WebSearch + ICLR website",
+   "family": "known_item",
+   "query": "arXiv id_list=2201.09724 ; OpenAlex search=Hot-Refresh Model Upgrades with Regression-Alleviating Compatible Training in Image Retrieval ; WebSearch \"Hot-Refresh Model Upgrades with Regression-Free Compatible Training in Image Retrieval\" ICLR 2022 openreview ; https://iclr.cc/virtual/2022/poster/5920",
+   "hits": 12,
+   "screened": 12,
+   "kept": [
+    "T1-P38"
+   ],
+   "notes": "Zhang B, Ge Y, Shen Y, Li Y, Yuan C, Xu X, Wang Y, Shan Y. ICLR 2022 poster (official page; OpenReview forum HTp-6yLGGX), published title Hot-Refresh Model Upgrades with Regression-Free Compatible Training in Image Retrieval (arXiv v1 title says Regression-Alleviating). Abstract: hot-refresh deploys the new model at once and backfills the gallery on the fly, so new-to-old and new-to-new comparisons coexist and cause negative flips (model regression) during the transition. Retrieval analogue of a partly reprocessed longitudinal record. Also surfaced: online backfilling with metric-compatible training (WACV 2025)."
+  },
+  {
+   "id": "T1-S094",
+   "date": "2026-10-12",
+   "tool": "Europe PMC REST API (full text)",
+   "family": "known_item",
+   "query": "GET https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10299035/fullTextXML (Cao et al. 2023)",
+   "hits": 1,
+   "screened": 1,
+   "kept": [
+    "T1-P13"
+   ],
+   "notes": "Clarified what the abstract agreement statistics compare: pairwise Pearson correlations among volumes from ground-truth masks, the original model (OM) and the retrained model (RM) (r > 0.90), repeated-measures ANOVA with no significant volume difference among GT, OM and RM, ICC used for Dice agreement with raters. Version comparison of volumes is by correlation/ANOVA at one timepoint; DeepBleed tended to underestimate volume."
+  },
+  {
+   "id": "T1-S095",
+   "date": "2026-10-12",
+   "tool": "OpenAlex API + Crossref REST API",
+   "family": "citation_forward",
+   "query": "GET https://api.openalex.org/works?filter=cites:W2905034244,title_and_abstract.search:(update OR updates OR updating OR compatibility OR compatible OR version OR retraining)&per-page=100 ; abstracts W4409187208, W4409750202, W3192733319 ; Crossref /works/10.1007/s10676-025-09829-2 and /works/10.1145/3706598.3713751",
+   "hits": 39,
+   "screened": 39,
+   "kept": [
+    "T1-P39",
+    "T1-P40"
+   ],
+   "notes": "Filtered forward chase of Bansal 2019 (283 citing works overall; 39 mention updates or compatibility). Kept: Hatherley 2025 Ethics Inf Technol 27(2):20 (update opacity: users cannot tell how an update changed a system; strategies include dynamic model reporting and update compatibility) and Mohanty, Lim, Luther 2025 CHI pp. 1-21 (users struggle to notice silent model updates, which change downstream behaviour). Screened: personalised performance-compatibility objectives (AAAI 2021), interpretable model comparison (IJCAI 2021), explanation updates (CHI 2023), trust repair, BCT variants. None concerns measurements."
+  },
+  {
+   "id": "T1-S096",
+   "date": "2026-10-12",
+   "tool": "OpenAlex API",
+   "family": "citation_forward",
+   "query": "GET https://api.openalex.org/works?filter=cites:W3034594226,title_and_abstract.search:(medical OR clinical OR radiology OR regression OR measurement OR longitudinal OR segmentation OR continuous)&per-page=100 (77 works cite Shen et al. 2020 in OpenAlex)",
+   "hits": 20,
+   "screened": 20,
+   "kept": [],
+   "notes": "Filtered forward chase of Shen 2020: all hits are retrieval or person re-identification compatibility (lifelong re-ID without re-indexing, CVPR 2024; TPAMI 2025), regression-free update methods already recorded, or matched only on regression-free. No medical, measurement or longitudinal use of backward-compatible representations."
+  }
+ ]
+}

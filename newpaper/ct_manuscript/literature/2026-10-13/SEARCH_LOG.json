@@ -1,0 +1,549 @@
+{
+ "review": "fetch list 2026-10-13",
+ "entries": [
+  {
+   "id": "F-S001",
+   "date": "2026-10-13",
+   "tool": "OpenAlex API",
+   "family": "known_item",
+   "query": "https://api.openalex.org/works/doi:10.1080/10543400701329489",
+   "hits": 1,
+   "screened": 1,
+   "kept": [
+    "M078"
+   ],
+   "notes": "Barnhart 2007, assessing individual agreement: open access False (closed); best OA version None"
+  },
+  {
+   "id": "F-S002",
+   "date": "2026-10-13",
+   "tool": "OpenAlex API",
+   "family": "known_item",
+   "query": "https://api.openalex.org/works/doi:10.1177/0962280206075527",
+   "hits": 1,
+   "screened": 1,
+   "kept": [
+    "M079"
+   ],
+   "notes": "Haber and Barnhart 2008, agreement with replicated measurements: open access False (closed); best OA version None"
+  },
+  {
+   "id": "F-S003",
+   "date": "2026-10-13",
+   "tool": "OpenAlex API",
+   "family": "known_item",
+   "query": "https://api.openalex.org/works/doi:10.1177/096228029900800204",
+   "hits": 1,
+   "screened": 1,
+   "kept": [
+    "M076"
+   ],
+   "notes": "Bland and Altman 1999, measuring agreement: open access False (closed); best OA version None"
+  },
+  {
+   "id": "F-S004",
+   "date": "2026-10-13",
+   "tool": "OpenAlex API",
+   "family": "known_item",
+   "query": "https://api.openalex.org/works/doi:10.1016/j.ejca.2015.10.014",
+   "hits": 1,
+   "screened": 1,
+   "kept": [
+    "M100"
+   ],
+   "notes": "Yoon 2016, observer variability meta-analysis: open access False (closed); best OA version None"
+  },
+  {
+   "id": "F-S005",
+   "date": "2026-10-13",
+   "tool": "OpenAlex API",
+   "family": "known_item",
+   "query": "https://api.openalex.org/works/doi:10.1097/RLI.0000000000000048",
+   "hits": 1,
+   "screened": 1,
+   "kept": [
+    "M104"
+   ],
+   "notes": "Keil 2014, target lesion selection and measurement method: open access False (closed); best OA version None"
+  },
+  {
+   "id": "F-S006",
+   "date": "2026-10-13",
+   "tool": "OpenAlex API",
+   "family": "known_item",
+   "query": "https://api.openalex.org/works/doi:10.1200/JCO.2003.01.144",
+   "hits": 1,
+   "screened": 1,
+   "kept": [
+    "M102"
+   ],
+   "notes": "Erasmus 2003, observer variability and misclassification: open access False (closed); best OA version None"
+  },
+  {
+   "id": "F-S007",
+   "date": "2026-10-13",
+   "tool": "OpenAlex API",
+   "family": "known_item",
+   "query": "https://api.openalex.org/works/doi:10.1016/j.ejrad.2011.12.026",
+   "hits": 1,
+   "screened": 1,
+   "kept": [
+    "M106"
+   ],
+   "notes": "van Kessel 2012, semi-automatic liver metastasis measurement: open access False (closed); best OA version None"
+  },
+  {
+   "id": "F-S008",
+   "date": "2026-10-13",
+   "tool": "OpenAlex API",
+   "family": "known_item",
+   "query": "https://api.openalex.org/works/doi:10.1016/j.ejrad.2012.05.018",
+   "hits": 1,
+   "screened": 1,
+   "kept": [
+    "M091"
+   ],
+   "notes": "Rothe 2013, liver metastases volumetry and response: open access False (closed); best OA version None"
+  },
+  {
+   "id": "F-S009",
+   "date": "2026-10-13",
+   "tool": "OpenAlex API",
+   "family": "known_item",
+   "query": "https://api.openalex.org/works/doi:10.1055/s-0032-1312860",
+   "hits": 1,
+   "screened": 1,
+   "kept": [
+    "M092"
+   ],
+   "notes": "Wulff 2012, lung, liver and lymph node volumetric follow-up: open access False (closed); best OA version None"
+  },
+  {
+   "id": "F-S010",
+   "date": "2026-10-13",
+   "tool": "OpenAlex API",
+   "family": "known_item",
+   "query": "https://api.openalex.org/works/doi:10.1148/radiol.2452061054",
+   "hits": 1,
+   "screened": 1,
+   "kept": [
+    "M088"
+   ],
+   "notes": "Gietema 2007, interscan variability of nodule volumetry: open access False (closed); best OA version None"
+  },
+  {
+   "id": "F-S011",
+   "date": "2026-10-13",
+   "tool": "OpenAlex API",
+   "family": "known_item",
+   "query": "https://api.openalex.org/works/doi:10.1148/radiol.2252011604",
+   "hits": 1,
+   "screened": 1,
+   "kept": [
+    "M115"
+   ],
+   "notes": "Prasad 2002, volumetric response thresholds: open access False (closed); best OA version None"
+  },
+  {
+   "id": "F-S012",
+   "date": "2026-10-13",
+   "tool": "OpenAlex API",
+   "family": "known_item",
+   "query": "https://api.openalex.org/works/doi:10.1007/s00330-018-5424-0",
+   "hits": 1,
+   "screened": 1,
+   "kept": [
+    "M118"
+   ],
+   "notes": "Winter 2018, volumetric thresholds: open access False (closed); best OA version None"
+  },
+  {
+   "id": "F-S013",
+   "date": "2026-10-13",
+   "tool": "OpenAlex API",
+   "family": "known_item",
+   "query": "https://api.openalex.org/works/doi:10.1007/s00330-023-09926-0",
+   "hits": 1,
+   "screened": 1,
+   "kept": [
+    "M125"
+   ],
+   "notes": "Joskowicz 2023, deep-learning follow-up of liver metastases: open access False (closed); best OA version None"
+  },
+  {
+   "id": "F-S014",
+   "date": "2026-10-13",
+   "tool": "OpenAlex API",
+   "family": "known_item",
+   "query": "https://api.openalex.org/works/doi:10.1016/j.ejrad.2026.112776",
+   "hits": 1,
+   "screened": 1,
+   "kept": [
+    "M111"
+   ],
+   "notes": "Heiselman 2026, pancreatic response and registration: open access True (hybrid); best OA version publishedVersion"
+  },
+  {
+   "id": "F-S015",
+   "date": "2026-10-13",
+   "tool": "OpenAlex API",
+   "family": "known_item",
+   "query": "https://api.openalex.org/works/doi:10.1148/rycan.230001",
+   "hits": 1,
+   "screened": 1,
+   "kept": [
+    "M109"
+   ],
+   "notes": "Siegel 2023, discrepant progression calls: open access True (diamond); best OA version publishedVersion"
+  },
+  {
+   "id": "F-S016",
+   "date": "2026-10-13",
+   "tool": "OpenAlex API",
+   "family": "known_item",
+   "query": "https://api.openalex.org/works/doi:10.1200/JCO.2015.64.0391",
+   "hits": 1,
+   "screened": 1,
+   "kept": [
+    "M129"
+   ],
+   "notes": "Hodi 2016, irRC versus RECIST in melanoma: open access True (green); best OA version submittedVersion"
+  },
+  {
+   "id": "F-S017",
+   "date": "2026-10-13",
+   "tool": "OpenAlex API",
+   "family": "known_item",
+   "query": "https://api.openalex.org/works/doi:10.1002/pst.1524",
+   "hits": 1,
+   "screened": 1,
+   "kept": [
+    "M131"
+   ],
+   "notes": "Hong 2012, measurement variability attenuates PFS effects: open access False (closed); best OA version None"
+  },
+  {
+   "id": "F-S018",
+   "date": "2026-10-13",
+   "tool": "OpenAlex API",
+   "family": "known_item",
+   "query": "https://api.openalex.org/works/doi:10.1007/s00330-010-1967-4",
+   "hits": 1,
+   "screened": 1,
+   "kept": [
+    "M045"
+   ],
+   "notes": "Goh 2011, software upgrade changes CT perfusion: open access False (closed); best OA version None"
+  },
+  {
+   "id": "F-S019",
+   "date": "2026-10-13",
+   "tool": "OpenAlex API",
+   "family": "known_item",
+   "query": "https://api.openalex.org/works/doi:10.1385/jcd:5:2:199",
+   "hits": 1,
+   "screened": 1,
+   "kept": [
+    "M083"
+   ],
+   "notes": "Wong and Griffiths 2002, DXA software upgrade: open access False (closed); best OA version None"
+  },
+  {
+   "id": "F-S020",
+   "date": "2026-10-13",
+   "tool": "OpenAlex API",
+   "family": "known_item",
+   "query": "https://api.openalex.org/works/doi:10.3233/JAD-170306",
+   "hits": 1,
+   "screened": 1,
+   "kept": [
+    "M048"
+   ],
+   "notes": "Stelmokas 2017, NeuroQuant versions: open access True (green); best OA version submittedVersion"
+  },
+  {
+   "id": "F-S021",
+   "date": "2026-10-13",
+   "tool": "OpenAlex API",
+   "family": "known_item",
+   "query": "https://api.openalex.org/works/doi:10.1007/s00234-021-02862-0",
+   "hits": 1,
+   "screened": 1,
+   "kept": [
+    "M049"
+   ],
+   "notes": "Filip 2022, FreeSurfer versions: open access True (green); best OA version submittedVersion"
+  },
+  {
+   "id": "F-S022",
+   "date": "2026-10-13",
+   "tool": "OpenAlex API",
+   "family": "known_item",
+   "query": "https://api.openalex.org/works/doi:10.1007/s00330-025-12265-x",
+   "hits": 1,
+   "screened": 1,
+   "kept": [
+    "M055"
+   ],
+   "notes": "Boitsios 2026, two versions of a bone-age AI tool: open access False (closed); best OA version None"
+  },
+  {
+   "id": "F-S023",
+   "date": "2026-10-13",
+   "tool": "OpenAlex API",
+   "family": "known_item",
+   "query": "https://api.openalex.org/works/doi:10.3174/ajnr.a8490",
+   "hits": 1,
+   "screened": 1,
+   "kept": [
+    "M036"
+   ],
+   "notes": "Ying 2025, longitudinal consistency of a DL PET/MR pipeline: open access True (hybrid); best OA version publishedVersion"
+  },
+  {
+   "id": "F-S024",
+   "date": "2026-10-13",
+   "tool": "OpenAlex API",
+   "family": "known_item",
+   "query": "https://api.openalex.org/works/doi:10.1007/s11604-026-02079-2",
+   "hits": 1,
+   "screened": 1,
+   "kept": [
+    "M148"
+   ],
+   "notes": "Kobayashi 2026, longitudinal multi-organ volumetry: open access True (hybrid); best OA version publishedVersion"
+  },
+  {
+   "id": "F-S025",
+   "date": "2026-10-13",
+   "tool": "OpenAlex API",
+   "family": "known_item",
+   "query": "https://api.openalex.org/works/doi:10.1148/ryai.260385",
+   "hits": 1,
+   "screened": 1,
+   "kept": [
+    "M182"
+   ],
+   "notes": "Dayma 2026, PCCPs of radiology AI devices: open access False (closed); best OA version None"
+  },
+  {
+   "id": "F-S026",
+   "date": "2026-10-13",
+   "tool": "OpenAlex API",
+   "family": "known_item",
+   "query": "https://api.openalex.org/works/doi:10.1148/radiol.2020200038",
+   "hits": 1,
+   "screened": 1,
+   "kept": [
+    "M006"
+   ],
+   "notes": "Pianykh 2020, continuous learning AI in radiology: open access False (closed); best OA version None"
+  },
+  {
+   "id": "F-S027",
+   "date": "2026-10-13",
+   "tool": "OpenAlex API",
+   "family": "known_item",
+   "query": "https://api.openalex.org/works/doi:10.1016/j.media.2025.103730",
+   "hits": 1,
+   "screened": 1,
+   "kept": [
+    "M021"
+   ],
+   "notes": "Kumari 2025, continual learning review: open access True (hybrid); best OA version publishedVersion"
+  },
+  {
+   "id": "F-S028",
+   "date": "2026-10-13",
+   "tool": "Europe PMC REST",
+   "family": "known_item",
+   "query": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?resultType=core&format=json&query=DOI%3A%2210.1186/s13244-022-01287-4%22",
+   "hits": 1,
+   "screened": 1,
+   "kept": [
+    "desouza2022"
+   ],
+   "notes": "desouza2022: pmcid PMC9532485"
+  },
+  {
+   "id": "F-S029",
+   "date": "2026-10-13",
+   "tool": "Europe PMC REST",
+   "family": "known_item",
+   "query": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC9532485/fullTextXML",
+   "hits": null,
+   "screened": 1,
+   "kept": [
+    "desouza2022"
+   ],
+   "notes": "desouza2022: full text 65073 characters"
+  },
+  {
+   "id": "F-S030",
+   "date": "2026-10-13",
+   "tool": "Europe PMC REST",
+   "family": "known_item",
+   "query": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?resultType=core&format=json&query=DOI%3A%2210.1007/s11548-024-03181-4%22",
+   "hits": 1,
+   "screened": 1,
+   "kept": [
+    "hering2024"
+   ],
+   "notes": "hering2024: pmcid PMC11365847"
+  },
+  {
+   "id": "F-S031",
+   "date": "2026-10-13",
+   "tool": "Europe PMC REST",
+   "family": "known_item",
+   "query": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11365847/fullTextXML",
+   "hits": null,
+   "screened": 1,
+   "kept": [
+    "hering2024"
+   ],
+   "notes": "hering2024: full text 40453 characters"
+  },
+  {
+   "id": "F-S032",
+   "date": "2026-10-13",
+   "tool": "Europe PMC REST",
+   "family": "known_item",
+   "query": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?resultType=core&format=json&query=DOI%3A%2210.1158/1078-0432.CCR-14-0245%22",
+   "hits": 1,
+   "screened": 1,
+   "kept": [
+    "zhao2014"
+   ],
+   "notes": "zhao2014: pmcid PMC4337392"
+  },
+  {
+   "id": "F-S033",
+   "date": "2026-10-13",
+   "tool": "Europe PMC REST",
+   "family": "known_item",
+   "query": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC4337392/fullTextXML",
+   "hits": null,
+   "screened": 1,
+   "kept": [],
+   "notes": "zhao2014: full text 0 characters"
+  },
+  {
+   "id": "F-S034",
+   "date": "2026-10-13",
+   "tool": "Europe PMC REST",
+   "family": "known_item",
+   "query": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?resultType=core&format=json&query=DOI%3A%2210.1038/s41598-020-69920-0%22",
+   "hits": 1,
+   "screened": 1,
+   "kept": [
+    "renard2020"
+   ],
+   "notes": "renard2020: pmcid PMC7426407"
+  },
+  {
+   "id": "F-S035",
+   "date": "2026-10-13",
+   "tool": "Europe PMC REST",
+   "family": "known_item",
+   "query": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC7426407/fullTextXML",
+   "hits": null,
+   "screened": 1,
+   "kept": [
+    "renard2020"
+   ],
+   "notes": "renard2020: full text 92194 characters"
+  },
+  {
+   "id": "F-S036",
+   "date": "2026-10-13",
+   "tool": "Europe PMC REST",
+   "family": "known_item",
+   "query": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?resultType=core&format=json&query=DOI%3A%2210.1148/ryai.260385%22",
+   "hits": 1,
+   "screened": 1,
+   "kept": [
+    "dayma2026"
+   ],
+   "notes": "dayma2026: pmcid None"
+  },
+  {
+   "id": "F-S037",
+   "date": "2026-10-13",
+   "tool": "Europe PMC REST",
+   "family": "known_item",
+   "query": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?resultType=core&format=json&query=DOI%3A%2210.1038/s41592-020-01008-z%22",
+   "hits": 1,
+   "screened": 1,
+   "kept": [
+    "isensee2021"
+   ],
+   "notes": "isensee2021: pmcid None"
+  },
+  {
+   "id": "F-S038",
+   "date": "2026-10-13",
+   "tool": "arXiv API",
+   "family": "known_item",
+   "query": "https://export.arxiv.org/api/query?id_list=0712.1111",
+   "hits": 1,
+   "screened": 1,
+   "kept": [
+    "owen2007"
+   ],
+   "notes": "owen2007: Annals of Applied Statistics 2007, Vol. 1, No. 2, 386-411"
+  },
+  {
+   "id": "F-S039",
+   "date": "2026-10-13",
+   "tool": "arXiv API",
+   "family": "known_item",
+   "query": "https://export.arxiv.org/api/query?id_list=2211.04161",
+   "hits": 1,
+   "screened": 1,
+   "kept": [
+    "bertels2021"
+   ],
+   "notes": "bertels2021: Elsevier Medical Image Analysis, Volume 61, January 2021, 101833"
+  },
+  {
+   "id": "F-S040",
+   "date": "2026-10-13",
+   "tool": "arXiv API",
+   "family": "known_item",
+   "query": "https://export.arxiv.org/api/query?id_list=1904.08128",
+   "hits": 1,
+   "screened": 1,
+   "kept": [
+    "isensee2021_arxiv"
+   ],
+   "notes": "isensee2021_arxiv: Nature Methods (2020)"
+  },
+  {
+   "id": "F-S041",
+   "date": "2026-10-13",
+   "tool": "Crossref API",
+   "family": "known_item",
+   "query": "https://api.crossref.org/works/10.1016/j.acra.2014.07.004",
+   "hits": 1,
+   "screened": 1,
+   "kept": [
+    "R-P01"
+   ],
+   "notes": "Obuchowski, Subhas & Schoenhagen 2014, Testing for interchangeability of imaging tests: Academic Radiology 21(11):1483-1489, November 2014; matches the version of record the user supplied"
+  },
+  {
+   "id": "F-S042",
+   "date": "2026-10-13",
+   "tool": "Crossref API",
+   "family": "known_item",
+   "query": "https://api.crossref.org/works/10.1007/s00330-018-5695-5",
+   "hits": 1,
+   "screened": 1,
+   "kept": [
+    "R-P11"
+   ],
+   "notes": "Joskowicz, Cohen, Caplan & Sosna 2019, Inter-observer variability of manual contour delineation of structures in CT: European Radiology 29(3):1391-1399, March 2019 (online 7 September 2018); matches the version of record the user obtained from the authors; no update notice (Crossref updates filter, 0 results)"
+  }
+ ]
+}

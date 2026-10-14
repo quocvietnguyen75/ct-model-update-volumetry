@@ -1,10 +1,10 @@
-# Longitudinal tumour volumetry after CT segmentation model updates
+# Better contours, incompatible measurements
 
-Analysis code, frozen analysis configurations, dated protocol amendments and verified aggregate results for the manuscript:
+Analysis code, frozen analysis configurations, dated protocol amendments, verified aggregate results and literature-search records for the manuscript:
 
-> Quoc Viet Nguyen, Phuc Tai Duong, Duc Hoai Anh Nguyen, Dzung Van Dinh and Zengchang Qin. *Longitudinal tumour volumetry after CT segmentation model updates: a controlled evaluation across training runs and cohorts.* Submitted to *Physics in Medicine & Biology*, 2026.
+> Quoc Viet Nguyen, Phuc Tai Duong, Duc Hoai Anh Nguyen, Dzung Van Dinh and Zengchang Qin. *Better contours, incompatible measurements: the cost of mixing segmentation model versions in longitudinal CT tumour volumetry.* Submitted to *Physics in Medicine & Biology*, 2026.
 
-The study updates a CT tumour segmentation model with more training data. It then measures how retaining baseline measurements made by the old model, instead of reprocessing the baseline scan, changes the error of measured tumour-volume change. It compares a three-dimensional residual U-Net (three original runs and a prespecified 20-run replication) with nnU-Net (a ten-run replication), on an internal Longitudinal-CT holdout and the external PanTrack cohort.
+The study updates a CT tumour segmentation model with more training data. It then measures how retaining baseline measurements made by the old model, instead of reprocessing the baseline scan, changes the error of measured tumour-volume change. It compares a three-dimensional residual U-Net (three original runs and a prespecified 20-run replication) with nnU-Net (a ten-run replication), on an internal Longitudinal-CT holdout and the external PanTrack cohort. It also expresses that cost relative to the model's own error, defines a compatibility index from the between-version difference on single scans, and reports the effect on patient-level volumetric response categories (amendment 019).
 
 This repository is a snapshot of the authors' working repository at the time of submission, restricted to this study. It contains no imaging data, no patient-level values and no trained weights.
 
@@ -28,6 +28,7 @@ The code never hard-codes a data location. Dataset, cache and run roots come fro
 | `newpaper/plan/CT_*AMENDMENT_*.md` | The dated protocol amendments. Each was written before the outcomes it governs were inspected. Amendment 001 creates the protocol. |
 | `newpaper/research_selection_2026-09-13/CT_*` | The verified aggregate results reported in the paper (JSON and CSV) |
 | `newpaper/ct_manuscript/tables/` | The supplementary data files `s1`–`s7`, and four aggregate tables the scripts read |
+| `newpaper/ct_manuscript/literature/` | The literature-search records behind the statements about prior work: query logs, evidence register, paper cards, claim checks and citation audit of the four searches. `LITERATURE_SEARCH.md` there indexes them. |
 
 Paths keep the working repository's layout, because the configurations and amendments bind files by path and hash. Links in the amendments to internal planning documents point to files that are not included.
 
@@ -43,7 +44,7 @@ From the repository root:
 PYTHONPATH=src python -m unittest discover -s tests
 ```
 
-The suite runs 247 tests. Tests that need PyTorch, MONAI or nnU-Net are skipped when those packages are absent.
+The suite runs 285 tests. Tests that need PyTorch, MONAI or nnU-Net are skipped when those packages are absent.
 
 To regenerate the manuscript's figures, table fragments and supplementary CSVs from the verified results:
 
@@ -76,12 +77,17 @@ Each stage is a module run by one Slurm script. A stage refuses to run unless th
 | Post hoc descriptions | 016 | `ct_posthoc_016` | `ct_posthoc_run` |
 | nnU-Net replication | 017, 017A | `ct_strong_017` | `ct_strong_run` |
 | Example lesion pair (Figure 4) | 018 | `ct_example_018` | `ct_example_run` |
+| Compatibility and patient-level response analyses (Table 5, Figure 5) | 019 | `ct_compat_019` | `ct_compat_run` |
 
 The amendment numbers above are a guide; the amendments themselves are authoritative. The analyses ran from hash-recorded code bundles of earlier versions of this code. Those execution records are available from the corresponding author.
 
+## Versions
+
+The tag `pmb-submission-2026-10-14` marks the code, configurations, amendments, results and search records current at submission. The earlier tag `pmb-submission-2026-10-06` marks the snapshot before amendments 018 and 019 and the literature records were added.
+
 ## AI assistance
 
-Claude Opus 5.5 (Anthropic) wrote and tested much of this code under the authors' direction, as the paper's AI statement describes. The authors take responsibility for it.
+Claude Opus 5.5 (Anthropic) wrote and tested much of this code under the authors' direction and supported the literature search whose records are in `newpaper/ct_manuscript/literature/`, as the paper's AI statement describes. The authors take responsibility for it.
 
 ## Licence
 

@@ -1,0 +1,736 @@
+{
+ "part": "T4",
+ "date": "2026-10-12",
+ "entries": [
+  {
+   "id": "T4-S001",
+   "date": "2026-10-12",
+   "tool": "PubMed E-utilities",
+   "family": "known_item",
+   "query": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=Yoon SH[au] AND observer variability[tiab] AND RECIST[tiab] AND meta-analysis&retmax=10&retmode=json&sort=relevance",
+   "hits": 1,
+   "screened": 1,
+   "kept": [
+    "T4-P01"
+   ],
+   "notes": "Anchor Yoon 2016 found; abstract fetched."
+  },
+  {
+   "id": "T4-S002",
+   "date": "2026-10-12",
+   "tool": "PubMed E-utilities",
+   "family": "known_item",
+   "query": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=Kuhl CK[au] AND RECIST[tiab] AND 2019[dp]&retmax=10&retmode=json&sort=relevance",
+   "hits": 2,
+   "screened": 2,
+   "kept": [
+    "T4-P02"
+   ],
+   "notes": "Anchor Kuhl 2019 found, plus Kuhl's 2019 editorial 'RECIST needs revision' (opinion; not kept)."
+  },
+  {
+   "id": "T4-S003",
+   "date": "2026-10-12",
+   "tool": "PubMed E-utilities",
+   "family": "known_item",
+   "query": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=Mozley PD[au] AND volume[tiab] AND Transl Oncol[ta]&retmax=10&retmode=json&sort=relevance",
+   "hits": 1,
+   "screened": 1,
+   "kept": [
+    "T4-P16"
+   ],
+   "notes": "Anchor Mozley 2012 found (open access)."
+  },
+  {
+   "id": "T4-S004",
+   "date": "2026-10-12",
+   "tool": "PubMed E-utilities",
+   "family": "known_item",
+   "query": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=Oxnard GR[au] AND variability[tiab] AND J Clin Oncol[ta]&retmax=10&retmode=json&sort=relevance",
+   "hits": 1,
+   "screened": 1,
+   "kept": [
+    "T4-P03"
+   ],
+   "notes": "Anchor Oxnard 2011 found (PMC)."
+  },
+  {
+   "id": "T4-S005",
+   "date": "2026-10-12",
+   "tool": "OpenAlex",
+   "family": "known_item",
+   "query": "https://api.openalex.org/works/https://doi.org/10.1016/j.ejca.2015.10.014 | https://api.openalex.org/works/https://doi.org/10.1148/radiol.2018180648 | https://api.openalex.org/works/https://doi.org/10.1593/tlo.11232 | https://api.openalex.org/works/https://doi.org/10.1200/JCO.2010.33.7071 | https://api.openalex.org/works/https://doi.org/10.1016/j.ejca.2008.10.026",
+   "hits": 5,
+   "screened": 5,
+   "kept": [],
+   "notes": "Retrieval step, not a search: OpenAlex IDs and open-access status of the four anchors and Eisenhauer 2009 (W2019607817, 29,567 citing works). Yoon 2016 and Kuhl 2019 closed; Mozley gold OA; Oxnard green OA."
+  },
+  {
+   "id": "T4-S006",
+   "date": "2026-10-12",
+   "tool": "OpenAlex",
+   "family": "citation_forward",
+   "query": "https://api.openalex.org/works?filter=cites:W2196324452&per-page=100&page=1&sort=cited_by_count:desc",
+   "hits": 97,
+   "screened": 97,
+   "kept": [
+    "T4-P09",
+    "T4-P10",
+    "T4-P11",
+    "T4-P24",
+    "T4-P26",
+    "T4-P27",
+    "T4-P30",
+    "T4-P31"
+   ],
+   "notes": "All works citing Yoon 2016 screened by title. Main source of recent benchmarks (Goldmacher 2026, Siegel 2023, Beaumont 2023, Dahm 2024, de Grauw 2026) and the closest neighbour (Adhikary 2026 preprint). Also seen, not kept: Bellomi 2017, Cornelis 2017, Iannessi 2024, Beaumont 2018/2021, Huff 2023 (PMB, lesion matching), Tang 2018, Machado 2025 (ONCOPILOT; T5 territory), Yoon JH 2019, Ibrahim 2026, Wesdorp 2022/2023."
+  },
+  {
+   "id": "T4-S007",
+   "date": "2026-10-12",
+   "tool": "OpenAlex",
+   "family": "citation_forward",
+   "query": "https://api.openalex.org/works?filter=cites:W2899585536&per-page=100&page=1&sort=cited_by_count:desc",
+   "hits": 89,
+   "screened": 89,
+   "kept": [
+    "T4-P10",
+    "T4-P14",
+    "T4-P23",
+    "T4-P24",
+    "T4-P26",
+    "T4-P28"
+   ],
+   "notes": "All works citing Kuhl 2019 screened. Added Zimmermann 2021 (two papers), Joskowicz 2023; re-found Dahm 2024, de Grauw 2026, Beaumont 2023, Wesdorp 2021. Seen, not kept: Zimmermann 2020 EJR (whole-body volumetry), Ristow 2024, Huicochea Castellanos 2021, Ruchalski 2021/2024, Zamboni 2024, Tareco Bucho 2023/2025, Coy 2019, Mergen 2026 (LLM report classification)."
+  },
+  {
+   "id": "T4-S008",
+   "date": "2026-10-12",
+   "tool": "OpenAlex",
+   "family": "citation_forward",
+   "query": "https://api.openalex.org/works?filter=cites:W2019607817&per-page=50&page=1&sort=cited_by_count:desc&search=interobserver variability response classification || rerun with sort=relevance_score:desc: https://api.openalex.org/works?filter=cites:W2019607817&per-page=50&page=1&sort=relevance_score:desc&search=interobserver variability response classification",
+   "hits": 311,
+   "screened": 100,
+   "kept": [
+    "T4-P05",
+    "T4-P08",
+    "T4-P12",
+    "T4-P24",
+    "T4-P27"
+   ],
+   "notes": "Eisenhauer 2009 forward chasing restricted to variability. Run twice with the same search (first sorted by citations, then by relevance; 50 screened each). Added van Kessel 2012, Muenzel 2012, Smesseim 2026; seen Suzuki 2010, Krasovitsky 2022, Wulff 2013, Schoot 2013, Goldmacher 2012, Bellomi 2017 (not kept: older or redundant benchmarks)."
+  },
+  {
+   "id": "T4-S009",
+   "date": "2026-10-12",
+   "tool": "OpenAlex",
+   "family": "citation_forward",
+   "query": "https://api.openalex.org/works?filter=cites:W2019607817&per-page=50&page=1&sort=cited_by_count:desc&search=inter-reader agreement response category discordance",
+   "hits": 14,
+   "screened": 14,
+   "kept": [
+    "T4-P23"
+   ],
+   "notes": "Eisenhauer forward restricted to inter-reader category discordance. Re-found Zimmermann 2021 PJR; seen Schmid 2021, Beaumont 2026 (DoPD discordance 39.3%), Herzog 2023 (PRIMA BICR), Seyal 2015 (mRECIST)."
+  },
+  {
+   "id": "T4-S010",
+   "date": "2026-10-12",
+   "tool": "OpenAlex",
+   "family": "citation_forward",
+   "query": "https://api.openalex.org/works?filter=cites:W2019607817&per-page=40&page=1&sort=relevance_score:desc&search=deep learning automated response assessment longitudinal CT",
+   "hits": 164,
+   "screened": 40,
+   "kept": [
+    "T4-P26",
+    "T4-P31"
+   ],
+   "notes": "Eisenhauer forward restricted to automated longitudinal response. Seen Hering 2024, Huff 2023, Santoro-Fernandes 2024 (PMB), Kashyap 2025, Xia 2024, Zhou 2024, Kraaijveld 2026, Chun 2026, Karunanayake 2026, Kirchhoff 2026 (LNCS; PanTrack group, already cited). Re-found Dahm 2024 and Adhikary 2026."
+  },
+  {
+   "id": "T4-S011",
+   "date": "2026-10-12",
+   "tool": "OpenAlex",
+   "family": "citation_forward",
+   "query": "https://api.openalex.org/works?filter=cites:W2019607817&per-page=40&page=1&sort=relevance_score:desc&search=volumetric response criteria threshold volume RECIST comparison",
+   "hits": 526,
+   "screened": 40,
+   "kept": [
+    "T4-P12",
+    "T4-P16",
+    "T4-P18",
+    "T4-P19",
+    "T4-P22",
+    "T4-P23",
+    "T4-P26",
+    "T4-P30"
+   ],
+   "notes": "Eisenhauer forward restricted to volumetric criteria. Added Zhao 2025 (QIBA vs RECIST), Gong 2023, Rothe 2013. Seen Schiavon 2012 (GIST), Goldmacher 2012 review, Bendtsen 2011, Kale 2024, Orsatti 2020, Liu 2025 (PDAC preprint)."
+  },
+  {
+   "id": "T4-S012",
+   "date": "2026-10-12",
+   "tool": "PubMed E-utilities",
+   "family": "boolean",
+   "query": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=(RECIST[tiab]) AND (interobserver[tiab] OR inter-observer[tiab] OR interreader[tiab] OR inter-reader[tiab] OR intraobserver[tiab] OR intra-observer[tiab]) AND (response classification[tiab] OR response category[tiab] OR response categories[tiab] OR misclassification[tiab] OR discordan*[tiab] OR response assessment[tiab]) AND (CT[tiab] OR computed tomography[tiab])&retmax=80&retmode=json&sort=relevance",
+   "hits": 46,
+   "screened": 46,
+   "kept": [
+    "T4-P02",
+    "T4-P04",
+    "T4-P05",
+    "T4-P08",
+    "T4-P10",
+    "T4-P22",
+    "T4-P24",
+    "T4-P25",
+    "T4-P26",
+    "T4-P27"
+   ],
+   "notes": "Reader variability x RECIST x categories. Added Erasmus 2003; re-found Kuhl, Muenzel, van Kessel, Rothe, Wesdorp 2021, Dahm, de Grauw, Beaumont 2023. Seen Wulff 2013, Marten 2006 (automated volumetry kappa 1 vs manual 0.73-0.84), Kalkmann 2010, Felsch 2017, Suzuki 2010, Bellomi 2017, Ristow 2024."
+  },
+  {
+   "id": "T4-S013",
+   "date": "2026-10-12",
+   "tool": "PubMed E-utilities",
+   "family": "boolean",
+   "query": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=((\"independent central review\"[tiab] OR \"central review\"[tiab] OR BICR[tiab] OR \"independent review\"[tiab] OR \"double read\"[tiab] OR \"double reads\"[tiab]) AND (discordan*[tiab] OR discrepan*[tiab] OR adjudicat*[tiab] OR disagreement*[tiab]) AND (progression[tiab] OR RECIST[tiab] OR response[tiab]))&retmax=80&retmode=json&sort=relevance",
+   "hits": 100,
+   "screened": 80,
+   "kept": [
+    "T4-P10"
+   ],
+   "notes": "BICR discordance family; noisy (trial reports mentioning BICR). Useful hits: Amit 2011, Stone 2019, Dello Russo 2020 (trial-level HR concordance of local vs central review; noted for context, not kept), Beaumont 2021/2023, Iannessi 2023/2024, Felsch 2017, Sjoquist 2023."
+  },
+  {
+   "id": "T4-S014",
+   "date": "2026-10-12",
+   "tool": "PubMed E-utilities",
+   "family": "known_item",
+   "query": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=Ford R[au] AND \"independent central review\"[tiab] AND Eur J Cancer[ta]&retmax=10&retmode=json&sort=relevance",
+   "hits": 1,
+   "screened": 1,
+   "kept": [],
+   "notes": "Ford 2009 'Lessons learned from independent central review' found; narrative, superseded by Goldmacher 2026 empirical rates; not kept."
+  },
+  {
+   "id": "T4-S015",
+   "date": "2026-10-12",
+   "tool": "PubMed E-utilities",
+   "family": "known_item",
+   "query": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=\"Radiologists and Clinical Trials\"[ti]&retmax=10&retmode=json&sort=relevance",
+   "hits": 0,
+   "screened": 0,
+   "kept": [],
+   "notes": "Title search for Schmid 2021 returned nothing (title indexing); retried by author in T4-S018."
+  },
+  {
+   "id": "T4-S016",
+   "date": "2026-10-12",
+   "tool": "PubMed E-utilities",
+   "family": "known_item",
+   "query": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=Goldmacher G[au] AND discordance[tiab]&retmax=10&retmode=json&sort=relevance",
+   "hits": 2,
+   "screened": 2,
+   "kept": [
+    "T4-P09"
+   ],
+   "notes": "Goldmacher 2026 found (empirical site-central discordance); also Ahmed 2021 (melanoma RECIST vs iRECIST, KEYNOTE-002), not kept."
+  },
+  {
+   "id": "T4-S017",
+   "date": "2026-10-12",
+   "tool": "Crossref",
+   "family": "known_item",
+   "query": "https://api.crossref.org/works?query.bibliographic=Ford adjudication rates between readers in blinded independent central review of oncology studies&rows=5",
+   "hits": 686092,
+   "screened": 5,
+   "kept": [],
+   "notes": "Bibliographic query for Ford et al. adjudication rates: Journal of Clinical Trials 2016 (OMICS publisher) found; not kept because of venue quality and availability of better sources."
+  },
+  {
+   "id": "T4-S018",
+   "date": "2026-10-12",
+   "tool": "PubMed E-utilities",
+   "family": "known_item",
+   "query": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=Schmid AM[au] AND reader[tiab] AND disagreement*[tiab]&retmax=10&retmode=json&sort=relevance",
+   "hits": 1,
+   "screened": 1,
+   "kept": [],
+   "notes": "Schmid 2021 'Radiologists and clinical trials part 1' found (PINTAD narrative review of reader disagreement); not kept, optional background."
+  },
+  {
+   "id": "T4-S019",
+   "date": "2026-10-12",
+   "tool": "PubMed E-utilities",
+   "family": "known_item",
+   "query": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=10.1186/s40644-018-0186-0[doi] OR 10.1186/s12874-019-0727-7[doi] OR 10.1148/rycan.230001[doi] OR 10.1186/s13244-026-02320-6[doi] OR 10.1136/ijgc-2021-003319[doi] OR 10.5114/pjr.2021.111048[doi] OR 10.1007/s00330-023-09926-0[doi] OR 10.1093/radadv/umaf001[doi] OR 10.1148/rycan.220166[doi] OR 10.1007/s11548-024-03181-4[doi] OR 10.1038/s41698-025-00903-y[doi] OR 10.1007/s00330-025-12234-4[doi] OR 10.3390/cancers13184533[doi] OR 10.1186/s13244-024-01774-w[doi] OR 10.3389/fonc.2023.988784[doi]&retmax=20&retmode=json&sort=relevance",
+   "hits": 15,
+   "screened": 15,
+   "kept": [],
+   "notes": "Retrieval step: PubMed IDs for 15 candidate DOIs found by citation chasing."
+  },
+  {
+   "id": "T4-S020",
+   "date": "2026-10-12",
+   "tool": "OpenAlex; Crossref; Research Square",
+   "family": "known_item",
+   "query": "https://api.openalex.org/works/W7202074933 | https://api.crossref.org/works/10.21203/rs.3.rs-10551828/v1 | https://www.researchsquare.com/article/rs-10551828/latest.pdf",
+   "hits": 1,
+   "screened": 1,
+   "kept": [],
+   "notes": "Retrieval step for the Adhikary 2026 preprint: web page is script-rendered (WebFetch returned only the title); PDF downloaded to the scratch directory and read in full."
+  },
+  {
+   "id": "T4-S021",
+   "date": "2026-10-12",
+   "tool": "OpenAlex",
+   "family": "citation_backward",
+   "query": "https://api.openalex.org/works/W2196324452",
+   "hits": 47,
+   "screened": 47,
+   "kept": [
+    "T4-P03",
+    "T4-P04",
+    "T4-P05",
+    "T4-P07",
+    "T4-P08",
+    "T4-P36"
+   ],
+   "notes": "References of Yoon 2016. Added Zhao 2014, Hong 2012; re-found Erasmus 2003, Oxnard 2011, Muenzel 2012, van Kessel 2012. Seen Thiesse 1997 (major disagreements 40% of reviewed files), Hopper 1996, McErlean 2013, Korn 2010, Sullivan 2013, Zhang 2012 (FDA BICR meta-analysis), Moskowitz 2009, Hillman 2009."
+  },
+  {
+   "id": "T4-S022",
+   "date": "2026-10-12",
+   "tool": "OpenAlex",
+   "family": "citation_backward",
+   "query": "https://api.openalex.org/works/W2899585536",
+   "hits": 24,
+   "screened": 24,
+   "kept": [
+    "T4-P04",
+    "T4-P06",
+    "T4-P15",
+    "T4-P16",
+    "T4-P17"
+   ],
+   "notes": "References of Kuhl 2019. Added Prasad 2002 (primary use of -65%/+73% on per-patient sums), Mantatzis 2009, Keil 2014; re-found Mozley 2012, Erasmus 2003. Seen Bogaerts 2009, Dancey 2009, Schwartz 2016, Oubel 2015, Dinkel 2013."
+  },
+  {
+   "id": "T4-S023",
+   "date": "2026-10-12",
+   "tool": "PubMed E-utilities",
+   "family": "known_item",
+   "query": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=10.1158/1078-0432.ccr-14-0245[doi] OR 10.1148/radiol.13122665[doi] OR 10.1200/jco.1997.15.12.3507[doi] OR 10.1148/radiol.2252011604[doi] OR 10.1002/pst.1524[doi] OR 10.1016/j.acra.2014.09.008[doi] OR 10.1007/s00330-009-1327-4[doi] OR 10.1016/j.lungcan.2013.07.006[doi] OR 10.1016/j.ejrad.2013.02.018[doi] OR 10.1097/rli.0000000000000048[doi] OR 10.1177/1740774510382801[doi] OR 10.1158/1078-0432.ccr-12-2936[doi]&retmax=20&retmode=json&sort=relevance",
+   "hits": 11,
+   "screened": 11,
+   "kept": [],
+   "notes": "Retrieval step: PubMed IDs for 11 backward-chased DOIs."
+  },
+  {
+   "id": "T4-S024",
+   "date": "2026-10-12",
+   "tool": "PubMed E-utilities",
+   "family": "known_item",
+   "query": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=McErlean A[au] AND variability[tiab] AND Radiology[ta]&retmax=5&retmode=json&sort=relevance",
+   "hits": 1,
+   "screened": 1,
+   "kept": [],
+   "notes": "McErlean 2013 found (size-dependent true-change thresholds 4-12%); measurement repeatability is T3 territory; not kept."
+  },
+  {
+   "id": "T4-S025",
+   "date": "2026-10-12",
+   "tool": "PubMed E-utilities",
+   "family": "boolean",
+   "query": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=(\"software version\"[tiab] OR \"software versions\"[tiab] OR \"software update\"[tiab] OR \"software upgrade\"[tiab] OR \"algorithm update\"[tiab] OR \"model update\"[tiab] OR \"version change\"[tiab] OR \"new version\"[tiab]) AND (RECIST[tiab] OR \"tumor response\"[tiab] OR \"tumour response\"[tiab] OR \"response assessment\"[tiab] OR \"treatment response\"[tiab] OR \"tumor volume\"[tiab] OR \"tumour volume\"[tiab] OR volumetry[tiab])&retmax=60&retmode=json&sort=relevance",
+   "hits": 83,
+   "screened": 60,
+   "kept": [],
+   "notes": "Novelty check: software or model version change x response assessment. No study of response categories under software or model version changes; only unrelated hits and Filip 2022 (FreeSurfer versions change statistical outcomes; T2 territory)."
+  },
+  {
+   "id": "T4-S026",
+   "date": "2026-10-12",
+   "tool": "Europe PMC REST",
+   "family": "boolean",
+   "query": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=(\"software version\" OR \"software update\" OR \"model version\" OR \"algorithm version\" OR \"software upgrade\") AND (\"RECIST\" OR \"response category\" OR \"response categories\") AND (\"reclassif*\" OR \"discordan*\" OR \"category change*\" OR \"changed the response\")&format=json&pageSize=50&resultType=lite",
+   "hits": 26,
+   "screened": 26,
+   "kept": [],
+   "notes": "Novelty check in Europe PMC (full text of open-access articles): no relevant hit; all 26 off-topic."
+  },
+  {
+   "id": "T4-S027",
+   "date": "2026-10-12",
+   "tool": "OpenAlex",
+   "family": "exact_phrase",
+   "query": "https://api.openalex.org/works?search=segmentation model update retraining longitudinal tumor volume response category RECIST&per-page=30",
+   "hits": 14,
+   "screened": 14,
+   "kept": [],
+   "notes": "Novelty check phrased as model update and retraining: no relevant study (Rojas-Pizarro 2026 RECIST dataset and ULS+ adaptation seen; off-question)."
+  },
+  {
+   "id": "T4-S028",
+   "date": "2026-10-12",
+   "tool": "Semantic Scholar Graph API",
+   "family": "boolean",
+   "query": "https://api.semanticscholar.org/graph/v1/paper/search?query=software version change tumor response assessment reclassification longitudinal CT&limit=30 (retried once after a pause)",
+   "hits": null,
+   "screened": 0,
+   "kept": [],
+   "notes": "Failed twice with HTTP 429 (anonymous rate limit); coverage limit."
+  },
+  {
+   "id": "T4-S029",
+   "date": "2026-10-12",
+   "tool": "PubMed E-utilities",
+   "family": "boolean",
+   "query": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=(RECIST[tiab]) AND (misclassif*[tiab] OR \"false progression\"[tiab] OR \"false-positive progression\"[tiab] OR pseudoprogression[tiab] OR overdiagnos*[tiab] OR \"premature discontinuation\"[tiab]) AND (discontinu*[tiab] OR \"treatment decision\"[tiab] OR \"treatment decisions\"[tiab] OR \"management\"[tiab] OR premature*[tiab])&retmax=60&retmode=json&sort=relevance",
+   "hits": 39,
+   "screened": 39,
+   "kept": [
+    "T4-P05",
+    "T4-P34"
+   ],
+   "notes": "Consequences of misclassification (pseudoprogression, premature discontinuation). Added Hodi 2016; seen Ahmed 2021, Manitz 2022, Persigehl 2017, Huang 2025 meta-analysis (continuing ICI after pseudoprogression), Ricciuti 2019."
+  },
+  {
+   "id": "T4-S030",
+   "date": "2026-10-12",
+   "tool": "PubMed E-utilities",
+   "family": "known_item",
+   "query": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=Seymour L[au] AND iRECIST[ti] AND Lancet Oncol[ta]&retmax=5&retmode=json&sort=relevance",
+   "hits": 1,
+   "screened": 1,
+   "kept": [
+    "T4-P33"
+   ],
+   "notes": "iRECIST guideline (Seymour 2017) found; author manuscript read."
+  },
+  {
+   "id": "T4-S031",
+   "date": "2026-10-12",
+   "tool": "PubMed E-utilities",
+   "family": "boolean",
+   "query": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=(volumetric[tiab] OR volumetry[tiab] OR \"tumor volume\"[tiab] OR \"tumour volume\"[tiab]) AND RECIST[tiab] AND (threshold*[tiab] OR cutoff*[tiab] OR cut-off*[tiab] OR criteria[tiab]) AND (\"65%\"[tiab] OR \"73%\"[tiab] OR sphere[tiab] OR spherical[tiab] OR \"partial response\"[tiab]) AND (CT[tiab] OR \"computed tomography\"[tiab])&retmax=60&retmode=json&sort=relevance",
+   "hits": 76,
+   "screened": 60,
+   "kept": [
+    "T4-P18",
+    "T4-P21",
+    "T4-P25"
+   ],
+   "notes": "Volumetric thresholds vs RECIST. Added Vogel 2012 (volume equivalents and decision impact), Lubner 2017; re-found Gong 2023. Seen Knollmann 2014, Fang 2013, Laubender 2014, Beaumont 2015, Kale 2024."
+  },
+  {
+   "id": "T4-S032",
+   "date": "2026-10-12",
+   "tool": "PubMed E-utilities",
+   "family": "known_item",
+   "query": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=Winter KS[au] AND volumetric[tiab] AND RECIST[tiab]&retmax=5&retmode=json&sort=relevance",
+   "hits": 1,
+   "screened": 1,
+   "kept": [
+    "T4-P20"
+   ],
+   "notes": "Winter 2018 found (empirical liver thresholds)."
+  },
+  {
+   "id": "T4-S033",
+   "date": "2026-10-12",
+   "tool": "PubMed E-utilities",
+   "family": "known_item",
+   "query": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=Nishino M[au] AND (volumetric[ti] OR \"tumor volume\"[ti]) AND (lung[ti] OR NSCLC[ti] OR \"non-small-cell\"[ti])&retmax=10&retmode=json&sort=relevance",
+   "hits": 17,
+   "screened": 10,
+   "kept": [],
+   "notes": "Nishino volumetric NSCLC papers; Nishino 2016 (8-week volume decrease and survival) screened, not kept (continuous volume, no category comparison)."
+  },
+  {
+   "id": "T4-S034",
+   "date": "2026-10-12",
+   "tool": "PubMed E-utilities",
+   "family": "boolean",
+   "query": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=(\"deep learning\"[tiab] OR \"artificial intelligence\"[tiab] OR \"neural network\"[tiab] OR automated[tiab] OR automatic[tiab] OR \"fully automatic\"[tiab]) AND (RECIST[tiab] OR \"response assessment\"[tiab] OR \"response category\"[tiab] OR \"response categories\"[tiab] OR \"tumor burden\"[tiab] OR \"tumour burden\"[tiab]) AND (longitudinal[tiab] OR \"follow-up\"[tiab] OR serial[tiab]) AND (CT[tiab] OR \"computed tomography\"[tiab]) AND (segmentation[tiab] OR volumetr*[tiab] OR \"lesion tracking\"[tiab])&retmax=80&retmode=json&sort=relevance",
+   "hits": 65,
+   "screened": 65,
+   "kept": [
+    "T4-P21",
+    "T4-P25",
+    "T4-P26",
+    "T4-P28",
+    "T4-P29"
+   ],
+   "notes": "AI/automated longitudinal response assessment on CT. Added Joskowicz 2023, Abbas 2026; re-found Dahm 2024, Vogel 2012, Lubner 2017. Seen Folio 2013 (melanoma PACS automation), Hayes 2016 (volumetric better OS prediction), Marten 2007, Dicken 2015, Vivanti 2017, Kraaijveld 2026, Moon 2026."
+  },
+  {
+   "id": "T4-S035",
+   "date": "2026-10-12",
+   "tool": "PubMed E-utilities",
+   "family": "boolean",
+   "query": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=(pancrea*[tiab]) AND (volumetr*[tiab] OR \"tumor volume\"[tiab] OR \"tumour volume\"[tiab] OR \"tumor burden\"[tiab] OR \"tumour burden\"[tiab]) AND (RECIST[tiab] OR \"response assessment\"[tiab] OR \"treatment response\"[tiab]) AND (CT[tiab] OR \"computed tomography\"[tiab]) AND (metasta*[tiab] OR advanced[tiab])&retmax=40&retmode=json&sort=relevance",
+   "hits": 21,
+   "screened": 21,
+   "kept": [
+    "T4-P22"
+   ],
+   "notes": "Pancreatic volumetric response: low yield; only Rothe 2013 relevant (pancreatic-cancer liver metastases). Coverage gap noted."
+  },
+  {
+   "id": "T4-S036",
+   "date": "2026-10-12",
+   "tool": "PubMed E-utilities",
+   "family": "boolean",
+   "query": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=(melanoma[tiab]) AND (volumetr*[tiab] OR \"tumor volume\"[tiab] OR \"tumour volume\"[tiab] OR \"tumor burden\"[tiab] OR \"tumour burden\"[tiab] OR \"lesion tracking\"[tiab]) AND (RECIST[tiab]) AND (CT[tiab] OR \"computed tomography\"[tiab])&retmax=40&retmode=json&sort=relevance",
+   "hits": 16,
+   "screened": 16,
+   "kept": [
+    "T4-P26"
+   ],
+   "notes": "Melanoma volumetric response: re-found Dahm 2024; seen Fabel 2008 (semi-automated lymph-node volumetry), Basler 2020."
+  },
+  {
+   "id": "T4-S037",
+   "date": "2026-10-12",
+   "tool": "PubMed E-utilities",
+   "family": "boolean",
+   "query": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=(\"same-day\"[tiab] OR \"repeat CT\"[tiab] OR \"repeat computed tomography\"[tiab] OR \"test-retest\"[tiab] OR \"coffee-break\"[tiab] OR \"within 15 minutes\"[tiab] OR \"repeat scans\"[tiab]) AND (RECIST[tiab] OR \"response category\"[tiab] OR misclassif*[tiab] OR \"progressive disease\"[tiab] OR \"partial response\"[tiab] OR progression[tiab]) AND (tumor[tiab] OR tumour[tiab] OR lesion*[tiab] OR metasta*[tiab])&retmax=40&retmode=json&sort=relevance",
+   "hits": 213,
+   "screened": 40,
+   "kept": [],
+   "notes": "Repeat-scan family, too broad; no relevant new item in the top 40."
+  },
+  {
+   "id": "T4-S038",
+   "date": "2026-10-12",
+   "tool": "PubMed E-utilities",
+   "family": "boolean",
+   "query": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=(\"same-day\"[tiab] OR \"repeat CT\"[tiab] OR \"coffee-break\"[tiab] OR \"test-retest\"[tiab] OR \"within minutes\"[tiab]) AND (RECIST[tiab] OR \"tumor measurement\"[tiab] OR \"tumour measurement\"[tiab] OR \"tumor measurements\"[tiab] OR \"tumor volume\"[tiab] OR \"tumour volume\"[tiab]) AND (CT[tiab] OR \"computed tomography\"[tiab]) AND (cancer[tiab] OR tumor[tiab] OR tumour[tiab])&retmax=40&retmode=json&sort=relevance",
+   "hits": 75,
+   "screened": 40,
+   "kept": [
+    "T4-P03"
+   ],
+   "notes": "Refined repeat-scan query: re-found Oxnard 2011 and Buckler 2015 (already cited); repeatability itself is T3 territory."
+  },
+  {
+   "id": "T4-S039",
+   "date": "2026-10-12",
+   "tool": "OpenAlex",
+   "family": "citation_forward",
+   "query": "https://api.openalex.org/works?filter=cites:W4404855017&per-page=50&page=1&sort=cited_by_count:desc",
+   "hits": 12,
+   "screened": 12,
+   "kept": [
+    "T4-P30",
+    "T4-P31"
+   ],
+   "notes": "All works citing Dahm 2024: re-found Leszczyńska 2026, Adhikary 2026, Kraaijveld 2026; saturation signal."
+  },
+  {
+   "id": "T4-S040",
+   "date": "2026-10-12",
+   "tool": "OpenAlex",
+   "family": "citation_forward",
+   "query": "https://api.openalex.org/works?filter=cites:W4406098097&per-page=50&page=1&sort=cited_by_count:desc",
+   "hits": 4,
+   "screened": 4,
+   "kept": [
+    "T4-P31"
+   ],
+   "notes": "All works citing Zhao 2025: Adhikary 2026, Ibrahim 2026, Kraaijveld 2026, Wang 2025; saturation signal."
+  },
+  {
+   "id": "T4-S041",
+   "date": "2026-10-12",
+   "tool": "PubMed E-utilities",
+   "family": "known_item",
+   "query": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=10.3390/cancers18050808[doi] OR 10.1016/j.ejrad.2026.113057[doi] OR 10.1088/1361-6560/acef8f[doi] OR 10.1016/j.esmorc.2026.100517[doi]&retmax=10&retmode=json&sort=relevance | https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=10.3390/cancers18050808[doi] OR 10.1016/j.ejrad.2026.113057[doi] OR 10.1088/1361-6560/acef8f[doi]&retmax=10&retmode=json&sort=relevance",
+   "hits": 3,
+   "screened": 3,
+   "kept": [],
+   "notes": "Retrieval step: PubMed IDs for Leszczyńska 2026, Kraaijveld 2026, Huff 2023."
+  },
+  {
+   "id": "T4-S042",
+   "date": "2026-10-12",
+   "tool": "WebSearch",
+   "family": "regulatory",
+   "query": "FDA guidance \"Clinical Trial Imaging Endpoint Process Standards\" 2018 software version image analysis",
+   "hits": null,
+   "screened": 9,
+   "kept": [
+    "T4-P32"
+   ],
+   "notes": "Located the FDA guidance page and PDF links (FDA media, HHS mirror)."
+  },
+  {
+   "id": "T4-S043",
+   "date": "2026-10-12",
+   "tool": "FDA website",
+   "family": "regulatory",
+   "query": "https://www.hhs.gov/guidance/sites/default/files/hhs-guidance-documents/FDA/Clinical-Trial-Imaging-Endpoint-Process-Standards-Guidance-for-Industry.pdf (Access Denied) | https://www.fda.gov/media/81172/download | https://www.fda.gov/regulatory-information/search-fda-guidance-documents/clinical-trial-imaging-endpoint-process-standards-guidance-industry (docket and status)",
+   "hits": 1,
+   "screened": 1,
+   "kept": [
+    "T4-P32"
+   ],
+   "notes": "Retrieval step: final April 2018 guidance read in full (HHS mirror denied access; FDA media URL worked); software-upgrade passage found; FDA page confirms final status and docket FDA-2011-D-0586."
+  },
+  {
+   "id": "T4-S044",
+   "date": "2026-10-12",
+   "tool": "Europe PMC REST",
+   "family": "boolean",
+   "query": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=(reprocess* OR re-segment* OR resegment* OR \"re-measure*\" OR remeasure*) AND baseline AND (\"RECIST\" OR \"tumor volume\" OR \"tumour volume\" OR \"tumor burden\" OR \"tumour burden\") AND (\"software\" OR \"algorithm\" OR \"deep learning\") AND (\"follow-up\" OR longitudinal) AND (\"response category\" OR \"response categories\" OR \"response classification\" OR reclassif*)&format=json&pageSize=40&resultType=lite",
+   "hits": 67,
+   "screened": 40,
+   "kept": [
+    "T4-P27",
+    "T4-P30"
+   ],
+   "notes": "Novelty check for baseline reprocessing or re-segmentation in response assessment: no study of reprocessing after a software change; recurring items Leszczyńska 2026, de Grauw 2026, Ibrahim 2026; seen Rubin 2014 (ePAD automated tracking)."
+  },
+  {
+   "id": "T4-S045",
+   "date": "2026-10-12",
+   "tool": "PubMed E-utilities; OpenAlex; publisher site",
+   "family": "known_item",
+   "query": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=Therasse P[au] AND \"New guidelines to evaluate the response to treatment in solid tumors\"[ti]&retmax=5&retmode=json&sort=relevance || https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=Therasse P[au] AND J Natl Cancer Inst[ta] AND 2000[dp] AND guidelines[ti]&retmax=5&retmode=json&sort=relevance || https://api.openalex.org/works/https://doi.org/10.1093/jnci/92.3.205 || https://academic.oup.com/jnci/article/92/3/205/2965067",
+   "hits": 1,
+   "screened": 1,
+   "kept": [],
+   "notes": "Therasse 2000 (RECIST 1.0), cited by Zimmermann 2021 for the volume equivalents: found (PubMed 10655437) but closed access; the conversion table could not be checked; not kept."
+  },
+  {
+   "id": "T4-S046",
+   "date": "2026-10-12",
+   "tool": "OpenAlex",
+   "family": "citation_forward",
+   "query": "https://api.openalex.org/works?filter=cites:W2039010280&per-page=30&page=1&sort=relevance_score:desc&search=volumetric response threshold RECIST categories",
+   "hits": 12,
+   "screened": 12,
+   "kept": [],
+   "notes": "Works citing Mozley 2012 on volumetric thresholds: re-found Zhao 2025, Smesseim 2026, Kraaijveld 2026; seen Kidd 2022 (automated mesothelioma volumetry), McNitt-Gray 2015 (no-change variability; T3)."
+  },
+  {
+   "id": "T4-S047",
+   "date": "2026-10-12",
+   "tool": "OpenAlex",
+   "family": "citation_forward",
+   "query": "https://api.openalex.org/works?filter=cites:W2122538591&per-page=30&page=1&sort=relevance_score:desc&search=response progression misclassification variability",
+   "hits": 4,
+   "screened": 4,
+   "kept": [
+    "T4-P35"
+   ],
+   "notes": "Works citing Oxnard 2011 on misclassification: added Cowell 2026 (misclassification and trial power); seen Lombard 2020, Nishino 2016 JITC, Shao 2014."
+  },
+  {
+   "id": "T4-S048",
+   "date": "2026-10-12",
+   "tool": "PubMed E-utilities",
+   "family": "known_item",
+   "query": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=10.1016/j.lungcan.2026.109624[doi] OR 10.1136/thoraxjnl-2021-217808[doi]&retmax=5&retmode=json&sort=relevance | https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=10.1016/j.lungcan.2026.109624[doi]&retmax=5&retmode=json&sort=relevance",
+   "hits": 2,
+   "screened": 2,
+   "kept": [],
+   "notes": "Retrieval step: PubMed IDs for Cowell 2026 and Kidd 2022."
+  },
+  {
+   "id": "T4-S049",
+   "date": "2026-10-12",
+   "tool": "PubMed E-utilities",
+   "family": "boolean",
+   "query": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=(pancrea*[tiab]) AND (RECIST[tiab]) AND (interobserver[tiab] OR inter-observer[tiab] OR interreader[tiab] OR inter-reader[tiab] OR variability[tiab] OR discordan*[tiab] OR reproducib*[tiab])&retmax=30&retmode=json&sort=relevance",
+   "hits": 10,
+   "screened": 10,
+   "kept": [
+    "T4-P13",
+    "T4-P22"
+   ],
+   "notes": "Gap check for pancreatic RECIST variability: added Heiselman 2026; re-found Rothe 2013."
+  },
+  {
+   "id": "T4-S050",
+   "date": "2026-10-12",
+   "tool": "PubMed E-utilities",
+   "family": "known_item",
+   "query": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=10.1016/j.acra.2020.05.029[doi] OR 10.1097/AS9.0000000000000103[doi]&retmax=5&retmode=json&sort=relevance",
+   "hits": 2,
+   "screened": 2,
+   "kept": [
+    "T4-P14"
+   ],
+   "notes": "Retrieval step: PubMed IDs for Zimmermann 2021 (Acad Radiol) and Wesdorp 2021, both first seen in T4-S006/T4-S007."
+  },
+  {
+   "id": "T4-S051",
+   "date": "2026-10-12",
+   "tool": "PubMed E-utilities",
+   "family": "known_item",
+   "query": "efetch.fcgi?db=pubmed&retmode=xml for 13 batches of PubMed IDs (about 65 abstracts), e.g. https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id=26687017,30398433,22348172,21730273,31094652&retmode=xml",
+   "hits": null,
+   "screened": 65,
+   "kept": [],
+   "notes": "Retrieval step: abstracts of candidates and kept papers (numbers in PAPERS.csv for abstract-level cards come from these records)."
+  },
+  {
+   "id": "T4-S052",
+   "date": "2026-10-12",
+   "tool": "Europe PMC REST",
+   "family": "known_item",
+   "query": "https://www.ebi.ac.uk/europepmc/webservices/rest/{PMCID}/fullTextXML for 17 PMC IDs",
+   "hits": 10,
+   "screened": 17,
+   "kept": [],
+   "notes": "Retrieval step: 10 full texts obtained (Zhao 2025, Dahm 2024, de Grauw 2026, Goldmacher 2026, Muenzel 2012, Zimmermann 2021 PJR, Smesseim 2026, Hering 2024, Beaumont 2018, Yoon JH 2019); 7 failed with HTTP 500."
+  },
+  {
+   "id": "T4-S053",
+   "date": "2026-10-12",
+   "tool": "PubMed Central E-utilities",
+   "family": "known_item",
+   "query": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=3157977&retmode=xml | https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=3281412&retmode=xml | https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=10546365&retmode=xml | https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=3474043&retmode=xml | https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=10546354&retmode=xml | https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=5648544&retmode=xml | https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=4337392&retmode=xml",
+   "hits": 2,
+   "screened": 7,
+   "kept": [],
+   "notes": "Retrieval step: bodies only for Seymour 2017 and Zhao 2014 (author manuscripts); 5 publisher PDFs without body."
+  },
+  {
+   "id": "T4-S054",
+   "date": "2026-10-12",
+   "tool": "WebFetch",
+   "family": "known_item",
+   "query": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3157977/ | /PMC3281412/ | /PMC10546365/ | /PMC3474043/ | /PMC10546354/ | https://www.researchsquare.com/article/rs-10551828/v1 | https://ascopubs.org/doi/10.1200/JCO.2003.01.144",
+   "hits": null,
+   "screened": 7,
+   "kept": [],
+   "notes": "Retrieval step: methods/results of Oxnard 2011, Mozley 2012, Gong 2023, Vogel 2012 extracted from PMC pages; Siegel 2023 blocked by a browser check; Research Square page script-rendered; Erasmus 2003 HTTP 403."
+  },
+  {
+   "id": "T4-S055",
+   "date": "2026-10-12",
+   "tool": "Crossref",
+   "family": "known_item",
+   "query": "https://api.crossref.org/works/{DOI} for 40 DOIs (all kept papers with DOIs plus Therasse 2000, Hering 2024, Amit 2011, Schmid 2021, Eisenhauer 2009)",
+   "hits": 40,
+   "screened": 40,
+   "kept": [],
+   "notes": "Verification step: all DOIs resolve; bibliographic fields for PAPERS.csv and refs.bib taken from these records (pages of Muenzel 2012 from PubMed); no correction or retraction relations found."
+  },
+  {
+   "id": "T4-S056",
+   "date": "2026-10-12",
+   "tool": "OpenAlex",
+   "family": "known_item",
+   "query": "https://api.openalex.org/works/https://doi.org/10.3390/cancers16234009 | https://api.openalex.org/works/https://doi.org/10.1093/radadv/umaf001 | https://api.openalex.org/works/https://doi.org/10.1007/s00330-023-09926-0 | https://api.openalex.org/works/https://doi.org/10.1007/s00330-018-5424-0 | https://api.openalex.org/works/https://doi.org/10.1148/radiol.2252011604",
+   "hits": 5,
+   "screened": 5,
+   "kept": [],
+   "notes": "Retrieval step: OpenAlex IDs for Dahm 2024 and Zhao 2025; open-access status of Joskowicz 2023, Winter 2018, Prasad 2002 (all closed)."
+  }
+ ]
+}

@@ -1,0 +1,14 @@
+{
+  "status": "COMPAT_VERIFIED",
+  "protocol_id": "CT-UPDATE-019",
+  "values_checked": 172,
+  "intervals_reproduced": true,
+  "intervals_independent": false,
+  "checked_at_utc": "2026-10-12T14:02:24.399561+00:00",
+  "result_sha256": "65821fb6d0a2e1526ec753044ab84386b579322de3dc64e75c39071021a7d985",
+  "policy_sha256": "e51e23cf43627f4b67169fa432a20ea7a0de586448271becd5fe9d1190354f34",
+  "source_manifest_sha256": "ab11bd927d13a58bfc99c55f6a02c3509295ba3b87599822ed71f0aac908b7ba",
+  "inference_rerun": false,
+  "independent_agent": false,
+  "human_reading": "not_attested"
+}

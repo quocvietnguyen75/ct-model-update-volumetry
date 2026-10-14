@@ -1,0 +1,1173 @@
+{
+ "part": "T3",
+ "date": "2026-10-12",
+ "entries": [
+  {
+   "id": "T3-S001",
+   "date": "2026-10-12",
+   "tool": "PubMed E-utilities (esearch, sort=relevance)",
+   "family": "known_item",
+   "query": "Kessler LG[au] AND \"quantitative imaging biomarkers\"[ti] AND terminology[ti]",
+   "hits": 1,
+   "screened": 1,
+   "kept": [
+    "T3-P02"
+   ],
+   "notes": "Known item Kessler 2015 (PMID 24919826). Not in PMC; version of record later obtained from DukeSpace (T3-S031)."
+  },
+  {
+   "id": "T3-S002",
+   "date": "2026-10-12",
+   "tool": "PubMed E-utilities (esearch, sort=relevance)",
+   "family": "known_item",
+   "query": "Raunig DL[au] AND \"technical performance assessment\"[ti]",
+   "hits": 2,
+   "screened": 2,
+   "kept": [
+    "T3-P03"
+   ],
+   "notes": "Raunig 2015 found; NIH author manuscript PMC5574197 retrieved by NCBI efetch and read. Huang 2023 not relevant."
+  },
+  {
+   "id": "T3-S003",
+   "date": "2026-10-12",
+   "tool": "PubMed E-utilities (esearch, sort=relevance)",
+   "family": "known_item",
+   "query": "Obuchowski NA[au] AND \"interpreting change\"[ti]",
+   "hits": 1,
+   "screened": 1,
+   "kept": [
+    "T3-P05"
+   ],
+   "notes": "Anchor verified: Acad Radiol 2018;25(3):372-379. Author manuscript PMC5834376 read in full."
+  },
+  {
+   "id": "T3-S004",
+   "date": "2026-10-12",
+   "tool": "PubMed E-utilities (esearch, sort=relevance)",
+   "family": "known_item",
+   "query": "Oxnard GR[au] AND \"repeat computed tomography\"[ti]",
+   "hits": 1,
+   "screened": 1,
+   "kept": [
+    "T3-P31"
+   ],
+   "notes": "Oxnard 2011 verified; abstract shows diameter-only measurements, so it is not a volume benchmark. PMC XML restricted."
+  },
+  {
+   "id": "T3-S005",
+   "date": "2026-10-12",
+   "tool": "PubMed E-utilities (esearch, sort=relevance)",
+   "family": "known_item",
+   "query": "McNitt-Gray MF[au] AND \"no change\"[ti]",
+   "hits": 1,
+   "screened": 1,
+   "kept": [
+    "T3-P10"
+   ],
+   "notes": "McNitt-Gray 2015 verified; open-access full text read."
+  },
+  {
+   "id": "T3-S006",
+   "date": "2026-10-12",
+   "tool": "Crossref works API (query.bibliographic)",
+   "family": "known_item",
+   "query": "Bland Altman 1986 Statistical methods for assessing agreement between two methods of clinical measurement Lancet",
+   "hits": 2188803,
+   "screened": 5,
+   "kept": [
+    "T3-P11"
+   ],
+   "notes": "Lancet 1986;327(8476):307-310 confirmed; text read from the author-hosted reproduction (T3-S054)."
+  },
+  {
+   "id": "T3-S007",
+   "date": "2026-10-12",
+   "tool": "Crossref works API (query.bibliographic)",
+   "family": "known_item",
+   "query": "Bland Altman 1999 Measuring agreement in method comparison studies Statistical Methods in Medical Research",
+   "hits": 1650091,
+   "screened": 5,
+   "kept": [
+    "T3-P12"
+   ],
+   "notes": "Two DOIs registered for the 1999 SMMR article; PubMed uses 10.1177/096228029900800204. Zou 2011 (LoA with multiple observations) seen, not kept."
+  },
+  {
+   "id": "T3-S008",
+   "date": "2026-10-12",
+   "tool": "PubMed E-utilities (esearch, sort=relevance)",
+   "family": "known_item",
+   "query": "Sullivan DC[au] AND \"metrology standards\"[ti]",
+   "hits": 1,
+   "screened": 1,
+   "kept": [
+    "T3-P04"
+   ],
+   "notes": "Sullivan 2015 verified; PMC XML restricted, so the PMC HTML page was read (tables are images)."
+  },
+  {
+   "id": "T3-S009",
+   "date": "2026-10-12",
+   "tool": "PubMed E-utilities (esearch, sort=relevance)",
+   "family": "known_item",
+   "query": "Zhao B[au] AND \"same-day repeat\"[tiab] AND (lung OR tumor)",
+   "hits": 4,
+   "screened": 4,
+   "kept": [
+    "T3-P33"
+   ],
+   "notes": "Zhao 2009 (already cited) located; Zhao 2024 Sci Data annotated test-retest dataset noted, not kept."
+  },
+  {
+   "id": "T3-S010",
+   "date": "2026-10-12",
+   "tool": "PubMed E-utilities (esearch, sort=relevance)",
+   "family": "known_item",
+   "query": "Obuchowski NA[au] AND \"computer algorithm comparisons\"[ti]",
+   "hits": 0,
+   "screened": 0,
+   "kept": [],
+   "notes": "Zero hits because of title wording; reformulated as T3-S011."
+  },
+  {
+   "id": "T3-S011",
+   "date": "2026-10-12",
+   "tool": "PubMed E-utilities (esearch, sort=relevance)",
+   "family": "known_item",
+   "query": "Obuchowski NA[au] AND \"algorithm comparisons\"[ti]",
+   "hits": 1,
+   "screened": 1,
+   "kept": [
+    "T3-P34"
+   ],
+   "notes": "Obuchowski 2015 algorithm-comparison review (already cited); author manuscript PMC4263694 read."
+  },
+  {
+   "id": "T3-S012",
+   "date": "2026-10-12",
+   "tool": "PubMed E-utilities (esearch, sort=relevance)",
+   "family": "known_item",
+   "query": "Athelogou M[au] AND QIBA",
+   "hits": 3,
+   "screened": 3,
+   "kept": [
+    "T3-P09",
+    "T3-P35"
+   ],
+   "notes": "QIBA 3A (Athelogou 2016; author manuscript PMC6237094 read) and Buckler 2015 (already cited; PMC4609285 read). Robins 2019 not kept."
+  },
+  {
+   "id": "T3-S013",
+   "date": "2026-10-12",
+   "tool": "PubMed E-utilities (esearch, sort=relevance)",
+   "family": "known_item",
+   "query": "Kalpathy-Cramer J[au] AND \"lung nodule segmentation algorithms\"[ti]",
+   "hits": 1,
+   "screened": 1,
+   "kept": [
+    "T3-P23"
+   ],
+   "notes": "Kalpathy-Cramer 2016 verified; abstract read (PMC XML restricted)."
+  },
+  {
+   "id": "T3-S014",
+   "date": "2026-10-12",
+   "tool": "PubMed E-utilities (esearch, sort=relevance)",
+   "family": "known_item",
+   "query": "Armato SG[au] AND RIDER[ti]",
+   "hits": 1,
+   "screened": 1,
+   "kept": [
+    "T3-P32"
+   ],
+   "notes": "RIDER project paper verified; abstract read."
+  },
+  {
+   "id": "T3-S015",
+   "date": "2026-10-12",
+   "tool": "HTTP GET (urllib)",
+   "family": "regulatory",
+   "query": "https://www.bipm.org/en/committees/jc/jcgm/publications",
+   "hits": null,
+   "screened": 1,
+   "kept": [
+    "T3-P01"
+   ],
+   "notes": "BIPM JCGM publications page (accessed 2026-10-12): VIM = JCGM 200:2012, DOI 10.59161/JCGM200-2012; annotated VIM3 online; no newer edition listed."
+  },
+  {
+   "id": "T3-S016",
+   "date": "2026-10-12",
+   "tool": "HTTP GET (urllib)",
+   "family": "regulatory",
+   "query": "https://www.bipm.org/en/committees/jc/jcgm/wg/jcgm-wg2-vim",
+   "hits": null,
+   "screened": 1,
+   "kept": [
+    "T3-P01"
+   ],
+   "notes": "JCGM-WG2 page: VIM4 at second committee draft (2023 documents); not a published edition."
+  },
+  {
+   "id": "T3-S017",
+   "date": "2026-10-12",
+   "tool": "HTTP GET (urllib, binary)",
+   "family": "regulatory",
+   "query": "https://www.bipm.org/documents/20126/2071204/JCGM_200_2012.pdf/f0e1ad45-d337-bbeb-53a6-15fe649d0ff1?version=1.24&t=1775224222346&download=true",
+   "hits": null,
+   "screened": 1,
+   "kept": [
+    "T3-P01"
+   ],
+   "notes": "JCGM 200:2012 PDF downloaded to scratch; entries 2.3, 2.6, 2.15, 2.17-2.25, 2.39, 2.44-2.47, 3.2, 4.20-4.21 read verbatim; page numbers checked."
+  },
+  {
+   "id": "T3-S018",
+   "date": "2026-10-12",
+   "tool": "HTTP GET (urllib)",
+   "family": "regulatory",
+   "query": "https://qibawiki.rsna.org/index.php/Profiles",
+   "hits": null,
+   "screened": 1,
+   "kept": [
+    "T3-P07",
+    "T3-P08"
+   ],
+   "notes": "QIBA Profiles page (last edited 11 July 2024): CTV-AD Clinically Feasible streamlined profile 21 July 2022 (DOI 10.1148/QIBA/20220721); Small Lung Nodule Clinically Feasible 19 Dec 2023 (DOI 10.1148/QIBA/20231219)."
+  },
+  {
+   "id": "T3-S019",
+   "date": "2026-10-12",
+   "tool": "HTTP GET (urllib, binary)",
+   "family": "regulatory",
+   "query": "https://qibawiki.rsna.org/images/3/3c/QIBACTVol_TumorVolumeChange_2022Jul21.pdf",
+   "hits": null,
+   "screened": 1,
+   "kept": [
+    "T3-P07"
+   ],
+   "notes": "CTV-AD 2022 PDF (32 pages) read in full; Table B-1 verified on rendered page images."
+  },
+  {
+   "id": "T3-S020",
+   "date": "2026-10-12",
+   "tool": "HTTP GET (urllib, binary)",
+   "family": "regulatory",
+   "query": "https://qibawiki.rsna.org/images/c/c2/QIBA_CT_Vol_SmallLungNoduleAssessmentInCTScreening_2023Dec19.pdf",
+   "hits": null,
+   "screened": 1,
+   "kept": [
+    "T3-P08"
+   ],
+   "notes": "Small Lung Nodule 2023 PDF: claims, Table 1 (rendered check) and section 3.10 read."
+  },
+  {
+   "id": "T3-S021",
+   "date": "2026-10-12",
+   "tool": "Crossref works API (DOI lookup)",
+   "family": "regulatory",
+   "query": "10.1148/QIBA/20220721",
+   "hits": 1,
+   "screened": 1,
+   "kept": [
+    "T3-P07"
+   ],
+   "notes": "Crossref: DOI registered as a report by RSNA/QIBA, issued 2022-07-21; title 'CT Tumor Volume Change for Advanced Disease, Clinically Feasible Profile'."
+  },
+  {
+   "id": "T3-S022",
+   "date": "2026-10-12",
+   "tool": "Crossref works API (DOI lookup)",
+   "family": "regulatory",
+   "query": "10.1148/QIBA/20231219",
+   "hits": 1,
+   "screened": 1,
+   "kept": [
+    "T3-P08"
+   ],
+   "notes": "Crossref: DOI registered as a report, issued 2023-12-19."
+  },
+  {
+   "id": "T3-S023",
+   "date": "2026-10-12",
+   "tool": "HTTP GET (urllib)",
+   "family": "regulatory",
+   "query": "https://doi.org/api/handles/10.1148/QIBA/20220721",
+   "hits": null,
+   "screened": 1,
+   "kept": [
+    "T3-P07"
+   ],
+   "notes": "DOI handle resolves to the QIBA wiki page of the CTV-AD Clinically Feasible profile."
+  },
+  {
+   "id": "T3-S024",
+   "date": "2026-10-12",
+   "tool": "HTTP GET (urllib)",
+   "family": "regulatory",
+   "query": "https://doi.org/api/handles/10.1148/QIBA/20231219",
+   "hits": null,
+   "screened": 1,
+   "kept": [
+    "T3-P08"
+   ],
+   "notes": "DOI handle resolves to the QIBA wiki page of the Small Lung Nodule profile."
+  },
+  {
+   "id": "T3-S025",
+   "date": "2026-10-12",
+   "tool": "HTTP GET (urllib)",
+   "family": "regulatory",
+   "query": "https://qibawiki.rsna.org/index.php/CT_Volumetry_Biomarker_Ctte",
+   "hits": null,
+   "screened": 1,
+   "kept": [
+    "T3-P07"
+   ],
+   "notes": "QIBA CT Volumetry Biomarker Committee page: the 2022-07-21 streamlined CTV-AD profile is current; earlier drafts (2021-12-09, 2022-03-03) and a Stage 4 plan listed; no later edition."
+  },
+  {
+   "id": "T3-S026",
+   "date": "2026-10-12",
+   "tool": "Europe PMC REST (search, resultType=lite)",
+   "family": "known_item",
+   "query": "EXT_ID:24919826 OR EXT_ID:24919831 OR EXT_ID:29191687 OR EXT_ID:26267831 OR EXT_ID:24919829 OR EXT_ID:21730273 OR EXT_ID:25749178 OR EXT_ID:19561260 OR EXT_ID:27215408 OR EXT_ID:26847203 OR EXT_ID:18754000 OR EXT_ID:26376841",
+   "hits": 12,
+   "screened": 12,
+   "kept": [
+    "T3-P02",
+    "T3-P03",
+    "T3-P04",
+    "T3-P05",
+    "T3-P09",
+    "T3-P10",
+    "T3-P23",
+    "T3-P31",
+    "T3-P32",
+    "T3-P33",
+    "T3-P34",
+    "T3-P35"
+   ],
+   "notes": "Batch check of PMC availability for 12 anchors; all but Kessler 2015 have PMC copies (Sullivan, Zhao, Oxnard, Kalpathy-Cramer restricted for XML download)."
+  },
+  {
+   "id": "T3-S027",
+   "date": "2026-10-12",
+   "tool": "PubMed E-utilities (esearch, sort=relevance)",
+   "family": "citation_backward",
+   "query": "Obuchowski NA[au] AND \"pulmonary nodule volume as an example\"[ti]",
+   "hits": 0,
+   "screened": 0,
+   "kept": [
+    "T3-P06"
+   ],
+   "notes": "Backward citation from Obuchowski 2018 (ref. 11). The PubMed title query returned 0 hits; the paper was identified from the reference list and its author manuscript PMC4263699 retrieved and read."
+  },
+  {
+   "id": "T3-S028",
+   "date": "2026-10-12",
+   "tool": "PubMed E-utilities (esearch, sort=relevance)",
+   "family": "citation_backward",
+   "query": "Barnhart HX[au] AND Barboriak DP[au] AND repeatability[ti]",
+   "hits": 1,
+   "screened": 1,
+   "kept": [],
+   "notes": "Backward citation from Obuchowski 2018 (ref. 5): Barnhart & Barboriak 2009 Transl Oncol located; PMC XML had no body text; not kept (RC definitions taken from T3-P02/T3-P03)."
+  },
+  {
+   "id": "T3-S029",
+   "date": "2026-10-12",
+   "tool": "PubMed E-utilities (esearch, sort=relevance)",
+   "family": "citation_backward",
+   "query": "Obuchowski NA[au] AND \"quantitative imaging biomarker algorithms\"[ti]",
+   "hits": 0,
+   "screened": 0,
+   "kept": [],
+   "notes": "Alternative title wording for the Case Example paper also returned 0 hits; see T3-S027."
+  },
+  {
+   "id": "T3-S030",
+   "date": "2026-10-12",
+   "tool": "WebSearch",
+   "family": "known_item",
+   "query": "\"emerging science of quantitative imaging biomarkers terminology and definitions\" Kessler pdf repeatability coefficient reproducibility coefficient definition",
+   "hits": null,
+   "screened": 9,
+   "kept": [
+    "T3-P02"
+   ],
+   "notes": "Web search found the DukeSpace record of Kessler 2015 and Ye, Lim & Huang 2022 (BJR Open review; not kept). Summary text of the search tool not used as evidence."
+  },
+  {
+   "id": "T3-S031",
+   "date": "2026-10-12",
+   "tool": "HTTP GET (urllib)",
+   "family": "known_item",
+   "query": "https://dukespace.lib.duke.edu/items/c4ad1c80-c482-4702-ba3d-62a0b325546c/full",
+   "hits": null,
+   "screened": 1,
+   "kept": [
+    "T3-P02"
+   ],
+   "notes": "DukeSpace item page is a JavaScript app; DSpace REST API listed the PDF (OnlineFirst version of record), which was downloaded to scratch and read."
+  },
+  {
+   "id": "T3-S032",
+   "date": "2026-10-12",
+   "tool": "PubMed E-utilities (esearch, sort=relevance)",
+   "family": "boolean",
+   "query": "(repeatability[tiab] OR reproducibility[tiab] OR \"test-retest\"[tiab] OR \"coffee break\"[tiab] OR \"same-day\"[tiab] OR \"interobserver\"[tiab] OR \"inter-observer\"[tiab]) AND (\"liver metastases\"[tiab] OR \"hepatic metastases\"[tiab] OR \"liver metastasis\"[tiab] OR \"colorectal liver\"[tiab]) AND (volumetry[tiab] OR volumetric[tiab] OR \"tumor volume\"[tiab] OR \"tumour volume\"[tiab] OR \"lesion volume\"[tiab]) AND (\"computed tomography\"[tiab] OR CT[tiab])",
+   "hits": 21,
+   "screened": 21,
+   "kept": [
+    "T3-P27"
+   ],
+   "notes": "No scan-rescan volumetry of liver metastases found. Rothe 2013 (liver metastases from pancreatic and colorectal cancer; intra-observer and inter-method variability) kept. Wulff 2013 and Ding 2021 seen at abstract level, not kept."
+  },
+  {
+   "id": "T3-S033",
+   "date": "2026-10-12",
+   "tool": "PubMed E-utilities (esearch, sort=relevance)",
+   "family": "boolean",
+   "query": "(melanoma[tiab] OR \"lymph node\"[tiab] OR \"lymph nodes\"[tiab]) AND (volumetry[tiab] OR \"semi-automated\"[tiab] OR semiautomated[tiab] OR \"volume measurement\"[tiab] OR \"volumetric measurement\"[tiab]) AND (variability[tiab] OR reproducibility[tiab] OR repeatability[tiab] OR \"interobserver\"[tiab] OR \"intraobserver\"[tiab]) AND (\"computed tomography\"[tiab] OR CT[tiab]) AND (metastases[tiab] OR metastatic[tiab])",
+   "hits": 9,
+   "screened": 9,
+   "kept": [
+    "T3-P28"
+   ],
+   "notes": "Wulff 2012 (lung, liver, lymph-node metastases; inter-reader volumetry) kept. Fabel 2008 (melanoma lymph-node volumetry, abstract without numbers) not kept."
+  },
+  {
+   "id": "T3-S034",
+   "date": "2026-10-12",
+   "tool": "PubMed E-utilities (esearch, sort=relevance)",
+   "family": "boolean",
+   "query": "(pancreatic[tiab] OR pancreas[tiab]) AND (cancer[tiab] OR adenocarcinoma[tiab] OR tumor[tiab] OR tumour[tiab]) AND (\"tumor volume\"[tiab] OR \"tumour volume\"[tiab] OR volumetry[tiab] OR volumetric[tiab]) AND (variability[tiab] OR reproducibility[tiab] OR repeatability[tiab] OR interobserver[tiab] OR \"inter-observer\"[tiab] OR \"inter-reader\"[tiab]) AND (\"computed tomography\"[tiab] OR CT[tiab])",
+   "hits": 39,
+   "screened": 39,
+   "kept": [
+    "T3-P30",
+    "T3-P27"
+   ],
+   "notes": "Pancreas results are radiotherapy delineation studies; Versteijne 2017 kept as context. No repeat-scan pancreatic volumetry found."
+  },
+  {
+   "id": "T3-S035",
+   "date": "2026-10-12",
+   "tool": "PubMed E-utilities (esearch, sort=relevance)",
+   "family": "exact_phrase",
+   "query": "(\"lot-to-lot\"[tiab] OR \"between-lot\"[tiab] OR \"reagent lot\"[tiab]) AND (verification[tiab] OR evaluation[tiab] OR \"patient samples\"[tiab]) AND (review[pt] OR guideline[tiab] OR recommendation*[tiab] OR CLSI[tiab])",
+   "hits": 32,
+   "screened": 30,
+   "kept": [
+    "T3-P22"
+   ],
+   "notes": "Lot-to-lot reviews: Thompson & Chesher 2018 kept; Katzman 2017 (EP26-A evaluation), Loh 2023 (CCLM review) and Gosselin 2024 (ICSH guidance) seen, not kept."
+  },
+  {
+   "id": "T3-S036",
+   "date": "2026-10-12",
+   "tool": "PubMed E-utilities (esearch, sort=relevance)",
+   "family": "exact_phrase",
+   "query": "(\"cross-calibration\"[tiab] OR \"cross calibration\"[tiab]) AND (DXA[tiab] OR densitometry[tiab] OR \"bone mineral density\"[tiab]) AND (\"official position\"[tiab] OR \"official positions\"[tiab] OR ISCD[tiab])",
+   "hits": 9,
+   "screened": 9,
+   "kept": [
+    "T3-P18"
+   ],
+   "notes": "ISCD cross-calibration positions: Jankowski 2019 kept; Shepherd 2006 (2005 positions) seen, superseded by the 2023 positions (T3-S038)."
+  },
+  {
+   "id": "T3-S037",
+   "date": "2026-10-12",
+   "tool": "WebSearch",
+   "family": "regulatory",
+   "query": "ISCD Adult Official Positions cross-calibration \"no quantitative comparison to the prior machine can be made\" new baseline least significant change",
+   "hits": null,
+   "screened": 9,
+   "kept": [],
+   "notes": "Web search did not return the ISCD positions page; direct retrieval used (T3-S038)."
+  },
+  {
+   "id": "T3-S038",
+   "date": "2026-10-12",
+   "tool": "HTTP GET (curl)",
+   "family": "regulatory",
+   "query": "https://iscd.org/official-positions-2023/",
+   "hits": null,
+   "screened": 1,
+   "kept": [
+    "T3-P17"
+   ],
+   "notes": "ISCD Official Adult Positions 2023 page read (approved 24 Aug 2023); cross-calibration, LSC and between-facility positions quoted."
+  },
+  {
+   "id": "T3-S039",
+   "date": "2026-10-12",
+   "tool": "WebSearch",
+   "family": "regulatory",
+   "query": "CLSI EP31 Verification of Comparability of Patient Results Within One Health Care System edition",
+   "hits": null,
+   "screened": 10,
+   "kept": [
+    "T3-P21"
+   ],
+   "notes": "Located CLSI EP31 listings; edition and date confirmed on the CLSI product page (T3-S042). Search-tool summaries not used as evidence."
+  },
+  {
+   "id": "T3-S040",
+   "date": "2026-10-12",
+   "tool": "WebSearch",
+   "family": "regulatory",
+   "query": "CLSI EP26 User Evaluation of Acceptability of a Reagent Lot Change edition 2022",
+   "hits": null,
+   "screened": 10,
+   "kept": [
+    "T3-P20"
+   ],
+   "notes": "Located CLSI EP26 listings; confirmed on the CLSI product page (T3-S041)."
+  },
+  {
+   "id": "T3-S041",
+   "date": "2026-10-12",
+   "tool": "HTTP GET (curl)",
+   "family": "regulatory",
+   "query": "https://clsi.org/shop/standards/ep26",
+   "hits": null,
+   "screened": 1,
+   "kept": [
+    "T3-P20"
+   ],
+   "notes": "CLSI EP26 2nd ed.: 'User Evaluation of Acceptability of a Reagent Lot Change', published 27 April 2022, replaces EP26-A (2013); abstract and scope read."
+  },
+  {
+   "id": "T3-S042",
+   "date": "2026-10-12",
+   "tool": "HTTP GET (curl)",
+   "family": "regulatory",
+   "query": "https://clsi.org/shop/standards/ep31/",
+   "hits": null,
+   "screened": 1,
+   "kept": [
+    "T3-P21"
+   ],
+   "notes": "CLSI EP31 2nd ed.: 'Verification of Comparability of Patient Results Within One Health Care System', published 25 September 2025, replaces EP31-A-IR (2012); abstract and scope read."
+  },
+  {
+   "id": "T3-S043",
+   "date": "2026-10-12",
+   "tool": "OpenAlex works API",
+   "family": "citation_forward",
+   "query": "search=software filter=cites:W2104398861 | request: https://api.openalex.org/works?per-page=50&search=software&filter=cites%3AW2104398861&select=id%2Cdoi%2Ctitle%2Cpublication_year%2Ccited_by_count%2Cprimary_location%2Cauthorships%2Ctype",
+   "hits": 112,
+   "screened": 50,
+   "kept": [
+    "T3-P10",
+    "T3-P23"
+   ],
+   "notes": "Forward citations of Kessler 2015 matching 'software': none studies a software or model version change between timepoints; Obuchowski 2016 (QIBA conformance statistics) noted, not kept."
+  },
+  {
+   "id": "T3-S044",
+   "date": "2026-10-12",
+   "tool": "OpenAlex works API",
+   "family": "citation_forward",
+   "query": "search=algorithm filter=cites:W2104398861 | request: https://api.openalex.org/works?per-page=50&search=algorithm&filter=cites%3AW2104398861&select=id%2Cdoi%2Ctitle%2Cpublication_year%2Ccited_by_count%2Cprimary_location%2Cauthorships%2Ctype",
+   "hits": 89,
+   "screened": 50,
+   "kept": [
+    "T3-P06",
+    "T3-P23",
+    "T3-P35"
+   ],
+   "notes": "Forward citations of Kessler 2015 matching 'algorithm': QIBA SMMR series and algorithm-comparison studies; no version-update study."
+  },
+  {
+   "id": "T3-S045",
+   "date": "2026-10-12",
+   "tool": "OpenAlex works API",
+   "family": "citation_forward",
+   "query": "search=software OR algorithm OR algorithms filter=cites:W2124932867 | request: https://api.openalex.org/works?per-page=60&search=software+OR+algorithm+OR+algorithms&filter=cites%3AW2124932867&select=id%2Cdoi%2Ctitle%2Cpublication_year%2Ccited_by_count%2Cprimary_location%2Cauthorships%2Ctype",
+   "hits": 181,
+   "screened": 60,
+   "kept": [
+    "T3-P09",
+    "T3-P23",
+    "T3-P29",
+    "T3-P35"
+   ],
+   "notes": "Forward citations of Zhao 2009 matching software/algorithm: Nishino 2011 found; no study of model or software version changes in longitudinal measurement."
+  },
+  {
+   "id": "T3-S046",
+   "date": "2026-10-12",
+   "tool": "OpenAlex works API",
+   "family": "citation_forward",
+   "query": "search=change OR longitudinal OR version OR update filter=cites:W2072484199 | request: https://api.openalex.org/works?per-page=60&search=change+OR+longitudinal+OR+version+OR+update&filter=cites%3AW2072484199&select=id%2Cdoi%2Ctitle%2Cpublication_year%2Ccited_by_count%2Cprimary_location%2Cauthorships%2Ctype",
+   "hits": 94,
+   "screened": 60,
+   "kept": [
+    "T3-P05",
+    "T3-P06"
+   ],
+   "notes": "Forward citations of Obuchowski 2015 (change/longitudinal/version/update): Obuchowski 2018 confirmed; Obuchowski 2016 (conformance) and 2021 (precision without test-retest) noted; none on version updates."
+  },
+  {
+   "id": "T3-S047",
+   "date": "2026-10-12",
+   "tool": "OpenAlex works API",
+   "family": "citation_forward",
+   "query": "filter=cites:W2771913748 | request: https://api.openalex.org/works?per-page=50&filter=cites%3AW2771913748&select=id%2Cdoi%2Ctitle%2Cpublication_year%2Ccited_by_count%2Cprimary_location%2Cauthorships%2Ctype",
+   "hits": 30,
+   "screened": 30,
+   "kept": [],
+   "notes": "All 30 works citing Obuchowski 2018 screened by title: MRI/PET repeatability studies, Danzer 2024 SMMR test-retest planning framework, QIBA DWI profile; none addresses a changed measuring system between timepoints."
+  },
+  {
+   "id": "T3-S048",
+   "date": "2026-10-12",
+   "tool": "Europe PMC REST (search, resultType=lite)",
+   "family": "exact_phrase",
+   "query": "\"metrological compatibility\" AND (imaging OR radiology OR tomography OR \"medical image\" OR segmentation)",
+   "hits": 3,
+   "screened": 3,
+   "kept": [],
+   "notes": "No imaging paper uses 'metrological compatibility' in Europe PMC; supports the absence statement in T3-C39."
+  },
+  {
+   "id": "T3-S049",
+   "date": "2026-10-12",
+   "tool": "PubMed E-utilities (esearch, sort=relevance)",
+   "family": "exact_phrase",
+   "query": "\"reproducibility coefficient\"[tiab] AND (\"computed tomography\"[tiab] OR CT[tiab]) AND (volume[tiab] OR volumetry[tiab] OR volumetric[tiab])",
+   "hits": 8,
+   "screened": 8,
+   "kept": [],
+   "notes": "RDC in CT volume studies: Kirby 2020 (already cited), Li 2015 phantom study, Chung 2017 head-and-neck inter-observer; none kept."
+  },
+  {
+   "id": "T3-S050",
+   "date": "2026-10-12",
+   "tool": "PubMed E-utilities (esearch, sort=relevance)",
+   "family": "boolean",
+   "query": "(\"software version\"[tiab] OR \"software versions\"[tiab] OR \"software update\"[tiab] OR \"software upgrade\"[tiab] OR \"algorithm version\"[tiab] OR \"different software\"[tiab]) AND (longitudinal[tiab] OR \"follow-up\"[tiab] OR serial[tiab] OR change[tiab]) AND (reproducibility[tiab] OR repeatability[tiab] OR agreement[tiab] OR \"limits of agreement\"[tiab] OR \"least significant change\"[tiab]) AND (volume[tiab] OR volumetry[tiab] OR volumetric[tiab] OR \"bone mineral density\"[tiab])",
+   "hits": 25,
+   "screened": 25,
+   "kept": [
+    "T3-P19"
+   ],
+   "notes": "Software version/upgrade with longitudinal agreement: Wong & Griffiths 2002 (DXA analysis software upgrade; reanalysis advised) kept; Shuter 2008 (MRI scanner software, brain volumes) and Bassiri 2024 (adaptive RT software upgrade QA) noted for T2/T6."
+  },
+  {
+   "id": "T3-S051",
+   "date": "2026-10-12",
+   "tool": "PubMed E-utilities (esearch, sort=relevance)",
+   "family": "known_item",
+   "query": "(Barnhart HX[au] OR Haber M[au]) AND (\"individual agreement\"[ti] OR \"coefficient of individual agreement\"[tiab] OR \"replicated measurements\"[ti])",
+   "hits": 5,
+   "screened": 5,
+   "kept": [
+    "T3-P14",
+    "T3-P15",
+    "T3-P16"
+   ],
+   "notes": "Coefficient of individual agreement papers; Haber, Gao & Barnhart 2010 author manuscript PMC2907262 read for the exact definition."
+  },
+  {
+   "id": "T3-S052",
+   "date": "2026-10-12",
+   "tool": "PubMed E-utilities (esearch, sort=relevance)",
+   "family": "known_item",
+   "query": "Wong JC[au] AND \"software upgrade\"[ti]",
+   "hits": 1,
+   "screened": 1,
+   "kept": [
+    "T3-P19"
+   ],
+   "notes": "Wong & Griffiths 2002 abstract read."
+  },
+  {
+   "id": "T3-S053",
+   "date": "2026-10-12",
+   "tool": "WebSearch",
+   "family": "known_item",
+   "query": "Bland Altman 1999 \"Measuring agreement in method comparison studies\" pdf log transformation limits of agreement ratio",
+   "hits": null,
+   "screened": 9,
+   "kept": [
+    "T3-P12"
+   ],
+   "notes": "No open full text of Bland & Altman 1999 found; abstract taken from PubMed."
+  },
+  {
+   "id": "T3-S054",
+   "date": "2026-10-12",
+   "tool": "HTTP GET (curl)",
+   "family": "known_item",
+   "query": "https://www-users.york.ac.uk/~mb55/meas/meas.htm",
+   "hits": null,
+   "screened": 1,
+   "kept": [
+    "T3-P11"
+   ],
+   "notes": "Martin Bland's measurement page lists ba.htm, the 1986 Lancet paper reproduced by permission; retrieved and read."
+  },
+  {
+   "id": "T3-S055",
+   "date": "2026-10-12",
+   "tool": "PubMed E-utilities (esearch, sort=relevance)",
+   "family": "known_item",
+   "query": "(Bland JM[au] AND \"proportional to the mean\"[ti]) OR (Euser AM[au] AND \"Bland-Altman\"[ti])",
+   "hits": 1,
+   "screened": 1,
+   "kept": [
+    "T3-P13"
+   ],
+   "notes": "Euser 2008 found; Bland & Altman 1996 BMJ title not matched (see T3-S056)."
+  },
+  {
+   "id": "T3-S056",
+   "date": "2026-10-12",
+   "tool": "Crossref works API (query.bibliographic)",
+   "family": "known_item",
+   "query": "Bland Altman Measurement error proportional to the mean BMJ 1996",
+   "hits": 3649252,
+   "screened": 5,
+   "kept": [],
+   "notes": "Bland & Altman 1996 BMJ 313:106 'Measurement error proportional to the mean' identified (DOI 10.1136/bmj.313.7049.106)."
+  },
+  {
+   "id": "T3-S057",
+   "date": "2026-10-12",
+   "tool": "PubMed E-utilities (esearch, sort=relevance)",
+   "family": "known_item",
+   "query": "10.1136/bmj.313.7049.106[doi]",
+   "hits": 1,
+   "screened": 1,
+   "kept": [],
+   "notes": "PMID 8688716 for the 1996 BMJ note."
+  },
+  {
+   "id": "T3-S058",
+   "date": "2026-10-12",
+   "tool": "Europe PMC REST (search, resultType=lite)",
+   "family": "known_item",
+   "query": "DOI:\"10.1136/bmj.313.7049.106\"",
+   "hits": 1,
+   "screened": 1,
+   "kept": [],
+   "notes": "PMC2351517 is a scanned article without text; not kept (log-scale guidance taken from T3-P11, T3-P12, T3-P13)."
+  },
+  {
+   "id": "T3-S059",
+   "date": "2026-10-12",
+   "tool": "Semantic Scholar Graph API (paper/search)",
+   "family": "boolean",
+   "query": "reproducibility coefficient tumor volume change different algorithms baseline follow-up",
+   "hits": null,
+   "screened": 0,
+   "kept": [],
+   "notes": "FAILED: Semantic Scholar returned HTTP 429 after six retries (anonymous rate limit). Not repeated; coverage provided by OpenAlex and PubMed queries."
+  },
+  {
+   "id": "T3-S060",
+   "date": "2026-10-12",
+   "tool": "Semantic Scholar Graph API (paper/search)",
+   "family": "boolean",
+   "query": "metrology measurement uncertainty deep learning segmentation volume medical imaging | request: https://api.semanticscholar.org/graph/v1/paper/search?query=metrology+measurement+uncertainty+deep+learning+segmentation+volume+medical+imaging&limit=20&fields=title%2Cyear%2Cvenue%2CexternalIds%2CcitationCount%2Cauthors",
+   "hits": 133,
+   "screened": 20,
+   "kept": [],
+   "notes": "Generic deep-learning segmentation and uncertainty papers; nothing on metrology of version changes."
+  },
+  {
+   "id": "T3-S061",
+   "date": "2026-10-12",
+   "tool": "Europe PMC REST (search, resultType=lite)",
+   "family": "boolean",
+   "query": "(\"measurement uncertainty\" OR metrology OR \"metrological\") AND (\"deep learning\" OR \"neural network\" OR \"artificial intelligence\") AND (segmentation) AND (volume OR volumetry) AND (CT OR \"computed tomography\" OR MRI) | request: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=%28%22measurement+uncertainty%22+OR+metrology+OR+%22metrological%22%29+AND+%28%22deep+learning%22+OR+%22neural+network%22+OR+%22artificial+intelligence%22%29+AND+%28segmentation%29+AND+%28volume+OR+volumetry%29+AND+%28CT+OR+%22computed+tomography%22+OR+MRI%29&format=json&pageSize=40&resultType=lite",
+   "hits": 286,
+   "screened": 40,
+   "kept": [],
+   "notes": "Mostly unrelated; no source applies a metrology framework to model version changes."
+  },
+  {
+   "id": "T3-S062",
+   "date": "2026-10-12",
+   "tool": "OpenAlex works API",
+   "family": "boolean",
+   "query": "search=\"cross-calibration\" AND (software OR algorithm) AND (longitudinal OR follow-up) AND (imaging OR CT OR MRI OR densitometry) | request: https://api.openalex.org/works?per-page=40&search=%22cross-calibration%22+AND+%28software+OR+algorithm%29+AND+%28longitudinal+OR+follow-up%29+AND+%28imaging+OR+CT+OR+MRI+OR+densitometry%29&select=id%2Cdoi%2Ctitle%2Cpublication_year%2Ccited_by_count%2Cprimary_location%2Cauthorships%2Ctype",
+   "hits": 5246,
+   "screened": 40,
+   "kept": [],
+   "notes": "Relevance-ranked: DXA and HR-pQCT cross-calibration precedents (e.g., Manske 2017; Sadoughi 2024) noted; none concerns segmentation software versions; not kept."
+  },
+  {
+   "id": "T3-S063",
+   "date": "2026-10-12",
+   "tool": "OpenAlex works API",
+   "family": "venue_sweep",
+   "query": "search=(repeatability OR reproducibility OR \"limits of agreement\") AND (volume OR volumetry) AND (segmentation) AND (longitudinal OR \"follow-up\" OR change OR version) filter=primary_location.source.issn:0031-9155|0094-2405 | request: https://api.openalex.org/works?per-page=50&search=%28repeatability+OR+reproducibility+OR+%22limits+of+agreement%22%29+AND+%28volume+OR+volumetry%29+AND+%28segmentation%29+AND+%28longitudinal+OR+%22follow-up%22+OR+change+OR+version%29&filter=primary_location.source.issn%3A0031-9155%7C0094-2405&select=id%2Cdoi%2Ctitle%2Cpublication_year%2Ccited_by_count%2Cprimary_location%2Cauthorships%2Ctype",
+   "hits": 1205,
+   "screened": 50,
+   "kept": [],
+   "notes": "Venue sweep of Physics in Medicine & Biology and Medical Physics: no study of model version changes in longitudinal volumetry; Chaney 2005 point/counterpoint on calibrating segmentation methods noted."
+  },
+  {
+   "id": "T3-S064",
+   "date": "2026-10-12",
+   "tool": "Crossref works API (DOI lookup)",
+   "family": "known_item",
+   "query": "10.59161/JCGM200-2012",
+   "hits": 1,
+   "screened": 1,
+   "kept": [
+    "T3-P01"
+   ],
+   "notes": "Crossref metadata for the VIM DOI (BIPM, posted content, 2012)."
+  },
+  {
+   "id": "T3-S065",
+   "date": "2026-10-12",
+   "tool": "Crossref works API (DOI lookup)",
+   "family": "known_item",
+   "query": "10.1177/0962280214537333",
+   "hits": 1,
+   "screened": 1,
+   "kept": [
+    "T3-P02"
+   ],
+   "notes": "Crossref metadata verified."
+  },
+  {
+   "id": "T3-S066",
+   "date": "2026-10-12",
+   "tool": "Crossref works API (DOI lookup)",
+   "family": "known_item",
+   "query": "10.1177/0962280214537344",
+   "hits": 1,
+   "screened": 1,
+   "kept": [
+    "T3-P03"
+   ],
+   "notes": "Crossref metadata verified."
+  },
+  {
+   "id": "T3-S067",
+   "date": "2026-10-12",
+   "tool": "Crossref works API (DOI lookup)",
+   "family": "known_item",
+   "query": "10.1177/096228029900800204",
+   "hits": 1,
+   "screened": 1,
+   "kept": [
+    "T3-P12"
+   ],
+   "notes": "Crossref metadata verified."
+  },
+  {
+   "id": "T3-S068",
+   "date": "2026-10-12",
+   "tool": "Crossref works API (DOI lookup)",
+   "family": "known_item",
+   "query": "10.1016/j.acra.2017.09.023",
+   "hits": 1,
+   "screened": 1,
+   "kept": [
+    "T3-P05"
+   ],
+   "notes": "Crossref metadata verified."
+  },
+  {
+   "id": "T3-S069",
+   "date": "2026-10-12",
+   "tool": "Crossref works API (DOI lookup)",
+   "family": "known_item",
+   "query": "10.1016/j.acra.2016.02.018",
+   "hits": 1,
+   "screened": 1,
+   "kept": [
+    "T3-P09"
+   ],
+   "notes": "Crossref metadata verified."
+  },
+  {
+   "id": "T3-S070",
+   "date": "2026-10-12",
+   "tool": "Crossref works API (DOI lookup)",
+   "family": "known_item",
+   "query": "10.1177/0962280214537392",
+   "hits": 1,
+   "screened": 1,
+   "kept": [
+    "T3-P06"
+   ],
+   "notes": "Crossref metadata verified."
+  },
+  {
+   "id": "T3-S071",
+   "date": "2026-10-12",
+   "tool": "Crossref works API (DOI lookup)",
+   "family": "known_item",
+   "query": "10.1148/radiol.2015142202",
+   "hits": 1,
+   "screened": 1,
+   "kept": [
+    "T3-P04"
+   ],
+   "notes": "Crossref metadata verified."
+  },
+  {
+   "id": "T3-S072",
+   "date": "2026-10-12",
+   "tool": "Crossref works API (DOI lookup)",
+   "family": "known_item",
+   "query": "10.1016/S0140-6736(86)90837-8",
+   "hits": 1,
+   "screened": 1,
+   "kept": [
+    "T3-P11"
+   ],
+   "notes": "Crossref metadata verified."
+  },
+  {
+   "id": "T3-S073",
+   "date": "2026-10-12",
+   "tool": "Crossref works API (DOI lookup)",
+   "family": "known_item",
+   "query": "10.1016/j.tranon.2015.01.001",
+   "hits": 1,
+   "screened": 1,
+   "kept": [
+    "T3-P10"
+   ],
+   "notes": "Crossref metadata verified."
+  },
+  {
+   "id": "T3-S074",
+   "date": "2026-10-12",
+   "tool": "Crossref works API (DOI lookup)",
+   "family": "known_item",
+   "query": "10.1385/jcd:5:2:199",
+   "hits": 1,
+   "screened": 1,
+   "kept": [
+    "T3-P19"
+   ],
+   "notes": "Crossref metadata verified."
+  },
+  {
+   "id": "T3-S075",
+   "date": "2026-10-12",
+   "tool": "Crossref works API (DOI lookup)",
+   "family": "known_item",
+   "query": "10.1080/10543400701329489",
+   "hits": 1,
+   "screened": 1,
+   "kept": [
+    "T3-P14"
+   ],
+   "notes": "Crossref metadata verified."
+  },
+  {
+   "id": "T3-S076",
+   "date": "2026-10-12",
+   "tool": "Crossref works API (DOI lookup)",
+   "family": "known_item",
+   "query": "10.1177/0962280206075527",
+   "hits": 1,
+   "screened": 1,
+   "kept": [
+    "T3-P15"
+   ],
+   "notes": "Crossref metadata verified (online 2007, issue April 2008)."
+  },
+  {
+   "id": "T3-S077",
+   "date": "2026-10-12",
+   "tool": "Crossref works API (DOI lookup)",
+   "family": "known_item",
+   "query": "10.1007/s10278-016-9859-z",
+   "hits": 1,
+   "screened": 1,
+   "kept": [
+    "T3-P23"
+   ],
+   "notes": "Crossref metadata verified."
+  },
+  {
+   "id": "T3-S078",
+   "date": "2026-10-12",
+   "tool": "Crossref works API (DOI lookup)",
+   "family": "known_item",
+   "query": "10.1016/j.jclinepi.2007.11.003",
+   "hits": 1,
+   "screened": 1,
+   "kept": [
+    "T3-P13"
+   ],
+   "notes": "Crossref metadata verified."
+  },
+  {
+   "id": "T3-S079",
+   "date": "2026-10-12",
+   "tool": "Crossref works API (DOI lookup)",
+   "family": "known_item",
+   "query": "10.1016/j.jocd.2019.09.001",
+   "hits": 1,
+   "screened": 1,
+   "kept": [
+    "T3-P18"
+   ],
+   "notes": "Crossref metadata verified."
+  },
+  {
+   "id": "T3-S080",
+   "date": "2026-10-12",
+   "tool": "Crossref works API (DOI lookup)",
+   "family": "known_item",
+   "query": "10.1016/j.ejrad.2012.05.018",
+   "hits": 1,
+   "screened": 1,
+   "kept": [
+    "T3-P27"
+   ],
+   "notes": "Crossref metadata verified."
+  },
+  {
+   "id": "T3-S081",
+   "date": "2026-10-12",
+   "tool": "Crossref works API (DOI lookup)",
+   "family": "known_item",
+   "query": "10.1055/s-0032-1312860",
+   "hits": 1,
+   "screened": 1,
+   "kept": [
+    "T3-P28"
+   ],
+   "notes": "Crossref metadata verified."
+  },
+  {
+   "id": "T3-S082",
+   "date": "2026-10-12",
+   "tool": "Semantic Scholar Graph API (paper/citations with contexts, curl)",
+   "family": "citation_forward",
+   "query": "citations of DOI:10.1177/0962280214537390 (Obuchowski 2015) with contexts, limit=500; contexts screened for software/version/upgrade/update/longitudinal/change",
+   "hits": null,
+   "screened": 161,
+   "kept": [],
+   "notes": "Semantic Scholar citation contexts of Obuchowski 2015: 161 citing papers, 7 with contexts matching software/version/upgrade/update/longitudinal/interchangeability; none about model or software version updates."
+  },
+  {
+   "id": "T3-S083",
+   "date": "2026-10-12",
+   "tool": "Semantic Scholar Graph API (paper/citations with contexts, curl)",
+   "family": "citation_forward",
+   "query": "citations of DOI:10.1177/0962280214537333 with contexts, limit=500; contexts screened for software/version/upgrade/update/interchangeab",
+   "hits": null,
+   "screened": 286,
+   "kept": [],
+   "notes": "Citation contexts of Kessler 2015: 286 citing papers, 8 matching contexts; none about version updates."
+  },
+  {
+   "id": "T3-S084",
+   "date": "2026-10-12",
+   "tool": "Semantic Scholar Graph API (paper/citations with contexts, curl)",
+   "family": "citation_forward",
+   "query": "citations of DOI:10.1148/radiol.2522081593 with contexts, limit=500; contexts screened for software/version/upgrade/update/interchangeab",
+   "hits": null,
+   "screened": 343,
+   "kept": [
+    "T3-P29"
+   ],
+   "notes": "Citation contexts of Zhao 2009: 343 citing papers, 6 matching contexts; Nishino 2011 noted; none about version updates."
+  },
+  {
+   "id": "T3-S085",
+   "date": "2026-10-12",
+   "tool": "PubMed E-utilities (esearch, sort=relevance)",
+   "family": "known_item",
+   "query": "(Wormanns D[au] AND \"in vivo reproducibility\"[ti]) OR (Gietema HA[au] AND \"interscan variability\"[ti]) OR (Nishino M[au] AND \"CT tumor volume measurement\"[ti])",
+   "hits": 2,
+   "screened": 2,
+   "kept": [
+    "T3-P24",
+    "T3-P25"
+   ],
+   "notes": "Gietema 2007 and Wormanns 2004 abstracts read; Nishino title not matched (see T3-S086)."
+  },
+  {
+   "id": "T3-S086",
+   "date": "2026-10-12",
+   "tool": "PubMed E-utilities (esearch, sort=relevance)",
+   "family": "known_item",
+   "query": "Nishino M[au] AND \"tumor volume\"[ti] AND \"non-small-cell\"[ti] AND 2011[dp]",
+   "hits": 1,
+   "screened": 1,
+   "kept": [
+    "T3-P29"
+   ],
+   "notes": "Nishino 2011 abstract read."
+  },
+  {
+   "id": "T3-S087",
+   "date": "2026-10-12",
+   "tool": "PubMed E-utilities (esearch, sort=relevance)",
+   "family": "boolean",
+   "query": "(\"deep learning\"[tiab] OR \"artificial intelligence\"[tiab] OR \"convolutional neural network\"[tiab] OR nnU-Net[tiab] OR \"automated segmentation\"[tiab]) AND (\"test-retest\"[tiab] OR repeatability[tiab] OR \"coffee break\"[tiab] OR \"same-day\"[tiab] OR \"repeat CT\"[tiab] OR \"scan-rescan\"[tiab]) AND (\"tumor volume\"[tiab] OR \"tumour volume\"[tiab] OR \"lesion volume\"[tiab] OR \"nodule volume\"[tiab] OR volumetry[tiab]) AND (\"computed tomography\"[tiab] OR CT[tiab])",
+   "hits": 12,
+   "screened": 12,
+   "kept": [],
+   "notes": "No CT deep-learning tumour volumetry repeatability study on repeat scans found by this query (PET studies only)."
+  },
+  {
+   "id": "T3-S088",
+   "date": "2026-10-12",
+   "tool": "Europe PMC REST (search, resultType=lite)",
+   "family": "dataset_docs",
+   "query": "(RIDER AND (\"coffee break\" OR \"test-retest\" OR \"same-day\")) AND (\"deep learning\" OR \"nnU-Net\" OR \"convolutional\") AND (volume OR volumetry) AND (lung OR tumor OR tumour)",
+   "hits": 62,
+   "screened": 40,
+   "kept": [],
+   "notes": "RIDER/test-retest plus deep learning: radiomics-dominated; Zhao 2024 Sci Data test-retest dataset noted; no deep-learning volumetry repeatability benchmark found."
+  },
+  {
+   "id": "T3-S089",
+   "date": "2026-10-12",
+   "tool": "OpenAlex works API",
+   "family": "citation_forward",
+   "query": "filter=cites:W4400525910|W4400525579|W2403226953 | request: https://api.openalex.org/works?per-page=50&filter=cites%3AW4400525910%7CW4400525579%7CW2403226953&select=id%2Cdoi%2Ctitle%2Cpublication_year%2Ccited_by_count%2Cprimary_location%2Cauthorships%2Ctype",
+   "hits": 23,
+   "screened": 23,
+   "kept": [
+    "T3-P26"
+   ],
+   "notes": "Forward citations of both QIBA profiles and the QIBA 3A paper: Jirapatnakul 2024 kept; Robins 2019 and screening-guidance papers noted."
+  },
+  {
+   "id": "T3-S090",
+   "date": "2026-10-12",
+   "tool": "PubMed E-utilities (esearch, sort=relevance)",
+   "family": "citation_forward",
+   "query": "Jirapatnakul AC[au] AND \"measurement uncertainty\"[ti]",
+   "hits": 0,
+   "screened": 0,
+   "kept": [],
+   "notes": "Title wording mismatch; resolved by T3-S091."
+  },
+  {
+   "id": "T3-S091",
+   "date": "2026-10-12",
+   "tool": "Europe PMC REST (search, resultType=lite)",
+   "family": "citation_forward",
+   "query": "DOI:\"10.21037/qims-23-1501\"",
+   "hits": 1,
+   "screened": 1,
+   "kept": [
+    "T3-P26"
+   ],
+   "notes": "Jirapatnakul 2024 QIMS 14(7):5057-5071 confirmed; abstract read."
+  }
+ ]
+}

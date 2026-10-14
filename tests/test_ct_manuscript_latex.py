@@ -32,15 +32,15 @@ class FigureCopyTests(unittest.TestCase):
     def test_every_figure_is_copied_under_its_manuscript_name(self):
         self.draw()
         written = self.script.copy_figures(self.source, self.target)
-        self.assertEqual(written, ['figure1.pdf', 'figure2.pdf', 'figure3.pdf', 'figure4.pdf', 'figure5.pdf',
-                                   'figureS1.pdf'])
+        self.assertEqual(written, ['figure1.pdf', 'figure2.pdf', 'figure3.pdf', 'figure4.pdf', 'figureS1.pdf',
+                                   'figureS2.pdf'])
         for name, target in self.script.FIGURE_COPIES:
             self.assertEqual((self.target/target).read_bytes(), name.encode())
 
     def test_only_the_example_figure_may_be_absent_and_is_not_counted(self):
         self.draw(skip={EXAMPLE})
         written = self.script.copy_figures(self.source, self.target)
-        self.assertEqual(written, ['figure1.pdf', 'figure2.pdf', 'figure3.pdf', 'figure5.pdf', 'figureS1.pdf'])
+        self.assertEqual(written, ['figure1.pdf', 'figure2.pdf', 'figure3.pdf', 'figureS1.pdf', 'figureS2.pdf'])
         self.assertFalse((self.target/'figure4.pdf').exists())
 
     def test_a_missing_figure_drawn_from_the_records_is_an_error(self):
